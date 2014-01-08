@@ -1,0 +1,54 @@
+.color { color: #888; }
+a { color: #888; }
+a:hover { color: #444; }
+.invert { background: #888; }
+.navbar > .container .navbar-brand:hover { color: #888; }
+.nav li a:hover { background: #888; }
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus { background-color: #888; }
+.dropdown:hover { background: #888; }
+input:hover,
+.form-control:hover, textarea:hover, input:focus, .form-control:focus, textarea:focus, input:active, .form-control:active, textarea:active { border-color: #888; }
+.btn-primary, .label-primary {
+  border-color: #444;
+  background-color: #888;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#888), to(#444));
+  background: -webkit-linear-gradient(#888, #444);
+  background: -moz-linear-gradient(#888, #444);
+  background: -o-linear-gradient(#888, #444);
+  background: linear-gradient(#888, #444);
+}
+.btn-primary:hover, .label-primary:hover {
+  border-color: #444;
+  background-color: #888;
+  background: -webkit-gradient(linear, left top, left bottom, from(#888), to(#444));
+  background: -webkit-linear-gradient(top, #888, #444);
+  background: -moz-linear-gradient(top, #888, #444);
+  background: -ms-linear-gradient(top, #888, #444);
+  background: -o-linear-gradient(top, #888, #444);
+}
+#scrollToTop { background: #888; }
+.panel-title:hover { background: #888; }
+.progress-bar { background-color: #888; }
+.progress-bar-success { background-color: #20bf00; }
+.progress-bar-warning { background-color: #fca600; }
+.progress-bar-danger { background-color: #bf0000; }
+#sidebar .active { border-right-color: #888; }
+.carousel .color { background: #888; }
+.carousel-control i { background: #888; }
+.carousel-indicators li:hover {  border-color: #888; }
+.carousel-indicators .active { border-color: #888; background: #888; }
+.bx-wrapper .bx-controls-direction a:hover { background: #888; }
+.bx-wrapper .bx-pager.bx-default-pager a:hover { border-color: #888; }
+.bx-wrapper .bx-pager.bx-default-pager a.active { border-color: #888; background: #888; }
+#footer .newsletter { border-top-color:#888; background: #888; }
+.pricing-table .price-tag { color: #888; }
+.portfolio-filter li.active { background: #888; }
+.portfolio > li a .portfolio-item-content { background: #888; }
+.project-single-more ul a:before { background: #888; }
+.team .profile .details { border-top-color: #888; }
+#blog-home .post-meta-side .date { background: #888; }
+.post-content .blog-post-title a:hover { color: #888; }
+.blog-widget .post-excerpt a:before { background: #888; }
+#comments .comment-data .comment-author a:hover,
+#comments .comment-data .comment-text a:hover { color: #888; }
+.gallery a:hover:before { background: #888; }

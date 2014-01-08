@@ -1,0 +1,20 @@
+.container .navbar-header {
+	float: left;
+}
+
+.navbar .navbar-collapse {
+	display: inline-block;
+}
+
+.nav li {
+	float: left;
+}
+
+.navbar-collapse {
+	float: right !important;
+}
+
+.blog-widget .post-content {
+	width: 50%;
+	display: inline-block;
+}

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<title>Library Simplified &middot; Project Design</title>
+<link rel="icon" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts (more: http://www.google.com/fonts) -->
+<!-- Main Font -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<!-- Headings -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<!-- Handwritten -->
+<link href="http://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+<!-- Countdown, Pricing Table Price Tag -->
+<link href="http://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+<!-- Logo -->
+<link href="http://fonts.googleapis.com/css?family=Cantora+One" rel="stylesheet" type="text/css">
+
+<!-- CDN Bootstrap & FontAwesome -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- CSS Libraries -->
+<link href="assets/css/animate.min.css" rel="stylesheet">
+<link href="assets/css/bxslider.css" rel="stylesheet">
+<link href="assets/css/magnific-popup.css" rel="stylesheet">
+
+<!-- Theme Specific CSS -->
+<link href="assets/css/styles.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+
+<!-- Predefined Color Scheme -->
+<link href="assets/css/colors/orange.css" rel="stylesheet" id="colors">
+
+<!-- LESS - Development Only
+<link href="assets/less/styles.less" rel="stylesheet/less" />
+<script>less = { env: 'development' };</script>
+<script src="assets/js/less.js"></script>
+-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+<link href="assets/css/ie8.css" rel="stylesheet"></link>
+<![endif]-->
+</head>
+<body>
+
+<header id="header" class="navbar">
+
+  <div class="container">
+    <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	    	<span class="sr-only">Skip navigation</span>
+	    	<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+		  </button> 
+	    <a class="navbar-brand logo" href="/">Library Simplified</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+	    <ul class="nav navbar-nav">
+	    	<li class="dropdown">
+	    		<a href="#">Pages</a>
+	    		<ul class="dropdown-menu">
+	    			<li><a href="about.html">About</a></li>
+	    			<li><a href="contact.html">Contact Us</a></li>
+  					<!-- <li><a href="#contact" data-toggle="modal">Contact - Popup (Modal)</a></li> -->
+  					<!-- <li><a href="coming-soon.html">Coming Soon</a></li> -->
+  					<!-- <li><a href="coming-soon-bg-image.html">Coming Soon (Background)</a></li> -->
+	    			<!-- <li><a href="pricing-tables.html">Pricing Tables</a></li> -->
+	    			<li><a href="faq.html">FAQ</a></li>
+	    			<li><a href="404.html">404 - Page not found</a></li> 
+	    		</ul>
+	    	<!-- </li>
+	    	<li class="dropdown">
+	    		<a href="#">Features</a>
+	    		<ul class="dropdown-menu">
+	    			<li><a href="elements.html">Elements</a></li>
+	    			<li><a href="grid-system.html">Grid System</a></li>
+	    			<li><a href="icons.html">Icons</a></li>
+	    			<li><a href="typography.html">Typography</a></li>
+	    		</ul>
+	    	</li> -->
+	    	<!-- <li class="dropdown">
+	    		<a href="#">Portfolio</a>
+	    		<ul class="dropdown-menu">
+  					<li><a href="portfolio-four-columns.html">Four Columns</a></li>
+  					<li><a href="portfolio-three-columns.html">Three Columns</a></li>
+  					<li><a href="portfolio-two-columns.html">Two Columns</a></li>
+  					<li><a href="portfolio-one-column.html">One Column</a></li>
+    				<li><a href="portfolio-masonry.html">Masonry Layout</a></li>
+    				<li><a href="single-project-gallery.html">Single Project - Gallery</a></li>
+    				<li><a href="single-project-slider.html">Single Project - Slider</a></li>
+    				<li><a href="single-project-slider-full-width.html">Single Project - Slider Full Width</a></li>    				
+  				</ul>
+	    	</li> -->
+	    	<li class="dropdown">
+	    		<a href="#">Blog</a>
+	    		<ul class="dropdown-menu">
+  					<li><a href="blog.html">Blog Home</a></li>
+  					<li><a href="blog-post-slider.html">Blog Post - Slider</a></li>
+  					<li><a href="blog-post-gallery.html">Blog Post - Gallery</a></li>
+  					<!-- <li><a href="blog-post-video.html">Blog Post - Video</a></li> -->
+  				</ul>
+	    	</li>
+	    	<li class="dropdown header-search-form">
+	    		<a><i class="icon-search"></i></a>
+		    	<ul class="dropdown-menu">
+			    	<li>
+				    	<form action="404.html" method="post">			    
+						    <input type="text" placeholder="Search for.." />
+						  </form>
+			    	</li>
+		    	</ul>
+	    	</li>
+	    </ul>
+    </nav>
+    
+  </div>
+</header><!-- .navbar-fixed-top -->
+
+<div class="page-top">
+	<div class="container">	
+		<h1 class="page-top-header">Project Design</h1>		
+		<ol class="breadcrumb">
+		  <li><a href="//index.html">Home</a></li>
+		  <li class="active">Project Design</li>
+		</ol>
+	</div>	
+</div>
+
+<div class="container" id="main">
+
+<div class="row">
+
+	<div class="col-md-3">
+		<div id="sidebar" class="affix" role="complementary">
+			<ul class="nav">
+				<li><a href="#overview">Overveiw</a></li>
+				<li><a href="#phase-1">Fact gathering and analysis</a></li>
+				<li><a href="#phase-2">Architecture and testing </a></li>
+				<li><a href="#phase-3">Build</a></li>
+			</ul>
+		</div><!-- .affix -->
+	</div>
+
+	<div class="col-md-9">
+
+		<div class="row">
+		
+			<h2 id="overview"></h2>
+		
+			<p class="lead">
+				<strong>Library Simplified</strong> is jointly funded by <a href="http://www.NYPL.org" data-toggle="tooltip" title="The New York Public Library" target="_blank">NYPL</a> and <a href="http://www.imls.org" data-toggle="tooltip" title="Institute for Museum and Library Sciences" target="_blank">IMLS</a>.  This funding supports a full-time position at NYPL: “Product Owner (PO) for the Library Reading Experience.” The PO, is charged with proposing ways in which to employ technology, innovation in library policies, and the full range of library offerings to deliver a better experience to more patrons.  The PO leads a small technical team, and works in concert with partner libraries to analyze the digital assessment findings and move the design process forward. Library Simplified will include four phases of work with major milestones and deliverables at the end of each: (I) Fact gathering and analysis, (II) Architecture and testing (III) Build and (IV) Implementation and assessment.  
+			</p>
+
+			<hr />
+
+			<h3 id="phase-1"><Strong>Phase 1:</strong> Fact gathering and analysis</h3>
+
+			<p class="lead">
+				There are three parts to the fact gathering and analysis of Library Simplified.  The three parts are designed to clearly document the expereinces of users and non-users, the system infterfaces and technology architectures that deliver those expereinces and analyze the needs and wants of users and how those are met or not met. 
+			</p>
+			<ul class="nav nav-tabs tab-header">
+		  		<li class="active"><a href="#part1" data-toggle="tab"><i class="icon-user"></i> Part 1 </a></li>
+		  		<li><a href="#part2" data-toggle="tab"><i class="icon-search"></i> Part 2</a></li>
+		  		<li><a href="#part3" data-toggle="tab"><i class="icon-cogs"></i> Part 3</a></li>
+			</ul>
+		
+			<div class="tab-content">
+		  		<div class="tab-pane active" id="part1">
+		  		<h5>User Experience (UX) Assessment</h5>
+			  	<p>
+				  <h6>Mapping the User Journey -</h6> 
+				  <p>The team will document all relevant interaction points at all partner libraries, the end-to-end journey of a user borrowing an e-book.</p>
+				  <h6>Heuristic Evaluation -</h6>
+				  <p> The team, assisted by expert consultant(s) as needed, will conduct an audit of all current screen-based catalog/reading interfaces by assessing them in terms of usability heuristics and identifying "trouble spots" in the current design. 
+				  </p>
+				  <h6>Library Policy ‘pain’ points –</h6> 
+				  <p>This will demonstrate how and for whom current library policies create “pain points; providing key support for senior library decision makers evaluating the pros and cons of policy changes.
+				  </p>
+				  <h6>Storyboard Experiences -</h6> 
+				  <p>The team will create visual representations (storyboards) of proposed new directions intended to serve as a foundation for further prototyping.  These UX Storyboards will describe the ideal process.</p>  
+			  	</p>
+		  		</div>
+
+		  		<div class="tab-pane" id="part2">
+			  	<h5>Needs/Wants of Users and Non-users</h5>
+			  	<p>
+				  The project team will engage directly with users throughout the first two phases to test hypotheses and gather input.  Since the first goal of this project is to build audience, at all stages it will be critical to gather insights from non-users. For example, in January 2013 when NYPL’s Office of Strategic Planning sought feedback on a new Netflix-type card, users in focus groups conveyed that they wanted to be able to check out at least 10 items and expressed anxiety about fines but also a belief that they were important to teach personal responsibility.  Many non-users, on the other hand, indicated they would be happy to sacrifice the number of items available (e.g. accepting a card with a 3-5 item borrowing limit) if that meant a promise that they would never incur fines.  These critically different perspectives must be considered and addressed throughout the duration of the project.
+				</p>  
+				<p>With that in mind, the project team will be tasked to conduct at least the following analysis of users and non-users:
+				</p> 
+				<h6>Survey Data roll up and gap assessment -</h6> NYPL’s Office of Strategic Planning’s User Insights Group has conducted large-scale surveys with user and non-user quantitative and qualitative data. Similar research completed by partner libraries or published elsewhere (American Community Survey, Pew) will also be included. 
+				<h6>User & Non-User Ethnographies -</h6> The team will conduct a small field study of selected circulating branch libraries and online users to explore the behaviors and attitudes of current users, with a particular focus on policy issues and related UX design implications.
+				<h6>Personas of users and non-users -</h6> The team will also develop user personas that capture the needs and wants of the most largest and most important groups of potential users, including heavy media consumers & ereaders; and youth and students.  
+			  	</p>
+		  		</div>
+
+		  		<div class="tab-pane" id="part3">
+		  		<h5>Systems Architecture analysis</h5>
+			  	<p>
+				  <h6>Architectural Schematics of/for all Partners -</h6>
+				  <p>The Product Owner will work with partner project leads to develop a simple but comprehensive annotated schematic diagram of the IT architecture for each partner library.</p>
+				  <h6>Overlay of Data sources and feeds -</h6> 
+				  <p>A key component of the architectural diagnostic will be to understand the potential sources of patron and collections data from an <a data-toggle="tooltip" title="ILS: Integrated Library System" target="_blank">ILS</a>, e-content from vendors, and supplemental UGC and/or recommendation from other third party products.  This overlay, which will sit “on top” of schematic diagrams, will capture not what the systems are but also how they interact, a critical first step toward proposing ways they can be streamlined.</p><h6>Market Scan -</h6> 
+				  <p>The Product Owner and team will review products that are available to libraries but not in use at all/any of the partners.  This work will come late in the Fact gathering/Analysis phase so that it can focus on exploring strong hypotheses about how new products could be integrated to satisfy unmet needs and wants.</p>
+				  <strong>Note:</strong>At the end of the Phase I, the team will produce and circulate a comprehensive report with all the findings and raw data.   Although the team will likely have begun to develop ideas about how to solve for the user stories gathered, this report will stop short of recommendation or proposed product design.  It will instead create the robust foundation for the next phase, which will be to design the actual product offering.
+			  	</p>
+		  		</div>
+			</div>
+		
+			<hr />
+			
+			<h3 id="phase-2"><Strong>Phase 2:</strong> Architecture and testing </h3>
+
+			<p class="lead">
+				During Phase II, the team will attempt to sketch a wide variety of products that could be built and test them against user stories and user personas to identify the most impactful design.  This will be an iterative process and will include engagement with a variety of external technology experts; partners will come together physically to discuss the different approaches.
+			</p>	
+
+			<ul class="nav nav-tabs tab-header">
+		  		<li class="active"><a href="#2part1" data-toggle="tab"><i class="icon-thumbs-up icon-large"></i>&nbsp Partner Review and Assesment </a></li>
+		  		<li><a href="#2part2" data-toggle="tab"><i class="icon-search icon-large"></i>&nbsp Test and Evaluate</a></li>
+			</ul>
+		
+			<div class="tab-content">
+		  		<div class="tab-pane active" id="2part1">
+		  		<h5>Partner review and assesment of options</h5>
+			  	<p>
+				  Partners will be asked to review the options through the lens of three main factors, 
+				  <ol>
+				  	<li>Feasibility (i.e. does the partner feel confident that, if built, they could implement the proposed product at their library),</li>
+				  	<li>Willingness to adopt implied policies,</li>
+				  	<li>Satisfaction with goals.</li> 
+				  </ol>
+				  <p>The project team will review partner feedback, and during an in-person event, build consensus to go forward with a product build that will have the broadest impact. The team will then develop detailed technical documentation of the proposed solution that can serve as a roadmap for an in-house software development effort or become the basis of outsourced contract development work. </p>   
+			  	</p>
+		  		</div>
+
+		  		<div class="tab-pane" id="2part2">
+			  	<h5>Implement and test</h5>
+			  	<p>
+				  Each partner library will be responsible for implementing the test product at their institution and will bear any associated costs (e.g. securing needed data feeds from ILS or vendors).  As such, partners are not formally committing to implement the product, just to go through steps (I) and (II) and then try to locate resources customized for their institution. Partner activities and contributions will be managed using an adapted Agile methodology. All partners will have access to a living online work plan that will be owned by the Product Owner but maintained and updated by the owner of each ‘to-do’. Project leads at partner libraries will convene on regular calls, not less than once a month but more frequently during the first six months of the grant (the planning and architecture phases). Partners will also meet in person at least two times during the project, for a kick-off and during the later portion of the architecture phase. 
+
+				<p>
+				  Additional elements and deliverable of the product could be optional and adopted by some partners and not others. For example, any physical component that proves too radical for one library’s senior management in terms of policy (e.g. no fines) or to costliness (e.g. delivery by mail) but other libraries may want to use this product as a vehicle for experimentation.   The delivery of a better ebook discovery and access experience should be considered the base case, from which additional branches/ offerings may be added (e.g. by mail) as/if libraries are able and willing to support them.  At the close of Phase II, the project team will deliver a final proposal, including product vision and detailed functional specification (RFP or similar).
+				</p>
+				</div>
+			</div>
+		
+			<hr />
+
+			<h3 id="phase-3"><strong>Phase 3:</strong> Build</h3>
+
+			<p class="lead">
+				During this phase the Product Owner will identify and commission the most cost effective way to build the chosen product, estimating the time and cost associated with building the project in-house using staff resources and seeking quotes from vendors to compare the cost of outsourcing.  The team will also look for opportunities to build/accelerate parts of the build by convening hackathons or codes sprints, drawing from the local developer pool in New York City hosting at one of our partner libraries, including those in Silicon Valley, and/or seek support and contributions, as appropriate, from existing industry developer communities such as Code4Lib.
+			</p>	
+				<h5><i class="icon-code-fork 2x"></i> Middleware/Applciation Backend</h5>
+				<h6> Normalized Catalogue/Content Inventory Application Programing Interface (API)</h6>
+				<p>
+				  During this phase the project team will prepare for integration by vetting and adopting new policies and practice suggested by the product visions and by preparing any technical enablers that will be required for implementation. In addition to the existing <a data-toggle="tooltip" title="API: Application Programing Interface" target="_blank">ILS</a>, e-content vendor platform (i.e. 3M, Baker & Taylor), and catalog frontend being in place, several more pieces of infrastructure would be brought together to make the existing components work well with one another and provide a better experience to users. The project would develop piece of middleware to coordinate ebook inventory and activity between multiple vendors across a common API, enabling 3M, Overdrive, and Baker & Taylor to be accessed and served in a uniform way. This middleware would sit between the ILS, ebook vendors (via their APIs), and the Library Simplified frontend, pulling the aggregate list of titles from the catalog, inventory details from the vendors, and facilitate user’s transaction to check out a title from any vendor. Library Simplified’s frontend would be powered by the same data feeds that drive existing catalog frontends coming out of the ILS, as well as the vendor management middleware.
+				</p>
+
+				<h6> Normalized Recommendation Application Programing Interface (API)</h6>
+				<p>
+				  The data feeds and APIs that power this user-facing frontend would be implemented first for the web, but would also enable the creation of integrated Library Simplified native apps for mobile devices and some dedicated e-readers like the Kindle Fire and the Nook. This frontend would utilize a third-party recommendation engine, such as Hunch or LibraryThing, which would index the ILS’s corpus of ebooks, and with a little knowledge about each user (what it needs will vary depending on the recommendation engine or engines used). The recommendation engine would also interface with the vendor middleware to determine titles a patron might be interested in reading that are immediately available, will be available in a day or so, or for which the user might wish to join a longer hold queue. This common discovery interface could power more than just the e-reading experience, but discovery for all of Library Simplified’s offerings.
+				</p>
+				<h5><i class="icon-tablet 2x"></i> Client Applications</h5>
+				<h6>Web/Connected Client Application</h6>
+				<p>
+				  Ebook delivery will be offered two ways. To facilitate immediate reading, without undergoing the arduous process of transferring an ebook to a device, the project will follow the example of OpenLibrary’s browser-based lending system and build a HTML5 browser-based reader that can be used on any browser connected to the internet, optimized both for tablets and smartphones. Checking out an e-book to read in the browser will result in the book being checked out to a server controlled by the library with the digital rights management (<a data-toggle="tooltip" title="DRM: Digital Right Management" target="_blank">DRM</a>) certificate being tied to the library server for the lending period. When a user requests a page in the book, that page will be rendered on-the-fly on the server, and sent to the user’s browser. When a user moves to a new page, the service copy of the previous page will be deleted from the server so no more than one page is available at any given time, but offering all the features of a standard e-reader including searching the full text of the book.
+				</p>
+				<h6>Native Client Application</h6>
+				<p>
+				  While the browser-based model works only when connected to the internet, it doesn’t replace reading on a dedicated app that can be used offline. Delivery of ebooks can be arduous due to the complex requirements of the underlying DRM. Major sellers like Amazon and Apple own the process from end-to-end and have created the illusion of no DRM within that ecosystem. Library Simplified will do something similar by taking advantage of the existing e-reader software on devices which is compatible with libraries and making the delivery experience to those apps seamless via the checkout API of the vendor middleware, and serving the book to the user via a special URL. By visiting that URL to pick up the book, they’ll be presented with a list of options, and by clicking on the user’s preferred reading app, Library Simplified will trigger via special URLs to tell those apps to access the books directly, without any special steps. This leaves the possibility open for a set of Library Simplified native apps, but makes immediately actionable the seamless checkout of ebooks to smartphones, tablets, and some dedicated readers without needing to build specific apps for each platform.
+				</p>	
+			</p>
+
+			<h2 id="well">Well</h2>
+		
+			<div class="well">
+				<div class="row">
+		  			<div class="col-md-9">
+		  			<h3>The Perfect Highlighter</h3>
+		  				<p>Well with inset box shadow and light gray background.</p>
+		  			</div>
+		  			<div class="col-md-3">
+			  		<button class="btn btn-lg btn-default btn-block">Sign Up</button>
+			  		<p class="text-center text-muted"><small>Add a little note..</small></p>
+		  			</div>
+				</div>
+			</div>
+
+			<div class="well gradient">
+
+  			<h3>Well with background gradient</h3>
+	  		<p class="lead">For a background gradient add <code>.gradient</code> to your well. Same with Jumbotron or any other element.</p>
+			</div>
+		
+			<hr />
+				
+			<div class="col-md-6">
+			<h2 id="tooltip">Tooltip</h2>
+				<p>Add the <code>data-toggle="tooltip"</code> and <code>title=".."</code> attribute to the element you want the tooltip to apply to. The title attribute contain your tooltip's text.</p>
+				<p><strong>Example:</strong> <a href="http://getbootstrap.com/javascript/#tooltips" data-toggle="tooltip" title="Bootstrap Documentation: Tooltip" target="_blank">http://getbootstrap.com/javascript/#tooltips</a></p>
+			</div>
+		
+			<div class="col-md-6">
+			<h2 id="popovers">Popovers</h2>
+			<p>Add small overlays of content, like those on the iPad, to any element for housing secondary information.</p>
+			<p><strong>"On Hover" Example</strong> - <code>class="popover"</code>:<br>
+			<a href="http://getbootstrap.com/javascript/#popovers" data-toggle="popover-hover" data-original-title="Bootstrap Documentation: Popovers" data-content="Learn more about the popover." target="_blank">http://getbootstrap.com/javascript/#popovers</a></p>
+			
+			<p><strong>"On Click"" Example</strong> - <code>class="popover"</code>:<br>
+			<a class="btn btn-default" data-toggle="popover" data-original-title="Custom Popover Title" data-content="<p>Here goes your custom popover body. <strong>HTML</strong> allowed. A button for example:</p><button type='button' class='btn btn-primary btn-sm'>more</button>" target="_blank">Click to toggle the popover</a></p>
+			</div>
+		
+			<hr />
+		
+			<p>
+			The sidebar on the left is a live demo of the <a href="http://getbootstrap.com/javascript/#affix" target="_blank">Affix plugin</a>. 
+			</p>
+			  	  	  
+	  <h4>Gallery</h4>
+	  
+	  <div class="gallery">
+		  <div class="row">
+			  <div class="col-sm-4">
+					<a href="http://placehold.it/1200x800&text=Gallery+Image+1" title="<h3>Easily browse through a gallery with your keyboard (left & right), close with ESC</h3>"><img src="http://placehold.it/600x400&text=Gallery+Image+1" alt="" /></a>
+				</div>
+			  <div class="col-sm-4">
+			  	<a href="http://placehold.it/1200x800&text=Gallery+Image+2" title="Use the <code>title</code> attribute to add a caption like this one. "><img src="http://placehold.it/600x400&text=Gallery+Image+2" alt="" /></a>
+			  </div>
+			  <div class="col-sm-4">
+			  	<a href="http://placehold.it/1200x800&text=Gallery+Image+3" title="HTML content works as well, see: <button class='btn btn-primary'><i class='icon-heart'></i> .. I'm a lovely button</button>"><img src="http://placehold.it/600x400&text=Gallery+Image+3" alt="" /></a>
+			  </div>
+		  </div>
+	  </div>
+	  
+	  <p>
+		  The <code>title</code> attribute holds the content for your image's caption. Simply add a title to your <code>img</code> to add a caption.
+	  </p>
+	  
+	  <h4>iFrame - Google Maps or videos such as YouTube, Vimeo etc.</h4>
+	  <a class="lightbox-iframe" href="http://www.youtube.com/watch?v=0O2aH4XLbto">Open YouTube video <i class="icon-film"></i></a><br>
+		<a class="lightbox-iframe" href="https://vimeo.com/45830194">Open Vimeo video  <i class="icon-film"></i></a><br>
+		<a class="lightbox-iframe" href="https://maps.google.com/maps?q=Main+Street,+New+York+City,+New+York&amp;hl=en&amp;t=v&amp;hnear=Main+Street,+New+York+City,+New+York">Open Google Map  <i class="icon-map-marker"></i></a>
+
+	</div><!-- .col-md-9 -->
+	
+</div><!-- .row -->
+
+</div><!-- .container -->
+
+<footer id="footer">
+
+	<div class="newsletter">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<h3 class="title"><i class="icon-envelope-alt"></i> Newsletter</h3>
+					<span class="lead">We will only send you good stuff. Promise!</span>
+				</div>
+				<div class="col-md-4">
+					<form class="input-group small" method="post" action="">
+				    <input type="text" class="form-control" placeholder="Your Email Address" />
+				    <div class="input-group-btn">
+				      <button class="btn btn-default" type="button">Sign Up <i class="icon-angle-right"></i></button>
+				    </div>
+				  </form>
+				</div>
+			</div>
+	  </div>
+  </div>
+
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+			
+				<div class="col-md-4">
+					<div class="social-networks">
+						<a href="https://www.facebook.com/nypl"><i class="icon-facebook"></i></a>
+						<a href="https://www.facebook.com/nypl"><i class="icon-twitter"></i></a>
+						<a href="https://plus.google.com/u/0/+newyorkpubliclibrary/posts"><i class="icon-google-plus"></i></a>
+						<a href="http://nypl.tumblr.com/"><i class="icon-tumblr"></i></a>
+						<a href="https://www.pinterest.com/nypl/"><i class="icon-pinterest"></i></a>
+						<!-- <a href=""><i class="icon-linkedin"></i></a>
+						<a href=""><i class="icon-dribbble"></i></a>	
+						<a href=""><i class="icon-instagram"></i></a>
+						<a href=""><i class="icon-pinterest"></i></a>
+						<a href=""><i class="icon-youtube-play"></i></a>
+						<a href=""><i class="icon-rss"></i></a> -->
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<h6 class="title">About</h6>
+					<p>
+						We are a team of remarkable institutions doing great things. Get to know a little bit more <a href="about">about us</a>.
+					</p>
+				</div>  
+				
+				<div class="col-md-4">
+					<h6 class="title">Get in Touch</h6>
+					<address>
+						<i class="icon-map-marker"></i> <a class="lightbox-iframe" href="https://maps.google.com/maps?q=NYPL+5th+Ave+at+42nd+St,+New+York+City,+New+York&amp;hl=en&amp;t=v&amp;hnear=5th+Ave+at+42nd+St,+New+York+City,+New+York" data-toggle="tooltip" title="Show on Google Maps">42nd Street 5th Avenue, New York City, United States</a><br />
+						<i class="icon-envelope"></i> <a href="mailto:info@librarysimplified.org" data-toggle="tooltip" title="Email Us">info@librarysimplified.org</a><br />
+						<i class="icon-phone"></i> +1 212 621 40520<br />
+					</address>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="container footer-bottom">
+		<div class="footer-copyright">
+			<p>&copy; 2013 by Olin. All Rights Reserved.</p>
+		</div>
+	</div>
+	
+</footer>
+
+<a href="#" id="scrollToTop">
+	<i class="icon-angle-up icon-2x"></i>
+</a>
+
+<!-- Contact Popup (Modal) -->
+<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">We would love to hear from you</h4>
+      </div>
+      <div class="modal-body">
+
+				<p class="lead">
+					Our qualified support is waiting for you, literally. Ask us anything you want. We will get back to you within 24h, seven days a week.</strong>
+				</p>
+				<form name="contactform" id="contactform" class="margin-bottom-large" method="post" action="contactform.php">		
+					<div class="row">
+						<div class="form-group col-md-6">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" placeholder="" class="form-control" />
+						</div>
+						<div class="form-group col-md-6">
+							<label for="email">Email <span class="text-warning">*</span></label>
+							<input type="text" name="email" id="email" placeholder="" class="form-control" />
+							<div id="email_error_empty" class="error">Please enter your email address.</div>
+							<div id="email_error_invalid" class="error">Please enter a valid email address.</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="subject">Subject</label>
+						<input type="text" name="subject" id="subject" class="form-control" placeholder="" />
+					</div>
+					<div class="form-group">
+						<label for="message">Message <span class="text-warning">*</span></label>
+						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder=""></textarea>
+						<div id="message_error_empty" class="error">Please enter a message.</div>
+						<div id="message_error_invalid" class="error">Please check your message for any errors.</div>
+					</div>
+	
+					<div id="mailsuccess" class="success">Your message has been sent successfully.</div>
+					<div id="mailfail" class="error">Sorry, error occured this time sending your message.</div>
+					
+					<div class="margin-top-base">
+						<input type="submit" id="submit_contact_form" class="btn btn-primary" value="Send">				
+						<small class="pull-right text-muted">* required</small>
+					</div>
+					<script src="assets/js/validation.js"></script>
+				</form>
+
+				<div class="row">
+					<div class="col-sm-6">
+						<h4 class="invert">Great Company Inc.</h4>
+						<address>
+							<i class="icon-map-marker"></i> Main Street, New York City, United States<br />
+							<i class="icon-envelope"></i> mail@yourcompany.com<br />
+							<i class="icon-phone"></i> +1 555 1234 4556<br />
+						</address>		
+					</div>
+					<div class="col-sm-6">
+						<h5 class="hr2 margin-bottom-base text-muted"><i class="icon-time"></i> Business Hours</h5>
+						<p class="lead">
+							<span class="color">Mon - Fri:</span> <span class="text-muted">9am to 5pm <em>(EST)</em></span><br />
+							<span class="color">Sat:</span> <span class="text-muted">9am to 2pm <em>(EST)</em></span><br />
+							<span class="color">Sun:</span> <span class="text-muted">closed</span>
+						</p>
+					</div>
+				</div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Libraries & jQuery Plugins -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.bxslider.min.js"></script>
+<script src="assets/js/jquery.isotope.min.js"></script>
+<script src="assets/js/jquery.fittext.js"></script>
+<script src="assets/js/jquery.fitvids.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.hoverdir.js"></script>
+<script src="assets/js/validation.js"></script>
+<script src="assets/js/theme.js"></script>
+ 
+</body>
+</html>
