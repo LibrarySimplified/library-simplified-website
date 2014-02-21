@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<title>Library Simplified &middot; Home</title>
+<link rel="icon" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts (more: http://www.google.com/fonts) -->
+<!-- Main Font -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<!-- Headings -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<!-- Handwritten -->
+<link href="http://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+<!-- Countdown, Pricing Table Price Tag -->
+<link href="http://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+<!-- Logo -->
+<link href="http://fonts.googleapis.com/css?family=Cantora+One" rel="stylesheet" type="text/css">
+
+<!-- CDN Bootstrap & FontAwesome -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- CSS Libraries -->
+<link href="assets/css/animate.min.css" rel="stylesheet">
+<link href="assets/css/bxslider.css" rel="stylesheet">
+<link href="assets/css/magnific-popup.css" rel="stylesheet">
+
+<!-- Theme Specific CSS -->
+<link href="assets/css/styles.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+
+<!-- Predefined Color Scheme -->
+<link href="assets/css/colors/orange.css" rel="stylesheet" id="colors">
+
+<!-- LESS - Development Only
+<link href="assets/less/styles.less" rel="stylesheet/less" />
+<script>less = { env: 'development' };</script>
+<script src="assets/js/less.js"></script>
+-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+<link href="assets/css/ie8.css" rel="stylesheet"></link>
+<![endif]-->
+
+<!--Charts-->
+<script src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+  google.load('visualization', '1',null); // No 'packages' section.
+
+  google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {
+    // Define the chart using setters:
+    var chart1 = new google.visualization.ChartWrapper();
+    chart1.setChartType('ColumnChart');
+    chart1.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=1:4&drive_web#gid=0');
+    chart1.setContainerId('chart1');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart1.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart1.draw();
+
+    var chart2 = new google.visualization.ChartWrapper();
+    chart2.setChartType('ColumnChart');
+    chart2.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=7:14&drive_web#gid=0');
+    chart2.setContainerId('chart2');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart2.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart2.draw();
+
+    var chart3 = new google.visualization.ChartWrapper();
+    chart3.setChartType('ColumnChart');
+    chart3.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=15:19&drive_web#gid=0');
+    chart3.setContainerId('chart3');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart3.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart3.draw();
+
+    var chart4 = new google.visualization.ChartWrapper();
+    chart4.setChartType('ColumnChart');
+    chart4.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=21:25&drive_web#gid=0');
+    chart4.setContainerId('chart4');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart4.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart4.draw();
+
+    var chart5 = new google.visualization.ChartWrapper();
+    chart5.setChartType('BarChart');
+    chart5.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=27:33&drive_web#gid=0');
+    chart5.setContainerId('chart5');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart5.setOptions({'legend':'none', 'colors': ['#ee8900']});
+    chart5.draw();
+
+    var chart6 = new google.visualization.ChartWrapper();
+    chart6.setChartType('BarChart');
+    chart6.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=35:39&drive_web#gid=0');
+    chart6.setContainerId('chart6');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart6.setOptions({'legend':'none', 'colors': ['#ee8900']});
+    chart6.draw();
+
+    var chart7 = new google.visualization.ChartWrapper();
+    chart7.setChartType('ColumnChart');
+    chart7.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=41:42&drive_web#gid=0');
+    chart7.setContainerId('chart7');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart7.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart7.draw();
+
+    var chart8 = new google.visualization.ChartWrapper();
+    chart8.setChartType('ColumnChart');
+    chart8.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=44:48&drive_web#gid=0');
+    chart8.setContainerId('chart8');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart8.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart8.draw();
+
+    var chart9 = new google.visualization.ChartWrapper();
+    chart9.setChartType('ColumnChart');
+    chart9.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=50:51&drive_web#gid=0');
+    chart9.setContainerId('chart9');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart9.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart9.draw();
+
+    var chart10 = new google.visualization.ChartWrapper();
+    chart10.setChartType('ColumnChart');
+    chart10.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=53:54&drive_web#gid=0');
+    chart10.setContainerId('chart10');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart10.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart10.draw();
+
+    var chart11 = new google.visualization.ChartWrapper();
+    chart11.setChartType('ColumnChart');
+    chart11.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=56:58&drive_web#gid=0');
+    chart11.setContainerId('chart11');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart11.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart11.draw();
+
+    var chart12 = new google.visualization.ChartWrapper();
+    chart12.setChartType('ColumnChart');
+    chart12.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=60:62&drive_web#gid=0');
+    chart12.setContainerId('chart12');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart12.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart12.draw();
+
+    var chart13 = new google.visualization.ChartWrapper();
+    chart13.setChartType('ColumnChart');
+    chart13.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=64:65&drive_web#gid=0');
+    chart13.setContainerId('chart13');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart13.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart13.draw();
+
+    var chart14 = new google.visualization.ChartWrapper();
+    chart14.setChartType('ColumnChart');
+    chart14.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=67:69&drive_web#gid=0');
+    chart14.setContainerId('chart14');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart14.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart14.draw();
+
+    var chart15 = new google.visualization.ChartWrapper();
+    chart15.setChartType('ColumnChart');
+    chart15.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=71:73&drive_web#gid=0');
+    chart15.setContainerId('chart15');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart15.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart15.draw();
+
+    var chart16 = new google.visualization.ChartWrapper();
+    chart16.setChartType('ColumnChart');
+    chart16.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=75:76&drive_web#gid=0');
+    chart16.setContainerId('chart16');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart16.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart16.draw();
+
+    var chart17 = new google.visualization.ChartWrapper();
+    chart17.setChartType('ColumnChart');
+    chart17.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=78:80&drive_web#gid=0');
+    chart17.setContainerId('chart17');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart17.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart17.draw();
+
+	var chart18 = new google.visualization.ChartWrapper();
+    chart18.setChartType('ColumnChart');
+    chart18.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=71:73&drive_web#gid=0');
+    chart18.setContainerId('chart18');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart18.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart18.draw();
+
+    var chart19 = new google.visualization.ChartWrapper();
+    chart169.setChartType('ColumnChart');
+    chart19.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=75:76&drive_web#gid=0');
+    chart19.setContainerId('chart19');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart19.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart19.draw();
+
+    var chart20 = new google.visualization.ChartWrapper();
+    chart20.setChartType('ColumnChart');
+    chart20.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=78:80&drive_web#gid=0');
+    chart20.setContainerId('chart20');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart20.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart20.draw();
+
+  }
+
+</script>
+
+
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-RKWC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-RKWC');</script>
+<!-- End Google Tag Manager -->
+
+
+<header id="header" class="navbar">
+
+  <div class="container">
+    <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	    	<span class="sr-only">Skip navigation</span>
+	    	<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+		  </button> 
+	    <a class="navbar-brand logo" href="index.html">Library Simplified</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+	    <ul class="nav navbar-nav">
+	    	<li class="dropdown">
+	    		<a href="index.html">Home</a>
+	    		<ul class="dropdown-menu">
+	    			<li><a href="about.html">About</a></li>
+	    			<li><a href="news-and-events.html">News and Events</a></li>
+  					<!-- <li><a href="contact.html">Contact Us</a></li>-->
+  					<!-- <li><a href="coming-soon.html">Coming Soon</a></li> -->
+  					<!-- <li><a href="coming-soon-bg-image.html">Coming Soon (Background)</a></li> -->
+	    			<li><a href="project-design.html">Project Design</a></li>
+	    			<!--<li><a href="faq.html">FAQ</a></li>
+	    			<li><a href="404.html">404 - Page not found</a></li>  -->
+	    		</ul>
+	    	</li>
+	    	<li class="dropdown header-search-form">
+	    		<a><i class="icon-search"></i></a>
+		    	<ul class="dropdown-menu">
+			    	<li>
+				    	<form action="404.html" method="post">			    
+						    <input type="text" placeholder="Search for.." />
+						  </form>
+			    	</li>
+		    	</ul>
+	    	</li>
+	    </ul>
+    </nav>
+    
+  </div>
+</header><!-- .navbar-fixed-top -->
+
+<div class="page-top">
+	<div class="container">	
+		<h1 class="page-top-header">LS Survey One</h1>		
+		<ol class="breadcrumb">
+		  <li><a href="/">Home</a></li>
+		  <li class="active">LS Survey One</li>
+		</ol>
+	</div>	
+</div>
+
+<div class="container" id="main">
+
+<div class="row">
+
+	<div class="col-md-3">
+		<div id="sidebar" class="affix" role="complementary">
+			<ul class="nav">
+				<li><a href="#summary">eReaders - Summary</a></li>
+				<li><a href="#income">Income - Key Points of Difference</a></li>
+				<li><a href="#gender">Gender - Key Point of Difference</a></li>
+				<li><a href="#usage">Library - Usage - Key Points of Difference</a></li>
+			</ul>
+		</div><!-- .affix -->
+	</div>
+
+	<div class="col-md-9">
+
+		<div class="row">
+		
+			<h2 id="intro"></h2>
+		
+			<p class="lead">
+
+				The Library Simplified Summary was design was infomred by existing national surveys to understand library patron use of ebooks.  For the first round, 50% of the partner libraries participated.  There were almost 2000 responces to the survey with the over 50% of reponces comming from Kent District Library.  The remaining balance of respondants came from Sacramento Public Libary, Santa Clara Public Library, Alemeda Public Library and Brooklyn Public Library.  A subsequent survey building upon this initial survey is under construction to improve upon and validate this survey's findings accros the remaining libraries.  Additionally, this subsequent survey may expose any point in time bias that may have been introduced in the first round as well as further explore findings in the first survey.</p>
+			<p class="lead">
+				The first section is a general overview of eBook readers, including some comparison against non-eBook readers. The second is attempting to get at a "user profile" by doing a side-by-side comparison on demographic cuts of income, gender, and library usage behavior. 
+			</p>
+			<p class="lead">
+			A hard copy of the report can be downloaded <a href="assets/pdf/librarysimplifiedsurvey.pdf" target="_blank">here.</a>
+			</p>
+			
+			<hr />
+		
+		<h2 id="summary">eReaders - Summary</h2>
+		<p>
+			<ol>
+				<li>eReaders most often use the library to look for print books</li>
+				<li>On average, eReaders visit the library slightly less than non-eReaders</li>
+				<li>Generally, eReaders are reading for the same purposes as non-eReaders, with pleasure reading most dominant </li>
+				<li>eReaders prefer eBooks for their speed and convenience—they are most often the preferred format for travel and bed, while print is still preferred greatly for kids and sharing</li>
+				<li>The majority of eReaders look for recommendations from
+				<ul>
+					<li> friends (92%)</li>
+					<li> online bookstores (84%) </li>
+					<li>librarians (61%)</li> 
+			seeking more recommendations across sources than non-eReaders 
+				</ul>
+				<li>About half of eReaders read newspapers and magazines in digital formats</li>
+				<li>Just over half (52%) of eReaders use multiple devices to read </li>
+				<li>Most eReaders are using a tablet (58%) or an eReader (50%), while some are using their smartphone or a PC 
+				<li>45% of eReaders own a Kindle, and 20% own a Nook</li>
+				<li>On average, eReaders are wealthier, more likely to be employed, and have higher levels of educations than non-eReaders </li>
+			</ol>
+
+		<div class="row">
+
+			<div class="col-lg-6">
+				<p>
+				<h6>What do you most often do at the library?</h6>
+				</p>
+				<span id="chart1"></span>	
+			</div>
+			<div class="col-lg-6">
+				<p>
+				<h6>Often do you physically visit the library?</h6>
+				</p>
+				<span id="chart2"></span>	
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div class="col-lg-6">
+				<p>
+				<h6>Do you ever read for the follwoing purposes?</br>
+				(Percent a few times a month or more)</h6>
+				</p>
+				<span id="chart3"></span>	
+			</div>
+
+			<div class="col-lg-6">
+				<h6>Do you ever get recommendations from the following sources?</h6>
+				<span id="chart4"></span>	
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div class="col-lg-6">
+				<h6>Circumstances where eBooks are prefered </br>
+				(Percent who prefere eBooks, eBook readers only)</h6>
+				<span id="chart5"></span>	
+			</div>
+
+			<div class="col-lg-6">
+				<h6>What Devices to you use to read eBooks</h6>
+				<span id="chart6"></span>	
+			</div>
+		</div>
+
+		<hr />
+
+		<h2>Key Points of Difference</h2>
+		<p class="lead">
+			This section of the summary analysis privdes a look at several varialbles (income, gender and library usage) that surfaced some key differences in eBook usage accross library users.
+		</p>
+
+		<h3 id="income">Income</h3>
+
+		<p class="lead">
+			The following observations and data from the survey describe and contrast the effect of income on library and eBook usage.
+		</p>
+
+		<div class="row">
+
+			<div class="col-lg-6">
+				<h6>eReading and income</h6>
+				<span id="chart7"></span>	
+			</div>
+				
+			<div class="col-lg-6">
+			<h6>Device use and income</h6>
+				<span id="chart8"></span>	
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div class="col-lg-6">
+				<p>
+				<h6>Physical library visits and income</h6>
+				</p>
+				<span id="chart9"></span>
+			</div>
+
+			<div class="col-lg-6">
+				<p>
+				<h6>Recommendation source preference and income</h6>
+				</p>
+				<span id="chart10"></span>	
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div class="col-lg-6">
+				<p>
+				<h6>eBook format preference and income</h6>
+				</p>
+				<span id="chart11"></span>
+			</div>
+
+			<div class="col-lg-6">
+				<p>
+				<h6>Quality of life and income</h6>
+				</p>
+				<span id="chart12"></span>	
+			</div>
+		</div>
+
+		<h3 id="income">Gender - Key Points of Difference</h3>
+
+		<p class="lead">
+			The following observations and data from the survey describe and contrast the effect of gender on library and eBook usage.
+		</p>
+
+		<div class="row">
+			<div class="col-lg-6">
+				<p>
+				<h6>Physical visits to libraries and gender</h6>
+				</p>
+				<span id="chart13"></span>	
+			</div>
+
+			<div class="col-lg-6">
+				<p>
+				<h6>Purposes for reading and gender</h6>
+				</p>
+				<span id="chart14"></span>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-6">
+				<p>
+				<h6>Recommendation source preference and gender</h6>
+				</p>
+				<span id="chart15"></span>	
+			</div>
+
+			<div class="col-lg-6">
+				<p>
+				<h6>Number of books read and gender</h6>
+				</p>
+				<span id="chart16"></span>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-9">
+				<p>
+				<h6>Device preference and gender</h6>
+				</p>
+				<span id="chart17"></span>	
+			</div>
+		</div>
+
+		<h3 id="income">Library Usage - Key Points of Difference</h3>
+
+		<p class="lead">
+			The following observations and data from the survey describe and contrast overall library use profile (heavy users vs light users) with regard use of library services, eBook reading, device preferences, purpose for reading, and income.
+
+		</p>
+
+		<div class="row">
+			<div class="col-lg-6">
+				<p>
+				<h6>Use of eBooks and overall use of library services</h6>
+				</p>
+				<span id="chart13"></span>	
+			</div>
+
+			<div class="col-lg-6">
+				<p>
+				<h6>eReader device overall use of library services</h6>
+				</p>
+				<span id="chart14"></span>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-6">
+				<p>
+				<h6>Use and overal use of library services</h6>
+				</p>
+				<span id="chart15"></span>	
+			</div>
+
+			<div class="col-lg-6">
+				<p>
+				<h6>Purpose for reading and overall use of library services</h6>
+				</p>
+				<span id="chart16"></span>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-9">
+				<p>
+				<h6> Recommendation source and use of library services</h6>
+				</p>
+				<span id="chart17"></span>	
+			</div>
+		</div>
+
+	</div><!-- .col-md-9 -->
+	
+</div><!-- .row -->
+
+</div><!-- .container -->
+
+<footer id="footer">
+
+	<div class="newsletter">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<h3 class="title"><i class="icon-envelope-alt"></i> Newsletter</h3>
+					<span class="lead">We will only send you good stuff. Promise!</span>
+				</div>
+				<div class="col-md-4">
+					<form class="input-group small" method="post" action="">
+				    <input type="text" class="form-control" placeholder="Your Email Address" />
+				    <div class="input-group-btn">
+				      <button class="btn btn-default" type="button">Sign Up <i class="icon-angle-right"></i></button>
+				    </div>
+				  </form>
+				</div>
+			</div>
+	  </div>
+  </div>
+
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+			
+				<div class="col-md-4">
+					<div class="social-networks">
+						<a href=""><i class="icon-facebook"></i></a>
+						<a href=""><i class="icon-twitter"></i></a>
+						<a href=""><i class="icon-google-plus"></i></a>
+						<a href=""><i class="icon-linkedin"></i></a>
+						<a href=""><i class="icon-tumblr"></i></a>
+						<a href=""><i class="icon-dribbble"></i></a>	
+						<a href=""><i class="icon-instagram"></i></a>
+						<a href=""><i class="icon-pinterest"></i></a>
+						<a href=""><i class="icon-youtube-play"></i></a>
+						<a href=""><i class="icon-rss"></i></a>
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<h6 class="title">About</h6>
+					<p>
+						We are a small team of remarkable people doing great things. The people who worked with us, leave always happy. Get to know a little bit more <a href="about">about us</a>.
+					</p>
+				</div>  
+				
+				<div class="col-md-4">
+					<h6 class="title">Get in Touch</h6>
+					<address>
+						<i class="icon-map-marker"></i> <a class="lightbox-iframe" href="https://maps.google.com/maps?q=Main+Street,+New+York+City,+New+York&amp;hl=en&amp;t=v&amp;hnear=Main+Street,+New+York+City,+New+York" data-toggle="tooltip" title="Show on Google Maps">Main Street, New York City, United States</a><br />
+						<i class="icon-envelope"></i> <a href="mailto:mail@yourcompany.com" data-toggle="tooltip" title="Email Us">mail@yourcompany.com</a><br />
+						<i class="icon-phone"></i> +1 555 1234 4556<br />
+					</address>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="container footer-bottom">
+		<div class="footer-copyright">
+			<p>&copy; 2013 by Olin. All Rights Reserved.</p>
+		</div>
+	</div>
+	
+</footer>
+
+<a href="#" id="scrollToTop">
+	<i class="icon-angle-up icon-2x"></i>
+</a>
+
+<!-- Contact Popup (Modal) -->
+<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">We would love to hear from you</h4>
+      </div>
+      <div class="modal-body">
+
+				<p class="lead">
+					Our qualified support is waiting for you, literally. Ask us anything you want. We will get back to you within 24h, seven days a week.</strong>
+				</p>
+				<form name="contactform" id="contactform" class="margin-bottom-large" method="post" action="contactform.php">		
+					<div class="row">
+						<div class="form-group col-md-6">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" placeholder="" class="form-control" />
+						</div>
+						<div class="form-group col-md-6">
+							<label for="email">Email <span class="text-warning">*</span></label>
+							<input type="text" name="email" id="email" placeholder="" class="form-control" />
+							<div id="email_error_empty" class="error">Please enter your email address.</div>
+							<div id="email_error_invalid" class="error">Please enter a valid email address.</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="subject">Subject</label>
+						<input type="text" name="subject" id="subject" class="form-control" placeholder="" />
+					</div>
+					<div class="form-group">
+						<label for="message">Message <span class="text-warning">*</span></label>
+						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder=""></textarea>
+						<div id="message_error_empty" class="error">Please enter a message.</div>
+						<div id="message_error_invalid" class="error">Please check your message for any errors.</div>
+					</div>
+	
+					<div id="mailsuccess" class="success">Your message has been sent successfully.</div>
+					<div id="mailfail" class="error">Sorry, error occured this time sending your message.</div>
+					
+					<div class="margin-top-base">
+						<input type="submit" id="submit_contact_form" class="btn btn-primary" value="Send">				
+						<small class="pull-right text-muted">* required</small>
+					</div>
+					<script src="assets/js/validation.js"></script>
+				</form>
+
+				<div class="row">
+					<div class="col-sm-6">
+						<h4 class="invert">Great Company Inc.</h4>
+						<address>
+							<i class="icon-map-marker"></i> Main Street, New York City, United States<br />
+							<i class="icon-envelope"></i> mail@yourcompany.com<br />
+							<i class="icon-phone"></i> +1 555 1234 4556<br />
+						</address>		
+					</div>
+					<div class="col-sm-6">
+						<h5 class="hr2 margin-bottom-base text-muted"><i class="icon-time"></i> Business Hours</h5>
+						<p class="lead">
+							<span class="color">Mon - Fri:</span> <span class="text-muted">9am to 5pm <em>(EST)</em></span><br />
+							<span class="color">Sat:</span> <span class="text-muted">9am to 2pm <em>(EST)</em></span><br />
+							<span class="color">Sun:</span> <span class="text-muted">closed</span>
+						</p>
+					</div>
+				</div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Libraries & jQuery Plugins -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.bxslider.min.js"></script>
+<script src="assets/js/jquery.isotope.min.js"></script>
+<script src="assets/js/jquery.fittext.js"></script>
+<script src="assets/js/jquery.fitvids.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.hoverdir.js"></script>
+<script src="assets/js/validation.js"></script>
+<script src="assets/js/theme.js"></script>
+ 
+</body>
+</html>
