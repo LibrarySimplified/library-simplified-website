@@ -258,12 +258,20 @@
     chart25.draw();
 
     var chart26 = new google.visualization.ChartWrapper();
-    chart26.setChartType('ColumnChart');
-    chart26.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=89:90&drive_web#gid=0');
+    chart26.setChartType('BarChart');
+    chart26.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=109:111&drive_web#gid=0');
     chart26.setContainerId('chart26');
     //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
     chart26.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
     chart26.draw();
+
+    var chart27 = new google.visualization.ChartWrapper();
+    chart27.setChartType('ColumnChart');
+    chart27.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=113:114&drive_web#gid=0');
+    chart27.setContainerId('chart27');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart27.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart27.draw();
 
   }
 
@@ -390,7 +398,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<li>45% of eReaders own a Kindle, and 20% own a Nook</li>
 				<li>On average, eReaders are wealthier, more likely to be employed, and have higher levels of educations than non-eReaders </li>
 			</ol>
-            The charts and graphs below provide some detailed highlevel findings with regard to the summary conclusions above.
+        </p>
+
+        <p class="lead">
+            The following data points from the survey provide are informative to the technology decision for the Library Simplified program.
+        </p>
+
+        <div class="row">
+
+            <div class="col-lg-6">
+            <h6>How do you find the e-books that you read?</h6>
+                <span id="chart26"></span>   
+                <p>
+                    The survey reveals that folks typically search for particular titles they would like.  This could be that a result of search being, logically, the most efficient path after a recommendation for locating a title.  Browse, while less efficient if one knows what they are looking for, is arguably important to finding a book.  This opens possibilities for recommendation based browsing, subscriptions or other faceted browse experiences.  More importantly, it reinforces the notion that recommendation is a key area of investment for Library's seeking to help users discover their collections.
+                </p>    
+            </div>
+                
+            <div class="col-lg-6">
+            <h6>Do you plan on purchasing a dedicated eReading device?</h6>
+            <span id="chart27"></span>
+            <p>
+               As we see, dedicated eReading devices are not a favored technology for readers going forward.  While this may merely reflect the large percentage of persons who already have a device in the survey, it may also suggest that they have no intention of replacing or refreshing that particular technology in favor of a Tablet of other multi-function device.
+            </p>    
+            </div>
+        </div>
+
+        <p class="lead">
+
+            The charts and graphs below provide some detailed highlevel findings with regard to the summary conclusions bulleted above.
 
         </p>
 
