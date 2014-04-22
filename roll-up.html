@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<title>Library Simplified &middot; Analysis Roll Up</title>
+<link rel="icon" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts (more: http://www.google.com/fonts) -->
+<!-- Main Font -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<!-- Headings -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<!-- Handwritten -->
+<link href="http://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+<!-- Countdown, Pricing Table Price Tag -->
+<link href="http://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+<!-- Logo -->
+<link href="http://fonts.googleapis.com/css?family=Cantora+One" rel="stylesheet" type="text/css">
+
+<!-- CDN Bootstrap & FontAwesome -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- CSS Libraries -->
+<link href="assets/css/animate.min.css" rel="stylesheet">
+<link href="assets/css/bxslider.css" rel="stylesheet">
+<link href="assets/css/magnific-popup.css" rel="stylesheet">
+
+<!-- Theme Specific CSS -->
+<link href="assets/css/styles.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+
+<!-- Predefined Color Scheme -->
+<link href="assets/css/colors/orange.css" rel="stylesheet" id="colors">
+
+<!-- LESS - Development Only
+<link href="assets/less/styles.less" rel="stylesheet/less" />
+<script>less = { env: 'development' };</script>
+<script src="assets/js/less.js"></script>
+-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+<link href="assets/css/ie8.css" rel="stylesheet"></link>
+<![endif]-->
+
+<!--Charts-->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="tablequerywrapper.js"></script>
+<script type="text/javascript">
+    google.load('visualization', '1', {'packages' : ['table']});
+    google.setOnLoadCallback(init);
+
+    var dataSourceUrl = 'https://spreadsheets.google.com/tq?key=rh_6pF1K_XsruwVr_doofvw&pub=1';
+    var query, options, container;
+
+    function init() {
+      query = new google.visualization.Query(dataSourceUrl);
+      container = document.getElementById("table");
+      options = {'pageSize': 2};
+      sendAndDraw();
+    }
+
+    function sendAndDraw() {
+      query.abort();
+      var tableQueryWrapper = new TableQueryWrapper(query, container, options);
+      tableQueryWrapper.sendAndDraw();
+    }
+
+    function setOption(prop, value) {
+      options[prop] = value;
+      sendAndDraw();
+    }
+
+  </script>
+
+
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-RKWC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-RKWC');</script>
+<!-- End Google Tag Manager -->
+
+
+<header id="header" class="navbar">
+
+  <div class="container">
+    <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	    	<span class="sr-only">Skip navigation</span>
+	    	<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+		  </button> 
+	    <a class="navbar-brand logo" href="index.html">Library Simplified</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+	    <ul class="nav navbar-nav">
+	    	<li class="dropdown">
+	    		<a href="index.html">Home</a>
+	    		<ul class="dropdown-menu">
+	    			<li><a href="about.html">About</a></li>
+	    			<li><a href="news-and-events.html">News and Events</a></li>
+  					<!-- <li><a href="contact.html">Contact Us</a></li>-->
+  					<!-- <li><a href="coming-soon.html">Coming Soon</a></li> -->
+  					<!-- <li><a href="coming-soon-bg-image.html">Coming Soon (Background)</a></li> -->
+	    			<li><a href="project-design.html">Project Design</a></li>
+	    			<!--<li><a href="faq.html">FAQ</a></li>
+	    			<li><a href="404.html">404 - Page not found</a></li>  -->
+	    		</ul>
+	    	</li>
+	    	<li class="dropdown header-search-form">
+	    		<a><i class="icon-search"></i></a>
+		    	<ul class="dropdown-menu">
+			    	<li>
+				    	<form action="404.html" method="post">			    
+						    <input type="text" placeholder="Search for.." />
+						  </form>
+			    	</li>
+		    	</ul>
+	    	</li>
+	    </ul>
+    </nav>
+    
+  </div>
+</header><!-- .navbar-fixed-top -->
+
+<div class="page-top">
+	<div class="container">	
+		<h1 class="page-top-header">Reserch and Analysis</h1>		
+		<ol class="breadcrumb">
+		  <li><a href="/">Home</a></li>
+		  <li class="active">Research and Analysis</li>
+		</ol>
+	</div>	
+</div>
+
+<div class="container" id="main">
+
+<div class="row">
+
+	<div class="col-md-3">
+		<div id="sidebar" class="affix" role="complementary">
+			<ul class="nav">
+				<li><a href="#techadoption">Technology Adoption Findings</a></li>
+				<li><a href="#ebooksrising">e-books are on the rise</a></li>
+				<li><a href="#ebooksandlibraries">e-Books and Libraries</a></li>
+				<li><a href="#monopolization">Monopolization</a></li>
+				<li><a href="#recommendation">Recommendation based services</a></li>
+				<li><a href="#selfpublishing">Self-publishing</a><li>
+			</ul>
+		</div><!-- .affix -->
+	</div>
+
+	<div class="col-md-9">
+
+		<div class="row">
+		  </hr>
+		
+		<h2 id="techadoption">Internet and Technology Adoption</h2>
+		<p class="lead">
+           Rapid and widespread adoption of the Internet and digital technology continues to influence modern life, including the way people access information, consume media, and communicate</br>
+           Downloadeable Fact Sheet <a href="assets/pdf/librarysimplifiedsurvey.pdf" target="_blank">here.</a>
+        </p>
+        <h4>Technology Adoption Findings</h4>
+		<ul>
+           	<li>87% of American adults use the Internet, with near-saturation usage among households earning $75K or more (99%), young adults ages 18-29 (97%), and those with college degrees (97%) </li>
+			<li>Attitudes about the Internet are generally positive—90% of American Internet users say the Internet has been good thing for them personally, and 53% say it would be very hard to give up16 </li>
+			<li>Most Internet user feel online communication is strengthening their relationships16</li>
+			<li>73% of American adults use at least one social network; 42% use multiple networks; Facebook is most popular (71%), followed by LinkedIn (22%), Pinterest (21%) and Twitter (18%) </li>
+			<li>Photo and video sharing are growing—57% of adult Internet users post original photos online, and 47% of adult Internet users repost photos they’ve found </li>
+			<li>Device multi-tasking is growing, particularly among youth—when watching TV, consumers 12 – 17 often use laptops (57%), smartphones (44%), and tablets (26%) at the same time </li>
+			<li>One in four teens are “cell-mostly” internet users- 78% of teens who have a cell phone (78%), of those half own smartphones (47%), One in four teens (23%) have a tablet computer, Nine in ten (93%) teens have a computer or have access to one at home, Seven in ten (71%) teens with home computer access say the laptop or desktop is shared with family.  </li>
+			<li>Adoption of electronic reading is growing, particularly for young people—28% of all adults and 47% of 18 – 29-year-olds have read an eBook in the last year </li>
+			<li>Since 2012 household ownership of a tablet computer has more than doubled - use of a tablet computer at home has tripled among 5-15s since 2012 (42% vs. 14%) 
+			<li>Around a quarter of children aged 12 to 15 years old (yo) have their own tablet computer</li>
+			<li>Three per cent of children aged 3-4 have their own tablet computer.  This ownership figure increases to one in eight 5-7yo (13%), around one in five 8-11yo (18%) and one in four 12-15yo (26%), for 5-7s (39% vs. 11%), 8-11s (44% vs. 13%) and 12-15s (42% vs. 17%).</li>
+			<li>One-quarter (28%) of 3-4s use a tablet computer at home.</li>
+			</ul>
+        </p>
+
+        <p class="lead">
+            With the rise in internet and digital technology adoption, many Americans have moved toward digital as a venue for reading.  The earlier findings above also indicate that digital technology is being adopted by younger and younger generations.  Their embrace of eBooks over the physical format will likely be higher given their early comfort and familiarity with technology medium over older Amercians who grew up reading only physical books.  This can be problematic for libraries as time goes on.  Consumer expectations are being set for immediate demand satisfaction and almost unlimited breadth of content.  Libraries neither own their user experience and have limited, time based and queu based acces to content.  Industry forces driving innovation are aimed at establishing barriers to compettion or market exploitation.
+        </p>
+
+        <div class="row">
+
+            <div class="col-lg-6">
+            <h6 id="ebooksrising">e-books are on the rise</h6>
+                <span id="chart26"></span>   
+            <p>
+        <ul>   
+			<li>According to a Pew study, 28% of Americans read an e-book in 2014, up from 17% in 2011.
+			<li>Print reading still remains more popular—69% of Americans read a print book in 2014, down only slightly from 71% in 2011. 
+			<li>Half of American adults now own either a tablet or an e-reader
+			<li>E-book readers who own tablets or e-readers are very likely to read e-books on those devices—but those who own computers or cellphones sometimes turn to those platforms, too. 
+			<li>The proportion of Americans who read e-books is growing, but few have completely replaced print books for electronic versions.</li>
+		</ul>
+
+		<h6 id="#ebooksandlibraries">The rules governing e-book circulation and pricing pose a problem for libraries </h6>
+
+		<ul>
+			<li>The real problem with e-books is that they’re more “e” than book, so an entirely different set of rules govern what someone — from an individual to a library — can and can’t do with them compared to physical books, especially when it comes to pricing.</li>
+			<li>Buyers of physical books can do whatever they want with them, from loaning to friends as many times as they like to reselling at a used-books store. (Note that when a book owner does this, she gets that money — not the publisher.)</li>
+			<li>Take the example of J.K. Rowling’s pseudonymous book, Cuckoo’s Calling. For the physical book, libraries would pay $14.40 from book distributor Baker & Taylor — close to the consumer price of $15.49 from Barnes & Noble and of $15.19 from Amazon. But even though the ebook will cost consumers $6.50 on Amazon and Barnes & Noble, libraries would pay $78 (through library ebook distributors Overdrive and 3M) for the same thing</li>
+		</ul>
+		</p>    
+            </div>
+                
+            <div class="col-lg-6">
+            <h6 id="monopolization">The power in publishing is quickly becoming concentrated among a few corporations like Apple, Amazon, and OverDrive and the quest for profits is driving attention to a smaller number of books</h6>
+
+            <p>
+            <ul>	
+				<li>For Libraries OverDrive represents 90% of the Library market for eBooks. </li> 
+				<li>Outside the library, Amazon represent 70%-to-80% market share for eBooks sales and about a 50% market share for books sold online (e.g. eBooks and printed books sold via the Internet.)  </li>
+				<li>Library prices for eBooks are seeing 100-200% percent price increases for libraries while consumers can access up to 10-40% of the content for free through service such as Osyter and Scribed subscription services.</li>
+				<li>Of the 5K titles in OverDrive, 90% is accessible by on user as a time, and 10% of the collection technical expires at the end of the year.</li>
+				</li>17% of the 19K titles in 3M are accessible by on user as a time, and the other 83% expire over time</li>
+				<li>Some veiw this rapid monopolization by companies like Apple and Amazon to be gatekeepers, who are “inherently elitist” and act as “barriers to the complete commercialization of ideas.” The quest for publishing profits in an economy of scarcity drives the money toward a few big books, as does the gradual disappearance of book reviewers and knowledgeable booksellers34</li>
+			</ul>
+            </p>    
+            </div>
+        </div>
+
+
+		<div class="row">
+
+			<div class="col-lg-6">
+				
+			<h6 id="recommendation">Recommendations are becoming more popular and readers are relying less on online retailers and more on libraries to find books they like</h6>
+            <p>
+            <ul>	
+				<li>The popularity of Netfix, Spotify, and Pandora suggests we are a culture who loves recommendations. (Subscribers: Netflix 40mil, Spotify  6mil., Pandora 2.5mil.)</li>
+				<li>Just 7% of readers found their last book at an online retailer: a number that has barely budged in the last three years. </li>
+				<li>Libraries are evolving to become the first choice for patrons trying to find their next great read, even if they prefer to buy that book online.35</li>
+				<li>The increasing use of visual merchandising and self-checkout allows librarians to focus more on patrons and become concierges to the world of reading.35</li>
+  			</ul>
+            </p>
+
+			</div>
+			<div class="col-lg-6">
+				
+				<h6>Self-publishing continues to grow in popularity, giving rise to serialized fiction and the concept of author as brand</h6>
+                <p>
+                	<ul>
+					<li>Serialized web fiction is becoming popular; Wattpad, a leading site, has more than two million writers producing 100,000 pieces of material a day for 20 million readers </li>
+					<li>Social networking has created the opportunity for only authors to create a brand and develop an online following for their work 36</li>
+					<li>Long-form journalism is also having a renaissance due to new publishing platforms like Longform and Byliner</li>
+					</ul>
+
+                </p>
+			</div>
+		</div>
+
+	</div><!-- .col-md-9 -->
+	
+</div><!-- .row -->
+
+</div><!-- .container -->
+
+<footer id="footer">
+
+    <div class="newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3 class="title"><i class="icon-envelope-alt"></i> Contact Us</h3>
+                    <span class="lead">We will only send you good stuff. Promise!</span>
+                </div>
+                <!--<div class="col-md-4">
+                    <form class="input-group small" method="post" action="">
+                    <input type="text" class="form-control" placeholder="Your Email Address" />
+                    <div class="input-group-btn">
+                      <button class="btn btn-default" type="button">Sign Up <i class="icon-angle-right"></i></button>
+                    </div>
+                  </form>
+                </div>-->
+            </div>
+      </div>
+  </div>
+
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-4">
+                    <div class="social-networks">
+                        <a href="https://www.facebook.com/nypl"><i class="icon-facebook"></i></a>
+                        <a href="https://twitter.com/nypl"><i class="icon-twitter"></i></a>
+                        <a href="https://plus.google.com/u/0/+newyorkpubliclibrary/posts"><i class="icon-google-plus"></i></a>
+                        <a href="http://nypl.tumblr.com/"><i class="icon-tumblr"></i></a>
+                        <a href="https://www.pinterest.com/nypl/"><i class="icon-pinterest"></i></a>
+                        <!-- <a href=""><i class="icon-linkedin"></i></a>
+                        <a href=""><i class="icon-dribbble"></i></a>    
+                        <a href=""><i class="icon-instagram"></i></a>
+                        <a href=""><i class="icon-pinterest"></i></a>
+                        <a href=""><i class="icon-youtube-play"></i></a>
+                        <a href=""><i class="icon-rss"></i></a> -->
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <h6 class="title">About</h6>
+                    <p>
+                        We are a team of remarkable institutions doing great things. Get to know a little bit more <a href="about">about us</a>.
+                    </p>
+                </div>  
+                
+                <div class="col-md-4">
+                    <h6 class="title">Get in Touch</h6>
+                    <address>
+                        <i class="icon-map-marker"></i> <a class="lightbox-iframe" href="https://maps.google.com/maps?q=NYPL+5th+Ave+at+42nd+St,+New+York+City,+New+York&amp;hl=en&amp;t=v&amp;hnear=5th+Ave+at+42nd+St,+New+York+City,+New+York" data-toggle="tooltip" title="Show on Google Maps">42nd Street 5th Avenue, New York City, United States</a><br />
+                        <i class="icon-envelope"></i> <a href="mailto:info@librarysimplified.com" data-toggle="tooltip" title="Email Us">info@librarysimplified.com</a><br />
+                        <i class="icon-phone"></i> +1 212 621 40520<br />
+                    </address>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="container footer-bottom">
+        <div class="footer-copyright">
+            <p>&copy; 2013 by Olin. All Rights Reserved.</p>
+        </div>
+    </div>
+    
+</footer>
+
+<a href="#" id="scrollToTop">
+    <i class="icon-angle-up icon-2x"></i>
+</a>
+
+<!-- Contact Popup (Modal) -->
+<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">We would love to hear from you</h4>
+      </div>
+      <div class="modal-body">
+
+                <p class="lead">
+                    Ask us anything you want. We will get back to you during the work week.</strong>
+                </p>
+                <form name="contactform" id="contactform" class="margin-bottom-large" method="post" action="contactform.php">       
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="" class="form-control" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email">Email <span class="text-warning">*</span></label>
+                            <input type="text" name="email" id="email" placeholder="" class="form-control" />
+                            <div id="email_error_empty" class="error">Please enter your email address.</div>
+                            <div id="email_error_invalid" class="error">Please enter a valid email address.</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" id="subject" class="form-control" placeholder="" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message <span class="text-warning">*</span></label>
+                        <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder=""></textarea>
+                        <div id="message_error_empty" class="error">Please enter a message.</div>
+                        <div id="message_error_invalid" class="error">Please check your message for any errors.</div>
+                    </div>
+    
+                    <div id="mailsuccess" class="success">Your message has been sent successfully.</div>
+                    <div id="mailfail" class="error">Sorry, error occured this time sending your message.</div>
+                    
+                    <div class="margin-top-base">
+                        <input type="submit" id="submit_contact_form" class="btn btn-primary" value="Send">             
+                        <small class="pull-right text-muted">* required</small>
+                    </div>
+                    <script src="assets/js/validation.js"></script>
+                </form>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4 class="invert">Library Simplified</h4>
+                        <address>
+                            <i class="icon-map-marker"></i> the New York Public Library, 5th Ave at 42nd St, New York City, United States<br />
+                            <i class="icon-envelope"></i> info@librarysimplified.com<br />
+                            <i class="icon-map-marker"></i> 42nd Street and 5th Avenue, New York City, United States<br />
+                            <i class="icon-envelope"></i> info@librarysimplified.com<br />
+                            <i class="icon-phone"></i> +1 212 621 0520<br />
+                        </address>      
+                    </div>
+                </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Libraries & jQuery Plugins -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.bxslider.min.js"></script>
+<script src="assets/js/jquery.isotope.min.js"></script>
+<script src="assets/js/jquery.fittext.js"></script>
+<script src="assets/js/jquery.fitvids.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.hoverdir.js"></script>
+<script src="assets/js/validation.js"></script>
+<script src="assets/js/theme.js"></script>
+ 
+</body>
+</html>
