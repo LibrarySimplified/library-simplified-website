@@ -262,7 +262,7 @@
     chart26.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=109:111&drive_web#gid=0');
     chart26.setContainerId('chart26');
     //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
-    chart26.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart26.setOptions({'legend':'none'});
     chart26.draw();
 
     var chart27 = new google.visualization.ChartWrapper();
@@ -384,19 +384,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <ul>
                     <li>Responces: 1911</li>
                     <li>Reported Gender: 80% Female </li>
-                    <ul>Education
+                    <li>Education<ul>
                         <li>Did not graduate Highschool: 2%</li>
                         <li>Highschool/or equivalent: 7%</li>
                         <li>College/associate's Degree: 24%</li>
                         <li>College/bachelor's Degree: 36%</li>
                         <li>Post-colelge/Advanced degree: 31%</li>
-                    </ul>
+                    </ul></li>
                     <li>Read eBooks: 74%</li>
-                    <ul>Acquire eBooks
+                    <li>Acquire eBooks<ul>
                         <li>Public Library: 66%</li>
                         <li>eReader platform's storefront: 12%</li>
                         <li>Online Store/Website: 18%</li>
-                    </ul>
+                    </ul></li>
                 </ul>
             </br>
             <p class="lead">
