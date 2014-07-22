@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<title>Library Simplified &middot; Survey 2</title>
+<link rel="icon" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts (more: http://www.google.com/fonts) -->
+<!-- Main Font -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<!-- Headings -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<!-- Handwritten -->
+<link href="http://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+<!-- Countdown, Pricing Table Price Tag -->
+<link href="http://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+<!-- Logo -->
+<link href="http://fonts.googleapis.com/css?family=Cantora+One" rel="stylesheet" type="text/css">
+
+<!-- CDN Bootstrap & FontAwesome -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- CSS Libraries -->
+<link href="assets/css/animate.min.css" rel="stylesheet">
+<link href="assets/css/bxslider.css" rel="stylesheet">
+<link href="assets/css/magnific-popup.css" rel="stylesheet">
+
+<!-- Theme Specific CSS -->
+<link href="assets/css/styles.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+
+<!-- Predefined Color Scheme -->
+<link href="assets/css/colors/orange.css" rel="stylesheet" id="colors">
+
+<!-- LESS - Development Only
+<link href="assets/less/styles.less" rel="stylesheet/less" />
+<script>less = { env: 'development' };</script>
+<script src="assets/js/less.js"></script>
+-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+<link href="assets/css/ie8.css" rel="stylesheet"></link>
+<![endif]-->
+
+<!--Charts-->
+<script src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+  google.load('visualization', '1',null); // No 'packages' section.
+
+  google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {
+    // Define the chart using setters:
+    var chart1 = new google.visualization.ChartWrapper();
+    chart1.setChartType('ColumnChart');
+    chart1.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=1:4&drive_web#gid=0');
+    chart1.setContainerId('chart1');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart1.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart1.draw();
+
+    var chart2 = new google.visualization.ChartWrapper();
+    chart2.setChartType('ColumnChart');
+    chart2.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=113:114&drive_web#gid=0');
+    chart2.setContainerId('chart2');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart2.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart2.draw();
+
+  }
+
+</script>
+
+
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-RKWC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-RKWC');</script>
+<!-- End Google Tag Manager -->
+
+
+<header id="header" class="navbar">
+
+  <div class="container">
+    <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	    	<span class="sr-only">Skip navigation</span>
+	    	<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+		  </button> 
+	    <a class="navbar-brand logo" href="index.html">Library Simplified</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+	    <ul class="nav navbar-nav">
+	    	<li class="dropdown">
+	    		<a href="index.html">Home</a>
+	    		<ul class="dropdown-menu">
+	    			<li><a href="about.html">About</a></li>
+	    			<li><a href="news-and-events.html">News and Events</a></li>
+  					<!-- <li><a href="contact.html">Contact Us</a></li>-->
+  					<!-- <li><a href="coming-soon.html">Coming Soon</a></li> -->
+  					<!-- <li><a href="coming-soon-bg-image.html">Coming Soon (Background)</a></li> -->
+	    			<li><a href="project-design.html">Project Design</a></li>
+	    			<!--<li><a href="faq.html">FAQ</a></li>
+	    			<li><a href="404.html">404 - Page not found</a></li>  -->
+	    		</ul>
+	    	</li>
+            <li class="dropdown">
+                <a href="/">Information</a>
+                <ul class="dropdown-menu">
+                    <li><a href="roll-up.html">Industry Reasearch and Analysis</a></li>
+                    <li><a href="LSsurvey1.html">Survey One Roll-up</a></li>
+                    <!-- <li><a href="contact.html">Contact Us</a></li>-->
+                    <!-- <li><a href="coming-soon.html">Coming Soon</a></li> -->
+                    <!-- <li><a href="coming-soon-bg-image.html">Coming Soon (Background)</a></li> -->
+                    <!--<li><a href="faq.html">FAQ</a></li>
+                    <li><a href="404.html">404 - Page not found</a></li>  -->
+                </ul>
+            </li>
+	    	<li class="dropdown header-search-form">
+	    		<a><i class="icon-search"></i></a>
+		    	<ul class="dropdown-menu">
+			    	<li>
+				    	<form action="404.html" method="post">			    
+						    <input type="text" placeholder="Search for.." />
+						  </form>
+			    	</li>
+		    	</ul>
+	    	</li>
+	    </ul>
+    </nav>
+    
+  </div>
+</header><!-- .navbar-fixed-top -->
+
+<div class="page-top">
+	<div class="container">	
+		<h1 class="page-top-header">Survey One</h1>		
+		<ol class="breadcrumb">
+		  <li><a href="/">Home</a></li>
+		  <li class="active">Survey One</li>
+		</ol>
+	</div>	
+</div>
+
+<div class="container" id="main">
+
+<div class="row">
+
+	<div class="col-md-3">
+		<div id="sidebar" class="affix" role="complementary">
+			<ul class="nav">
+				<li><a href="#design">Survey Design</a></li>
+				<li><a href="#profile">Sample Profile</a></li>
+				<li><a href="#summary">Summary</a></li>
+                <li><a href-"#userandnonusers">Findings: Library Users vs. Non-Users</a></li>
+				<li><a href="#usage">Findings: eReading</a></li>
+                <li><a href="#demogrphics">Findings: Demographics Tables</a><li>
+			</ul>
+		</div><!-- .affix -->
+	</div>
+
+	<div class="col-md-9">
+
+		<div class="row">
+		
+			<h2 id="design">About Survey Two: </h2>
+
+            <h4>Survey Design</h4>
+		
+			<p class="lead">
+                The second Library Simplified survey was 10-minute web survey designed to expand the findings from survey one; provide data specific to NYPL boroughs; and draw comparisons between users and non-users. 
+            </p>
+				
+                <strong>Sample Data and Quality</strong>
+                <p>
+                    A third party vendor, Survey Sampling International (SSI), programmed, hosted and managed the survey. SSI used a blind, unbranded invite. Timestamps and data checks were used while the study was in field to identify and remove speeders and straight-liners. However, this does not mean that responses are precise; self-reported behaviors are often overstated and should not be misconstrued as accurate frequencies. 
+                </p>
+
+                <strong>Sample Plan</strong></br>
+                <ul>
+                    <li><strong>Sample Size:</strong> 319 completes (originally 300, but vendor provided extra sample)</li>
+                    <li><strong>Respondent Requirements:</strong> Must live in NYC boroughs of Manhattan, Staten Island, or the Bronx <i>(While some NYPL users reside outside of our boroughs, residency was the most effective screening criterion to ensure a qualified sample.)</i></li>
+                    <li><strong>Quotas</strong><ul>
+                        <li><strong>eReaders:</strong> min. n = 100; Respondents who have read at least one eBook in the past year</li> 
+                        <li><strong>Library Users:</strong> min. n = 100; Respondents who have used a public library in the past year</li>
+                    </ul></li>
+                </ul>
+            </br>
+
+            <h2 id="profile"> Sample Profile</h2>
+
+
+            <h2 id="summary"> Summary</h2>
+            
+            <strong>Library Users vs. Non-Users </strong>
+            <p>            </p>
+                <ol>
+                    <li>On average (arithmetic mean using midpoints), library users report reading about 50% more books than non-users; however, the mode for both populations is 1 – 10 books</li>
+                    <li>Library users more strongly associate themselves with books and reading than non-users, particularly regarding the role of books in their social lives</li>
+                    <li>Library users read more genres than non-users</li>
+                    <li>A significantly greater proportion of library users read fiction, biography, classics, fantasy, and historical fiction, among others</li>
+                    <li>Frequency of reading across formats is positively correlated with library usage </li>
+                    <li>An exception to this is low-frequency library users, ~2/3 of whom are frequent eReaders </li>
+                    <li>Library users prefer print and eBooks for different occasions, while print is favored by the majority of non-users across occasions (largely because fewer read eBooks at all) </li>
+                    <li>The majority of both library users and non-users prefer to buy books rather than check them out from the library</li>
+                    <li>Buying online is the overwhelming favorite for eBooks</li>
+                    <li>Likewise, online bookstores are a key source of recommendations for library users and non-users </li>
+                    <li>In general, library users also seek recommendations from more sources than non-users </li>
+                    <li>The main reason non-users cite for not using a library is that they prefer to buy their books, both in physical bookstores and online </li>
+                </ol>
+
+            <strong>eReading </strong>
+            <p>            </p>
+                <ol>
+                    <li>The majority of respondents who were library users were also eReaders; because of this, data about library users in the previous section is generally also true of eReaders</li>
+                    <li>On average (arithmetic mean using midpoints), eReaders report reading more than 2x as many books as non-eReaders; the mode for both populations is 1 – 10 books</li>
+                    <li>Genres like romance, science, historical fiction, and fantasy / science fiction are read by a significantly greater proportion of eReaders than non-eReaders</li>
+                    <li>Buying online is the most popular way to access new eBooks</li>
+                    <li>Of those that use digital subscription services, Oyster is the most popular</li>
+                    <li>eReaders read to keep up with current events, for work, and for research more than non-eReaders; they also read more non-book media in electronic formats</li>
+                    <li>eReaders indicate a preference for browsing to find their eBooks, using features like cover jackets, ratings, and recommendations</li>
+                    <li>While behaviors may be overstated, the data indicates that consumption of eBooks across multiple devices is common practice among eReaders</li>
+                    <li>The most common devices owned by eReaders are the Kindle, iPhone, and iPad</li>
+                    <li>When reading, eReaders are most often using basic features like digital bookmarks and adjustable fonts; use of social eReading features is less common</li>
+                </ol>
+			<p>	</p>
+			<p>A hard copy of the report can be downloaded <a href="assets/pdf/librarysimplifiedsurvey.pdf" target="_blank">here.</a>
+			</p>
+		  </hr>
+		
+		<h2 id="summary">Summary</h2>
+		<p class="lead">
+           In short, the survey suggests that eReaders behave just like non-eReaders when it comes to reading.  Because they primarily use eBooks for pleasure reading and convenience, they use the library, better known for print books, for research and children’s book needs.  As such, eBooks readers do not look to Library recommendation services with respect to eBooks.  This may reflect the nature of the leisure reading and its social connection; it could also be the influence of income and the ability to pay for convenience so out of habit eReaders have become accustomed to using retailers and online promotion/recommendation lists.  Because eBook readers in general are not using library services.  Logically, it could reflect the fact that library physical spaces are more conducive to discovery of physical material (physical arrangement of material ready access to library personnel) and research activities.  Alternatively, digital properties and systems in use by libraries require users to understand sophisticated taxonomies or interfaces to search for material as opposed to users being pushed or subscribed to recommendations.  The following list provides itemized summary of findings.
+			<ol>
+				<li>eReaders most often use the library to look for print books</li>
+				<li>On average, eReaders visit the library slightly less than non-eReaders</li>
+				<li>Generally, eReaders are reading for the same purposes as non-eReaders, with pleasure reading most dominant </li>
+				<li>eReaders prefer eBooks for their speed and convenience—they are most often the preferred format for travel and bed, while print is still preferred greatly for kids and sharing</li>
+				<li>The majority of eReaders look for recommendations from
+				<ul>
+					<li> friends (92%)</li>
+					<li> online bookstores (84%) </li>
+					<li>librarians (61%)</li> 
+			seeking more recommendations across sources than non-eReaders 
+				</ul>
+				<li>About half of eReaders read newspapers and magazines in digital formats</li>
+				<li>Just over half (52%) of eReaders use multiple devices to read </li>
+				<li>Most eReaders are using a tablet (58%) or an eReader (50%), while some are using their smartphone or a PC 
+				<li>45% of eReaders own a Kindle, and 20% own a Nook</li>
+				<li>On average, eReaders are wealthier, more likely to be employed, and have higher levels of educations than non-eReaders </li>
+			</ol>
+        </p>
+
+        <p class="lead">
+            The following data points from the survey are informative to the technology decisions for the Library Simplified program.
+        </p>
+
+
+        
+        <div class="row">
+            <div class="col-lg-6">
+                
+                <h6>Adoption of eBooks and use of library services</h6>
+                <img src="assets/slides/Slide12.png">
+                <span id="chart24"></span>
+                <p>
+                    This observation offers a very compelling data point that suggest libraries have an opportunity through eBooks to encourage more reading if this is a goal of libraires. 
+                </p>
+                  
+            </div>
+            <div class="col-lg-6">
+                
+                <h6>Income/employment and use of library services</h6>
+                <span id="chart25"></span>
+                <p>
+                    This data corroborates itself and is most likely reflective of the fact that libraries provide a substantial service offering to communities of need.
+                </p>
+                  
+            </div>
+        </div>
+
+	</div><!-- .col-md-9 -->
+	
+</div><!-- .row -->
+
+</div><!-- .container -->
+
+<footer id="footer">
+
+    <div class="newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3 class="title"><i class="icon-envelope-alt"></i> Contact Us</h3>
+                    <span class="lead">We will only send you good stuff. Promise!</span>
+                </div>
+                <!--<div class="col-md-4">
+                    <form class="input-group small" method="post" action="">
+                    <input type="text" class="form-control" placeholder="Your Email Address" />
+                    <div class="input-group-btn">
+                      <button class="btn btn-default" type="button">Sign Up <i class="icon-angle-right"></i></button>
+                    </div>
+                  </form>
+                </div>-->
+            </div>
+      </div>
+  </div>
+
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-4">
+                    <div class="social-networks">
+                        <a href="https://www.facebook.com/nypl"><i class="icon-facebook"></i></a>
+                        <a href="https://twitter.com/nypl"><i class="icon-twitter"></i></a>
+                        <a href="https://plus.google.com/u/0/+newyorkpubliclibrary/posts"><i class="icon-google-plus"></i></a>
+                        <a href="http://nypl.tumblr.com/"><i class="icon-tumblr"></i></a>
+                        <a href="https://www.pinterest.com/nypl/"><i class="icon-pinterest"></i></a>
+                        <!-- <a href=""><i class="icon-linkedin"></i></a>
+                        <a href=""><i class="icon-dribbble"></i></a>    
+                        <a href=""><i class="icon-instagram"></i></a>
+                        <a href=""><i class="icon-pinterest"></i></a>
+                        <a href=""><i class="icon-youtube-play"></i></a>
+                        <a href=""><i class="icon-rss"></i></a> -->
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <h6 class="title">About</h6>
+                    <p>
+                        We are a team of remarkable institutions doing great things. Get to know a little bit more <a href="about">about us</a>.
+                    </p>
+                </div>  
+                
+                <div class="col-md-4">
+                    <h6 class="title">Get in Touch</h6>
+                    <address>
+                        <i class="icon-map-marker"></i> <a class="lightbox-iframe" href="https://maps.google.com/maps?q=NYPL+5th+Ave+at+42nd+St,+New+York+City,+New+York&amp;hl=en&amp;t=v&amp;hnear=5th+Ave+at+42nd+St,+New+York+City,+New+York" data-toggle="tooltip" title="Show on Google Maps">42nd Street 5th Avenue, New York City, United States</a><br />
+                        <i class="icon-envelope"></i> <a href="mailto:info@librarysimplified.com" data-toggle="tooltip" title="Email Us">info@librarysimplified.com</a><br />
+                        <i class="icon-phone"></i> +1 212 621 40520<br />
+                    </address>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="container footer-bottom">
+        <div class="footer-copyright">
+            <p>&copy; 2013 by Olin. All Rights Reserved.</p>
+        </div>
+    </div>
+    
+</footer>
+
+<a href="#" id="scrollToTop">
+    <i class="icon-angle-up icon-2x"></i>
+</a>
+
+<!-- Contact Popup (Modal) -->
+<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">We would love to hear from you</h4>
+      </div>
+      <div class="modal-body">
+
+                <p class="lead">
+                    Ask us anything you want. We will get back to you during the work week.</strong>
+                </p>
+                <form name="contactform" id="contactform" class="margin-bottom-large" method="post" action="contactform.php">       
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="" class="form-control" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email">Email <span class="text-warning">*</span></label>
+                            <input type="text" name="email" id="email" placeholder="" class="form-control" />
+                            <div id="email_error_empty" class="error">Please enter your email address.</div>
+                            <div id="email_error_invalid" class="error">Please enter a valid email address.</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" id="subject" class="form-control" placeholder="" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message <span class="text-warning">*</span></label>
+                        <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder=""></textarea>
+                        <div id="message_error_empty" class="error">Please enter a message.</div>
+                        <div id="message_error_invalid" class="error">Please check your message for any errors.</div>
+                    </div>
+    
+                    <div id="mailsuccess" class="success">Your message has been sent successfully.</div>
+                    <div id="mailfail" class="error">Sorry, error occured this time sending your message.</div>
+                    
+                    <div class="margin-top-base">
+                        <input type="submit" id="submit_contact_form" class="btn btn-primary" value="Send">             
+                        <small class="pull-right text-muted">* required</small>
+                    </div>
+                    <script src="assets/js/validation.js"></script>
+                </form>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4 class="invert">Library Simplified</h4>
+                        <address>
+                            <i class="icon-map-marker"></i> the New York Public Library, 5th Ave at 42nd St, New York City, United States<br />
+                            <i class="icon-envelope"></i> info@librarysimplified.com<br />
+                            <i class="icon-map-marker"></i> 42nd Street and 5th Avenue, New York City, United States<br />
+                            <i class="icon-envelope"></i> info@librarysimplified.com<br />
+                            <i class="icon-phone"></i> +1 212 621 0520<br />
+                        </address>      
+                    </div>
+                </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Libraries & jQuery Plugins -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.bxslider.min.js"></script>
+<script src="assets/js/jquery.isotope.min.js"></script>
+<script src="assets/js/jquery.fittext.js"></script>
+<script src="assets/js/jquery.fitvids.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.hoverdir.js"></script>
+<script src="assets/js/validation.js"></script>
+<script src="assets/js/theme.js"></script>
+ 
+</body>
+</html>
