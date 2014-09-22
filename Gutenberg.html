@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<title>Library Simplified &middot; Survey 2</title>
+<link rel="icon" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts (more: http://www.google.com/fonts) -->
+<!-- Main Font -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<!-- Headings -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<!-- Handwritten -->
+<link href="http://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+<!-- Countdown, Pricing Table Price Tag -->
+<link href="http://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+<!-- Logo -->
+<link href="http://fonts.googleapis.com/css?family=Cantora+One" rel="stylesheet" type="text/css">
+
+<!-- CDN Bootstrap & FontAwesome -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- CSS Libraries -->
+<link href="assets/css/animate.min.css" rel="stylesheet">
+<link href="assets/css/bxslider.css" rel="stylesheet">
+<link href="assets/css/magnific-popup.css" rel="stylesheet">
+
+<!-- Theme Specific CSS -->
+<link href="assets/css/styles.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+
+<!-- Predefined Color Scheme -->
+<link href="assets/css/colors/orange.css" rel="stylesheet" id="colors">
+
+<!-- LESS - Development Only
+<link href="assets/less/styles.less" rel="stylesheet/less" />
+<script>less = { env: 'development' };</script>
+<script src="assets/js/less.js"></script>
+-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+<link href="assets/css/ie8.css" rel="stylesheet"></link>
+<![endif]-->
+
+<!--Charts-->
+<script src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+  google.load('visualization', '1',null); // No 'packages' section.
+
+  google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {
+    // Define the chart using setters:
+    var chart1 = new google.visualization.ChartWrapper();
+    chart1.setChartType('ColumnChart');
+    chart1.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=1:4&drive_web#gid=0');
+    chart1.setContainerId('chart1');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart1.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart1.draw();
+
+    var chart2 = new google.visualization.ChartWrapper();
+    chart2.setChartType('ColumnChart');
+    chart2.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=113:114&drive_web#gid=0');
+    chart2.setContainerId('chart2');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart2.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart2.draw();
+
+  }
+
+</script>
+
+
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-RKWC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-RKWC');</script>
+<!-- End Google Tag Manager -->
+
+
+<header id="header" class="navbar">
+
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Skip navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button> 
+      <a class="navbar-brand logo" href="index.html">Library Simplified</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="index.html">Home</a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">About</a></li>
+            <li><a href="news-and-events.html">News and Events</a></li>
+            <!-- <li><a href="contact.html">Contact Us</a></li>-->
+            <!-- <li><a href="coming-soon.html">Coming Soon</a></li> -->
+            <!-- <li><a href="coming-soon-bg-image.html">Coming Soon (Background)</a></li> -->
+            <li><a href="project-design.html">Project Design</a></li>
+            <!--<li><a href="faq.html">FAQ</a></li>
+            <li><a href="404.html">404 - Page not found</a></li>  -->
+          </ul>
+        </li>
+            <li class="dropdown">
+                <a href="/">Information</a>
+                <ul class="dropdown-menu">
+                    <li><a href="roll-up.html">Industry Reasearch and Analysis</a></li>
+                    <li><a href="LSsurvey1.html">Survey One eBook Survey</a></li>
+                    <li><a href="LSsurvey2.html">Survey Two non-user Survey</a></li>
+                    <!-- <li><a href="coming-soon.html">Coming Soon</a></li> -->
+                    <!-- <li><a href="coming-soon-bg-image.html">Coming Soon (Background)</a></li> -->
+                    <!--<li><a href="faq.html">FAQ</a></li>
+                    <li><a href="404.html">404 - Page not found</a></li>  -->
+                </ul>
+            </li>
+        <li class="dropdown header-search-form">
+          <a><i class="icon-search"></i></a>
+          <ul class="dropdown-menu">
+            <li>
+              <form action="404.html" method="post">          
+                <input type="text" placeholder="Search for.." />
+              </form>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    
+  </div>
+</header><!-- .navbar-fixed-top -->
+
+<div class="page-top">
+  <div class="container"> 
+    <h1 class="page-top-header">Survey One</h1>   
+    <ol class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li class="active">Survey One</li>
+    </ol>
+  </div>  
+</div>
+
+<div class="container" id="main">
+
+<div class="row">
+
+  <div class="col-md-3">
+    <div id="sidebar" class="affix" role="complementary">
+      <ul class="nav">
+        <li><a href="#design">Survey Design</a></li>
+        <li><a href="#profile">Sample Profile</a></li>
+        <li><a href="#summary">Summary</a></li>
+                <li><a href="#userandnonusers">Findings: Library Users vs. Non-Users</a></li>
+        <li><a href="#usage">Findings: eReading</a></li>
+                <li><a href="#demographics">Findings: Demographics Tables</a><li>
+      </ul>
+    </div><!-- .affix -->
+  </div>
+
+  <div class="col-md-9">
+
+    <div class="row">
+
+<h1 id="generative-ebook-covers">Generative ebook covers</h1>
+<p>See original Blog by NYPL Labs' Mauricio Geraldo</p>
+
+<h4 id="finding-better-covers-for-public-domain-ebooks">Finding better covers for public domain ebooks</h4>
+
+<p><img src="http://i.imgur.com/pdLwuTZ.png" alt="header" title=""></p>
+
+<p>Here at <a href="http://www.nypl.org/collections/labs">NYPL Labs</a> we are working on an ebook-borrowing and reading app called Library Simplified. On the technical side, <a href="https://twitter.com/leonardr">Leonard Richardson</a> is doing all the back end magic, consolidating multiple data sources for each book into a single concise format: title, author, book cover and description. John Nowak is writing the code of the app itself (that you will be able to download to your phone). I (Mauricio) am doing the design (and writing blog posts). Many of the ebooks we will be offering come from public domain sites such as <a href="http://www.gutenberg.org/">Project Gutenberg</a>. If you spend a few minutes browsing that site you will notice that many of its ebooks either have a really crappy cover image or none at all (roughly 20K of the 40K plus items are missing adequate descriptions or a book jacket)</p>
+
+<p>See the following:</p>
+
+<p><a href="http://www.gutenberg.org/ebooks/46683"><img src="http://www.gutenberg.org/cache/epub/46683/pg46683.cover.small.jpg" alt="PG cover" title=""></a> <a href="http://www.gutenberg.org/ebooks/46681"><img src="http://www.gutenberg.org/cache/epub/46681/pg46681.cover.small.jpg" alt="PG cover" title=""></a> <a href="http://www.gutenberg.org/ebooks/46672"><img src="http://www.gutenberg.org/cache/epub/46672/pg46672.cover.small.jpg" alt="PG cover" title=""></a></p>
+
+<p>Book covers were not a big deal until the 20th century, but now they are how people first interact with a book, so not having one really puts a book at a disadvantage. They are problematic, and not only in ebooks. It's difficult to find high-quality, reusable covers of out-of-print or public domain books. There are some projects such as <a href="http://recoveringtheclassics.com/">Recovering the Classics</a> that approach this problem in interesting ways. However, we at NYPL are still left with very limited (and expensive) solutions to this problem.</p>
+
+<p>Given that eBook application's visual quality is highly dependant on ebook cover quality (a wall of bad book covers makes the whole applciation look bad) we had to have a solution for displaying ebooks with no cover or a bad cover. The easy answer in this situation is doing what retail websites do for products with no associated image: display a generic image.</p>
+
+<p><img src="http://i.imgur.com/nszu54A.jpg" alt="iTunes no cover" title=""> <img src="http://i.imgur.com/J5LVHEL.jpg" alt="S&amp;S no cover" title=""> <img src="http://i.imgur.com/sJ3CT4V.gif" alt="Abrams no cover" title=""></p>
+
+<p>This is not a very elegant solution. When dealing with books, it seems lazy to have a nothing to see here but the above image when one has at least a title and an author to work with. The next obvious choice is to make a generic cover that incorporates the book's title and author. This is also a common choice in software such as iBooks:</p>
+
+<p><img src="http://i.imgur.com/YqjnSsF.png" alt="iBooks cover" title=""></p>
+
+<p><a href="https://en.wikipedia.org/wiki/Skeuomorph">Skeuomorphism</a> aside, it is a decent book cover. However, it feels a bit cheesy and we wanted something more in line with the rest of the design of the app (a design which I am leaving for a future post). We need a design that can display very long titles (up to 80 characters) but that would also look good with short ones (two or three characters); it should allow for one credited author, multiple authors or none at all. I decided on a more plain and generic cover image:</p>
+
+<p><img src="http://i.imgur.com/JQjY36C.png" alt="NYPL cover 1" title=""></p>
+
+<p>Needless to say this didn't impress anyone; which is OK because the point was not to impress; we needed <em>a</em> cover that displayed author and title information and was legible to most people and this checked every box ... but.... at the same time ....<em>wouldn't it be cool if...</em></p>
+
+
+
+<h1 id="10-print-book-cover">10 PRINT BOOK COVER</h1>
+
+<p>While discussing options for doing a better generative cover I remembered <em><a href="http://10print.org/">10 PRINT</a></em>, a generative-art project and book led by Casey Reas that explores one line of Commodore 64 (C64) code:</p>
+
+<p><code>10 PRINT CHR$(205.5+RND(1)); : GOTO 10</code></p>
+
+<p>This code draws one of two possible characters (diagonal up or diagonal down) on the screen at random, over and over again. The C64 screen can show up to 40 characters in a row. The end result is a maze-like graphic like the one seen in this video:</p>
+
+<p><a href="https://www.youtube.com/watch?v=m9joBLOZVEo">https://www.youtube.com/watch?v=m9joBLOZVEo</a></p>
+
+<p>At the 2012 Eyeo festival, Casey Reas talked about this project, which involves nine other authors who are collected in <a href="http://10print.org/">this book</a>. I <em>highly recommend</em> <a href="https://vimeo.com/45851523#t=30m11s">watching Reasâ€™s presentation</a> (link jumps to 30:11 when <em>10 PRINT</em> is mentioned). The two charactersâ€“diagonal up and diagonal downâ€“come from the C64 PETSCII character list which is laid out here on the Commodore keyboard:</p>
+
+<p><img src="http://i.imgur.com/ee1qIPG.png" alt="PETSCII" title=""></p>
+
+<p>Each key on the PETSCII keyboard has a geometric shape associated with it. These shapes can be used to generate primitive graphics in the C64 operating system. For example, here is a rounded rectangle (I added some space to make it easier to see each character):</p>
+
+<p><img src="http://i.imgur.com/61xJ5a5.png" alt="5" title=""> <img src="http://i.imgur.com/CFr9mB4.png" alt="3" title=""> <img src="http://i.imgur.com/CFr9mB4.png" alt="3" title=""> <img src="http://i.imgur.com/CFr9mB4.png" alt="3" title=""> <img src="http://i.imgur.com/zHx7ke0.png" alt="9" title=""> <br>
+<img src="http://i.imgur.com/MVOeQK4.png" alt="2" title=""> <img src="http://i.imgur.com/pvF4JZr.png" alt="0" title=""> <img src="http://i.imgur.com/pvF4JZr.png" alt="0" title=""> <img src="http://i.imgur.com/pvF4JZr.png" alt="0" title=""> <img src="http://i.imgur.com/MVOeQK4.png" alt="2" title=""> <br>
+<img src="http://i.imgur.com/MVOeQK4.png" alt="2" title=""> <img src="http://i.imgur.com/pvF4JZr.png" alt="0" title=""> <img src="http://i.imgur.com/pvF4JZr.png" alt="0" title=""> <img src="http://i.imgur.com/pvF4JZr.png" alt="0" title=""> <img src="http://i.imgur.com/MVOeQK4.png" alt="2" title=""> <br>
+<img src="http://i.imgur.com/5hKRP5S.png" alt="a" title=""> <img src="http://i.imgur.com/CFr9mB4.png" alt="3" title=""> <img src="http://i.imgur.com/CFr9mB4.png" alt="3" title=""> <img src="http://i.imgur.com/CFr9mB4.png" alt="3" title=""> <img src="http://i.imgur.com/MgqFkjR.png" alt="b" title=""></p>
+
+<p>In terms of the letters on the same keyboard, that rectangle looks like this:</p>
+
+<pre><code>UCCCI
+B   B
+B   B
+JCCCK
+</code></pre>
+
+<p><em>10 PRINT</em> was the starting point for my next ebook cover generator. In <em>10 PRINT</em> a non-alphanumeric character is chosen by a random â€œcoin tossâ€ and displayed as a graphic. In my cover generator, a book's title is transformed into a graphic. Each letter A-Z and digit 0-9 is replaced with its PETSCII graphic equivalent (e.g. the W gets replaced with an empty circle). I used <a href="http://processing.org">Processing</a> to quickly create sketches that allowed for some parameter control such as line thickness and grid size. For characters not on the PETSCII â€œkeyboardâ€ (such as accented Latin letters or Chinese characters) I chose a replacement graphic based on the output of passing the character into Processingâ€™s <code>int()</code> function.</p>
+
+
+
+<h2 id="colors-and-fonts">Colors and fonts</h2>
+
+<p>In order to have a variety of colors across the books, I decided to use the combined length of the book title and the author's name as a seed number, and use that seed to generate a color. This color and its complimentary are used for drawing the shapes. Processing has a few functions that let you easily create colors. I used the <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">HSL color space</a> which facilitates generating complimentary colors (each color, or hue in HSL parlance, is located in a point on a circle, its complimentary is the diametrically opposite point). The gist code:</p>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">int</span> counts = title.length() + author.length();
+
+<span class="hljs-comment">// map the count to a number between 30 and 260</span>
+<span class="hljs-comment">// (seemed to give the best results)</span>
+<span class="hljs-keyword">int</span> colorSeed = <span class="hljs-keyword">int</span>(map(counts, <span class="hljs-number">2</span>, <span class="hljs-number">80</span>, <span class="hljs-number">30</span>, <span class="hljs-number">260</span>));
+
+<span class="hljs-comment">// use HSL color space</span>
+colorMode(HSB, <span class="hljs-number">360</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+
+<span class="hljs-comment">// main color is darker</span>
+shapeColor = color(colorSeed, baseSaturation, baseBrightness-(counts%<span class="hljs-number">20</span>));
+
+<span class="hljs-comment">// complimentary color</span>
+baseColor = color((colorSeed+<span class="hljs-number">180</span>)%<span class="hljs-number">360</span>, baseSaturation, baseBrightness); </code></pre>
+
+<p>To ensure legibility and avoid clashes with the generated colors, I always use black on white for text. I chose <a href="http://www.fonts.com/font/linotype/avenir-next">Avenir Next</a> as the font. The app as a whole uses that font for its interface, itâ€™s already installed on the OS and it contains glyphs for multiple languages.</p>
+
+<p>There are more (and better) ways to create colors using code. I didnâ€™t really go down the rabbit hole here but if you feel so inclined, take a look at <a href="http://devmag.org.za/2012/07/29/how-to-choose-colours-procedurally-algorithms/">Herman Tullekenâ€™s work with procedural color palettes</a>, <a href="http://earthobservatory.nasa.gov/blogs/elegantfigures/2013/08/05/subtleties-of-color-part-1-of-6/">Rob Simmonâ€™s extensive work on color</a>, or this cool post on <a href="http://www.panic.com/blog/itunes-11-and-colors/">emulating iTunes 11â€™s album cover color extractor</a>.</p>
+
+
+
+<h2 id="shapes">Shapes</h2>
+
+<p>I created a function that draws graphic alternate characters for the letters A-Z and the digits 0-9. I decided to simplify a few graphics to more basic shapes: the PETSCII club (X) became three dots, and the spade (A) became a triangle.</p>
+
+<p>I wrote a function that draws a shape given a character <code>k</code>, a position <code>x,y</code> and a size <code>s</code>. Here you can see the code for drawing the graphics for the letter Q (a filled circle) and the letter W (an open circle).</p>
+
+
+
+<pre class="prettyprint"><code class="language-java hljs "><span class="hljs-keyword">void</span> drawShape(<span class="hljs-keyword">char</span> k, <span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y, <span class="hljs-keyword">int</span> s) {
+  ellipseMode(CORNER);
+  fill(shapeColor);
+  <span class="hljs-keyword">switch</span> (k) {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">'q'</span>:
+    <span class="hljs-keyword">case</span> <span class="hljs-string">'Q'</span>:
+      ellipse(x, y, s, s);
+      <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-string">'w'</span>:
+    <span class="hljs-keyword">case</span> <span class="hljs-string">'W'</span>:
+      ellipse(x, y, s, s);
+      s = s-(shapeThickness*<span class="hljs-number">2</span>);
+      fill(baseColor);
+      ellipse(x+shapeThickness, y+shapeThickness, s, s);
+      <span class="hljs-keyword">break</span>;
+    <span class="hljs-comment">// plus all the other letters below</span>
+  }
+}</code></pre>
+
+<p>My cover generator calls <code>drawShape</code> repeatedly for each character in a bookâ€™s title. The size of the shape is controlled by the length of the title: the longer the title, the smaller the shape.</p>
+
+<p>Each letter in the title is replaced by a graphic and repeated as many times as it can fit in the space allotted. The resulting grid is a sort of visualization of the title; an alternate alphabet. In the example below, the M in â€œMacbethâ€ is replaced by a diagonal downwards stroke (the same character used to great effect in <em>10 PRINT</em>). The A is replaced by a triangle (rather than the club found on the PETSCII keyboard). The C becomes a horizontal line offset from the top, the B a vertical line offset from the left, and so on. Since the title is short, the grid is large, and the full title is not visible, but you get the idea:</p>
+
+<p><img src="http://i.imgur.com/lZXynwS.jpg" alt="10 PRINT &quot;BOOK COVER&quot;" title=""></p>
+
+<p>There is a <a href="https://github.com/mgiraldo/tenprintcover-p5">Git repository for this cover generator</a> you can play with.</p>
+
+<p>Some more examples (notice how â€œMoby Dickâ€, nine characters including the space, does fit in the 3x3 grid below and how the M in â€œMaxâ€ is repeated):</p>
+
+<p><img src="http://i.imgur.com/UxE9F4t.png" alt="Macbeth" title=""></p>
+
+<pre><code>MOB
+Y D
+ICK
+</code></pre>
+
+<p><img src="http://i.imgur.com/QnxW60L.png" alt="Max" title=""></p>
+
+<pre><code>MA
+XM
+</code></pre>
+
+<p>And so on:</p>
+
+<p><img src="http://i.imgur.com/SbbvlS2.png" alt="Douglass" title=""> <img src="http://i.imgur.com/KD9t5XZ.png" alt="Aesop" title=""></p>
+
+<p>The original design featured the cover on a white (or very light) background. This proved problematic, as the text could be dissociated from the artwork, so we went for a more â€œenclosedâ€ version (I especially like how the Ruzhen Li cover turned out!):</p>
+
+<p><img src="http://i.imgur.com/6niAJai.png" alt="Doctorow" title=""> <img src="http://i.imgur.com/zt5DhWt.png" alt="Li" title=""> <img src="http://i.imgur.com/dar2fwM.png" alt="Justice" title=""></p>
+
+<p>We initially thought about generating all these images and putting them on a server along with the ebooks themselves, but 1) it is an inefficient use of network resources since we needed several different sizes and resolutions and 2) when converted to PNG the covers lose a lot of their quality. I ended up producing an Objective-C version of this code (<a href="https://github.com/mgiraldo/tenprintcover-ios">Git repo</a>) that will run on the device and generate a cover on-the-fly when no cover is available. The Obj-C version subclasses <code>UIView</code> and can be used as a fancy-ish â€œno cover foundâ€ replacement.</p>
+
+
+
+<h1 id="cover-illustrated">Cover, illustrated</h1>
+
+<p>Of course, these covers do not reflect the content of the book. You canâ€™t get an idea of what the book is about by looking at the cover. However, Leonard brought up the fact that many Project Gutenberg books, <a href="http://www.gutenberg.org/files/20299/20299-h/20299-h.htm">such as this one</a>, include illustrations embedded as JPG or PNG files. We decided to use those images, when they are available, as a starting point for a generated cover. Our idea is to generate one cover for each illustration in a book and let people decide which cover is best using a simple web interface.</p>
+
+<p>I tried a very basic first pass using Python (which I later abandoned for Processing):</p>
+
+<p><img src="http://i.imgur.com/7aPvLJG.png" alt="Sherlock" title=""></p>
+
+<p>This lacks personality and becomes problematic as titles get longer. I then ran into <a href="http://www.lightindustry.org/editions/">Chris Marker and Jason Simonâ€™s work</a>, and was inspired:</p>
+
+<p><img src="http://i.imgur.com/rOgGvdM.jpg" alt="Marker &amp; Simon" title=""></p>
+
+<p>I liked the desaturated color and emphasis on faces. Faces can be automatically detected in images using computer-vision algorithms, and some of those are included in <a href="http://opencv.org/">OpenCV</a>, an open-source library that <a href="https://github.com/atduskgreg/opencv-processing">can be used in Processing</a>. Hereâ€™s my first attempt in the style of Marker and Simon, with and without face detection added:</p>
+
+<p><img src="http://i.imgur.com/aBo9ZUy.png" alt="no cv" title=""> <img src="http://i.imgur.com/dLy56BY.png" alt="cv" title=""></p>
+
+<p>I also tried variations on the design, adding or removing elements, and inverting the colors:</p>
+
+<p><img src="http://i.imgur.com/Gq4jmPN.png" alt="no cv line" title=""> <img src="http://i.imgur.com/HmF49cu.png" alt="cv line" title=""> <img src="http://i.imgur.com/STjUjPd.png" alt="no cv inverted" title=""></p>
+
+<p>Since Leonard and I couldnâ€™t agree on which variation was best, we decided to create a <a href="https://www.surveymonkey.com/s/NTNMZKV">survey</a> and let the people decide (I am not a fan of this approach, which can easily become a <a href="http://www.zeldman.com/2009/03/20/41-shades-of-blue/">41 shades of blue</a> situation but I also didnâ€™t have a compelling case for either version). The clear winner was, to my surprise, using inverted colors and no face detection:</p>
+
+<p><img src="http://i.imgur.com/GyUiYzT.png" alt="flatland" title=""> <img src="http://i.imgur.com/5pz7JXo.png" alt="ten girls" title=""> <img src="http://i.imgur.com/ydKpz5C.png" alt="procopius" title=""></p>
+
+<p>The final Processing sketch (<a href="https://github.com/mgiraldo/imagecoverp5tint">Git repo</a>) has many more parameters than the 10 PRINT generator:</p>
+
+<p><img src="http://i.imgur.com/vJKKaex.jpg" alt="Image Cover P5" title=""></p>
+
+
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>As with many subjects, you can go <em>really</em> deep down the rabbit hole when it comes to creating the <em>perfect</em> automated book cover. What if we detect illustrations vs. photographs and produce a different style for each? What about detecting where the main image is so we can crop it better? What if we do some OCR on the images to automatically exclude text-heavy images which will probably not work as covers?</p>
+
+<p>This can become a never-ending project and we have an app to ship. This is <em>good enough</em> for now. Of course, you are welcome to play with and improve on it:</p>
+
+<ul>
+<li><a href="https://github.com/mgiraldo/tenprintcover-p5">10 PRINT â€œBOOK COVERâ€ (Processing version)</a></li>
+<li><a href="https://github.com/mgiraldo/tenprintcover-ios">10 PRINT â€œBOOK COVERâ€ (iOS version)</a></li>
+<li><a href="https://github.com/mgiraldo/imagecoverp5tint">Cover Illustrated</a></li>
+</ul>
