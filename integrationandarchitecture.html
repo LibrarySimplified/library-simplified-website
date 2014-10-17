@@ -2,7 +2,7 @@
 <html> 
 <head>
 <meta charset="utf-8">
-<title>Library Simplified &middot; User Journies</title>
+<title>Library Simplified &middot; Integration and Architecture</title>
 <link rel="icon" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -47,6 +47,35 @@
 <link href="assets/css/ie8.css" rel="stylesheet"></link>
 <![endif]-->
 
+<!--Charts-->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="tablequerywrapper.js"></script>
+<script type="text/javascript">
+    google.load('visualization', '1', {'packages' : ['table']});
+    google.setOnLoadCallback(init);
+
+    var dataSourceUrl = 'https://spreadsheets.google.com/tq?key=rh_6pF1K_XsruwVr_doofvw&pub=1';
+    var query, options, container;
+
+    function init() {
+      query = new google.visualization.Query(dataSourceUrl);
+      container = document.getElementById("table");
+      options = {'pageSize': 2};
+      sendAndDraw();
+    }
+
+    function sendAndDraw() {
+      query.abort();
+      var tableQueryWrapper = new TableQueryWrapper(query, container, options);
+      tableQueryWrapper.sendAndDraw();
+    }
+
+    function setOption(prop, value) {
+      options[prop] = value;
+      sendAndDraw();
+    }
+
+  </script>
 
 
 </head>
@@ -89,18 +118,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	    			<li><a href="404.html">404 - Page not found</a></li>  -->
 	    		</ul>
 	    	</li>
-            <li class="dropdown">
-                <a href="/">Information</a>
-                <ul class="dropdown-menu">
-                    <li><a href="roll-up.html">Industry Reasearch and Analysis</a></li>
+	    	<li class="dropdown">
+	    		<a href="/">Information</a>
+	    		<ul class="dropdown-menu">
+	    			<li><a href="roll-up.html">Industry Reasearch and Analysis</a></li>
                     <li><a href="LSsurvey1.html">Survey One eBook Survey</a></li>
                     <li><a href="LSsurvey2.html">Survey Two non-user Survey</a></li>
-                    <!-- <li><a href="coming-soon.html">Coming Soon</a></li> -->
-                    <!-- <li><a href="coming-soon-bg-image.html">Coming Soon (Background)</a></li> -->
-                    <!--<li><a href="faq.html">FAQ</a></li>
-                    <li><a href="404.html">404 - Page not found</a></li>  -->
-                </ul>
-            </li>
+  					<!-- <li><a href="coming-soon.html">Coming Soon</a></li> -->
+  					<!-- <li><a href="coming-soon-bg-image.html">Coming Soon (Background)</a></li> -->
+	    			<!--<li><a href="faq.html">FAQ</a></li>
+	    			<li><a href="404.html">404 - Page not found</a></li>  -->
+	    		</ul>
+	    	</li>
+	    	
 	    </ul>
     </nav>
     
@@ -109,10 +139,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <div class="page-top">
 	<div class="container">	
-		<h1 class="page-top-header">User Journey</h1>		
+		<h1 class="page-top-header">Integration and Architecture</h1>		
 		<ol class="breadcrumb">
-		  <li><a href="/">Home</a></li>
-		  <li class="active">User Journey</li>
+		  <li><a href="index.html">Home</a></li>
+		  <li class="active">Integration and Architecture</li>
 		</ol>
 	</div>	
 </div>
@@ -124,220 +154,119 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<div class="col-md-3">
 		<div id="sidebar" class="affix" role="complementary">
 			<ul class="nav">
-				<li><a href="#userjourneys">User Journeys</a></li>
-				<li><a href="#userstories">User Stories</a></li>
-				<li><a href="#prototype">Prototype User Interaction</a></li>
+				<li><a href="#currentlandscape">Current Landscape</a></li>
+				<li><a href="#alternatelandscape">Alternate Landscape</a></li>
+				<li><a href="#possiblearchitecture">Possible Architecture</a></li>
+				<li><a href="#serverfootprint">Server Foot Print</a></li>
+				<!--<li><a href="#recommendation">Recommendation based services</a></li>
+				<li><a href="#selfpublishing">Self-publishing</a><li> -->
 			</ul>
 		</div><!-- .affix -->
 	</div>
 
 	<div class="col-md-9">
-    <div class="row">
-    <h2>User Journeys </h2>
 
-    <h4>Sample: The New York Public Library</h4>
-
-		  <p class="lead">
-        The maps of user journey depict the steps one must go through to find borrow and read and eBook. The journeys reflect the nature of the partner library implementation of eBook access for their combined collection. Sometimes these journeys begin online through a web interface on a PC, through a mobile optimized Online Public Access Catalogue (OPAC) or through the native client application provided by the eBook vendor or OPAC provider. 
-       </p>
-
-
-      <h4 id="userjourneys">Sample Journeys</h4>
-
-        <div class="gallery">
-
-          <div class="col-lg-6">
-
-          <h6>The New York Public Library: BiblioCommons Mobile App </h6>
-            <a href="assets/images/userjourney.png" title="<h5>NYPL User Journey mobile</h5>"><img src="assets/images/userjourney.png" alt="" /></a>
-            <!--<img src="assets/slides/Slide1.png"> -->
-          </div>
-
-          <div class="col-lg-6">
-
-            <h6>The New York Public Library: Web (OD Collection) </h6>
-              <a href="assets/images/userjourney2.png" title="<h5>NYPL User Journey web</h5>"><img src="assets/images/userjourney2.png" alt="" /></a>              
-              <!--<img src="assets/slides/Slide1.png"> --> 
-
-          </div>
-
-        </div> <!--gallery -->
-
-    </div> <!-- row -->
-
-    <div class="row">
+		<div class="row">
+		
+		<h2>Integration and Architecture</h2>
+		<p class="lead">
+      This effort is focused on identifying the systems and common interface frameworks, protocols and methods so as to inform development of the application.  It will focus on identifying integration needs, touch points and solution paths so that the application can be readily adopted by partner libraries and other libraries.</br>
+           <!--Downloadeable Fact Sheet <a href="assets/pdf/librarysimplifiedsurvey.pdf" target="_blank">here.</a>-->
+    </p>
 
     <h5 class="hr2"></h5>
 
-    <h2>User Stories</h2>
-         
-      <h4 id="userstories">Finding a book</h4>
+    <h4 id="currentlandscape">Current Application Landscape</h4>
 
-      <div class="col-sm-3">
-      <h6>Role / Persona</h6>
-        <ol>
-          <li>As an Existing User</li>
-          <li>New user</li>
-        </ol>
-      </div>  
-  
-      <div class="col-sm-5">
-      <h6>Desired Feature</h6>
-        <ol>
-          <li>I want to connect my library account easily</li>
-          <li>Search available titles</li>
-          <li>Get recommendations from Library</li>
-          <li>Connect to my 3rd party book clubs (Good Reads, etc..)</li>
-          <li>Create Wish List</li>
-          <li>See titles that are available</li>
-          <li>Get a physical copy if the eBook isn't available</li>
-        </ol>
-      </div>
-
-      <div class="col-sm-4">
-        <h6>Value / Benefit </h6> 
-          <ol>
-            <li>So that I don't have enter information again</li>
-            <li>So that I can get eBooks that I already know about</li>
-            <li>So that I find something good to read</li>
-            <li>So that I find something good to read and save that information</li>
-            <li>So that I can remember to borrow them at another time</li>
-            <li>So that I can get something to read immediately</li>
-            <li>So that I can read the book I realy want to read</li>
-          </ol> 
-      </div>
-
-    </div> <!-- row -->
-
-    <div class="row">
-      <h4>Borrowing a book</h4>
-
-      <div class="col-sm-3">
-      <h6>Role / Persona</h6>
-        <ol>
-          <li>As an Existing User</li>
-          <li>New user</li>
-        </ol>
-      </div>  
-  
-      <div class="col-sm-5">
-      <h6>Desired Feature</h6>
-        <ol><i>Existing User</i>
-          <li>I want the app to remember my library card</li>
-          <li>I want to know how long I have to wait for a book</li>
-          <li>I want to download book immediately without opening another application</li>
-          <li>I want to know how long I have left to read the book</li>
-          <li>I want to be able to cancel my hold</li>
-          <li>I want to be able to return the book early</li>
-          <li>I want to be able to sample the book before borrowing</li>
-        </ol>
-        <ol><i>New user</i>
-          <li>I want to be able to get a book without a library card</li>
-          <li>I don't want to got to the libary to get a lirary card or borrow a book<li>
-          <li>I want to get know how long I have to wait for a book</li>
-          <li>I want to download book immediately without opening another application</li>
-          <li>I want to know how long I have left to read the book</li>
-          <li>I want to be able to cancel my hold</li>
-          <li>I want to be able to sample the book before borrowing</li>
-          <li>I want to see whats popular or a best seller</li>
-        </ol>
-      </div>
-
-      <div class="col-sm-4">
-      <h6>Value / Benefit </h6> 
-        <ol>
-          <li>So that I don't have enter information again</li>
-          <li>So I know whether to find a different book<li>
-          <li></li>
-        </ol> 
-      </div>
-
-    </div> <!-- row -->
-
-    <div class="row">
-      <h5 class="hr2"></h5>
-      <h2 id="prototype">Prototype User Interaction </h2>
-        
-        <h4>Find a Book: Discovery</h4>
-          <div>
-              <p>The process of finding something to read is typically framed as a process of</p>
-              <ul>
-              <li><strong>Recommendation</strong></li>
-              <li><strong>Browse</strong></li>
-              <li><strong>Search</strong></li>
-            </ul>
-            <p>The process of discovery we believe always starts with <strong>recommendation</strong>.  Whether a user comes to library to <strong>Search</strong> for a specific title or author that intent is informed by some prior recommendation or suggestion regarding the work, or author.  The less informed method of discovery can be guided by expert recommendation by a librarian or the users awareness of the their book preferences through browse paths to collections of books.  When users come to the library, they have ready access to librarians to assist them in their discovery.  This expert extracts information from the user and guides the user to content or browse-able collections or directs them to the particular title they are looking for.  In commercial bookstores or online books stores, self-guided browse experiences are facilitated by highly curated collections and navigation schemes and queues based on genre, appeal and popularity.</p>
-           </div>
-    </div><!-- row -->
-
-    <div class="row">
-
-      <div class="gallery">
-
-        <div class="col-sm-4">
-        <h6>Browse recommended titles by genera category</h6>
-            <a href="assets/designs/001Catalog.png" title="<h3>Easily browse through recommended and suggested titles with in custom genera swim lanes.  Select title immediately to place hold, check out, return if necessary or view more titles within genera."><img src="assets/designs/001Catalog.png" alt="" /></a>
+    <p class="lead">
+      As part of the information gathering, the team discovered that almost all the libraries shared the same technology platforms.  The Online Public Access Catalogue (OPAC,) which is technology used to provide a common catalogue interface for all the libraries physical and electronic collection was either BiblioCommons or the web interface provided by their respective Information Library Systems (ILS) vendor, Triple I or Polaris.  The primary eBook distribution platforms we OverDrive, 3M Cloud Reader and or Baker and Taylor's Axis 360 platform and or Adobe Digital Editions which is the free eReader provided by Adobe for Adobe encrypted content.
+    </p>
+      <div class="gallery"> 
+        <div class="md-sm-9">       
+          <h6>Application Ecosystem </h6>
+          <p>
+            As one can see, the application ecosystem intermediates the libraries from their users.  This may lead to disconnects between the libaries desired service interaction design vs that of the vendor's user experience desing. Almost all of the user interfaces for finding, borrowing and reading an eBook from the library are handled by 3rd parties.  Each platform is independent and minimally interoperable with one another or the library systems.  This vendor competition for user access results in a different user experience for each system.  While this offers the broadest access to content licensed or owned by the library, it limits practical access to the difficulty and frustration caused by lack of interoperability and confusion as to what platforms are compatible with the various content.  While OPACs attempt to minimize this, they actually exasperate the problem with eBooks because they layer additional navigation and discovery steps to the eBook platform provider.        
+          </P>
         </div>
 
-        <div class="col-sm-4">
-        <h6>Browse selected genera cetegories for available titles</h6>
-            <a href="assets/designs/006Lane.png" title="Browse within selected genera, select title immediately to place hold, check out or return if necessary."><img src="assets/designs/006Lane.png" alt="" /></a>
+        <div class="col-sm-9">
+          <a href="assets/images/CurrentEbookArchitecture.png" title="<h5>NYPL User Journey mobile</h5>"><img src="assets/images/CurrentEbookArchitecture.png" alt="" /></a>
+                  <!--<img src="assets/slides/Slide1.png"> -->
         </div>
 
-        <div class="col-sm-4">
-            <h6>Browse lists of recommended titles regardless of Genera</h6>
-              <a href="assets/designs/005ListDetail.png" title="Browse within selected genera, select title immediately to place hold, check out or return if necessary."><img src="assets/designs/005ListDetail.png" alt="" /></a>
+        <div class="col-sm-9">
+          <p>
+             Note: The user journey was the same for almost all the libraries and their users (e.g. OPAC to OverDrive, 3M catalogue or Adobe DE) so the team mapped NYPLs users journey as the reference user journey.  There were edge cases that required additional steps depending on whether the user was using a 3rd party platform such as Amazon’s Kindle, Barnes and Nobles Nook or Adobe Reader.  Web and software development staff at NYPL conducted this process. 
+            </p>
         </div>
-      </div><!-- gallery --> 
-    </div><!-- row -->
-
-    <div class="row">
-    <h4>Borrow</h4>
-      <div>
-        <p>The process of borrowing a book from the library "digitally" is cumbersome.  However, buying a book commercially is simple from a user perspective.  This stems from online book stores having an unlimited supply.  Libraries, have forced scarcity and must elegantly deal with this issue.  To reduce the complexity, we remove the choices from this transaction stream.  First, we standardize packaging (ePub 3) and remove alternate digital format decisions.  Second, automatically eliminate transaction options if they are irrelevant and present only present options and information needed. Third, allow users to "shop" before executing a check requirement (e.g. entering their library card if or signing in.) </p>
-      </div>
-    </div><!-- row -->
-
-    <div class="row">
-      <div class="gallery">
-      <div class="col-sm-4">
-            <h6>Remove unnecesary decisions such as format from the transaction stream</h6>
-               <a href="assets/designs/006Lane.png" title="Browse within selected genera, select title immediately to place hold, check out or return if necessary."><img src="assets/designs/006Lane.png" alt="" /></a>
       </div>
 
-      <div class="col-sm-4">
-            <h6>Present immediate and relevant information for a particular interaction.</h6>
-                <a href="assets/designs/009LaneDownload.png" title="HTML content works as well, see: <button class='btn btn-primary'><i class='icon-heart'></i> .. I'm a lovely button</button>"><img src="assets/designs/009LaneDownload.png" alt="" /></a>
+      <div class="row">
+        <h5 class="hr2"></h5>
+        <div>
+          <h4 id="alternatelandscape">Alternate Application Landscape</h4>
+          <p class="lead">
+            Out of the 3 eBook platforms, only OverDrive and Baker and Taylor actually transfer content outside of their platforms.  Additionally these platforms utilize Adobe DRM and Adobe software for ePub presentation.  This underlying technology, is not ePub 3 capable and induces further “lock-in” to the particular vendors platform with out expensive licensing and software acquisition.  We additionally tested new technologies such as Sony DADC’s User Rights Management System (URMS) DRM and found it easy to use albeit, hardly used by reading platforms.  This is due to restrictive licensing terms of user for Adobe technologies as well as the antiquated methods for rendering content that limit the interactive content and more advanced interface technologies of today.
+          </p>
+        </div>
+      </div> <!-- row -->
+
+      <div class="row">
+        <div class="col-sm-9">
+          <a href="assets/images/desiredarchitecture.png" title="<h5>desired user and application intermediation</h5>"><img src="assets/images/desiredarchitecture.png" alt="" /></a>
+                    <!--<img src="assets/slides/Slide1.png"> -->
+        </div>
+
+        <div >
+          <p>
+           As you can see on the diagram to the left, the desired end state for libraries seeking to own the user experience and remove the intermediation of the library by its vendors  is to simply provide the interface to the eBook collection.  This interface in short intermediates the vendors so that discover, borrowing and reading experiences are managed by the library interfaces. 
+          </p>
+        </div>
+      </div> <!-- row -->
+
+      <div class="row">
+        <h5 class="hr2"></h5>
+        <div>
+        <h4 id="possiblearchitecture">Possible Application Architecture</h4>
+        <p class="lead">
+          A possible application architecture of Library Simplified that could intermediate the different platforms, systems and content repositories of the library and 3rd party vendors would be a “plug-in” infrastructure.  In some instances, Library Simplified systems would need to actually take on the functions of other systems when they cannot support the full scope of services needed to provide a unified view into the eBook collections.  It also will need to normalize depiction of the collection and the transactional consistency of a seamless user experience.
+        </p>
+        </div>
+      </div> <!-- row -->
+
+      <div class="row">
+        <div class="col-sm-9">
+          <a href="assets/images/pluginarchitecture.png" title="<h5>Application Infrastrucure for proposed system</h5>"><img src="assets/images/pluginarchitecture.png" alt="" /></a>
+                    <!--<img src="assets/slides/Slide1.png"> -->
+        </div>
+      </div>
       </div>
 
-      <div class="col-sm-4">
-          <h6>Allow users to "look" before transacting information.</h6>
-                <a href="assets/designs/019Auth.png" title="If not logged in, simply scan your library card once.  Credentials will persist locally so you never have to log in again."><img src="assets/designs/019Auth.png" alt="" /></a>
+      <div class="row">
+
+        <h5 class="hr2"></h5>
+        <div>
+        <h4 id="serverfootprint">Server Footprint</h4>
+        <p class="lead">
+          The infrastructure foot print that could support such as an application could be fully hosted by the library on license free LAMP stacks (Linux, Apache, MySQL) as well as leased infrastructure such as Amazon Web Services (AWS.)
+        </p>
+        </div>
+
+        <div class="col-sm-9">
+          <a href="assets/images/infrastructure.png" title="<h5>Server Infrastructure for proposed application</h5>"><img src="assets/images/infrastructure.png" alt="" /></a>
+                    <!--<img src="assets/slides/Slide1.png"> -->
+        </div>
       </div>
-    </div> <!-- gallery -->
-    </div><!-- row-->
-     
-    <div class="row">
-    <h4>Read</h4>                     
-        <div class="gallery">
-          <div class="col-sm-4">
-             <h6>Simply Open and Navigate the content.</h6>
-                <a href="assets/designs/101Reader.png" title="Simply Open and Navigate the content."><img src="assets/designs/101Reader.png" alt="" /></a>
-          </div>
 
-          <div class="col-sm-4">
-              <h6>Acess Book Marks, Highlights, Annotations</h6>
-                  <a href="assets/designs/107ReaderBookmark.png" title="Acess Book Marks, Highlights, Annotations"><img src="assets/designs/107ReaderBookmark.png" alt="" /></a>
-          </div>
-
-          <div class="col-sm-4">
-              <h6>Adjust readability and display settings</h6>
-                  <a href="assets/designs/106ReaderBW.png" title="Adjust readability and display settings"><img src="assets/designs/106ReaderBW.png" alt="" /></a>
-          </div>
-        </div> <!-- gallery -->
-    </div> <!-- row -->
-</div><!-- row -->
-</div> <!-- mdcol9 -->
+      <div class="row">
+        <p>
+          One area that could be better optimized involves the data remediation services that “wrangle” the disparate meta-data providers and repositories on the Internet.  This service is needed to classify and fill in the missing descriptive data of a book and its related cover-art that exists in trade eBooks and Public Domain eBooks.  This data and content “wrangling” architecture enables the distribution of Public Domain works hosted by the library such as Project Guttenberg, which houses over 40,000 eBooks, and Audio Books.  This area of the this application footprint is “heavy” in terms of data storage requirements because it aggregates a wide variety of data in that may be duplicate, but alternately indexed, or redundant or unnecessary in the end.  The processing services distill and remediates this data into the what is needed for the application database. Once processed, it is the remediated and distilled data that the application needs.  A potential solution for deployment and implementation would be to host this as a service for other libraries so as to eliminate the initial processing burden and infrastructure for adopters.  The service would only process and remediate the difference in the partner library catalogues and new works introduced by the partners collection developers as needed.  Where there is overlap in the respective collections, the service merely uses the remediated data and works on hand.  This service would allow a minimal footprint for other libraries looking to adopt Library Simplified.
+        </p>
+      </div> <!-- row -->
+      </div> <!--gallery -->
+	</div><!-- .col-md-9 -->
+	
+</div><!-- .row -->
 
 </div><!-- .container -->
 
