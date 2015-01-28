@@ -158,7 +158,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<li><a href="#alternatelandscape">Alternate Landscape</a></li>
 				<li><a href="#possiblearchitecture">Possible Architecture</a></li>
 				<li><a href="#serverfootprint">Server Foot Print</a></li>
-				<!--<li><a href="#recommendation">Recommendation based services</a></li>
+        <li><a href="#resultingarchitecture">Resulting Architecture </a></li>
+				<!-- <li><a href="#recommendation">Recommendation based services</a></li>
 				<li><a href="#selfpublishing">Self-publishing</a><li> -->
 			</ul>
 		</div><!-- .affix -->
@@ -263,6 +264,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           One area that could be better optimized involves the data remediation services that “wrangle” the disparate meta-data providers and repositories on the Internet. This service is needed to classify and fill in the missing descriptive data of a book and its related cover-art that exists in trade eBooks and Public Domain eBooks. This data and content “wrangling” architecture enables the distribution of Public Domain works hosted by the library such as Project Guttenberg, which houses over 40,000 eBooks, and Audio Books. This area of the this application footprint is “heavy” in terms of data storage requirements because it aggregates a wide variety of data in that may be duplicated, but alternately indexed, redundant and/or unnecessary in the end. The processing services distill and remediate this data into what is needed for the application database. Once processed, it is the remediated and distilled data that the application needs. A potential solution for deployment and implementation would be to host this as a service for other libraries so as to eliminate the initial processing burden and infrastructure for adopters. The service would only process and remediate the difference in the partner library catalogues and new works introduced by the partner’s collection developers as needed. Where there is overlap in the respective collections, the service merely uses the remediated data and works on hand. This service would allow a minimal footprint for other libraries looking to adopt Library Simplified.
         </p>
       </div> <!-- row -->
+      <div class="row">
+
+        <h5 class="hr2"></h5>
+
+        <div>
+        <h4 id="resultingarchitecture">Resulting Architecture</h4>
+        <p class="lead">
+          Upon implementation, we arrived at a new archticture to facilitate two key technologies: 1) Adobe Vendor ID and 2) OPDS for Libaries.  Addtinally, this archtiecture decoupled the Public Domain and Open Access content store from the core circulation management functions so that it can exist as a stand alone content store that is 3rd party hosted or locally hosted.
+        </p>
+        </div>
+
+        <div class="col-sm-9">
+          <a href="assets/images/architecture2.png" title="<h5>Resulting Architecture Diagram</h5>"><img src="assets/images/architecture2.png" alt="" /></a>
+                    <!--<img src="assets/slides/Slide1.png"> -->
+        </div>
+      </div>
+
+      <div class="row">
+        <p>
+          <strong>Adobe Vendor ID</strong> is a specification vs a true technology.  This specification provides licensors the ability to protect their users identies by taking on the authentication and acces authorization to of the licensds content.  Vendor ID works seemlessly with Adobe's Adept DRM technologies, RMSDK based applciations such as Adobe Reader and Adobe CMS.  The other bennefit is that is more naturally fits in within the library technology ecosystem.  Traditinally, libraries have relied on their ILS to provide patron identitiy management, authentication and authorization services for their digital properties.  This native ability allows libraries to preserve that traditional technology implementation until they migrate to more modern and practical SSO and CRM techologies to manage their patron identities, authentication and authorization to services.
+        </p>
+        <p>
+          <strong>Open Publication Distribution System (OPDS)</strong> is an open specification that has is widely used in European and North American (Canada) eBook markets where accessibility is more widely practiced.  The specification community consists of publishers, platform providers and eBooks vendors - <a href="http://OPDS-spec.org">OPDS.org</a> .  OPDS is a syndication format for electronic publications based on Atom <a href="http://www.ietf.org/rfc/rfc4287.txt"> RFC4287</a> and HTTP <a href="http://www.ietf.org/rfc/rfc2616.txt">RFC2616</a>.  <i>OPDS Catalogs enable the aggregation, distribution, and discovery of books, journals, and other digital content by any user, from any source, in  any electronic format, on any device.</i> The OPDS Catalogs specification prioritizes simplicity and speed.  Because the transport protocol is essentially an xml document it is easily consumed and widely supported by browsers and native platform code libraries and resources.  The OPDS Catalog 1.1 specification is based on a lot of existing, in-production software and collaboration between eBook reading systems, publishers, and distributors; eBook readers like Aldiko, Bluefire Reader, QuickReader, FBReader, Ibis Reader, and others already support the evolving specification as well as eBook providers such as Feedbooks, Internet Archive, O'Reily Media, etc..
+        </p>
+        <p>
+          <strong>Library Simplified APIs</strong> will be based on OPDS.  We are working with the OPDS community to extend and define the OPDS specification to include content rights management, authentication, authorization, and lending work flows.  These protocol extensions will allow for greater interoperability between libraries and eBook vendors. OPDS will used to as the machine to machine interface between Library Simplified's <i> Circulation Manager</i> the <i>Metadata Wrangler</i> and <i> Open Access Content Server</i>.  This opens up the potential for deep integration into the Library Simpliflied middleware application layers so that an array of compliant vendor systems can be easily implemented within a library application ecosystem.  Furthermore, we believe that as OPACs and ILS vendors adopt the standard we begin to allow great opportunity for libraries to curate and create custom user experiences that link their eBook collections with their special collections, physical collections and exhibitions.
+        </p>
+
       </div> <!--gallery -->
 	</div><!-- .col-md-9 -->
 	
