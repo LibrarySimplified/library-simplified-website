@@ -162,7 +162,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<li><a href="#serverfootprint">Server Foot Print</a></li>
         <li><a href="#resultingarchitecture">Resulting Architecture </a></li>
 				<li><a href="#cardregistration">Library Card Registration Solution</a></li>
-				<!--<li><a href="#selfpublishing">Self-publishing</a><li> -->
+				<li><a href="#applicationstacks">Application Stacks</a><li>
+        <!-- <li><a href="#implementationoptions">Implementation Options</a><li> --> 
 			</ul>
 		</div><!-- .affix -->
 	</div>
@@ -314,11 +315,47 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
       <div class="row">
         <p>
-          The solution uses simple mobile web, embedded camera and email technologies to replace typical paper forms, scanners and fax machine-enabled process for remote applications.  In short, users simply provide the required information for a library card application; Name, Date of Birth and Address.  It is done via a secure web view in the app and an uploaded image of the required proof of residency.  A temporary card and pin is assigned at that time to the user.  A secure email is sent to the card registration staff for the library.  Staff accesses the secure link in the email to the information to approve or reject the application.  If accepted the information is written to the library's ILS and the record is made permanent and the web artifacts are destroyed.  This solution actually provides greater data security and privacy for the data in transit and at rest than what exist with the current manual processed used by libraries. Those processes require a person to destroy the electronic or paper submission.  This new process deletes personal data automatically while providing a step change in efficiency for library card registration staff. Data is entered once and not manually transcribed between systems, forms and applications.
+          The solution uses simple responsive web views, mobile device camera resources and email technologies to replace typical paper forms, fixed web forms, scanners and fax machine-enabled processes for remote library card applications.  Users simply provide the required information they always do for a library card application; Name, Date of Birth and Address and use the onboard camera of the device to capture proof of residency.  The app uses a secure web view to uploaded an mage of the required proof of residency as opposed to attching it or doing some sort of device file upload.  A temporary card and pin is assigned to the user succesful completes the process.  A secure email is sent to the card registration staff at the library.  Staff accesses the secure link in the email to the information to approve or reject the application.  If accepted the information is written to the library's ILS and the record is made permanent and the web artifacts are destroyed.  This solution actually provides greater data security and privacy for the infomration in transit and at rest than what exist with the current manual processes used by libraries or the web forms provided by ILS vendors. Those processes require a person to destroy the electronic or paper submission.  This new process deletes personal data automatically while providing a step change in efficiency for library card registration staff. Data is entered once and not manually transcribed between systems, forms and applications.
+        </p>
+        </div><!-- Row -->
+   
+
+      <div class="row">
+        <h5 class="hr2"></h5>
+
+        <div>
+        <h4 id="applicationstacks">Application Stacks</h4>
+        <p class="lead">
+         The application consist of a combination of open source and commercial proprietary software. The following diagrams depict software and resources that make up the application stack.       
         </p>
         </div>
-      </div>
-	</div><!-- .col-md-9 -->
+
+        <h5 class="hr5">Mobile client stack</h5>
+        <P>
+          For the mobile client, the highest level of the stack is the open source eBook application for delivering the data model, control functionality and information views (e.g. MVC).  However, in simplest terms, the mobile app is 1) an OPDS reader (think of an ATOM or RSS feed reader) that functions as the "Discovery" interface for the library's content and 2) an e-reader that functions as the rendering engine for EPUB packaged content files.  The OPDs reader is based on the the OPDS 1.2 specification.  The Readium SDK EPUB rendering engine software compiled into the app provides the e-reader function of the app.  The Digital Rights Management (DRM) functions required for certain content is handled by the appropriate commercial technology (e.g. Adobe Adept Connector) to manage protected file acquisition and description.  There is a portion of the app for registering for a library card.  This is handled through a web-view within the app that is securely hosted in the middle-ware.  The same card registration tool can be easily swapped out for other SSO methods, or updated for to work with a different ILS or repurposed to other clients interfaces such as the library's website. 
+        </p>
+     
+
+      <div class="col-sm-9">
+        <a href="assets/images/clientappstack.png" title="<h5>client application stack</h5>"><img src="assets/images/clientappstack.png" alt="" /></a>
+                    <!--<img src="assets/slides/Slide1.png"> -->
+       </div> <!-- .col-sm-9 -->
+     </div><!--row-->
+
+      <div class="row">   
+        <h5 class="hr5">Middleware application stacks</h5>
+        <p>
+         The middleware consist of custom software application code and language specific resource libraries.  The bulk of the application is a python application.  The database technology is Postgres SQL and the server technology is Linux.  The card registration application is a Rails application using a Postgres SQL database to handle temp data storage and a SOAP interface to transact that data into the ILS.  The different application servers depicted in the diagram provide the core functionality and feature functions (e.g. card registration, open access content hosting and vendor ID.)  The core function of the middleware is to consolidate the remotely hosted content services into a unified collection, normalize its representation, normalize the 3rd party host APIs into a standard transaction for the client, manage access to content.  All interfaces between the application servers are based on OPDS (accept for the Database.)  
+        </p>
+
+        <div class="col-sm-9">
+          <a href="assets/images/middlewarestack.png" title="<h5>client application stack</h5>"><img src="assets/images/middlewarestack.png" alt="" /></a>
+                    <!--<img src="assets/slides/Slide1.png"> -->
+        </div><!-- .col-sm-9 -->
+      </div> <!--row -->        
+    </div><!-- row -->
+    </div> 
+	</div>
 	
 </div><!-- .row -->
 
