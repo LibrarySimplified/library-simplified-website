@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<title>End Users License Agreement</title>
+<meta name="About" content="With the help of this Institute of Museum and Library Services, ten public libraries across the United States are exploring that question. We’re re-thinking traditional library policies and building new technology to make the libraries and their digital collections easier to access. Our goal is to break down barriers to library use so that more people take advantage of all the services that the library offers. We hope you’ll join the conversation." />
+<link rel="icon" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts (more: http://www.google.com/fonts) -->
+<!-- Main Font -->
+<!--<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">-->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<!-- Headings -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<!-- Handwritten -->
+<link href="http://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+<!-- Countdown, Pricing Table Price Tag -->
+<link href="http://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+<!-- Logo -->
+<link href="http://fonts.googleapis.com/css?family=Cantora+One" rel="stylesheet" type="text/css">
+
+<!-- CDN Bootstrap & FontAwesome -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- CSS Libraries -->
+<link href="assets/css/animate.min.css" rel="stylesheet">
+<link href="assets/css/bxslider.css" rel="stylesheet">
+<link href="assets/css/magnific-popup.css" rel="stylesheet">
+
+<!-- Theme Specific CSS -->
+<link href="assets/css/styles.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+
+<!-- Predefined Color Scheme -->
+<link href="assets/css/colors/orange.css" rel="stylesheet" id="colors">
+
+<!-- LESS - Development Only
+<link href="assets/less/styles.less" rel="stylesheet/less" />
+<script>less = { env: 'development' };</script>
+<script src="assets/js/less.js"></script>
+-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+<link href="assets/css/ie8.css" rel="stylesheet"></link>
+<![endif]-->
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-RKWC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-RKWC');</script>
+<!-- End Google Tag Manager -->
+
+
+<header id="header" class="navbar">
+
+  <div class="container">
+    <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	    	<span class="sr-only">Skip navigation</span>
+	    	<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+		  </button> 
+	    <a class="navbar-brand logo" href="index.html">Library Simplified</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+	    <ul class="nav navbar-nav">
+	    	<li class="dropdown">
+	    		<a href="index.html">Home</a>
+	    		<ul class="dropdown-menu">
+	    			<li><a href="about.html">About</a></li>
+	    			<li><a href="news-and-events.html">News and Events</a></li>
+  					<!-- <li><a href="contact.html">Contact Us</a></li>
+  					<!-- <li><a href="coming-soon.html">Coming Soon</a></li> -->
+  					<!-- <li><a href="coming-soon-bg-image.html">Coming Soon (Background)</a></li> -->
+	    			<li><a href="project-design.html">Project Design</a></li>
+	    			<li><a href="faq.html">FAQ</a></li>
+	    			<!--<li><a href="404.html">404 - Page not found</a></li>  -->
+	    		</ul>
+	    	</li>
+	    	<li class="dropdown">
+	    		<a href="/">Information</a>
+	    		<ul class="dropdown-menu">
+                    <li><a href="roll-up.html">Industry Reasearch and Analysis</a></li>
+                    <li><a href="LSsurvey1.html">Survey One eBook Survey</a></li>
+                    <li><a href="LSsurvey2.html">Survey Two non-user Survey</a></li>
+                    <li><a href="integrationandarchitecture.html">Integration and Architecture</a></li>
+                    <li><a href="userjourney.html">User Journey and Application Mock-ups</a></li>
+                    <!--<li><a href="faq.html">FAQ</a></li>
+                    <li><a href="404.html">404 - Page not found</a></li>  -->
+                </ul>
+	    	</li>
+	    	
+	    </ul>
+    </nav>
+    
+  </div>
+</header><!-- .navbar-fixed-top -->
+
+<div class="page-top">
+	<div class="container">	
+		<h1 class="page-top-header">Deploying Library Simplifed Services</h1>		
+		<ol class="breadcrumb">
+		  <li><a href="/">Home</a></li>
+		  <li class="active">FAQ</li>
+		</ol>
+	</div>	
+</div>
+
+<div class="container" id="main">
+<div class="row">
+
+	<div class="col-md-3">
+		<div id="sidebar" class="affix" role="complementary">
+			<ul class="nav">
+				<li><a href="#EC2Install">Install on Amazon EC2</a></li>
+				<li><a href="#environmentvariables">Environment Variables</a></li>
+        <!-- <li><a href="#implementationoptions">Implementation Options</a><li> --> 
+			</ul>
+		</div><!-- .affix -->
+	</div>
+
+<div class="col-md-9">
+
+<div class="row">
+<div id="EC2Install">
+<h2>Install on to Amazon EC2</h2>
+</div>
+
+<div>
+<p class="lead">Step-by-step instructions for deploying any of the Simplified applications on an EC2 AMI.</p>
+</div>
+
+<div class="row">
+	<div>
+			<div class="panel-group">
+				<div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#1"><i class="icon-code"></i> Install packaged requirements</a></h4>
+			    </div>
+			    <div id="1" class="panel-collapse collapse">
+			      <div class="panel-body">
+			      	<ul class="list-unstyled">
+			      		<li><code>sudo yum install python27 python27-devel git postgresql python-nose python-sqlalchemy python-pip nginx</code></li>
+						<li><code>sudo pip install virtualenv virtualenvwrapper </code></li>
+						<li>These are necessary for installing python lxml through pip.</li>
+						<li><code>sudo yum install libxml2-devel libxslt-devel gcc libxslt-python </code></li>
+						<li>This is necessary for installing psycopg2 through pip</li>
+						<li><code>sudo yum install postgresql-devel </code></li>
+						<li>Used by pillow to generate JPG thumbnails.<li>
+						<li><code>sudo yum install libjpeg libjpeg-devel </code></li>
+						<li><code>TODO: pip install uwsgi?</code></li>
+						<li>The content server also needs to have Xvfb installed:/</li>
+						<li><i>Content server only</i></li>
+						<li><code>sudo yum install xorg-x11-server-Xvfb </code></li>
+						<li>The metadata wrangler has a number of additional dependencies so that scikit-learn can be installed:</li>
+						<li><i>Metadata wrangler only</i></li>
+						<li><code>sudo yum install numpy python-matplotlib ipython python-pandas sympy python-nose gcc gcc-c++ lapack-devel blas-static lapack-static </code></li>
+					<ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#2"><i class="icon-code"></i>Check out the Simplified repositories</a></h4>
+			    </div>
+			    <div id="2" class="panel-collapse collapse">
+			      <div class="panel-body">
+			      	<ul class="list-unstyled">
+			      		<li>Depending on whether you're installing the <i>circulation manager</i>, the <i>metadata wrangler</i>, or the <i>content server</i>, you'll check out a different Git repository.</li>
+			      		<li><strong>EITHER</strong></li>
+			      		<li><code>git clone https://github.com/NYPL/Simplified-circulation.git circulation cd circulation</code></li>
+						<li><strong>OR</strong></li>
+						<li><code>git clone https://github.com/NYPL/Simplified-content-server.git content cd content</code></li>
+						<li><strong>OR</strong></li>
+						<li><code>git clone https://github.com/NYPL/Simplified-server.git metadata cd metadata</code></li>
+						<li><strong>Then:</strong></li>
+						<li>Initialize submodules<li>
+						<li><code>git submodule init</code></li>
+						<li><code>git submodule update</code></li>
+					<ul>
+			      </div>
+			    </div>
+			  	</div>
+			<div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#3"><i class="icon-code"></i>Create the Python virtual environment</a></h4>
+			    </div>
+			    <div id="3" class="panel-collapse collapse">
+			      <div class="panel-body">
+			      	<ul class="list-unstyled">
+			      		<li>The next step is to create a virtual environment and set your [[environment variables|EnvironmentVariables]]. To create the virtual environment, use `virtualenv`:</li>
+			      		<li><code>virtualenv -p /usr/bin/python2.7 env</code></li>
+						<li>Then create a file called <code>`env/bin/simplified_env`</code> and put your [[environment variable declarations|EnvironmentVariables]] in there. It should look like this:</li>
+						<li><code>export DATABASE_URL="postgres://..."</br>
+							export SEARCH_SERVER_URL="http://..."</code></li>
+						<li>Finally, add the following line to the bottom of <code>`env/bin/activate`</code>:</li>
+						<li><code>source simplified_env</code></li>
+						<li>This will ensure that your environment variables are picked up when you activate the virtual environment, which you can do now:</li>
+						<li><code>source env/bin/activate</code></li>
+					<ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#4"><i class="icon-code"></i>Install Python requirements into the virtual environment</a></h4>
+			    </div>
+			    <div id="4" class="panel-collapse collapse">
+			      <div class="panel-body">
+			      	<ul class="list-unstyled">
+			      		<li>This can take a very long time--over 30 minutes for the metadata wrangler.</li>
+			      		<li><code>pip install -r requirements.txt</code></li>
+						<li>This page <a href="http://www.zezuladp.com/2014/10/scaling-numpy-and-scipy-with-django-and.html"/> http://www.zezuladp.com/2014/10/scaling-numpy-and-scipy-with-django-and.html</a> explains the problems with installing scipy (used by the metadata wrangler) through pip. NYPL is using pip because we are running Python 2.7 and AMI instances have Python 2.6 as the system Python.</li>
+					<ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#5"><i class="icon-code"></i>Set up the data directory</a></h4>
+			    </div>
+			    <div id="5" class="panel-collapse collapse">
+			      <div class="panel-body">
+			      	<ul class="list-unstyled">
+			      		<li>On the metadata wrangler, check out the Simplified-data repository to your <code>$DATA_DIRECTORY:</code></li>
+			      		<li><code>git clone https://github.com/NYPL/Simplified-data.git $DATA_DIRECTORY</code></li>
+						<li>On the content server, you can just create an empty directory at <code>$DATA_DIRECTORY</code></li>
+						<li>On the metadata wrangler and the content server, make sure that <code>$DATA_DIRECTORY</code> is writable by the user that will be running scripts.</li>
+						<li><code>sudo chown ec2-user.ec2-user $DATA_DIRECTORY</code></li>
+						<li>On the <i>metadata wrangler</i> and the </i>circulation manager</i>, download the TextBlob corpora. This shouldn't be necessary on the <i>circulation manager</i>, but for the moment it is.</li>
+						<li><code>python -m textblob.download_corpora</code></li>
+					<ul>
+			      </div>
+			    </div>
+			  	</div>
+			 </div>
+	</div>
+</div>
+
+<div id="environmentvariables" class="row">
+<h5 class="page-header"></h5>
+	<div>
+	<h2>Environment Variables</h2>
+
+	<p>The <code>simplified_env</code> file contains your Library Simplified configuration in the form or a number of shell EXPORT statements. This document explains what those variables do and which ones are required for the circulation manager, the metadata wrangler, and the content server.</p>
+
+	<p>In the table below, O means a value of that variable optional, X means it's required, and blank means that server doesn't use the variable.<p>
+
+	</div>
+	<div class="col-sm-9">
+<table border="1" style="width:100%">
+  <tr>
+    <th>Variable Name</th>
+    <th>circ</th> 
+    <th>metadata</th>
+    <th>content</th>
+  </tr>
+  <tr>
+    <td><code>DATABASE_URL</td>
+    <td>X</td>
+    <td>X</td> 
+    <td>X</td>
+  </tr>
+  <tr>
+  	<td><code>DATABASE_TEST_URL</td>
+    <td>O</td>  
+    <td>O</td>    
+    <td>O</td>
+   <tr>
+    <td><code>CONTENT_WEB_APP_URL</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+   <tr>
+    <td><code>MILLENIUM_HOST</td>	
+    <td>X</td>
+    <td></td>
+    <td></td>
+   </tr>				
+   <tr>
+    <td><code>METADATA_WEB_APP_URL</td>
+    <td>X</td>
+    <td></td>
+    <td></td>
+   <tr>
+    <td><code>LENDING_POLICY</td>	
+    <td>X</td>
+    <td></td>
+    <td></td>
+   </tr>
+   <tr>
+    <td><code>SEARCH_SERVER_URL</td>	
+    <td>X</td>
+    <td></td>
+    <td></td>
+   </tr>
+   <tr>		
+    <td><code>SEARCH_WORKS_INDEX</td>	
+    <td>X</td>
+    <td></td>
+    <td></td>
+   </tr>
+   <tr>		
+    <td><code>PRIMARY_COLLECTION_LANGUAGE</td>	
+    <td>X</td>
+    <td></td>
+    <td></td>
+   </tr>
+   <tr>		
+    <td><code>OTHER_COLLECTION_LANGUAGES</td>	
+    <td>X</td>
+    <td></td>
+   	<td></td>
+   </tr>
+   <tr>		
+    <td><code>STAFF_PICKS_GOOGLE_SPREADSHEET_KEY</td>
+    <td>X</td>
+    <td></td>
+   	<td></td>
+   </tr>
+   <tr>		
+    <td><code>ADOBE_VENDOR_ID</td>	
+    <td>O</td>
+    <td></td>
+   	<td></td>
+   </tr>
+   <tr>
+    <td><code>ADOBE_VENDOR_ID_NODE_VALUE</td>
+    <td>O</td>
+    <td></td>
+   	<td></td>	
+   </tr>
+   <tr>
+    <td><code>TEST_CREDENTIAL_USERNAME</td>
+   	<td>O</td>
+   	<td></td>
+   	<td></td>
+   </tr>
+   <tr>
+    <td><code>TEST_CREDENTIAL_PASSWORD</td>
+    <td>O</td>
+   	<td></td>
+   	<td></td>
+   </tr>
+   <tr>		
+    <td><code>BOOK_COVERS_CDN_HOST</td>
+    <td>O</td>
+   	<td></td>
+   	<td></td>
+   </tr>
+   <tr>		
+    <td><code>OPDS_FEEDS_CDN_HOST</td>
+    <td>O</td>	
+   	<td></td>
+   	<td></td>
+   </tr>
+   <tr>
+    <td><code>AXIS_360_USERNAME</td>	
+   	<td>O</td>
+   	<td></td>
+   	<td></td>
+   </tr>
+   <tr>
+    <td><code>AXIS_360_PASSWORD</td>
+    <td>O</td>	
+   	<td></td>
+   	<td></td>
+   </tr>
+   <tr>
+    <td><code>AXIS_360_LIBRARY_ID</td>
+    <td>O</td>		
+   	<td></td>
+   	<td></td>
+   </tr>
+   <tr>
+    <td><code>THREEM_LIBRARY_ID</td>
+    <td>X</td>
+    <td>X</td>
+    <td></td>
+   </tr>
+   <tr> 
+   	<td><code>THREEM_ACCOUNT_ID</td>	
+   	<td>X</td>	
+   	<td>X</td>
+   	<td></td>
+   </tr>
+   <tr>	
+    <td><code>THREEM_ACCOUNT_KEY</td>
+    <td>X</td>	
+   	<td>X</td>
+   	<td></td>
+   </tr>
+   <tr>	
+    <td><code>OVERDRIVE_CLIENT_KEY</td>
+    <td>X</td>	
+   	<td>X</td>
+   	<td></td>
+   </tr>
+   <tr>	
+    <td><code>OVERDRIVE_CLIENT_SECRET</td>
+    <td>X</td>	
+   	<td>X</td>
+   	<td></td>
+   </tr>
+   <tr>	
+    <td><code>OVERDRIVE_LIBRARY_ID</td>
+    <td>X</td>	
+   	<td>X</td>
+   	<td></td>
+   </tr>
+   <tr>	
+    <td><code>OVERDRIVE_WEBSITE_ID</td>
+    <td>X</td>	
+   	<td>X</td>
+   	<td></td>
+   </tr>
+   <tr>	
+    <td><code>OVERDRIVE_COLLECTION_NAME</td>
+    <td>X</td>	
+   	<td>X</td>
+   	<td></td>
+   </tr>
+   <tr>	
+    <td><code>NYT_BEST_SELLERS_API_KEY</td>
+    <td>X</td>	
+   	<td>X</td>
+   	<td></td>
+   </tr>
+   <tr>	
+    <td><code>METADATA_WEB_APP_PORT</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+   </tr>
+   <tr>
+    <td><code>BOOK_COVERS_S3_BUCKET</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+   </tr>
+   <tr>
+    <td><code>CONTENT_CAFE_USER_ID</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+   </tr>
+   <tr>
+    <td><code>CONTENT_CAFE_PASSWORD
+    </td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+   </tr>
+   <tr>	
+    <td><code>DATA_DIRECTORY</td>
+    <td></td>
+    <td>X</td>
+    <td>X</td>
+   </tr>
+   <tr>
+    <td><code>OPEN_ACCESS_CONTENT_S3_BUCKET</td>
+    <td></td>
+    <td></td>
+    <td>X</td>
+   </tr>
+   <tr>
+    <td><code>GUTENBERG_ILLUSTRATED_BINARY_PATH</td>
+    <td></td>
+    <td></td>
+    <td>X</td>
+   </tr>
+  </table>
+ </div>
+</div>
+
+<div class="row">
+
+	<div id="detaliedexplantation">	
+ 	<h5>Detailed explanations</h5>
+ 		<div>
+ 			<p class="lead"> The follwowing provides a detailed description of the environment variable parameters from above.</p>
+ 		<ul>
+ 			
+ 		<li><code>DATABASE_*_URL</code>
+
+
+			<p>These are postgres:// URLs similar to the following:</p>
+
+			<p><code>export DATABASE_URL="postgres://circulationuser:pass@mylsinstall.org:5432/circulation"</code></p>
+			<p>The DATABASE_TEST_URL is only used when running unit tests. If you're not running tests, you don't need it.</p></li>
+
+		<li><code>MILLENIUM_HOST</code>
+
+			<p>This is the URL to the Millenium Patron API used by your library.</p>
+
+			<p><code>EXPORT MILLENIUM_HOST="http://my-library.iii.com:4500/PATRONAPI/" </code><p>
+
+		<li><code>THREEM_, OVERDRIVE_, AXIS_360_, CONTENT_CAFE_</code></li>
+
+			<P>These are values given to you by a vendor for accessing general book metadata or a particular collection.</br>
+			If you don't have an account with that vendor, you still need to define the variables, but you can leave the values blank.<p></li>
+
+		<li><code>*_WEB_APP_URL</code></li>
+
+		<p>These variables allow the different parts of a Library Simplified system to find each other over the network. They also tell the Simplified app itself which URL it's hosted at.<p></li>
+
+		<li><code>CIRCULATION_WEB_APP_URL='https://circulation.librarysimplified.org/'</code>
+		<p><code>METADATA_WEB_APP_PORT</code> also needs to be set on the metadata wrangler. This is probably redundant and can be removed.</p></li>
+
+		<li><code>DATA_DIRECTORY</code>
+
+		<p>In the metadata wrangler, this should point to a clone of the Simplified-data repository. In the content server, this should point to a directory with a huge amount of free space, because this is where the Gutenberg mirrors will go.</p></li>
+
+		<li><code>*_S3_BUCKET</code>
+
+		<p>These are the URLs to the S3 buckets where open access epubs and cover images are stored.</p>
+		<p>
+		<code>export BOOK_COVERS_S3_BUCKET="http://book-covers.nypl.org"</code></br>
+		<code>export OPEN_ACCESS_CONTENT_S3_BUCKET="http://oabooks.nypl.org"</code></li>
+
+		<li><code>PRIMARY_COLLECTION_LANGUAGES</code> and <code>OTHER_COLLECTION_LANGUAGES</code></p>
+
+		<p>Both of these are JSON lists of strings.</p>
+
+		<p>
+			<code>export PRIMARY_COLLECTION_LANGUAGES='["eng"]'</code></br>
+			<code>export OTHER_COLLECTION_LANGUAGES='["rus", "chi", "spa"]'</code></p>
+
+		<p><code>PRIMARY_COLLECTION_LANGUAGES</code> is a list of the languages in which the library has a very large collection--either the single largest collection or all collections larger than 25,000 books.</p>
+
+		<p><code>OTHER_COLLECTION_LANGUAGES</code> is a list of other languages in which the library has a large or notable collection.</p><li>
+
+		<li><code>LENDING_POLICY</code>
+
+		<p>This is a JSON object that puts restrictions on what kind of books patrons can check out. If the patron's Patron.external_type is one of the strings found in the keys</p>
+
+		<p>For instance, if you have this in your <code>simplified_env:</code></p>
+
+		<p><code>export LENDING_POLICY='{"60": {"audiences": ["Children"]}, "152": {"audiences": ["Children"]}, "62": {"audiences": ["Children"]}}'</code></p>
+		<p>Then a patron whose <code>external_type</code> is <code>60</code>, <code>62</code>, or <code>152</code> will only be able to check out children's books. All other patrons will be able to check out any kind of books.</p></li>
+
+		<li><code>ADOBE_VENDOR_ID*</code>
+
+		<p>These are values provided by Adobe when you purchase the Adobe Vendor ID service. If you don't provide these values, the circulation manager will not implement the Adobe Vendor ID service.</p></li>
+
+		<li><code>TEST_CREDENTIAL_USERNAME and TEST_CREDENTIAL_PASSWORD</code>
+
+		<p>These variables are used by the circulation manager's /service_status handler to verify that the ILS is up and responding properly to PIN checks. If you don't specify them, /service_status won't work, but everything else will be fine.</p></li>
+
+		<li><code>GUTENBERG_ILLUSTRATED_BINARY_PATH</code>
+
+		<p>This should be set to your Simplified-server-content directory plus "bin/imagecoverp5tint/imagecoverp5tint". e.g. "/home/simplified/content/bin/imagecoverp5tint/imagecoverp5tint". It probably doesn't need to be an environment variable.</p></li>
+	</ul>
+	</div>
+	</div>
+	</div>
+</div>
+
+</div><!-- .container -->
+
+<footer >	
+</footer>
+
+
+</div>
+
+<!-- JavaScript Libraries & jQuery Plugins -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.bxslider.min.js"></script>
+<script src="assets/js/jquery.isotope.min.js"></script>
+<script src="assets/js/jquery.fittext.js"></script>
+<script src="assets/js/jquery.fitvids.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.hoverdir.js"></script>
+<script src="assets/js/validation.js"></script>
+<script src="assets/js/theme.js"></script>
+ 
+</body>
+</html>
+```
+
