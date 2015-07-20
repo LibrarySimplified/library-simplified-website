@@ -2,7 +2,7 @@
 <html> 
 <head>
 <meta charset="utf-8">
-<title>End Users License Agreement</title>
+<title>Deployement of Services</title>
 <meta name="About" content="With the help of this Institute of Museum and Library Services, ten public libraries across the United States are exploring that question. We’re re-thinking traditional library policies and building new technology to make the libraries and their digital collections easier to access. Our goal is to break down barriers to library use so that more people take advantage of all the services that the library offers. We hope you’ll join the conversation." />
 <link rel="icon" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -125,6 +125,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			<ul class="nav">
 				<li><a href="#EC2Install">Install on Amazon EC2</a></li>
 				<li><a href="#environmentvariables">Environment Variables</a></li>
+        <li><a href="#sampleenvironment">Sample EC2 set up and costs</a></li>
         <!-- <li><a href="#implementationoptions">Implementation Options</a><li> --> 
 			</ul>
 		</div><!-- .affix -->
@@ -133,15 +134,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="col-md-9">
 
 <div class="row">
-<div id="EC2Install">
-<h2>Install on to Amazon EC2</h2>
-</div>
-
+<h2 id="EC2Install"></h2>
 <div>
-<p class="lead">Step-by-step instructions for deploying any of the Simplified applications on an EC2 AMI.</p>
+<h2>Install on to Amazon EC2</h2>
+<div>
+<p class="lead">"Cloud Computing", by definition, refers to the on-demand delivery of IT resources and applications via the Internet with pay-as-you-go pricing.  The following page. Step-by-step instructions for deploying any of the Simplified applications.</p>
 </div>
 
-<div class="row">
+
 	<div>
 			<div class="panel-group">
 				<div class="panel panel-default">
@@ -152,21 +152,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			      <div class="panel-body">
 			      	<ul class="list-unstyled">
 			      		<li><code>sudo yum install python27 python27-devel git postgresql python-nose python-sqlalchemy python-pip nginx</code></li>
-						<li><code>sudo pip install virtualenv virtualenvwrapper </code></li>
-						<li>These are necessary for installing python lxml through pip.</li>
-						<li><code>sudo yum install libxml2-devel libxslt-devel gcc libxslt-python </code></li>
-						<li>This is necessary for installing psycopg2 through pip</li>
-						<li><code>sudo yum install postgresql-devel </code></li>
-						<li>Used by pillow to generate JPG thumbnails.<li>
-						<li><code>sudo yum install libjpeg libjpeg-devel </code></li>
-						<li><code>TODO: pip install uwsgi?</code></li>
-						<li>The content server also needs to have Xvfb installed:/</li>
-						<li><i>Content server only</i></li>
-						<li><code>sudo yum install xorg-x11-server-Xvfb </code></li>
-						<li>The metadata wrangler has a number of additional dependencies so that scikit-learn can be installed:</li>
-						<li><i>Metadata wrangler only</i></li>
-						<li><code>sudo yum install numpy python-matplotlib ipython python-pandas sympy python-nose gcc gcc-c++ lapack-devel blas-static lapack-static </code></li>
-					<ul>
+						    <li><code>sudo pip install virtualenv virtualenvwrapper </code></li>
+						    <li>These are necessary for installing python lxml through pip.</li>
+						    <li><code>sudo yum install libxml2-devel libxslt-devel gcc libxslt-python </code></li>
+  					   	<li>This is necessary for installing psycopg2 through pip</li>
+  					   	<li><code>sudo yum install postgresql-devel </code></li>
+  					   	<li>Used by pillow to generate JPG thumbnails.<li>
+  					   	<li><code>sudo yum install libjpeg libjpeg-devel </code></li>
+  				   		<li><code>TODO: pip install uwsgi?</code></li>
+  						  <li>The content server also needs to have Xvfb installed:/</li>
+  				  		<li><i>Content server only</i></li>
+  			   			<li><code>sudo yum install xorg-x11-server-Xvfb </code></li>
+  						  <li>The metadata wrangler has a number of additional dependencies so that scikit-learn can be installed:</li>
+  						  <li><i>Metadata wrangler only</i></li>
+  						  <li><code>sudo yum install numpy python-matplotlib ipython python-pandas sympy python-nose gcc gcc-c++ lapack-devel blas-static lapack-static </code></li>
+					   <ul>
 			      </div>
 			    </div>
 			  </div>
@@ -180,19 +180,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			      		<li>Depending on whether you're installing the <i>circulation manager</i>, the <i>metadata wrangler</i>, or the <i>content server</i>, you'll check out a different Git repository.</li>
 			      		<li><strong>EITHER</strong></li>
 			      		<li><code>git clone https://github.com/NYPL/Simplified-circulation.git circulation cd circulation</code></li>
-						<li><strong>OR</strong></li>
-						<li><code>git clone https://github.com/NYPL/Simplified-content-server.git content cd content</code></li>
-						<li><strong>OR</strong></li>
-						<li><code>git clone https://github.com/NYPL/Simplified-server.git metadata cd metadata</code></li>
-						<li><strong>Then:</strong></li>
-						<li>Initialize submodules<li>
-						<li><code>git submodule init</code></li>
-						<li><code>git submodule update</code></li>
-					<ul>
+    						<li><strong>OR</strong></li>
+    						<li><code>git clone https://github.com/NYPL/Simplified-content-server.git content cd content</code></li>
+    						<li><strong>OR</strong></li>
+    						<li><code>git clone https://github.com/NYPL/Simplified-server.git metadata cd metadata</code></li>
+    						<li><strong>Then:</strong></li>
+    						<li>Initialize submodules<li>
+    						<li><code>git submodule init</code></li>
+    						<li><code>git submodule update</code></li>
+					     </ul>
 			      </div>
 			    </div>
-			  	</div>
-			<div class="panel panel-default">
+			   </div>
+			   <div class="panel panel-default">
 			    <div class="panel-heading">
 			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#3"><i class="icon-code"></i>Create the Python virtual environment</a></h4>
 			    </div>
@@ -201,14 +201,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			      	<ul class="list-unstyled">
 			      		<li>The next step is to create a virtual environment and set your [[environment variables|EnvironmentVariables]]. To create the virtual environment, use `virtualenv`:</li>
 			      		<li><code>virtualenv -p /usr/bin/python2.7 env</code></li>
-						<li>Then create a file called <code>`env/bin/simplified_env`</code> and put your [[environment variable declarations|EnvironmentVariables]] in there. It should look like this:</li>
-						<li><code>export DATABASE_URL="postgres://..."</br>
+						    <li>Then create a file called <code>`env/bin/simplified_env`</code> and put your [[environment variable declarations|EnvironmentVariables]] in there. It should look like this:</li>
+						    <li><code>export DATABASE_URL="postgres://..."</br>
 							export SEARCH_SERVER_URL="http://..."</code></li>
-						<li>Finally, add the following line to the bottom of <code>`env/bin/activate`</code>:</li>
-						<li><code>source simplified_env</code></li>
-						<li>This will ensure that your environment variables are picked up when you activate the virtual environment, which you can do now:</li>
-						<li><code>source env/bin/activate</code></li>
-					<ul>
+						    <li>Finally, add the following line to the bottom of <code>`env/bin/activate`</code>:</li>
+						    <li><code>source simplified_env</code></li>
+						    <li>This will ensure that your environment variables are picked up when you activate the virtual environment, which you can do now:</li>
+						    <li><code>source env/bin/activate</code></li>
+					   <ul>
 			      </div>
 			    </div>
 			  </div>
@@ -221,8 +221,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			      	<ul class="list-unstyled">
 			      		<li>This can take a very long time--over 30 minutes for the metadata wrangler.</li>
 			      		<li><code>pip install -r requirements.txt</code></li>
-						<li>This page <a href="http://www.zezuladp.com/2014/10/scaling-numpy-and-scipy-with-django-and.html"/> http://www.zezuladp.com/2014/10/scaling-numpy-and-scipy-with-django-and.html</a> explains the problems with installing scipy (used by the metadata wrangler) through pip. NYPL is using pip because we are running Python 2.7 and AMI instances have Python 2.6 as the system Python.</li>
-					<ul>
+						    <li>This page <a href="http://www.zezuladp.com/2014/10/scaling-numpy-and-scipy-with-django-and.html"/> http://www.zezuladp.com/2014/10/scaling-numpy-and-scipy-with-django-and.html</a> explains the problems with installing scipy (used by the metadata wrangler) through pip. NYPL is using pip because we are running Python 2.7 and AMI instances have Python 2.6 as the system Python.</li>
+					   <ul>
 			      </div>
 			    </div>
 			  </div>
@@ -235,21 +235,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			      	<ul class="list-unstyled">
 			      		<li>On the metadata wrangler, check out the Simplified-data repository to your <code>$DATA_DIRECTORY:</code></li>
 			      		<li><code>git clone https://github.com/NYPL/Simplified-data.git $DATA_DIRECTORY</code></li>
-						<li>On the content server, you can just create an empty directory at <code>$DATA_DIRECTORY</code></li>
-						<li>On the metadata wrangler and the content server, make sure that <code>$DATA_DIRECTORY</code> is writable by the user that will be running scripts.</li>
-						<li><code>sudo chown ec2-user.ec2-user $DATA_DIRECTORY</code></li>
-						<li>On the <i>metadata wrangler</i> and the </i>circulation manager</i>, download the TextBlob corpora. This shouldn't be necessary on the <i>circulation manager</i>, but for the moment it is.</li>
-						<li><code>python -m textblob.download_corpora</code></li>
-					<ul>
+						    <li>On the content server, you can just create an empty directory at <code>$DATA_DIRECTORY</code></li>
+						    <li>On the metadata wrangler and the content server, make sure that <code>$DATA_DIRECTORY</code> is writable by the user that will be running scripts.</li>
+						    <li><code>sudo chown ec2-user.ec2-user $DATA_DIRECTORY</code></li>
+						    <li>On the <i>metadata wrangler</i> and the </i>circulation manager</i>, download the TextBlob corpora. This shouldn't be necessary on the <i>circulation manager</i>, but for the moment it is.</li>
+						    <li><code>python -m textblob.download_corpora</code></li>
+					   <ul>
 			      </div>
 			    </div>
 			  	</div>
 			 </div>
-	</div>
-</div>
 
-<div id="environmentvariables" class="row">
-<h5 class="page-header"></h5>
+<div>
+<h2 id="environmentvariables"></h2>
+<h5> </h5>
 	<div>
 	<h2>Environment Variables</h2>
 
@@ -257,22 +256,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 	<p>In the table below, O means a value of that variable optional, X means it's required, and blank means that server doesn't use the variable.<p>
 
-	</div>
-	<div class="col-sm-9">
-<table border="1" style="width:100%">
-  <tr>
+	<div>
+  <table border="1" style="width:100%">
+    <tr>
     <th>Variable Name</th>
     <th>circ</th> 
     <th>metadata</th>
     <th>content</th>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
     <td><code>DATABASE_URL</td>
     <td>X</td>
     <td>X</td> 
     <td>X</td>
-  </tr>
-  <tr>
+    </tr>
+    <tr>
   	<td><code>DATABASE_TEST_URL</td>
     <td>O</td>  
     <td>O</td>    
@@ -483,90 +481,255 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </table>
  </div>
 </div>
-
-<div class="row">
-
-	<div id="detaliedexplantation">	
+</div>
+	<div>	
  	<h5>Detailed explanations</h5>
  		<div>
  			<p class="lead"> The follwowing provides a detailed description of the environment variable parameters from above.</p>
- 		<ul>
- 			
- 		<li><code>DATABASE_*_URL</code>
+ 		   <ul>	
+   		<li><code>DATABASE_*_URL</code>
+  			<p>These are postgres:// URLs similar to the following:</p>
+  			<p><code>export DATABASE_URL="postgres://circulationuser:pass@mylsinstall.org:5432/circulation"</code></p>
+  			<p>The DATABASE_TEST_URL is only used when running unit tests. If you're not running tests, you don't need it.</p></li>
 
+  		<li><code>MILLENIUM_HOST</code>
 
-			<p>These are postgres:// URLs similar to the following:</p>
+  			<p>This is the URL to the Millenium Patron API used by your library.</p>
 
-			<p><code>export DATABASE_URL="postgres://circulationuser:pass@mylsinstall.org:5432/circulation"</code></p>
-			<p>The DATABASE_TEST_URL is only used when running unit tests. If you're not running tests, you don't need it.</p></li>
+  			<p><code>EXPORT MILLENIUM_HOST="http://my-library.iii.com:4500/PATRONAPI/" </code><p>
 
-		<li><code>MILLENIUM_HOST</code>
+  		<li><code>THREEM_, OVERDRIVE_, AXIS_360_, CONTENT_CAFE_</code></li>
 
-			<p>This is the URL to the Millenium Patron API used by your library.</p>
+  			<P>These are values given to you by a vendor for accessing general book metadata or a particular collection.</br>
+  			If you don't have an account with that vendor, you still need to define the variables, but you can leave the values blank.<p></li>
 
-			<p><code>EXPORT MILLENIUM_HOST="http://my-library.iii.com:4500/PATRONAPI/" </code><p>
+  		<li><code>*_WEB_APP_URL</code></li>
 
-		<li><code>THREEM_, OVERDRIVE_, AXIS_360_, CONTENT_CAFE_</code></li>
+  		  <p>These variables allow the different parts of a Library Simplified system to find each other over the network. They also tell the Simplified app itself which URL it's hosted at.<p></li>
 
-			<P>These are values given to you by a vendor for accessing general book metadata or a particular collection.</br>
-			If you don't have an account with that vendor, you still need to define the variables, but you can leave the values blank.<p></li>
+  		<li><code>CIRCULATION_WEB_APP_URL='https://circulation.librarysimplified.org/'</code>
+  		  <p><code>METADATA_WEB_APP_PORT</code> also needs to be set on the metadata wrangler. This is probably redundant and can be removed.</p></li>
 
-		<li><code>*_WEB_APP_URL</code></li>
+  		<li><code>DATA_DIRECTORY</code>
 
-		<p>These variables allow the different parts of a Library Simplified system to find each other over the network. They also tell the Simplified app itself which URL it's hosted at.<p></li>
+  		  <p>In the metadata wrangler, this should point to a clone of the Simplified-data repository. In the content server, this should point to a directory with a huge amount of free space, because this is where the Gutenberg mirrors will go.</p></li>
 
-		<li><code>CIRCULATION_WEB_APP_URL='https://circulation.librarysimplified.org/'</code>
-		<p><code>METADATA_WEB_APP_PORT</code> also needs to be set on the metadata wrangler. This is probably redundant and can be removed.</p></li>
+  		<li><code>*_S3_BUCKET</code>
 
-		<li><code>DATA_DIRECTORY</code>
+  		  <p>These are the URLs to the S3 buckets where open access epubs and cover images are stored.</p>
+  		  <p>
+  		  <code>export BOOK_COVERS_S3_BUCKET="http://book-covers.nypl.org"</code></br>
+  		  <code>export OPEN_ACCESS_CONTENT_S3_BUCKET="http://oabooks.nypl.org"</code></li>
 
-		<p>In the metadata wrangler, this should point to a clone of the Simplified-data repository. In the content server, this should point to a directory with a huge amount of free space, because this is where the Gutenberg mirrors will go.</p></li>
+  		<li><code>PRIMARY_COLLECTION_LANGUAGES</code> and <code>OTHER_COLLECTION_LANGUAGES</code></p>
 
-		<li><code>*_S3_BUCKET</code>
+  		  <p>Both of these are JSON lists of strings.</p>
 
-		<p>These are the URLs to the S3 buckets where open access epubs and cover images are stored.</p>
-		<p>
-		<code>export BOOK_COVERS_S3_BUCKET="http://book-covers.nypl.org"</code></br>
-		<code>export OPEN_ACCESS_CONTENT_S3_BUCKET="http://oabooks.nypl.org"</code></li>
+  		  <p>
+  			<code>export PRIMARY_COLLECTION_LANGUAGES='["eng"]'</code></br>
+  			<code>export OTHER_COLLECTION_LANGUAGES='["rus", "chi", "spa"]'</code></p>
 
-		<li><code>PRIMARY_COLLECTION_LANGUAGES</code> and <code>OTHER_COLLECTION_LANGUAGES</code></p>
+  		  <p><code>PRIMARY_COLLECTION_LANGUAGES</code> is a list of the languages in which the library has a very large collection--either the single largest collection or all collections larger than 25,000 books.</p>
 
-		<p>Both of these are JSON lists of strings.</p>
+  		  <p><code>OTHER_COLLECTION_LANGUAGES</code> is a list of other languages in which the library has a large or notable collection.</p><li>
 
-		<p>
-			<code>export PRIMARY_COLLECTION_LANGUAGES='["eng"]'</code></br>
-			<code>export OTHER_COLLECTION_LANGUAGES='["rus", "chi", "spa"]'</code></p>
+  		<li><code>LENDING_POLICY</code>
 
-		<p><code>PRIMARY_COLLECTION_LANGUAGES</code> is a list of the languages in which the library has a very large collection--either the single largest collection or all collections larger than 25,000 books.</p>
+  		  <p>This is a JSON object that puts restrictions on what kind of books patrons can check out. If the patron's Patron.external_type is one of the strings found in the keys</p>
 
-		<p><code>OTHER_COLLECTION_LANGUAGES</code> is a list of other languages in which the library has a large or notable collection.</p><li>
+  		  <p>For instance, if you have this in your <code>simplified_env:</code></p>
 
-		<li><code>LENDING_POLICY</code>
+  		  <p><code>export LENDING_POLICY='{"60": {"audiences": ["Children"]}, "152": {"audiences": ["Children"]}, "62": {"audiences": ["Children"]}}'</code></p>
+  		  <p>Then a patron whose <code>external_type</code> is <code>60</code>, <code>62</code>, or <code>152</code> will only be able to check out children's books. All other patrons will be able to check out any kind of books.</p></li>
 
-		<p>This is a JSON object that puts restrictions on what kind of books patrons can check out. If the patron's Patron.external_type is one of the strings found in the keys</p>
+  		<li><code>ADOBE_VENDOR_ID*</code>
 
-		<p>For instance, if you have this in your <code>simplified_env:</code></p>
+  		  <p>These are values provided by Adobe when you purchase the Adobe Vendor ID service. If you don't provide these values, the circulation manager will not implement the Adobe Vendor ID service.</p></li>
 
-		<p><code>export LENDING_POLICY='{"60": {"audiences": ["Children"]}, "152": {"audiences": ["Children"]}, "62": {"audiences": ["Children"]}}'</code></p>
-		<p>Then a patron whose <code>external_type</code> is <code>60</code>, <code>62</code>, or <code>152</code> will only be able to check out children's books. All other patrons will be able to check out any kind of books.</p></li>
+  		<li><code>TEST_CREDENTIAL_USERNAME and TEST_CREDENTIAL_PASSWORD</code>
 
-		<li><code>ADOBE_VENDOR_ID*</code>
+  		  <p>These variables are used by the circulation manager's /service_status handler to verify that the ILS is up and responding properly to PIN checks. If you don't specify them, /service_status won't work, but everything else will be fine.</p></li>
 
-		<p>These are values provided by Adobe when you purchase the Adobe Vendor ID service. If you don't provide these values, the circulation manager will not implement the Adobe Vendor ID service.</p></li>
+  		<li><code>GUTENBERG_ILLUSTRATED_BINARY_PATH</code>
 
-		<li><code>TEST_CREDENTIAL_USERNAME and TEST_CREDENTIAL_PASSWORD</code>
+  		  <p>This should be set to your Simplified-server-content directory plus <code>bin/imagecoverp5tint/imagecoverp5tint</code>. e.g. <code>/home/simplified/content/bin/imagecoverp5tint/imagecoverp5tint</code>. It probably doesn't need to be an environment variable.</p></li>
+	     </ul>
+    </div>
+  </div>
 
-		<p>These variables are used by the circulation manager's /service_status handler to verify that the ILS is up and responding properly to PIN checks. If you don't specify them, /service_status won't work, but everything else will be fine.</p></li>
+  <h2 id="sampleenvironment"></h2>
+    <h5 class="hr2"> </h5>
 
-		<li><code>GUTENBERG_ILLUSTRATED_BINARY_PATH</code>
+    <h2>Sample EC2 set up and costs</h2>
 
-		<p>This should be set to your Simplified-server-content directory plus "bin/imagecoverp5tint/imagecoverp5tint". e.g. "/home/simplified/content/bin/imagecoverp5tint/imagecoverp5tint". It probably doesn't need to be an environment variable.</p></li>
-	</ul>
-	</div>
-	</div>
-	</div>
+    <h6>Amazon EC2</h6>
+    <p>Amazon EC2 provides a wide selection of instance types optimized to fit different use cases. Instance types comprise varying combinations of CPU, memory, storage, and networking capacity and give you the flexibility to choose the appropriate mix of resources for your applications. Each instance type includes one or more instance sizes, allowing you to scale your resources to the requirements of your target workload. For Library Simplified (at The New York Public Library) we are using a combination of <strong>T2 instances</strong>, <strong>Relational Database Services</strong>, <strong>Simple Storage Services</strong>, and <strong>Content Delivery Network</strong> services to implement a <i>low cost</i>, <i>low latency</i>, <i>highly scalable</i> Library Simplified environment.</p>
+     
+     <h6>EC2 Server Types</h6>
+
+      <ul>
+        <li><strong>T2 instances</strong> are burstable performance instances that provide a baseline level of CPU performance with the ability to burst above the baseline. T2 instances are a good choice for workloads that don’t use the full CPU often or consistently, but occasionally need to burst (e.g. web servers, developer environments and small databases).<a href="http://aws.amazon.com/ec2/instance-types/" target="new"/> Learn more.</a>
+        </li>
+        <li>
+        <strong>Relational Database Service</strong> (RDS) is a managed service that makes it easy to set up, operate, and scale a relational database in the cloud. It provides cost-efficient and resizable capacity, while managing time-consuming database administration tasks, freeing you up to focus on applications and services.  RDS automatically receive patches ro the database software and backs up to your database, storing the backups for a your user-defined retention period. <a href="http://aws.amazon.com/rds/" target="new"/>Learn more.</a> 
+        </li>
+        <li>
+          <strong>Simple Storage Service</strong> (Amazon S3), provides developers and IT teams with secure, durable, highly-scalable object storage. S3 is easy to use, with a simple web services interface to store and retrieve any amount of data from anywhere on the web.  Amazon S3 can be used alone or together with other AWS services such as Amazon Elastic Compute Cloud (Amazon EC2), Amazon Elastic Block Store (Amazon EBS), and Amazon Glacier, as well as third party storage repositories and gateways. <a href="http://aws.amazon.com/s3/" target="new"/>Learn more</a>
+        </li>
+        <li>
+          A <strong>Content Delivery Network</strong> (CDN) is a system of distributed servers that deliver webpages and other Web content to a users based on the geographic locations of the user and the origin of the content delivery server in order to reduce network induced latency. Amazon's CloudFront is a content delivery web service. It integrates with other Amazon Web Services products to give developers and businesses an easy way to distribute content to end users with low latency, high data transfer speeds, and no minimum usage commitments.  <a href="http://aws.amazon.com/cloudfront/" target="new"/> Learn more.</a>
+        </li>
+      </ul>
+
+    <h5>Environment Diagram</h5>
+
+    <h6>Frontend</h6>
+      <p>
+        The frontend environment represents the publicly exposed service resources that allow for content syndication and discovery.  This is the layer of the application that is accessed by the iOS and Android client applications.</p>
+      <div class="row">
+        <div class="col-sm-9">
+          <a href="assets/images/ec2frontend.png" title="<h5>Libary Simlified frontend EC2 environment diagram</h5>"><img src="assets/images/ec2frontend.png" alt="Libary Simlified frontend EC2 environment diagram" /></a>
+                  <!--<img src="assets/slides/Slide1.png"> -->
+        </div>
+    </div>
+
+    <h6>Backend</h6>    
+      <p>
+        The backend environment represents the service resources that are not exposed publically for data and content management and content hosting and content host integration.  This is the layer of the application that is primarily accessed by teh circulation server and from time to time by the iOS and Android client applications by way of the OPDS interface.</p>
+     <div class="row">     
+        <div class="col-sm-9">
+          <a href="assets/images/ec2backend.png" title="<h5>Libary Simlified backend EC2 environment diagram</h5>"><img src="assets/images/ec2backend.png" alt="Libary Simlified backend EC2 environment diagram" /></a>
+                  <!--<img src="assets/slides/Slide1.png"> -->
+        </div>
+    </div>
+    <h5> </h5>
+
+    <h5>Sample pre-prodcution (QA) server environment and costs</h5>
+    <table border="1" style="width:100%">
+      <tr>
+        <th>Environment</th>
+        <th>Quantity</th> 
+        <th>Service Type</th>
+        <th>Cost/hr</th>
+        <th>Cost/Day</th>
+        <th>Extended</th>
+        <th>Purpose</th>
+      </tr>  
+      <tr>
+        <th rowspan="6">QA/Pre Production</th> 
+        <td>3</td> 
+        <td>EC2 m1.small</td>  
+        <td>$0.026</td> 
+        <td>$0.624</td> 
+        <td>$1.872</td>
+        <td>Circulation load balanced</td>
+      </tr>
+        <td>2</td>
+        <td>EC2 t2.micro</td> 
+        <td>$0.013</td>
+        <td>$0.312</td>
+        <td>$0.624</td>
+        <td>Circulation load balanced</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>RDS t2.medium</td>
+        <td>$0.2451</td>
+        <td>$5.8824</td>
+        <td>$5.8824</td>
+        <td>Circulation load balanced</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>RDS t2.micro</td>
+        <td>$0.149</td>
+        <td>$3.576</td>
+        <td>$3.576</td>
+        <td>Patron Account Sign Up</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>RDS t2.micro</td>
+        <td>$0.149</td>
+        <td>$3.576</td>
+        <td>$3.576</td>
+        <td>Content Server</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>RDS t2.medium</td>
+        <td>$0.2451</td>
+        <td>$5.8824</td>
+        <td>$5.8824</td>
+        <td>Metadata Wrangler</td>
+      </tr>
+      <tr>
+    </table>
+    <P></p>
+          <h5>Sample Production Environment server instances and costs.</h5>
+    <table border="1" style="width:100%">
+      <tr>
+        <th>Environment</th>
+        <th>Quantity</th> 
+        <th>Service Type</th>
+        <th>Cost/hr</th>
+        <th>Cost/Day</th>
+        <th>Extended</th>
+        <th>Purpose</th>
+      </tr>  
+      <tr>
+        <th rowspan="6">Live /Production</th> 
+        <td>3</td> 
+        <td>EC2 m1.small</td>  
+        <td>$0.026</td> 
+        <td>$0.624</td> 
+        <td>41.872</td>
+        <td>Circulation load balanced</td>
+      </tr>
+        <td>2</td>
+        <td>EC2 t2.micro</td> 
+        <td>$0.013</td>
+        <td>$0.312</td>
+        <td>$0.624</td>
+        <td>Circulation load balanced</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>RDS t2.medium</td>
+        <td>$0.2451</td>
+        <td>$5.8824</td>
+        <td>$5.8824</td>
+        <td>Circulation load balanced</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>RDS t2.micro</td>
+        <td>$0.149</td>
+        <td>$3.576</td>
+        <td>$3.576</td>
+        <td>Patron Account Sign Up</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>RDS t2.micro</td>
+        <td>$0.149</td>
+        <td>$3.576</td>
+        <td>$3.576</td>
+        <td>Content Server</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>RDS t2.medium</td>
+        <td>$0.2451</td>
+        <td>$5.8824</td>
+        <td>$5.8824</td>
+        <td>Metadata Wrangler</td>
+      </tr>
+    </table>
 </div>
-
+</div>
+</div>
+</div>
 </div><!-- .container -->
 
 <footer >	
