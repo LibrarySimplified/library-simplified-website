@@ -122,9 +122,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<div class="col-md-3">
 		<div id="sidebar" class="affix" role="complementary">
 			<ul class="nav">
-				<li><a href="#EC2Install">Install on Amazon EC2</a></li>
-				<li><a href="#environmentvariables">Environment Variables</a></li>
-        <li><a href="#sampleenvironment">Sample EC2 set up and costs</a></li>
+        <li><a href="#buildyourcloud">Build your cloud</a></li>
+        <li><a href="#getandinstalsw">Get software</a></li>
+				<li><a href="#environmentvariables">Configure</a></li>
         <!-- <li><a href="#implementationoptions">Implementation Options</a><li> --> 
 			</ul>
 		</div><!-- .affix -->
@@ -133,13 +133,223 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="col-md-9">
 
 <div class="row">
-<h2 id="EC2Install"></h2>
-<div>
-<h2>Install on to Amazon EC2</h2>
-<div>
-<p class="lead">"Cloud Computing", by definition, refers to the on-demand delivery of IT resources and applications via the Internet with pay-as-you-go pricing.  The following page provides step-by-step instructions for deploying any of the Library Simplified server components.</p>
-</div>
+<h2></h2>
 
+<div class="iconbox section-small">
+        
+    <h2>How to deply Library Simplified applications into your library</h3>
+        <div>
+        <p class="lead">Library Simplified application services are designed to be run in the cloud.  This provides libraries with no IT infrastructure and few IT management resources the ability to provide high availability services for less.</p>
+        </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <i class="icon-cloud icon-2x"></i>
+        <h5 class="header">1: Build your cloud</h5>
+        <p class="content">
+          Goto Amazon and provision server, network and data storage resources .
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <i class="icon-github icon-2x"></i>
+        <h5 class="header">2: Get software</h5>
+        <p class="content">
+          Download Library Simplified from Github.
+        </p>
+      </div>
+
+      <div class="col-lg-4">
+        <i class="icon-magic icon-2x"></i>
+        <h5 class="header">3: Configure</h5>
+        <p class="content">
+          Configure the application for your particular envronment and services.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="buildyourcloud"></h2>
+  <div>
+  <h2>Build your cloud</h2>
+  <div>
+  <p class="lead">"Cloud Computing", by definition, refers to the on-demand delivery of IT resources and applications via the Internet with pay-as-you-go pricing.  The following page provides step-by-step instructions for deploying any of the Library Simplified server components in the cloud.</p>
+  </div>
+
+    <h4>Sample EC2 set up and costs</h4>
+
+    <h6>Amazon EC2</h6>
+    <p>Amazon EC2 provides a wide selection of instance types optimized to fit different use cases. Instance types comprise varying combinations of CPU, memory, storage, and networking capacity and give you the flexibility to choose the appropriate mix of resources for your applications. Each instance type includes one or more instance sizes, allowing you to scale your resources to the requirements of your target workload. For Library Simplified (at The New York Public Library) we are using a combination of <strong>T2 instances</strong>, <strong>Relational Database Services</strong>, <strong>Simple Storage Services</strong>, and <strong>Content Delivery Network</strong> services to implement a <i>low cost</i>, <i>low latency</i>, <i>highly scalable</i> Library Simplified environment.</p>
+     
+     <h6>EC2 Server Types</h6>
+
+      <ul>
+        <li><strong>T2 instances</strong> are burstable performance instances that provide a baseline level of CPU performance with the ability to burst above the baseline. T2 instances are a good choice for workloads that don’t use the full CPU often or consistently, but occasionally need to burst (e.g. web servers, developer environments and small databases).<a href="http://aws.amazon.com/ec2/instance-types/" target="new"/> Learn more.</a>
+        </li>
+        <li>
+        <strong>Relational Database Service</strong> (RDS) is a managed service that makes it easy to set up, operate, and scale a relational database in the cloud. It provides cost-efficient and resizable capacity, while managing time-consuming database administration tasks, freeing you up to focus on applications and services.  RDS automatically receive patches to the database software and backs up to your database, storing the backups for a your user-defined retention period. <a href="http://aws.amazon.com/rds/" target="new"/>Learn more.</a> 
+        </li>
+        <li>
+          <strong>Simple Storage Service</strong> (Amazon S3), provides developers and IT teams with secure, durable, highly-scalable object storage. S3 is easy to use, with a simple web services interface to store and retrieve any amount of data from anywhere on the web.  Amazon S3 can be used alone or together with other AWS services such as Amazon Elastic Compute Cloud (Amazon EC2), Amazon Elastic Block Store (Amazon EBS), and Amazon Glacier, as well as third party storage repositories and gateways. <a href="http://aws.amazon.com/s3/" target="new"/>Learn more</a>
+        </li>
+        <li>
+          A <strong>Content Delivery Network</strong> (CDN) is a system of distributed servers that deliver webpages and other Web content to a users based on the geographic locations of the user and the origin of the content delivery server in order to reduce network induced latency. Amazon's CloudFront is a content delivery web service. It integrates with other Amazon Web Services products to give developers and businesses an easy way to distribute content to end users with low latency, high data transfer speeds, and no minimum usage commitments.  <a href="http://aws.amazon.com/cloudfront/" target="new"/> Learn more.</a>
+        </li>
+      </ul>
+
+    <h4>Environment Diagram</h4>
+
+    <h6>Frontend</h6>
+      <p>
+        The frontend environment represents the publicly exposed service resources that allow for content syndication and discovery.  This is the layer of the application that is accessed by the iOS and Android client applications.</p>
+      <div class="row">
+        <div class="col-sm-9">
+          <a href="assets/images/ec2frontend.png" title="<h5>Libary Simlified frontend EC2 environment diagram</h5>"><img src="assets/images/ec2frontend.png" alt="Libary Simlified frontend EC2 environment diagram" /></a>
+                  <!--<img src="assets/slides/Slide1.png"> -->
+        </div>
+    </div>
+
+    <h6>Backend</h6>    
+      <p>
+        The backend environment represents the service resources that are not exposed publically for data and content management and content hosting and content host integration.  This is the layer of the application that is primarily accessed by the circulation server and from time to time by the iOS and Android client applications by way of the OPDS interface.</p>
+     <div class="row">     
+        <div class="col-sm-9">
+          <a href="assets/images/ec2backend.png" title="<h5>Libary Simlified backend EC2 environment diagram</h5>"><img src="assets/images/ec2backend.png" alt="Libary Simlified backend EC2 environment diagram" /></a>
+                  <!--<img src="assets/slides/Slide1.png"> -->
+        </div>
+    </div>
+    <h5> </h5>
+
+    <h5>Sample pre-prodcution (QA) server environment and costs</h5>
+    <table border="1" style="width:100%">
+      <tr>
+        <th>Environment</th>
+        <th>Quantity</th> 
+        <th>Service Type</th>
+        <th>Cost/hr</th>
+        <th>Cost/Day</th>
+        <th>Extended</th>
+        <th>Purpose</th>
+      </tr>  
+      <tr>
+        <th rowspan="6">QA/Pre Production</th> 
+        <td>3</td> 
+        <td>EC2 m1.small</td>  
+        <td>$0.026</td> 
+        <td>$0.624</td> 
+        <td>$1.872</td>
+        <td>Circulation load balanced</td>
+      </tr>
+        <td>2</td>
+        <td>EC2 t2.micro</td> 
+        <td>$0.013</td>
+        <td>$0.312</td>
+        <td>$0.624</td>
+        <td>Circulation load balanced</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>RDS t2.medium</td>
+        <td>$0.2451</td>
+        <td>$5.8824</td>
+        <td>$5.8824</td>
+        <td>Circulation load balanced</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>RDS t2.micro</td>
+        <td>$0.149</td>
+        <td>$3.576</td>
+        <td>$3.576</td>
+        <td>Patron Account Sign Up</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>RDS t2.micro</td>
+        <td>$0.149</td>
+        <td>$3.576</td>
+        <td>$3.576</td>
+        <td>Content Server</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>RDS t2.medium</td>
+        <td>$0.2451</td>
+        <td>$5.8824</td>
+        <td>$5.8824</td>
+        <td>Metadata Wrangler</td>
+      </tr>
+      <tr>
+    </table>
+    <P></p>
+          <h5>Sample Production Environment server instances and costs.</h5>
+    <table border="1" style="width:100%">
+      <tr>
+        <th>Environment</th>
+        <th>Quantity</th> 
+        <th>Service Type</th>
+        <th>Cost/hr</th>
+        <th>Cost/Day</th>
+        <th>Extended</th>
+        <th>Purpose</th>
+      </tr>  
+      <tr>
+        <th rowspan="6">Live /Production</th> 
+        <td>3</td> 
+        <td>EC2 m1.small</td>  
+        <td>$0.026</td> 
+        <td>$0.624</td> 
+        <td>41.872</td>
+        <td>Circulation load balanced</td>
+      </tr>
+        <td>2</td>
+        <td>EC2 t2.micro</td> 
+        <td>$0.013</td>
+        <td>$0.312</td>
+        <td>$0.624</td>
+        <td>Circulation load balanced</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>RDS t2.medium</td>
+        <td>$0.2451</td>
+        <td>$5.8824</td>
+        <td>$5.8824</td>
+        <td>Circulation load balanced</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>RDS t2.micro</td>
+        <td>$0.149</td>
+        <td>$3.576</td>
+        <td>$3.576</td>
+        <td>Patron Account Sign Up</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>RDS t2.micro</td>
+        <td>$0.149</td>
+        <td>$3.576</td>
+        <td>$3.576</td>
+        <td>Content Server</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>RDS t2.medium</td>
+        <td>$0.2451</td>
+        <td>$5.8824</td>
+        <td>$5.8824</td>
+        <td>Metadata Wrangler</td>
+      </tr>
+    </table>
+    <p></p>
+</div>
+<div id="getandinstalsw">
+<h2 class="hr2"></h2>
+<h2>Get Software</h2>
+</div>
+  <div>
+  <p class="lead">The Library Simplified application is avaialble at <a href="https://github.com/about" target="new"/>Github</a>.  GitHub is a web-based <a href="https://en.wikipedia.org/wiki/Git_(software)" target="new"/>Git</a> repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git</p>
+  </div>
 
 	<div>
 			<div class="panel-group">
@@ -249,7 +459,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h2 id="environmentvariables"></h2>
 <h5> </h5>
 	<div>
-	<h2>Environment Variables</h2>
+	<h2 class="hr2"></h2>
+  <h2>Configure</h2>
 
 	<p>The <code>simplified_env</code> file contains your Library Simplified configuration in the form or a number of shell <code>EXPORT</code> statements. This document explains what those variables do and which ones are required for the circulation manager, the metadata wrangler, and the content server.</p>
 
@@ -481,8 +692,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  </div>
 </div>
 </div>
-	<div>	
- 	<h5>Detailed explanations</h5>
+	<div>
+  <p class="lead"></p>	
+ 	<h5>Environment variables detailed explanations</h5>
  		<div>
  			<p class="lead"> The following provides a detailed description of the environment variable parameters from above.</p>
  		   <ul>	
@@ -555,177 +767,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	     </ul>
     </div>
   </div>
-
-  <h2 id="sampleenvironment"></h2>
-    <h5 class="hr2"> </h5>
-
-    <h2>Sample EC2 set up and costs</h2>
-
-    <h6>Amazon EC2</h6>
-    <p>Amazon EC2 provides a wide selection of instance types optimized to fit different use cases. Instance types comprise varying combinations of CPU, memory, storage, and networking capacity and give you the flexibility to choose the appropriate mix of resources for your applications. Each instance type includes one or more instance sizes, allowing you to scale your resources to the requirements of your target workload. For Library Simplified (at The New York Public Library) we are using a combination of <strong>T2 instances</strong>, <strong>Relational Database Services</strong>, <strong>Simple Storage Services</strong>, and <strong>Content Delivery Network</strong> services to implement a <i>low cost</i>, <i>low latency</i>, <i>highly scalable</i> Library Simplified environment.</p>
-     
-     <h6>EC2 Server Types</h6>
-
-      <ul>
-        <li><strong>T2 instances</strong> are burstable performance instances that provide a baseline level of CPU performance with the ability to burst above the baseline. T2 instances are a good choice for workloads that don’t use the full CPU often or consistently, but occasionally need to burst (e.g. web servers, developer environments and small databases).<a href="http://aws.amazon.com/ec2/instance-types/" target="new"/> Learn more.</a>
-        </li>
-        <li>
-        <strong>Relational Database Service</strong> (RDS) is a managed service that makes it easy to set up, operate, and scale a relational database in the cloud. It provides cost-efficient and resizable capacity, while managing time-consuming database administration tasks, freeing you up to focus on applications and services.  RDS automatically receive patches to the database software and backs up to your database, storing the backups for a your user-defined retention period. <a href="http://aws.amazon.com/rds/" target="new"/>Learn more.</a> 
-        </li>
-        <li>
-          <strong>Simple Storage Service</strong> (Amazon S3), provides developers and IT teams with secure, durable, highly-scalable object storage. S3 is easy to use, with a simple web services interface to store and retrieve any amount of data from anywhere on the web.  Amazon S3 can be used alone or together with other AWS services such as Amazon Elastic Compute Cloud (Amazon EC2), Amazon Elastic Block Store (Amazon EBS), and Amazon Glacier, as well as third party storage repositories and gateways. <a href="http://aws.amazon.com/s3/" target="new"/>Learn more</a>
-        </li>
-        <li>
-          A <strong>Content Delivery Network</strong> (CDN) is a system of distributed servers that deliver webpages and other Web content to a users based on the geographic locations of the user and the origin of the content delivery server in order to reduce network induced latency. Amazon's CloudFront is a content delivery web service. It integrates with other Amazon Web Services products to give developers and businesses an easy way to distribute content to end users with low latency, high data transfer speeds, and no minimum usage commitments.  <a href="http://aws.amazon.com/cloudfront/" target="new"/> Learn more.</a>
-        </li>
-      </ul>
-
-    <h5>Environment Diagram</h5>
-
-    <h6>Frontend</h6>
-      <p>
-        The frontend environment represents the publicly exposed service resources that allow for content syndication and discovery.  This is the layer of the application that is accessed by the iOS and Android client applications.</p>
-      <div class="row">
-        <div class="col-sm-9">
-          <a href="assets/images/ec2frontend.png" title="<h5>Libary Simlified frontend EC2 environment diagram</h5>"><img src="assets/images/ec2frontend.png" alt="Libary Simlified frontend EC2 environment diagram" /></a>
-                  <!--<img src="assets/slides/Slide1.png"> -->
-        </div>
-    </div>
-
-    <h6>Backend</h6>    
-      <p>
-        The backend environment represents the service resources that are not exposed publically for data and content management and content hosting and content host integration.  This is the layer of the application that is primarily accessed by the circulation server and from time to time by the iOS and Android client applications by way of the OPDS interface.</p>
-     <div class="row">     
-        <div class="col-sm-9">
-          <a href="assets/images/ec2backend.png" title="<h5>Libary Simlified backend EC2 environment diagram</h5>"><img src="assets/images/ec2backend.png" alt="Libary Simlified backend EC2 environment diagram" /></a>
-                  <!--<img src="assets/slides/Slide1.png"> -->
-        </div>
-    </div>
-    <h5> </h5>
-
-    <h5>Sample pre-prodcution (QA) server environment and costs</h5>
-    <table border="1" style="width:100%">
-      <tr>
-        <th>Environment</th>
-        <th>Quantity</th> 
-        <th>Service Type</th>
-        <th>Cost/hr</th>
-        <th>Cost/Day</th>
-        <th>Extended</th>
-        <th>Purpose</th>
-      </tr>  
-      <tr>
-        <th rowspan="6">QA/Pre Production</th> 
-        <td>3</td> 
-        <td>EC2 m1.small</td>  
-        <td>$0.026</td> 
-        <td>$0.624</td> 
-        <td>$1.872</td>
-        <td>Circulation load balanced</td>
-      </tr>
-        <td>2</td>
-        <td>EC2 t2.micro</td> 
-        <td>$0.013</td>
-        <td>$0.312</td>
-        <td>$0.624</td>
-        <td>Circulation load balanced</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>RDS t2.medium</td>
-        <td>$0.2451</td>
-        <td>$5.8824</td>
-        <td>$5.8824</td>
-        <td>Circulation load balanced</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>RDS t2.micro</td>
-        <td>$0.149</td>
-        <td>$3.576</td>
-        <td>$3.576</td>
-        <td>Patron Account Sign Up</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>RDS t2.micro</td>
-        <td>$0.149</td>
-        <td>$3.576</td>
-        <td>$3.576</td>
-        <td>Content Server</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>RDS t2.medium</td>
-        <td>$0.2451</td>
-        <td>$5.8824</td>
-        <td>$5.8824</td>
-        <td>Metadata Wrangler</td>
-      </tr>
-      <tr>
-    </table>
-    <P></p>
-          <h5>Sample Production Environment server instances and costs.</h5>
-    <table border="1" style="width:100%">
-      <tr>
-        <th>Environment</th>
-        <th>Quantity</th> 
-        <th>Service Type</th>
-        <th>Cost/hr</th>
-        <th>Cost/Day</th>
-        <th>Extended</th>
-        <th>Purpose</th>
-      </tr>  
-      <tr>
-        <th rowspan="6">Live /Production</th> 
-        <td>3</td> 
-        <td>EC2 m1.small</td>  
-        <td>$0.026</td> 
-        <td>$0.624</td> 
-        <td>41.872</td>
-        <td>Circulation load balanced</td>
-      </tr>
-        <td>2</td>
-        <td>EC2 t2.micro</td> 
-        <td>$0.013</td>
-        <td>$0.312</td>
-        <td>$0.624</td>
-        <td>Circulation load balanced</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>RDS t2.medium</td>
-        <td>$0.2451</td>
-        <td>$5.8824</td>
-        <td>$5.8824</td>
-        <td>Circulation load balanced</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>RDS t2.micro</td>
-        <td>$0.149</td>
-        <td>$3.576</td>
-        <td>$3.576</td>
-        <td>Patron Account Sign Up</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>RDS t2.micro</td>
-        <td>$0.149</td>
-        <td>$3.576</td>
-        <td>$3.576</td>
-        <td>Content Server</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>RDS t2.medium</td>
-        <td>$0.2451</td>
-        <td>$5.8824</td>
-        <td>$5.8824</td>
-        <td>Metadata Wrangler</td>
-      </tr>
-    </table>
-</div>
 </div>
 </div>
 </div>
