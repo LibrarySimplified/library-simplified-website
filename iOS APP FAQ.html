@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<title>Library Simplified &middot; How To FAQs</title>
+<meta name="About" content="With the help of this Institute of Museum and Library Services, ten public libraries across the United States are exploring that question. We’re re-thinking traditional library policies and building new technology to make the libraries and their digital collections easier to access. Our goal is to break down barriers to library use so that more people take advantage of all the services that the library offers. We hope you’ll join the conversation." />
+<link rel="icon" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts (more: http://www.google.com/fonts) -->
+<!-- Main Font -->
+<!--<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">-->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<!-- Headings -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<!-- Handwritten -->
+<link href="http://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+<!-- Countdown, Pricing Table Price Tag -->
+<link href="http://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+<!-- Logo -->
+<link href="http://fonts.googleapis.com/css?family=Cantora+One" rel="stylesheet" type="text/css">
+
+<!-- CDN Bootstrap & FontAwesome -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- CSS Libraries -->
+<link href="assets/css/animate.min.css" rel="stylesheet">
+<link href="assets/css/bxslider.css" rel="stylesheet">
+<link href="assets/css/magnific-popup.css" rel="stylesheet">
+
+<!-- Theme Specific CSS -->
+<link href="assets/css/styles.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+
+<!-- Predefined Color Scheme -->
+<link href="assets/css/colors/orange.css" rel="stylesheet" id="colors">
+
+<!-- LESS - Development Only
+<link href="assets/less/styles.less" rel="stylesheet/less" />
+<script>less = { env: 'development' };</script>
+<script src="assets/js/less.js"></script>
+-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+<link href="assets/css/ie8.css" rel="stylesheet"></link>
+<![endif]-->
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-RKWC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-RKWC');</script>
+<!-- End Google Tag Manager -->
+
+
+<header id="header" class="navbar">
+
+  <div class="container">
+    <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	    	<span class="sr-only">Skip navigation</span>
+	    	<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+		  </button> 
+	    <a class="navbar-brand logo" href="index.html">Library Simplified</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+	    <ul class="nav navbar-nav">
+	    	<li class="dropdown">
+	    		<a href="index.html">Home</a>
+	    		<ul class="dropdown-menu">
+	    			<li><a href="about.html">About</a></li>
+	    			<li><a href="news-and-events.html">News and Events</a></li>
+  					<!-- <li><a href="contact.html">Contact Us</a></li>
+  					<li><a href="coming-soon.html">Coming Soon</a></li> -->
+  					<!-- <li><a href="coming-soon-bg-image.html">Coming Soon (Background)</a></li> -->
+	    			<li><a href="project-design.html">Project Design</a></li>
+	    			<li><a href="faq.html">FAQ</a></li>
+	    			<!--<li><a href="404.html">404 - Page not found</a></li>  -->
+	    		</ul>
+	    	</li>
+	    	<li class="dropdown">
+	    		<a href="/">Information</a>
+	    		<ul class="dropdown-menu">
+                    <li><a href="roll-up.html">Industry Reasearch and Analysis</a></li>
+                    <li><a href="LSsurvey1.html">Survey One eBook Survey</a></li>
+                    <li><a href="LSsurvey2.html">Survey Two non-user Survey</a></li>
+                    <li><a href="integrationandarchitecture.html">Integration and Architecture</a></li>
+                    <li><a href="userjourney.html">User Journey and Application Mock-ups</a></li>
+                    <li><a href="deployinstruction.html">Deploying the application</a></li>
+                    <!--<li><a href="404.html">404 - Page not found</a></li>  -->
+                </ul>
+	    	</li>
+	    </ul>
+    </nav>
+    
+  </div>
+</header><!-- .navbar-fixed-top -->
+
+<div class="page-top">
+	<div class="container">	
+		<h1 class="page-top-header">Mobile Client How To FAQs</h1>		
+		<ol class="breadcrumb">
+		  <li><a href="/">Home</a></li>
+		  <li class="active">FAQ</li>
+		</ol>
+	</div>	
+</div>
+
+<div class="container" id="main">
+
+<h1><i class="icon-apple"></i>  SimplyE iOS </h1>
+
+<p class="lead">You can use the SimplyE app to borrow e-books from your iPhone, iPad, or iPod Touch. You will need a valid library card and PIN, and iOS 7.0 or later on your device.</p>
+
+<div class="row">
+		<ul class="faq list-unstyled">
+			<li>
+				<div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#1"><i class="icon-apple"></i> Install SimplyE on your iPhone, iPad, or iPod Touch</a></h4>
+			    </div>
+			    <div id="1" class="panel-collapse collapse">
+			      <div class="panel-body">
+			        <ul>
+			        	<li>From the Apple App Store app, install the SimplyE app. </li> 
+						<li>Once installed, open the SimplyE app.</br>
+						<li>Tap <i class="icon-hand-up"></i> <code>Accept</code> to agreee to the terms of Service</li>
+						<li>To register you Library Card</br>
+							<ul class="list-icon">
+								<li><i class="icon-hand-up"></i>Tap <code>Settings</code> > <code>Library Card </code> and enter your library card number and PIN.</li>  
+						  		<li><i class="icon-hand-up"></i>Tap <code>Login</code>.</li>
+							</ul>
+						</li>
+					</ul>
+					<i>NOTE:  You do not have to login to use the app until you want to borrow an e-book.</i>
+			      </div>
+			    </div>
+			  </div>
+			</li>
+
+			<li>
+				<div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#2"><i class="icon-eye-open"></i>Browsing the collection</a></h4>
+			    </div>
+			    <div id="2" class="panel-collapse collapse">
+			      <div class="panel-body">
+			        <ul>
+			        	<li><strong>Browsing the popular and avialable titles</strong></br>
+			        		<i class="icon-hand-up"></i>Tap the <code>Catalog tab</code> at the bottom.  At any time you can tap the cover of the book to read a description about the book, download, checkout or place a hold on the book.</li>
+			        		<ul class="list-icon"><strong> Browse Categories:</strong>
+			        			<li><i class="icon-hand-up"></i><i class="icon-long-arrow-right"></i>Swipe from left to right on the book covers to view the popular and available for the respective category.</li>  
+			        			<li><i class="icon-hand-up"></i><i class="icon-resize-vertical"></i>Scroll up and down to view the different categories.</li>
+			        			<li><i class="icon-hand-up"></i>Tap the category titles or <code>More...</code> to view sub categories or a list of all books in the respective category.</li>
+			        		</ul></li>
+			        	<li><i class="list-icon"></i><strong>Browse Category List:</strong></br>
+			        		<i class="icon-hand-up"></i> <i class="icon-resize-vertical"></i> Scroll up and down to browse the list of books</li>
+		        	</ul>
+			     </div>
+			    </div>
+			</li>
+			<li>
+				<div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#3"><i class="icon-sort-by-attributes"></i>Sort book lists</a></h4>
+			    </div>
+			    <div id="3" class="panel-collapse collapse">
+			      <div class="panel-body">
+			        	<ul>
+			        		<li> At the list level, <i class="icon-hand-up"></i>Tap on <code>Author</code> to change the sort order.</li>
+			        			<ul class="list-icon">
+			       					<li><i class="icon-hand-up"></i> Tap <code>Title</code> to sort by Title or</li>
+			       		    		<li><i class="icon-hand-up"></i> Tap <code>Author</code> to continue to sort by Author </li>
+			        			</ul>
+			        	</ul>
+			      </div>
+			    </div>
+			</li>
+			<li>
+				<div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#4"><i class="icon-filter"></i>Filter Lists</a></h4>
+			    </div>
+			    <div id="4" class="panel-collapse collapse">
+			      <div class="panel-body">
+			      	<ul>
+			      		<li>At the list level you can also filter the list by</br>       		
+			    		<ul class="list-icon">
+			        		<li><i class="icon-hand-up"></i> Tapping <code>All</code> to change the attributes to filter on</li>
+			        		<li><i class="icon-hand-up"></i> Tap <code>All</code> or <code>On Hold</code> to filter accordingly.</li>
+			        	</ul>
+			      	</ul>
+			      </div>
+			    </div>
+			</li>
+			<li>
+				<div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#5"><i class="icon-search"></i>Search for a particular tile</a></h4>
+			    </div>
+			    <div id="5" class="panel-collapse collapse">
+			      <div class="panel-body">
+			      	<ul>
+						<li><strong>To search for a particular title</strong></br> 
+							<ul class="list-icon">
+								<li><i class="icon-hand-up"></i> tap the Search icon <i class="icon-search"></i> in the Navigation bar in the upper right.  Type the name of the author or title of the book.  A list of books matching your search criteria will be displayed.</li>
+								<li><i class="icon-hand-up"></i> <i class="icon-resize-vertical"></i> Scroll the list of results to find your book or refine your search.</li>
+							</ul>
+						</li>
+					</ul>
+			      </div>
+			    </div>
+			</li>
+			<li>
+				<div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#6"><i class="icon-cloud-download"></i>Borrowing or downloading ebooks</a></h4>
+			    </div>
+			    <div id="6" class="panel-collapse collapse">
+			      <div class="panel-body">
+				        <p>You can borrow up to 24 ebooks.  You have 14 days to read them.  If you place a hold on the ebook, you have 3 days to Check out the book or Cancel the hold.  The book will disappear after 3 days from your hold list.</p>
+				        <ul>
+				        	<li>Find a book you would like to read.</li>
+							<li><strong>Books you can keep</strong></br> 
+								(Public Domain or Creative Commons Licenses books) will display only a <code>Download</code> button.</br>
+								Simply <i class="icon-hand-up"></i> tap the <code>Download</code> button to download the book. 
+								The button will change to Delete or Read once downloaded.  
+								The Book will also show up in the list under the tab <code>My Books</code> with a <code>Read</code> and a <code>Delete</code> button. </li>
+							<li><strong> Books you can borrow</strong></br> 
+								These books display a <code>Check Out</code> or <code>Hold</code> button.</br>
+								Simply <i class="icon-hand-up"></i> tap <code>Checkout</code> to borrow the book if it is available.  The book will download to your device.  The button will change to Read once downloaded.
+								The Book will also show up in the list under the tab <code>My Books</code> if you checked out the book. 
+								You have 14 days to read the book.  If you placed a Hold on the book it will show up on under the <code>Holds</code> tabs.</li>
+							<li><strong>Books you have reserved (Placed a Hold)</strong></li>
+								<ul class="list-icon">
+									<li><i class="icon-hand-up"></i>Tap <code>Hold</code> to be placed in a waiting queue for the book to become available. The book will also show up in <code>Holds</code> tab.  When the book becomes available the button will change to Check Out and you have 3 days to Check Out the e-books.</li>  
+									<li><i class="icon-hand-up"></i> Tap <code>checkout</code> to download the book.</br>  The book will now show up in the list under the tab <code>My Books</code>.  You have 14 days to read the book.</li>
+								</ul>
+						</ul> 
+				  </div>
+				</div>
+
+			</li>
+			<li>
+				<div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#7"><i class="icon-smile"></i>Reading an eBook</a></h4>
+			    </div>
+			    <div id="7" class="panel-collapse collapse">
+			      <div class="panel-body">
+			      	<p> You have 14 Days to read a book borrowed from the library unless it is Public Domain or Creative Commons Licensing.  Then you can hold on to the book as long as you like.</p>
+				      	<ul>
+				        	<li>Find a book you would like to read.</li>
+				        	<li><i class="icon-hand-up"></i> Tap the <code>Read</code> to open and read the book.</li>
+				        		<ul>
+				        			<li>To turn the page, <i class="icon-hand-up"></i> tap on the edges of the screen.</li>
+				        		</ul>
+				        	<li>To exit or navigate to a particular section</li>
+				       			<ul class="list-icon">
+				   					<li><i class="icon-hand-up"></i> tap the center of the screen to bring up the top menu bar.</li>
+			      					<li><i class="icon-hand-up"></i> tap the <code>My Books</code> on the upper left to exit the book</li>
+		        					<li><i class="icon-hand-up"></i> tap the <i class="icon-list"></i> button on the upper right of the top menu bar to bring up the TOC, then <i class="icon-hand-up"></i> tap on the section or chapter you which to open.</li>
+		        				</ul>
+		        			<li>To change font type, size, constrast or brightness</li>
+		        				<ul class="list-icon">
+		        					<li><i class="icon-hand-up"></i> tap the center of the screen to bring up the top menu bar.</li>
+		        					<li><i class="icon-hand-up"></i> tap the <i class="icon-font"></i> button (second from the right of the top bar menu).</li>
+		        					<li><i class="icon-hand-up"></i> tap the appropriate control or selection from the options dipslayed.</li>
+		        				</ul>
+						</ul>
+				  </div>
+			    </div>
+			    </div> 
+			</li>
+		<ul>
+</div>
+
+<h1><i class="icon-android"></i>  SimplyE Android </h1>
+
+<p class="lead">You can use the SimplyE app to borrow e-books from NYPL for your Android Tablet or Smartphone. You will need a valid library card and PIN, and Andorid device.</p>
+
+<div class="row">
+		<ul class="faq list-unstyled">
+			<li>
+				<div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#8"><i class="icon-android"></i> Install SimplyE on your Android Device</a></h4>
+			    </div>
+			    <div id="8" class="panel-collapse collapse">
+			      <div class="panel-body">
+			        <ul>
+			        	<li>From the Google Play Store app, install the SimplyE app. </li> 
+						<li>Once installed, open the SimplyE app.</br>
+						<li>Tap <i class="icon-hand-up"></i> <code>Accept</code> to agreee to the terms of Service</li>
+						<li>To register you Library Card</br>
+							<ul class="list-icon">
+								<li><i class="icon-hand-up"></i>Tap <code>Settings</code> > <code>Library Card </code> and enter your library card number and PIN.</li>  
+						  		<li><i class="icon-hand-up"></i>Tap <code>Login</code>.</li>
+							</ul>
+						</li>
+					</ul>
+					<i>NOTE:  You do not have to login to use the app until you want to borrow an e-book.</i>
+			      </div>
+			    </div>
+			  </div>
+			</li>
+
+			<li>
+				<div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#9"><i class="icon-eye-open"></i>Browsing the collection</a></h4>
+			    </div>
+			    <div id="9" class="panel-collapse collapse">
+			      <div class="panel-body">
+			        <ul>
+			        	<li><strong>Browsing the popular and avialable titles</strong></br>
+			        		<i class="icon-hand-up"></i>Tap the <i class="icon-align-justify"></i> at the top to open up the menu.  Select catalog and the browse lanes will appear. At any time you can tap the cover of the book to read a description about the book, download, checkout or place a hold on the book.</li>
+			        		<ul class="list-icon"><strong> Browse Categories:</strong>
+			        			<li><i class="icon-hand-up"></i><i class="icon-long-arrow-right"></i>Swipe from left to right on the book covers to view the popular and available for the respective category.</li>  
+			        			<li><i class="icon-hand-up"></i><i class="icon-resize-vertical"></i>Scroll up and down to view the different categories.</li>
+			        			<li><i class="icon-hand-up"></i>Tap the category titles or <code>More...</code> to view sub categories or a list of all books in the respective category.</li>
+			        		</ul></li>
+			        	<li><i class="list-icon"></i><strong>Browse Category List:</strong></br>
+			        		<i class="icon-hand-up"></i> <i class="icon-resize-vertical"></i> Scroll up and down to browse the list of books</li>
+		        	</ul>
+			     </div>
+			    </div>
+			</li>
+			<li>
+				<div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#10"><i class="icon-sort-by-attributes"></i>Sort book lists</a></h4>
+			    </div>
+			    <div id="10" class="panel-collapse collapse">
+			      <div class="panel-body">
+			        	<ul>
+			        		<li> At the list level, <i class="icon-hand-up"></i>Tap on <code>Author</code> to change the sort order.</li>
+			        			<ul class="list-icon">
+			       					<li><i class="icon-hand-up"></i> Tap <code>Title</code> to sort by Title or</li>
+			       		    		<li><i class="icon-hand-up"></i> Tap <code>Author</code> to continue to sort by Author </li>
+			        			</ul>
+			        	</ul>
+			      </div>
+			    </div>
+			</li>
+			<li>
+				<div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#11"><i class="icon-filter"></i>Filter Lists</a></h4>
+			    </div>
+			    <div id="11" class="panel-collapse collapse">
+			      <div class="panel-body">
+			      	<ul>
+			      		<li>At the list level you can also filter the list by</br>       		
+			    		<ul class="list-icon">
+			        		<li><i class="icon-hand-up"></i> Tapping <code>All</code> to change the attributes to filter on</li>
+			        		<li><i class="icon-hand-up"></i> Tap <code>All</code> or <code>On Hold</code> to filter accordingly.</li>
+			        	</ul>
+			      	</ul>
+			      </div>
+			    </div>
+			</li>
+			<li>
+				<div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#12"><i class="icon-search"></i>Search for a particular tile</a></h4>
+			    </div>
+			    <div id="12" class="panel-collapse collapse">
+			      <div class="panel-body">
+			      	<ul>
+						<li><strong>To search for a particular title</strong></br> 
+							<ul class="list-icon">
+								<li><i class="icon-hand-up"></i> tap the Search icon <i class="icon-search"></i> in the Navigation bar in the upper right.  Type the name of the author or title of the book.  A list of books matching your search criteria will be displayed.</li>
+								<li><i class="icon-hand-up"></i> <i class="icon-resize-vertical"></i> Scroll the list of results to find your book or refine your search.</li>
+							</ul>
+						</li>
+					</ul>
+			      </div>
+			    </div>
+			</li>
+			<li>
+				<div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#13"><i class="icon-cloud-download"></i>Borrowing or downloading ebooks</a></h4>
+			    </div>
+			    <div id="13" class="panel-collapse collapse">
+			      <div class="panel-body">
+				        <p>You can borrow up to 24 ebooks.  You have 14 days to read them.  If you place a hold on the ebook, you have 3 days to Check out the book or Cancel the hold.  The book will disappear after 3 days from your hold list.</p>
+				        <ul>
+				        	<li>Find a book you would like to read.</li>
+							<li><strong>Books you can keep</strong></br> 
+								(Public Domain or Creative Commons Licenses books) will display only a <code>Download</code> button.</br>
+								Simply <i class="icon-hand-up"></i> tap the <code>Download</code> button to download the book. 
+								The button will change to Delete or Read once downloaded.  
+								The Book will also show up in the list under the tab <code>My Books</code> with a <code>Read</code> and a <code>Delete</code> button. </li>
+							<li><strong> Books you can borrow</strong></br> 
+								These books display a <code>Check Out</code> or <code>Hold</code> button.</br>
+								Simply <i class="icon-hand-up"></i> tap <code>Checkout</code> to borrow the book if it is available.  The book will download to your device.  The button will change to Read once downloaded.
+								The Book will also show up in the list under the tab <code>My Books</code> if you checked out the book. 
+								You have 14 days to read the book.  If you placed a Hold on the book it will show up on under the <code>Holds</code> tabs.</li>
+							<li><strong>Books you have reserved (Placed a Hold)</strong></li>
+								<ul class="list-icon">
+									<li><i class="icon-hand-up"></i>Tap <code>Hold</code> to be placed in a waiting queue for the book to become available. The book will also show up in <code>Holds</code> tab.  When the book becomes available the button will change to Check Out and you have 3 days to Check Out the e-books.</li>  
+									<li><i class="icon-hand-up"></i> Tap <code>checkout</code> to download the book.</br>  The book will now show up in the list under the tab <code>My Books</code>.  You have 14 days to read the book.</li>
+								</ul>
+						</ul> 
+				  </div>
+				</div>
+
+			</li>
+			<li>
+				<div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" href="#14"><i class="icon-smile"></i>Reading an eBook</a></h4>
+			    </div>
+			    <div id="14" class="panel-collapse collapse">
+			      <div class="panel-body">
+			      	<p> You have 14 Days to read a book borrowed from the library unless it is Public Domain or Creative Commons Licensing.  Then you can hold on to the book as long as you like.</p>
+				      	<ul>
+				        	<li>Find a book you would like to read.</li>
+				        	<li><i class="icon-hand-up"></i> Tap the <code>Read</code> to open and read the book.</li>
+				        		<ul>
+				        			<li>To turn the page, <i class="icon-hand-up"></i> tap on the edges of the screen.</li>
+				        		</ul>
+				        	<li>To exit or navigate to a particular section</li>
+				       			<ul class="list-icon">
+				   					<li><i class="icon-hand-up"></i> tap the center of the screen to bring up the top menu bar.</li>
+			      					<li><i class="icon-hand-up"></i> tap the <code>My Books</code> on the upper left to exit the book</li>
+		        					<li><i class="icon-hand-up"></i> tap the <i class="icon-list"></i> button on the upper right of the top menu bar to bring up the TOC, then <i class="icon-hand-up"></i> tap on the section or chapter you which to open.</li>
+		        				</ul>
+		        			<li>To change font type, size, constrast or brightness</li>
+		        				<ul class="list-icon">
+		        					<li><i class="icon-hand-up"></i> tap the center of the screen to bring up the top menu bar.</li>
+		        					<li><i class="icon-hand-up"></i> tap the <i class="icon-font"></i> button (second from the right of the top bar menu).</li>
+		        					<li><i class="icon-hand-up"></i> tap the appropriate control or selection from the options dipslayed.</li>
+		        				</ul>
+						</ul>
+				  </div>
+			    </div>
+			    </div> 
+			</li>
+		<ul>
+</div>
+</div><!-- .container -->
+
+<footer id="footer">
+
+	<div class="newsletter">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<a href="http://eepurl.com/bo9K3T"><h3 class="title"><i class="icon-envelope-alt"></i> Subscribe to updates</h3></a>
+					<span class="lead">We will only send you good stuff. Promise!</span>
+				</div>
+				<div class="col-md-4">
+					<form class="input-group small" method="post" action="">
+				    <input type="text" class="form-control" placeholder="Your Email Address" />
+				    <div class="input-group-btn">
+				      <button class="btn btn-default" type="button">Sign Up <i class="icon-angle-right"></i></button>
+				    </div>
+				  </form>
+				</div>
+			</div>
+	  </div>
+  </div>
+
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+			
+				<div class="col-md-4">
+					<div class="social-networks">
+						<a href=""><i class="icon-facebook"></i></a>
+						<a href=""><i class="icon-twitter"></i></a>
+						<a href="https://plus.google.com/u/0/+newyorkpubliclibrary/posts"><i class="icon-google-plus"></i></a>
+						<!-- <a href=""><i class="icon-linkedin"></i></a>
+						<a href=""><i class="icon-tumblr"></i></a>
+						<a href=""><i class="icon-dribbble"></i></a>	
+						<a href=""><i class="icon-instagram"></i></a>
+						<a href=""><i class="icon-pinterest"></i></a>
+						<a href=""><i class="icon-youtube-play"></i></a>
+						<a href=""><i class="icon-rss"></i></a> -->
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<h6 class="title">About</h6>
+					<p>
+						We are a team of remarkable institutions doing great things. Get to know a little bit more <a href="about">about us</a>.
+					</p>
+				</div>  
+				
+				<div class="col-md-4">
+					<h6 class="title">Get in Touch</h6>
+					<address>
+						<i class="icon-map-marker"></i> <a class="lightbox-iframe" href="https://maps.google.com/maps?q=NYPL+5th+Ave+at+42nd+St,+New+York+City,+New+York&amp;hl=en&amp;t=v&amp;hnear=5th+Ave+at+42nd+St,+New+York+City,+New+York" data-toggle="tooltip" title="Show on Google Maps">42nd Street 5th Avenue, New York City, United States</a><br />
+						<i class="icon-envelope"></i> <a href="mailto:info@librarysimplified.com" data-toggle="tooltip" title="Email Us">info@librarysimplified.com</a><br />
+						<i class="icon-phone"></i> +1 212 621 40520<br />
+					</address>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="container footer-bottom">
+		<div class="footer-copyright">
+			<p>&copy; 2013 by Olin. All Rights Reserved.</p>
+		</div>
+	</div>
+	
+</footer>
+
+<a href="#" id="scrollToTop">
+	<i class="icon-angle-up icon-2x"></i>
+</a>
+
+<!-- Contact Popup (Modal) -->
+<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <!--<h4 class="modal-title">We would love to hear from you</h4> -->
+      </div>
+      <div >
+      		<iframe src="https://docs.google.com/forms/d/1a1oldSfQxlRqdVRZVyquV2099-W9nfE0qcaGFvQOsic/viewform?embedded=true" width="677" height="745" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Libraries & jQuery Plugins -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.bxslider.min.js"></script>
+<script src="assets/js/jquery.isotope.min.js"></script>
+<script src="assets/js/jquery.fittext.js"></script>
+<script src="assets/js/jquery.fitvids.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.hoverdir.js"></script>
+<script src="assets/js/validation.js"></script>
+<script src="assets/js/theme.js"></script>
+ 
+</body>
+</html>
