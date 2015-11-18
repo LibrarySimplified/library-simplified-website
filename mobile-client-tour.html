@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<title>Library Simplified &middot; Mobile Client Tour</title>
+<link rel="icon" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts (more: http://www.google.com/fonts) -->
+<!-- Main Font -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<!-- Headings -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<!-- Handwritten -->
+<link href="http://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+<!-- Countdown, Pricing Table Price Tag -->
+<link href="http://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+<!-- Logo -->
+<link href="http://fonts.googleapis.com/css?family=Cantora+One" rel="stylesheet" type="text/css">
+
+<!-- CDN Bootstrap & FontAwesome -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- CSS Libraries -->
+<link href="assets/css/animate.min.css" rel="stylesheet">
+<link href="assets/css/bxslider.css" rel="stylesheet">
+<link href="assets/css/magnific-popup.css" rel="stylesheet">
+
+<!-- Theme Specific CSS -->
+<link href="assets/css/styles.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+
+<!-- Predefined Color Scheme -->
+<link href="assets/css/colors/orange.css" rel="stylesheet" id="colors">
+
+<!-- LESS - Development Only
+<link href="assets/less/styles.less" rel="stylesheet/less" />
+<script>less = { env: 'development' };</script>
+<script src="assets/js/less.js"></script>
+-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+<link href="assets/css/ie8.css" rel="stylesheet"></link>
+<![endif]-->
+
+<!--Charts-->
+<script src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+  google.load('visualization', '1',null); // No 'packages' section.
+
+  google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {
+    // Define the chart using setters:
+    var chart1 = new google.visualization.ChartWrapper();
+    chart1.setChartType('ColumnChart');
+    chart1.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=1:4&drive_web#gid=0');
+    chart1.setContainerId('chart1');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart1.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart1.draw();
+
+    var chart2 = new google.visualization.ChartWrapper();
+    chart2.setChartType('ColumnChart');
+    chart2.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=113:114&drive_web#gid=0');
+    chart2.setContainerId('chart2');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart2.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart2.draw();
+
+  }
+
+</script>
+
+
+</head>
+  
+<div class="page-top">
+	<div class="container">	
+		<h1 class="page-top-header">Mobile Client Tour - iOS</h1>		
+		<ol class="breadcrumb">
+		  <li><a href="/">Home</a></li>
+		  <li class="active">Mobile Client Tour - iOS</li>
+		</ol>
+	</div>	
+</div>
+  
+<div class="container" id="main">
+	
+	<h4>Simple un-pretentious design</h4>
+	
+	<p class="lead">
+	  The SimplyE application is designed to organize the tasks required to find, borrow and read and eBook from the library.  In doing so the interface had to be utilitarian in design while preserving the visual appeal expected of a quality mobile applications.  For library lending, there is less need for supperficial interaction and display in order to sell the user on the content. The content itself is the product so that the application should fall away in order to showcase the collection and curatorial strength of the library.
+	</p>
+  
+  <ul class="portfolio-filter list-inline">
+	  <li class="active"><a href="#" data-filter="*">All</a></li>
+	  <li><a href="#" data-filter=".browse">Browse</a></li>
+	  <li><a href="#" data-filter=".search">Search</a></li>
+	  <li><a href="#" data-filter=".borrow">Borrow</a></li>
+	  <li><a href="#" data-filter=".holds">Reserve (Place Hold)</a></li>
+	  <li><a href="#" data-filter=".login">Log In/Out</a></li>
+	  <li><a href="#" data-filter=".apply">Optional: Sign Up</a></li>
+	  <li><a href="#" data-filter=".help">Optional: Help</a></li>
+	</ul> 
+  
+	<div class="row">
+		<ul class="portfolio">
+			<li class="browse">
+				<a href="">
+					<img src="assets/screenshotsios/01catalog.png" alt="" />
+					<span class="type">Browse</span>
+					<span class="portfolio-item-content">
+						<span class="header">Browse</span>
+						<p>
+							<strong>Browse the Catalog</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Swipe left and right on the NetFlix style lanes to see popular and available titles</br></li>
+									<li>Swipe up and down to view more catagories</br></li>
+									<li>Tap the category heading or More... to see more books in the category</br></li>
+									<li>Tap the refresh in the upper left to update the view of titles</li> 
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="browse">
+				<a href="">
+					<img src="assets/screenshotsios/02catalogbestsellers.png" alt="" />
+					<span class="type">Browse</span>
+					<span class="portfolio-item-content">
+						<span class="header">Browse</span>
+						<p>
+							<strong>Browse the Catalog: Best Sellers</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Swipe up and down to scroll through the list of best sellers available at the library</br></li>
+									<li>Tap the cover to read more about the book</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="browse">
+				<a href="">
+					<img src="assets/screenshotsios/02catalogbestsellers.png" alt="" />
+					<span class="type">Browse</span>
+					<span class="portfolio-item-content">
+						<span class="header">Browse</span>
+						<p>
+							<strong>Browse the Catalog: Staff Picks</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Swipe up and down to scroll through the list of best sellers available at the library</br></li>
+									<li>Tap the cover to read more about the book</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="search">
+				<a href="single-project-slider.html">
+					<img src="assets/screenshotsios/03searchcatalog.png" alt="" />
+					<span class="type">Search</span>
+					<span class="portfolio-item-content">
+						<span class="header">Search</span>
+						<p>
+							<Strong>Search the Catalog</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Tap the the search icon in the upper right to search for a particular title.</br></li>
+									<li>Type in title in the search bar or the author's name.</br></li>
+								</ul>
+							</p>
+							<p>
+								NOTE: The search is global if searching from the catalog.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="search">
+				<a href="single-project-slider.html">
+					<img src="assets/screenshotsios/04searchallfiction.png" alt="" />
+					<span class="type">Search</span>
+					<span class="portfolio-item-content">
+						<span class="header">Search</span>
+							<p>
+								<strong>Search a category</strong>
+							</p>
+
+						<span class="body">
+							<p>
+								<ul>
+									<li>Tap the category you wish to search.  
+									<li>If you are in the catagory tap the the Search icon in the upper right to search for a particular title.</br></li>
+									<li>Type in title in the search bar or the author's name.</br></li>
+								</ul>
+							</p>
+							<p>
+								NOTE: The search is confined to the given category.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="borrow">
+				<a href="">
+					<img src="assets/screenshotsios/05bookdetailborrow.png" alt="" />
+					<span class="type">Borrow</span>
+					<span class="portfolio-item-content">
+						<span class="header">Borrow</span>
+
+						<span class="body">
+							<p>
+							<ul>
+								<li>
+								When you find a book you want to read tap the Borrow button.
+								</li>
+							</ul>
+							</p>
+							<p>
+								NOTE: If the book is not a available the a Hold button will be avialable</br>
+								If a book is already borrowed or is unlicensed (Public Domain or Open Acces) a Download button will be displayed.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="holds">
+				<a href="">
+					<img src="assets/screenshotsios/07bbookdetaildownloading.png" alt="" />
+					<span class="type">Borrow</span>
+					<span class="portfolio-item-content">
+						<span class="header">Borrow</span>
+						<span class="body">
+							<p>
+								Tap Cancel to stop download if needed
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="login">
+				<a href="">
+					<img src="assets/screenshotsios/14settingsnotloggedin.png" alt="" />
+					<span class="type">Log In/Out</span>
+					<span class="portfolio-item-content">
+						<span class="header">Log In/Out</span>
+						<span class="body">
+							<p>
+								<ul>
+									<li>From the More Tab</li>
+									<li>Tap Library Card</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="login">
+				<a href="">
+					<img src="assets/screenshotsios/14settingslogin.png" alt="" />
+					<span class="type">Log In/Out</span>
+					<span class="portfolio-item-content">
+						<span class="header">Log In/Out</span>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Tap into the respective feild and the touch keyboard will display</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="login">
+				<a href="">
+					<img src="assets/screenshotsios/14settingsloginkeyboard.png" alt="" />
+					<span class="type">Log In/Out</span>
+					<span class="portfolio-item-content">
+						<span class="header">Log In/Out</span>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Enter your Barcode and PIN into the respective feilds</li>
+									<li>Tap Log In to verify and sign in or Log Out to sign out.<li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="login">
+				<a href="">
+					<img src="assets/screenshotsios/14settingsloggedout.png" alt="" />
+					<span class="type">Log In/Out</span>
+					<span class="portfolio-item-content">
+						<span class="header">Log In/Out</span>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Tap Sign Out</li>
+									<li>Confirm Sign Out</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="help">
+				<a href="">
+					<img src="assets/screenshotsios/14settings.png" alt="" />
+					<span class="type">Optional: Help</span>
+					<span class="portfolio-item-content">
+						<span class="header">Help</span>
+						<p>
+							<strong>FAQs</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>From the More Tab</li>
+									<li>Tap Help to see FAQs, How-To guides or submit an issue</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="help">
+				<a href="">
+					<img src="assets/screenshotsios/15help.png" alt="" />
+					<span class="type">Optional: Help</span>
+					<span class="portfolio-item-content">
+						<span class="header">Help</span>
+						<p>
+							<strong>FAQs</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Tap on a particular topic under FAQs</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="help">
+				<a href="">
+					<img src="assets/screenshotsios/15help2.png" alt="" />
+					<span class="type">Optional: Help</span>
+					<span class="portfolio-item-content">
+						<span class="header">Help</span>
+						<p>
+							<strong>FAQs</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Tap on the different FAQ Topics to see relevant information and instructions</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="help">
+				<a href="">
+					<img src="assets/screenshotsios/15help3.png" alt="" />
+					<span class="type">Optional: Help</span>
+					<span class="portfolio-item-content">
+						<span class="header">Help</span>
+						<p>
+							<strong>Submit Issue</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Tap on Issue to submit and issues</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="help">
+				<a href="">
+					<img src="assets/screenshotsios/15help6.jpg" alt="" />
+					<span class="type">Optional: Help</span>
+					<span class="portfolio-item-content">
+						<span class="header">Help</span>
+						<p>
+							<strong>Submit Issue</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Tap on Issue to submit and issues</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>												
+			<li class="apply">
+				<a href="">
+					<img src="assets/screenshotsios/14settingsnotloggedin.png" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								From the More Tab, Tap Library Card
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/screenshotsios/16signup.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Sign Up to apply for a Library Barcode and PIN
+ 							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/screenshotsios/16signup1.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Settgins to allow the access the application permision to access function on your iOS device needed to provide as part of the application process.
+ 							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/screenshotsios/16signup1a.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+							<p>
+							<strong>Settings</strong>
+							</p>
+						<span class="body">
+							<p>
+								Tap Location
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/screenshotsios/16signup1b.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+							<p>
+							<strong>Settings</strong>
+							</p>
+						<span class="body">
+							<p>
+								Select "While using the app."
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/screenshotsios/16signup1c.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+	 					<p>
+							<strong>Settings</strong>
+						</p>
+						<span class="body">
+							<p>
+								Tap Settings to return to SimplyE.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+
+			<li class="apply">
+				<a href="">
+					<img src="assets/screenshotsios/16signup2.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Continue.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/screenshotsios/16signup3.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/screenshotsios/16signup4.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/screenshotsios/16signup4b.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/screenshotsios/16signup5.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/screenshotsios/16signup6.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/screenshotsios/16signup7.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/screenshotsios/16signup8.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/screenshotsios/16signup9.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/screenshotsios/16signup10.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/screenshotsios/16signup11.png" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Return to Catalog to exit.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+
+		</ul>
+	</div>
+	
+</div><!-- .container -->
+
+<footer id="footer">
+
+	<div class="newsletter">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<a href="http://eepurl.com/bo9K3T"><h3 class="title"><i class="icon-envelope-alt"></i> Subscribe to updates</h3></a>
+					<span class="lead">We will only send you good stuff. Promise!</span>
+				</div>
+				<!--<div class="col-md-4">
+					<form class="input-group small" method="post" action="">
+				    <input type="text" class="form-control" placeholder="Your Email Address" />
+				    <div class="input-group-btn">
+				      <button class="btn btn-default" type="button">Sign Up <i class="icon-angle-right"></i></button>
+				    </div>
+				  </form>
+				</div>-->
+			</div>
+	  </div>
+  </div>
+
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+			
+				<div class="col-md-4">
+					<div class="social-networks">
+						<a href="https://www.facebook.com/nypl"><i class="icon-facebook"></i></a>
+						<a href="https://twitter.com/nypl"><i class="icon-twitter"></i></a>
+						<a href="https://plus.google.com/u/0/+newyorkpubliclibrary/posts"><i class="icon-google-plus"></i></a>
+						<a href="http://nypl.tumblr.com/"><i class="icon-tumblr"></i></a>
+						<a href="https://www.pinterest.com/nypl/"><i class="icon-pinterest"></i></a>
+						<!-- <a href=""><i class="icon-linkedin"></i></a>
+						<a href=""><i class="icon-dribbble"></i></a>	
+						<a href=""><i class="icon-instagram"></i></a>
+						<a href=""><i class="icon-pinterest"></i></a>
+						<a href=""><i class="icon-youtube-play"></i></a>
+						<a href=""><i class="icon-rss"></i></a> -->
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<h6 class="title">About</h6>
+					<p>
+						We are a team of remarkable institutions doing great things. Get to know a little bit more <a href="about">about us</a>.
+					</p>
+				</div>  
+				
+				<div class="col-md-4">
+					<h6 class="title">Get in Touch</h6>
+					<address>
+						<i class="icon-map-marker"></i> <a class="lightbox-iframe" href="https://maps.google.com/maps?q=NYPL+5th+Ave+at+42nd+St,+New+York+City,+New+York&amp;hl=en&amp;t=v&amp;hnear=5th+Ave+at+42nd+St,+New+York+City,+New+York" data-toggle="tooltip" title="Show on Google Maps">42nd Street 5th Avenue, New York City, United States</a><br />
+						<i class="icon-envelope"></i> <a href="mailto:info@librarysimplified.com" data-toggle="tooltip" title="Email Us">info@librarysimplified.com</a><br />
+						<i class="icon-phone"></i> +1 212 621 40520<br />
+					</address>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="container footer-bottom">
+		<div class="footer-copyright">
+			<p>&copy; 2013 by Olin. All Rights Reserved.</p>
+		</div>
+	</div>
+	
+</footer>
+
+
+<a href="#" id="scrollToTop">
+	<i class="icon-angle-up icon-2x"></i>
+</a>
+
+<!-- Contact Popup (Modal) -->
+<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">We would love to hear from you</h4>
+      </div>
+      <div class="modal-body">
+
+				<p class="lead">
+					Our qualified support is waiting for you, literally. Ask us anything you want. We will get back to you within 24h, seven days a week.</strong>
+				</p>
+				<form name="contactform" id="contactform" class="margin-bottom-large" method="post" action="contactform.php">		
+					<div class="row">
+						<div class="form-group col-md-6">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" placeholder="" class="form-control" />
+						</div>
+						<div class="form-group col-md-6">
+							<label for="email">Email <span class="text-warning">*</span></label>
+							<input type="text" name="email" id="email" placeholder="" class="form-control" />
+							<div id="email_error_empty" class="error">Please enter your email address.</div>
+							<div id="email_error_invalid" class="error">Please enter a valid email address.</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="subject">Subject</label>
+						<input type="text" name="subject" id="subject" class="form-control" placeholder="" />
+					</div>
+					<div class="form-group">
+						<label for="message">Message <span class="text-warning">*</span></label>
+						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder=""></textarea>
+						<div id="message_error_empty" class="error">Please enter a message.</div>
+						<div id="message_error_invalid" class="error">Please check your message for any errors.</div>
+					</div>
+	
+					<div id="mailsuccess" class="success">Your message has been sent successfully.</div>
+					<div id="mailfail" class="error">Sorry, error occured this time sending your message.</div>
+					
+					<div class="margin-top-base">
+						<input type="submit" id="submit_contact_form" class="btn btn-primary" value="Send">				
+						<small class="pull-right text-muted">* required</small>
+					</div>
+					<script src="assets/js/validation.js"></script>
+				</form>
+
+				<div class="row">
+					<div class="col-sm-6">
+						<h4 class="invert">Great Company Inc.</h4>
+						<address>
+							<i class="icon-map-marker"></i> Main Street, New York City, United States<br />
+							<i class="icon-envelope"></i> mail@yourcompany.com<br />
+							<i class="icon-phone"></i> +1 555 1234 4556<br />
+						</address>		
+					</div>
+					<div class="col-sm-6">
+						<h5 class="hr2 margin-bottom-base text-muted"><i class="icon-time"></i> Business Hours</h5>
+						<p class="lead">
+							<span class="color">Mon - Fri:</span> <span class="text-muted">9am to 5pm <em>(EST)</em></span><br />
+							<span class="color">Sat:</span> <span class="text-muted">9am to 2pm <em>(EST)</em></span><br />
+							<span class="color">Sun:</span> <span class="text-muted">closed</span>
+						</p>
+					</div>
+				</div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Libraries & jQuery Plugins -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.bxslider.min.js"></script>
+<script src="assets/js/jquery.isotope.min.js"></script>
+<script src="assets/js/jquery.fittext.js"></script>
+<script src="assets/js/jquery.fitvids.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.hoverdir.js"></script>
+<script src="assets/js/validation.js"></script>
+<script src="assets/js/theme.js"></script>
+ 
+</body>
+</html>
