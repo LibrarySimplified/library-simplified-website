@@ -3,7 +3,7 @@
 <html> 
 <head>
 <meta charset="utf-8">
-<title>Library Simplified &middot; Mobile Client Tour</title>
+<title>Library Simplified &middot; iOS UI Tour</title>
 <link rel="icon" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -48,40 +48,71 @@
 <link href="assets/css/ie8.css" rel="stylesheet"></link>
 <![endif]-->
 
-<!--Charts-->
-<script src="https://www.google.com/jsapi"></script>
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript">
-  google.load('visualization', '1',null); // No 'packages' section.
-  google.setOnLoadCallback(drawVisualization);
-  function drawVisualization() {
-    // Define the chart using setters:
-    var chart1 = new google.visualization.ChartWrapper();
-    chart1.setChartType('ColumnChart');
-    chart1.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=1:4&drive_web#gid=0');
-    chart1.setContainerId('chart1');
-    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
-    chart1.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
-    chart1.draw();
-    var chart2 = new google.visualization.ChartWrapper();
-    chart2.setChartType('ColumnChart');
-    chart2.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=113:114&drive_web#gid=0');
-    chart2.setContainerId('chart2');
-    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
-    chart2.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
-    chart2.draw();
-  }
-</script>
-
-
 </head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-RKWC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-RKWC');</script>
+<!-- End Google Tag Manager -->
+
+
+<header id="header" class="navbar">
+
+  <div class="container">
+    <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	    	<span class="sr-only">Skip navigation</span>
+	    	<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+		  </button> 
+	    <a class="navbar-brand logo" href="index.html">Library Simplified</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="index.html">Home</a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">About</a></li>
+            <li><a href="news-and-events.html">News and Events</a></li>
+            <!-- <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="coming-soon.html">Coming Soon</a></li> -->
+            <!-- <li><a href="coming-soon-bg-image.html">Coming Soon (Background)</a></li> -->
+            <li><a href="project-design.html">Project Design</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <!--<li><a href="404.html">404 - Page not found</a></li>  -->
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/">Information</a>
+          <ul class="dropdown-menu">
+                    <li><a href="roll-up.html">Industry Reasearch and Analysis</a></li>
+                    <li><a href="LSsurvey1.html">Survey One eBook Survey</a></li>
+                    <li><a href="LSsurvey2.html">Survey Two non-user Survey</a></li>
+                    <li><a href="integrationandarchitecture.html">Integration and Architecture</a></li>
+                    <li><a href="userjourney.html">User Journey and Application Mock-ups</a></li>
+                    <li><a href="deployinstruction.html">Deploying the application</a></li>
+                    <li><a href="iOSUItour.html">iOS UI Tour</a></li>
+                    <!--<li><a href="404.html">404 - Page not found</a></li>  -->
+                </ul>
+        </li>
+      </ul>
+    </nav>
+    
+  </div>
+</header><!-- .navbar-fixed-top -->
   
 <div class="page-top">
 	<div class="container">	
-		<h1 class="page-top-header">Mobile Client Tour - iOS</h1>		
+		<h1 class="page-top-header">iOS UI Tour</h1>		
 		<ol class="breadcrumb">
 		  <li><a href="/">Home</a></li>
-		  <li class="active">Mobile Client Tour - iOS</li>
+		  <li class="active">iOS UI Tour</li>
 		</ol>
 	</div>	
 </div>
@@ -93,7 +124,12 @@
 	<p class="lead">
 	  The SimplyE application is designed to organize the tasks required to find, borrow and read and eBook from the library.  In doing so the interface had to be utilitarian in design while preserving the visual appeal expected of a quality mobile applications.  For library lending, there is less need for supperficial interaction and display in order to sell the user on the content. The content itself is the product so that the application should fall away in order to showcase the collection and curatorial strength of the library.
 	</p>
-  
+	<blockquote>
+	  	<p><strong>The mobile app interface aims to get out of the way and let readers easily find, borrow and readthe books they want.</strong>
+	  	</p>
+	  		<small>Maurico Giraldo</small>
+	</blockquote>
+	
   <ul class="portfolio-filter list-inline">
 	  <li class="active"><a href="#" data-filter="*">All</a></li>
 	  <li><a href="#" data-filter=".browse">Browse</a></li>
@@ -343,7 +379,7 @@
 			</li>
 			<li class="help">
 				<a href="">
-					<img src="assets/screenshotsios/15help.jpg" alt="" />
+					<img src="assets/screenshotsios/15help.png" alt="" />
 					<span class="type">Optional: Help</span>
 					<span class="portfolio-item-content">
 						<span class="header">Help</span>
@@ -386,7 +422,7 @@
 					<span class="portfolio-item-content">
 						<span class="header">Help</span>
 						<p>
-							<strong>Submit Issue</strong>
+							<strong>FAQ</strong>
 						</p>
 						<span class="body">
 							<p>
@@ -400,7 +436,7 @@
 			</li>
 			<li class="help">
 				<a href="">
-					<img src="assets/screenshotsios/15help6.jpg" alt="" />
+					<img src="assets/screenshotsios/15help.png" alt="" />
 					<span class="type">Optional: Help</span>
 					<span class="portfolio-item-content">
 						<span class="header">Help</span>
@@ -416,7 +452,47 @@
 						</span>
 					</span>
 				</a>
-			</li>												
+			</li>
+			<li class="help">
+				<a href="">
+					<img src="assets/screenshotsios/15help4.png" alt="" />
+					<span class="type">Optional: Help</span>
+					<span class="portfolio-item-content">
+						<span class="header">Help</span>
+						<p>
+							<strong>Submit Issue</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Enter the requested contact information</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+
+			<li class="help">
+				<a href="">
+					<img src="assets/screenshotsios/15help5.jpg" alt="" />
+					<span class="type">Optional: Help</span>
+					<span class="portfolio-item-content">
+						<span class="header">Help</span>
+						<p>
+							<strong>Submit Issue</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Enter the issue and details about the issue encountered</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+												
 			<li class="apply">
 				<a href="">
 					<img src="assets/screenshotsios/14settingsnotloggedin.png" alt="" />
