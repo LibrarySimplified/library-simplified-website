@@ -3,7 +3,7 @@
 <html> 
 <head>
 <meta charset="utf-8">
-<title>Library Simplified &middot; Survey 2</title>
+<title>Library Simplified &middot; Cover Generator</title>
 <link rel="icon" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -48,37 +48,6 @@
 <link href="assets/css/ie8.css" rel="stylesheet"></link>
 <![endif]-->
 
-<!--Charts-->
-<script src="https://www.google.com/jsapi"></script>
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript">
-  google.load('visualization', '1',null); // No 'packages' section.
-
-  google.setOnLoadCallback(drawVisualization);
-
-  function drawVisualization() {
-    // Define the chart using setters:
-    var chart1 = new google.visualization.ChartWrapper();
-    chart1.setChartType('ColumnChart');
-    chart1.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=1:4&drive_web#gid=0');
-    chart1.setContainerId('chart1');
-    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
-    chart1.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
-    chart1.draw();
-
-    var chart2 = new google.visualization.ChartWrapper();
-    chart2.setChartType('ColumnChart');
-    chart2.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=113:114&drive_web#gid=0');
-    chart2.setContainerId('chart2');
-    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
-    chart2.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
-    chart2.draw();
-
-  }
-
-</script>
-
-
 </head>
 <body>
 <!-- Google Tag Manager -->
@@ -111,65 +80,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <ul class="dropdown-menu">
             <li><a href="about.html">About</a></li>
             <li><a href="news-and-events.html">News and Events</a></li>
-            <!-- <li><a href="contact.html">Contact Us</a></li>-->
-            <!-- <li><a href="coming-soon.html">Coming Soon</a></li> -->
+            <!-- <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="coming-soon.html">Coming Soon</a></li> -->
             <!-- <li><a href="coming-soon-bg-image.html">Coming Soon (Background)</a></li> -->
             <li><a href="project-design.html">Project Design</a></li>
-            <!--<li><a href="faq.html">FAQ</a></li>
-            <li><a href="404.html">404 - Page not found</a></li>  -->
+            <li><a href="faq.html">FAQ</a></li>
+            <!--<li><a href="404.html">404 - Page not found</a></li>  -->
           </ul>
         </li>
-            <li class="dropdown">
-                <a href="/">Information</a>
-                <ul class="dropdown-menu">
+        <li class="dropdown">
+          <a href="/">Information</a>
+          <ul class="dropdown-menu">
                     <li><a href="roll-up.html">Industry Reasearch and Analysis</a></li>
                     <li><a href="LSsurvey1.html">Survey One eBook Survey</a></li>
                     <li><a href="LSsurvey2.html">Survey Two non-user Survey</a></li>
                     <li><a href="integrationandarchitecture.html">Integration and Architecture</a></li>
-                    <li><a href="userjounrey.html">User Journey and Application Mock-ups</a></li>
-                    <!--<li><a href="faq.html">FAQ</a></li>
-                    <li><a href="404.html">404 - Page not found</a></li>  -->
+                    <li><a href="userjourney.html">User Journey and Application Mock-ups</a></li>
+                    <li><a href="gutenberg.html">Cover Generator</a></li>
                 </ul>
-            </li>
+        </li>
+        <li class="dropdown">
+          <a href="/">Product</a>
+          <ul class="dropdown-menu">
+                    <li><a href="deployinstruction.html">Deploying the application</a></li>
+                    <li><a href="iOSUItour.html">iOS UI Tour</a></li>
+                </ul>
+        </li>
+
       </ul>
     </nav>
     
   </div>
 </header><!-- .navbar-fixed-top -->
-
+  
 <div class="page-top">
   <div class="container"> 
-    <h1 class="page-top-header">Survey One</h1>   
+    <h1 class="page-top-header">Cover Generator</h1>    
     <ol class="breadcrumb">
       <li><a href="/">Home</a></li>
-      <li class="active">Survey One</li>
+      <li class="active">Cover Generator</li>
     </ol>
   </div>  
 </div>
-
 <div class="container" id="main">
 
-<div class="row">
-
-  <div class="col-md-3">
-    <div id="sidebar" class="affix" role="complementary">
-      <ul class="nav">
-        <li><a href="#design">Survey Design</a></li>
-        <li><a href="#profile">Sample Profile</a></li>
-        <li><a href="#summary">Summary</a></li>
-                <li><a href="#userandnonusers">Findings: Library Users vs. Non-Users</a></li>
-        <li><a href="#usage">Findings: eReading</a></li>
-                <li><a href="#demographics">Findings: Demographics Tables</a><li>
-      </ul>
-    </div><!-- .affix -->
-  </div>
-
-  <div class="col-md-9">
-
-    <div class="row">
-
 <h1 id="generative-ebook-covers">Generative ebook covers</h1>
-<p>See original Blog by NYPL Labs' Mauricio Geraldo</p>
+<p>See original Blog by NYPL Labs' Mauricio Geraldo <a href="http://www.nypl.org/blog/2014/09/03/generative-ebook-covers" target="new">here</a></p>
 
 <h4 id="finding-better-covers-for-public-domain-ebooks">Finding better covers for public domain ebooks</h4>
 
@@ -358,7 +314,7 @@ XM
 <p>This can become a never-ending project and we have an app to ship. This is <em>good enough</em> for now. Of course, you are welcome to play with and improve on it:</p>
 
 <ul>
-<li><a href="https://github.com/mgiraldo/tenprintcover-p5">10 PRINT â€œBOOK COVERâ€ (Processing version)</a></li>
-<li><a href="https://github.com/mgiraldo/tenprintcover-ios">10 PRINT â€œBOOK COVERâ€ (iOS version)</a></li>
-<li><a href="https://github.com/mgiraldo/imagecoverp5tint">Cover Illustrated</a></li>
+<li><a href="https://github.com/mgiraldo/tenprintcover-p5" target="new">10 PRINT BOOK COVER (Processing version)</a></li>
+<li><a href="https://github.com/mgiraldo/tenprintcover-ios" target="new">10 PRINT BOOK COVER (iOS version)</a></li>
+<li><a href="https://github.com/mgiraldo/imagecoverp5tint" target="new">Cover Illustrated</a></li>
 </ul>
