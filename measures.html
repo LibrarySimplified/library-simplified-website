@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<title>Library Simplified &middot; Application Objectives</title>
+<link rel="icon" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts (more: http://www.google.com/fonts) -->
+<!-- Main Font -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<!-- Headings -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<!-- Handwritten -->
+<link href="http://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+<!-- Countdown, Pricing Table Price Tag -->
+<link href="http://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+<!-- Logo -->
+<link href="http://fonts.googleapis.com/css?family=Cantora+One" rel="stylesheet" type="text/css">
+
+<!-- CDN Bootstrap & FontAwesome -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- CSS Libraries -->
+<link href="assets/css/animate.min.css" rel="stylesheet">
+<link href="assets/css/bxslider.css" rel="stylesheet">
+<link href="assets/css/magnific-popup.css" rel="stylesheet">
+
+<!-- Theme Specific CSS -->
+<link href="assets/css/styles.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+
+<!-- Predefined Color Scheme -->
+<link href="assets/css/colors/orange.css" rel="stylesheet" id="colors">
+
+<!-- LESS - Development Only
+<link href="assets/less/styles.less" rel="stylesheet/less" />
+<script>less = { env: 'development' };</script>
+<script src="assets/js/less.js"></script>
+-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+<link href="assets/css/ie8.css" rel="stylesheet"></link>
+<![endif]-->
+
+<!--Charts-->
+<script src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+  google.load('visualization', '1',null); // No 'packages' section.
+
+  google.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {
+    // Define the chart using setters:
+    var chart1 = new google.visualization.ChartWrapper();
+    chart1.setChartType('ColumnChart');
+    chart1.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=1:4&drive_web#gid=0');
+    chart1.setContainerId('chart1');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart1.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart1.draw();
+
+    var chart2 = new google.visualization.ChartWrapper();
+    chart2.setChartType('ColumnChart');
+    chart2.setDataSourceUrl('https://docs.google.com/spreadsheet/ccc?key=0ApuAYbtOQBxGdGYzQVA1c1pzbXplVEJ4YzhmbFkzX3c&range=113:114&drive_web#gid=0');
+    chart2.setContainerId('chart2');
+    //wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+    chart2.setOptions({'legend':'top', 'colors': ['#ee8900', '#666666']});
+    chart2.draw();
+
+  }
+
+</script>
+
+
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-RKWC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-RKWC');</script>
+<!-- End Google Tag Manager -->
+
+
+<header id="header" class="navbar">
+
+  <div class="container">
+    <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	    	<span class="sr-only">Skip navigation</span>
+	    	<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+		  </button> 
+	    <a class="navbar-brand logo" href="index.html">Library Simplified</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="index.html">Home</a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">About</a></li>
+            <li><a href="news-and-events.html">News and Events</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/">Project</a>
+          <ul class="dropdown-menu">
+              <li><a href="project-design.html">Project Design</a></li>
+              <li><a href="roll-up.html">Industry Reasearch and Analysis</a></li>
+              <li><a href="LSsurvey1.html">Survey One eBook Survey</a></li>
+              <li><a href="LSsurvey2.html">Survey Two non-user Survey</a></li>
+              <li><a href="integrationandarchitecture.html">Integration and Architecture</a></li>
+              <li><a href="userjourney.html">User Stories and Journey</a></li>
+              <li><a href="covergenerator.html">Invetigations: Cover Generator</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/">Product</a>
+          <ul class="dropdown-menu">
+              <li><a href="productbacklog.html">Product Backlog</a></li>
+              <li><a href="iOSUItour.html">iOS ver 1.0 UI</a></li>
+              <li><a href="accessibility.html">iOS Accessibility</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/">Deployment and Support</a>
+          <ul class="dropdown-menu">
+              <li><a href="deployinstruction.html">Deploying the application</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </nav>    
+  </div>
+</header><!-- .navbar-fixed-top -->
+
+<div class="page-top">
+	<div class="container">	
+		<h1 class="page-top-header">Product Objectives and Metrics</h1>		
+		<ol class="breadcrumb">
+		  <li><a href="/">Home</a></li>
+		  <li class="active">Product Objectives and Metrics</li>
+		</ol>
+	</div>	
+</div>
+
+<div class="container" id="main">
+
+<div class="row">
+
+	<div class="col-md-3">
+		<div id="sidebar" class="affix" role="complementary">
+			<ul class="nav">
+				<li><a href="#objectives"><strong>Product objectives</strong></a></li>
+        <li><a href="#growusers">Grow users</a></li>
+        <li><a href="#increasecirc">Increase circulation of collection</a></li>
+        <li><a href="#maximizereading">Maximize the time patrons spend reading books they like</a></li>
+        <li><a href="#othergoals">Other goals</a></li>
+			</ul>
+		</div><!-- .affix -->
+	</div>
+
+	<div class="col-md-9">
+
+		<div class="row">
+		
+			<h2 id="objectives"><strong>Product Objectives</strong></h2>
+      <p class="lead">
+        The Product Objectives center on the ability to make a postive impact on Libraries with regard to their eBook services.  These are:</p>
+        <ul>
+          <li><strong>Grow Users</li>
+          <li>Increase Circulation of collection</li>
+          <li>Maximize the time patrons spend reading books they like </strong>- this is a proxy to directing them to content they want.</li>
+          
+          <ul>
+            <li><strong>Expand the user profile for ebooks</strong> - this can grow users</li>
+            <li><strong>Minimize the number of unused loans</strong> - this can help circulation though greater availability</li>
+            <li><strong>Usability Goals</strong> - how we will evaluate the app.  This means the design and function of the app must answer the following:</li>
+              
+              <ul>
+                <li><strong>Is the app <i>Intuitive</i> - </strong> How easy is it for users to accomplish basic tasks the first time they encounter the design? </li>
+                <li><strong> Is the app is <i>Efficient</i> - </strong> Once users have learned the design, how quickly can they perform tasks? </li>
+                <li><strong>Is the app is <i>Memorable</i> - </strong> When users return to the design after a period of not using it, how easily can they reestablish proficiency? </li>
+                <li><strong>Does the app avoid user <i>Errors</i> - </strong> How many errors do users make, how severe are these errors, and how easily can they recover from the errors? </li>
+                <li><strong>Does the has high <i>Satisfaction</i> - </strong> How pleasant is it to use the design?</li>
+              </ul>
+          </ul>
+
+          <li><strong>Other Goals</strong></li>
+        </ul>
+
+<h2 class="hr2"></h2>
+<h2 id="growusers">Grow users</h2>
+<h3>New users to the Library</h3>
+<p>Becasue eBooks from libraries have been difficult for users to borrow, library ebook circ is betwenn 5% aand 7% of total circ.  This is also reflected in the number of unique and active patrons using library eBooks out of the total number of active users in the librarys.  For NYPL this is roughly 78,000 unique ebook users out of roughly 800,000 unique and active library patrons as measured by card holders.  The following measures are how we will mark progress to ward the goal of growing users</p>
+<p>
+  <strong>New Users - </strong> The number of new users onboarded to the library via the application.  This will be measured by the optional feature in the application to allow users to sign up for a library card via the application.
+</p>
+<p>
+  <strong>New eBook Users - </strong>  The increase in the number of unique new users of eBooks.
+</p>
+
+<h2 class="hr2"></h2>
+<h2 id="increasecirc">Increase circulation of collection</h2>
+
+<h6>How licenses work</h6>
+
+<p>
+  <ul>
+    <li>For most titles, we buy licenses that are both time-limited and use limited. That is, the license will expire after 26 loans or one year, whichever comes first. (What are the actual numbers?)</li>
+    <li>We acquire licenses to some titles (which ones?) on a pay-per-read basis.</li>
+    <li>For some titles, we acquire licenses for one title at a time. Other titles we acquire in bundle deals with the ebook provider. Our librarians may not even know which titles are available in these bundles.</li>
+    <li>Overdrive and 3M have purchasing consoles that encourage the library to buy more licenses. This is done on the basis of the hold/license ratio (see below).</li>
+  </ul>
+
+
+
+ <h6 id="unusedloans">Unused loans</h6>
+  <p>When a license expires, the number of times we could have loaned it out if it hadn't expired is the number of unused loans. Unused loans represent wasted money. It may have been better if we hadn't bought that license at all. Given that we did buy the license, we should have tried harder to lend out the book.</p>  However, assuming the collection represents books people want to read, then making the books easier to discover and acquire should deminish this number.
+
+  <h6 id="idletime">Idle time</h6>
+  <p>Idle time is the time between one patron checking a book in and the next patron reserving it or checking it out.</br>
+  For a book with active holds, idle time is zero. The book is reserved for the next person in the queue immediately after it's checked in.</br>
+  Minimizing idle time is important because we want someone to be reading the book all the time. The only books with large idle times should be books with niche audiences.</p>
+
+  <h6 id="failuretolend">Failure to lend rate</h6>
+  <p>A failure to lend is when someone joins the queue for a book and then leaves the queue without checking out the book. They either decided they didn't want the book, or they read the book some other way. We don't count people who are still in the queue, or people who left the queue via checking out the book.  By lowering this number we are succesfully increasing circulation of content by reducing the abandonment rate of the the holds queues</p>
+
+<h2 class="hr2"></h2>
+<h2 id="maximizereading">Maximize the time patrons spend reading books they like</h2>
+<h3>Expand the user profile for ebooks</h3>
+  <p>The primary measure for expanding the user profile is new users by demographic and interests.  Becasue libraries typically avoid colelcting demographic information on their users due to respect for a user's privacy, demographic measures of growth in users is deifficult to capture.  However, a proxy could be change in ciruclation for audience specific content. Increased circulation in our foreign language collections is an example.  Increased circulation in certain genere or subject matter could also be a measure of audience growth.</p>
+
+<h3 id="minimizeunusedloans">Minimize the number of unused loans</h3>
+
+
+  <h6 id="holdsratio">Hold/license ratio</h6>
+  <p>
+  The ratio of active holds to active licenses. This is the metric used by 3M and Overdrive (both of them?) to drive license sales. When this ratio gets above 9 (is that right? for both vendors?) they tell us we should buy another license. </br>
+  This is a terrible metric because it encourages buying a lot of licenses for things that are currently popular, licenses that are likely to expire before we get enough usage out of them to justify their cost.</p>
+  
+  <h6 id="unusedloans">Unused loans</h6>
+  <p>When a license expires, the number of times we could have loaned it out if it hadn't expired is the number of unused loans. Unused loans represent wasted money. It may have been better if we hadn't bought that license at all. Given that we did buy the license, we should have tried harder to lend out the book.</p>
+  <h6 id="waittime">Wait time</h6>
+  <p>Wait time is the time between a patron entering the hold queue for a book, and being given the opportunity to check it out.</br>
+    Minimizing wait time is important because large wait time leads to failures to lend (q.v.).</br>
+    It's also very important that wait time be predictable, so that we can give patrons an accurate picture of how long it will take them to get a book.</p>
+  <h6 id="reservationtime">Reservation time</h6>
+  <p>Reservation time is the time between a book being made available to someone and the time they decide to either check it out or pass it up.</br>
+  If the user decides to pass it up, that's the worst. They wanted the book badly enough to get in the hold queue, but they don't want it now that it's available. Maybe they already read it some other way, maybe they're no longer interested, maybe they're still interested but they don't have time right now. However, it happened, they've bumped up the wait time for everyone behind them in the queue, and for nothing.</br>
+  Minimizing reservation time is important because your reservation time contributes to the wait time of everyone in the queue behind you. If there is no one in the queue behind you, it's okay to give you more time to make up your mind.</p>
+
+  <h6 id="loantime">Loan time</h6>
+  <p>The time between a patron checking out a book and checking it in. For genre fiction this may be very short--measured in hours. For literary fiction and serious fiction it is longer.</br>
+  Not to be confused with the maximum loan time, which is the time (set by the ebook vendor) at which the DRM license will expire.</br>
+  In general, we don't want to try to change loan time, because we want people to read at their own pace. The one exception is when the loan time is the same as the maximum loan time. This probably means that the patron didn't finish the book. They might not have even started the book, in which case it would have been better if we hadn't loaned them the book at all. It cost us money, it drastically increased the wait time of everyone in the hold queue, and the patron didn't get anything out of it.</br>
+  For public domain books, "loan time" is not a coherent concept. However, we still don't want to loan out books that a patron will never read, because it uses bandwidth and makes the patron feel guilty.</p>
+  <h6 id="idletime">Idle time</h6>
+  <p>Idle time is the time between one patron checking a book in and the next patron reserving it or checking it out.</br>
+  For a book with active holds, idle time is zero. The book is reserved for the next person in the queue immediately after it's checked in.</br>
+  Minimizing idle time is important because we want someone to be reading the book all the time. The only books with large idle times should be books with niche audiences.</p>
+  <h6 id="failuretolend">Failure to lend rate</h6>
+  <p>A failure to lend is when someone joins the queue for a book and then leaves the queue without checking out the book. They either decided they didn't want the book, or they read the book some other way. We don't count people who are still in the queue, or people who left the queue via checking out the book.</p>
+  <p><strong><i>At NYPL, for its 3M collection, as of 2014-04-21:</i></strong>
+   <ul>
+      <li>7225 books had no failures to lend.</li>
+      <li><strong>6301 books failured to lend.</strong></li>
+      <li>Among books which failured to lend, the <strong>median failure rate was 18%.</strong></br>
+      That is, <i>18% of the people who ever joined the queue, left the queue without checking out the book.</i></br>
+      This includes people who entered the queue, went all the way through the queue, were notified that the book was available, and decided not to check it out. Because they made the decision in response to a reservation notification, these patrons bump up the failure-to-lend rate and the reservation time.</br>
+      We can minimize failure to lend by buying more licenses (the vendors' prefered solution), and by decreasing wait time (serving patrons more quickly).</br>
+      Giving accurate up-front estimates of wait time will bring this measurement down, because it will discourage patrons from joining a queue they can't wait through. However, someone who wants the book and doesn't join the queue because it's too long is still technically a "failure to lend". </br>
+      <strong>The benefits to the system of giving an up-front estimate of wait time are:</strong>
+      <ul>
+        <li>We've front-loaded the patron's disappointment, instead of making them frustrated at a long wait, then bothering them with a notification long after they're forgotten the book or read it some other way.  The patron's decision not to join the queue decreases the wait time (by the length of the reservation time) for everyone who joins the queue in the future.</li>
+        <li>Public domain loans</br>
+          Loans of public domain books from Gutenberg are free, and the patron gets to keep the book. Loans of public domain books from 3M and Overdrive are none of these things.</br>
+          How many loans are for public domain books?</br>
+          A very basic title/author match to try to find books in Overdrive and 3M that are also in Gutenberg.</br>
+          <ul>
+            <li>On Overdrive we own between 130 and 900 licenses for between 120 and 380 public domain books. There are also a few books (e.g. Frankenstein) for which we own thousands of licenses, which kind of simulates the public domain thing. This is out of about 16000 titles.</li>
+            <li>On 3M we own between 100 and 450 licenses for between 90 and 350 public domain books. This is out of a library size of about 14500 titles.</li>
+          </ul>    
+          <p>So the overlap is real, but it's not huge. We haven't determined how often these books get loaned out.</p>
+        </li>
+      </ul>
+      </li>
+    </ul>
+
+
+    <h3>Usability Goals</h3>
+
+    <h6>Intuitiveness</h6>
+    
+    <h6>Efficient</h6>
+    
+    <h6>Memorable</h6>
+    
+    <h6>Errors</h6>
+    
+    <h6>Satisfaction</h6>
+
+  <h2 class="hr2"><h2>
+  <h2 id="othergoals">Other goals</h2>
+
+
+			
+    </div>
+	</div><!-- .col-md-9 -->
+</div><!-- .row -->
+
+</div><!-- .container -->
+
+<footer id="footer">
+
+    <div class="newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3 class="title"><i class="icon-envelope-alt"></i> Contact Us</h3>
+                    <span class="lead">We will only send you good stuff. Promise!</span>
+                </div>
+                <!--<div class="col-md-4">
+                    <form class="input-group small" method="post" action="">
+                    <input type="text" class="form-control" placeholder="Your Email Address" />
+                    <div class="input-group-btn">
+                      <button class="btn btn-default" type="button">Sign Up <i class="icon-angle-right"></i></button>
+                    </div>
+                  </form>
+                </div>-->
+            </div>
+      </div>
+  </div>
+
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-4">
+                    <div class="social-networks">
+                        <a href="https://www.facebook.com/nypl"><i class="icon-facebook"></i></a>
+                        <a href="https://twitter.com/nypl"><i class="icon-twitter"></i></a>
+                        <a href="https://plus.google.com/u/0/+newyorkpubliclibrary/posts"><i class="icon-google-plus"></i></a>
+                        <a href="http://nypl.tumblr.com/"><i class="icon-tumblr"></i></a>
+                        <a href="https://www.pinterest.com/nypl/"><i class="icon-pinterest"></i></a>
+                        <!-- <a href=""><i class="icon-linkedin"></i></a>
+                        <a href=""><i class="icon-dribbble"></i></a>    
+                        <a href=""><i class="icon-instagram"></i></a>
+                        <a href=""><i class="icon-pinterest"></i></a>
+                        <a href=""><i class="icon-youtube-play"></i></a>
+                        <a href=""><i class="icon-rss"></i></a> -->
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <h6 class="title">About</h6>
+                    <p>
+                        We are a team of remarkable institutions doing great things. Get to know a little bit more <a href="about">about us</a>.
+                    </p>
+                </div>  
+                
+                <div class="col-md-4">
+                    <h6 class="title">Get in Touch</h6>
+                    <address>
+                        <i class="icon-map-marker"></i> <a class="lightbox-iframe" href="https://maps.google.com/maps?q=NYPL+5th+Ave+at+42nd+St,+New+York+City,+New+York&amp;hl=en&amp;t=v&amp;hnear=5th+Ave+at+42nd+St,+New+York+City,+New+York" data-toggle="tooltip" title="Show on Google Maps">42nd Street 5th Avenue, New York City, United States</a><br />
+                        <i class="icon-envelope"></i> <a href="mailto:info@librarysimplified.com" data-toggle="tooltip" title="Email Us">info@librarysimplified.com</a><br />
+                        <i class="icon-phone"></i> +1 212 621 40520<br />
+                    </address>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="container footer-bottom">
+        <div class="footer-copyright">
+            <p>&copy; 2013 by Olin. All Rights Reserved.</p>
+        </div>
+    </div>
+    
+</footer>
+
+<a href="#" id="scrollToTop">
+    <i class="icon-angle-up icon-2x"></i>
+</a>
+
+<!-- Contact Popup (Modal) -->
+<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">We would love to hear from you</h4>
+      </div>
+      <div class="modal-body">
+
+                <p class="lead">
+                    Ask us anything you want. We will get back to you during the work week.</strong>
+                </p>
+                <form name="contactform" id="contactform" class="margin-bottom-large" method="post" action="contactform.php">       
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="" class="form-control" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email">Email <span class="text-warning">*</span></label>
+                            <input type="text" name="email" id="email" placeholder="" class="form-control" />
+                            <div id="email_error_empty" class="error">Please enter your email address.</div>
+                            <div id="email_error_invalid" class="error">Please enter a valid email address.</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" id="subject" class="form-control" placeholder="" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message <span class="text-warning">*</span></label>
+                        <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder=""></textarea>
+                        <div id="message_error_empty" class="error">Please enter a message.</div>
+                        <div id="message_error_invalid" class="error">Please check your message for any errors.</div>
+                    </div>
+    
+                    <div id="mailsuccess" class="success">Your message has been sent successfully.</div>
+                    <div id="mailfail" class="error">Sorry, error occured this time sending your message.</div>
+                    
+                    <div class="margin-top-base">
+                        <input type="submit" id="submit_contact_form" class="btn btn-primary" value="Send">             
+                        <small class="pull-right text-muted">* required</small>
+                    </div>
+                    <script src="assets/js/validation.js"></script>
+                </form>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4 class="invert">Library Simplified</h4>
+                        <address>
+                            <i class="icon-map-marker"></i> the New York Public Library, 5th Ave at 42nd St, New York City, United States<br />
+                            <i class="icon-envelope"></i> info@librarysimplified.com<br />
+                            <i class="icon-map-marker"></i> 42nd Street and 5th Avenue, New York City, United States<br />
+                            <i class="icon-envelope"></i> info@librarysimplified.com<br />
+                            <i class="icon-phone"></i> +1 212 621 0520<br />
+                        </address>      
+                    </div>
+                </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Libraries & jQuery Plugins -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.bxslider.min.js"></script>
+<script src="assets/js/jquery.isotope.min.js"></script>
+<script src="assets/js/jquery.fittext.js"></script>
+<script src="assets/js/jquery.fitvids.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.hoverdir.js"></script>
+<script src="assets/js/validation.js"></script>
+<script src="assets/js/theme.js"></script>
+ 
+</body>
+</html>
