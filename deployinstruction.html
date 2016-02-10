@@ -165,9 +165,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
       <div class="col-lg-4">
         <i class="icon-github icon-2x"></i>
-        <h5 class="header">2: Get software</h5>
+        <h5 class="header">2: Get the software</h5>
         <p class="content">
-          Download Library Simplified from Github.
+          Visit the Library Simplified Github Repository <a href="https://github.com/NYPL-Simplified/Simplified/wiki/Deployment-Instructions">here</a>.
         </p>
       </div>
 
@@ -358,13 +358,102 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <div id="getandinstalsw">
 <h2 class="hr2"></h2>
-<h2>Get Software</h2>
+<h2>Library Simplified Code Repository</h2>
 </div>
   <div>
-  <p class="lead">The Library Simplified application is avaialble at <a href="https://github.com/about" target="new"/>Github</a>.  GitHub is a web-based <a href="https://en.wikipedia.org/wiki/Git_(software)" target="new"/>Git</a> repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git</p>
+  <p class="lead">The Library Simplified application and source code is available on GitHub.  GitHub is a web-based <a href="https://en.wikipedia.org/wiki/Git_(software)" target="new"/>Git</a> repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git.</p>
+  <h6>Quick Links...</h6>
+  <ul>
+    <li>
+      The repositories are located at <a href="https://github.com/NYPL-Simplified"/>https://github.com/NYPL-Simplified</a>.
+    </li>
+    <li>
+     The project has a general wiki for project.  It is can be found at <a href="https://github.com/NYPL-Simplified/Simplified/wiki"/>https://github.com/NYPL-Simplified/Simplified/wiki</a>.
+    </li>
+  </ul>
+
+  <h6> Deployment instructions</h6>
+
+  <p>
+    To begin to install the applications you will need to follow the deployment instructions provided in the main repositories wiki at <a href="https://github.com/NYPL-Simplified/Simplified/wiki/Deployment-Instructions">https://github.com/NYPL-Simplified/Simplified/wiki/Deployment-Instructions</a>.
+  </p>
+  <p>
+    There are several repositories in the project.  The following repositories are required to the run the application.
+  </p>
+
+  <h6>Required Server Software</h6>
+
+  <ul>
+    <li><strong>Server Core</strong> at <a href="https://github.com/NYPL-Simplified/server_core"/>https://github.com/NYPL-Simplified/server_core</a>. 
+      <p>
+        The <strong>Server Core</strong> contains functionality common between various LS servers, including database models and essential class constants, OPDS parsers, and certain configuration details.</br>
+        The <strong>OA Content Server</strong>, <strong>Metadata Wrangler</strong>, and <strong>Circulation Manager</strong> all depend on this code base.
+      </p>
+    </li>
+    <li><strong>Circulation Manager</strong> at <a href="https://github.com/NYPL-Simplified/circulation"/>https://github.com/NYPL-Simplified/circulation</a>. 
+      <p>
+        The <strong>Circulation Manager</strong> is the main connection between a library's collection and Library Simplified's various client-side applications. It handles user authentication, combines licensed works with open access content from the OA Content Server, pulls in updated book information from the Metadata Wrangler, and serves up available books in appropriately organized OPDS feeds.</br>
+        <strong>NOTE:</strong> This application depends on the <strong>Server Core</strong> as a git submodule. 
+      </p>
+    </li>
+  </ul>
+
+  <div class="well">
+
+    <h6>Optional Server Software</h6>
+
+    <p>
+      There are optional server components that a library may implement - <strong>Open Access (OA) Content Server</strong>, <strong>Metadata Wrangler</strong> and <strong>Card Creator</strong>.  These applications are purely optional because The New York Public Library will be providing functions for some of these servers as a service to implementing libraries so they do not have to install and host the servers.  <strong>Card Creator</strong> is an optional application which will not be provided as a service which needs to be customized on an individual basis by libraries.  which will allow libraries to incorporate remote library card application and proof of eligibility documentation in a secure and controlled process so that user data and privacy is secured in transit and at rest during the application review process and promptly deleted from library systems upon acceptance or rejection. 
+    </p>
+
+    <ul>
+      <li><strong>OA Content Server</strong> at <a href="https://github.com/NYPL-Simplified/content_server"/>https://github.com/NYPL-Simplified/content_server</a>
+        <p>
+          The <strong>OA Content Server</strong> collects and parses sources and preserves metadata for open access works, serving them up in a feed with verbose OPDS entries.</br>
+          <strong>NOTE:</strong> This application depends on the <strong>Server Core</strong> as a git submodule.</br>
+        </p>
+      </li>
+      <li><strong>Metadata Wrangler</strong> at <a href="https://github.com/NYPL-Simplified/metadata_wrangler"/>https://github.com/NYPL-Simplified/metadata_wrangler</a>
+        <p>
+          The <strong>Metadata Wrangler</strong> utilizes and intelligently amalgamates a wide variety of information sources for library ebooks and incorporates them into the reading experience for users by improving selection, search, and recommendations.
+        </p>
+        <p>
+          <strong>NOTE:</strong> This application depends on the <strong>Server Core</strong> as a git submodule.</br>
+        </p>
+      </li>
+      <li><strong>Card Creator</strong> at <a href="https://github.com/NYPL-Simplified/card-creator"/>https://github.com/NYPL-Simplified/card-creator</a>
+        <p>
+          The <strong>Card Creator</strong> application allows libraries to incorporate remote library card application and proof of eligibility documentation in a secure and controlled process so that user data and privacy is secured in transit and at rest during the application review process and promptly deleted from library systems upon acceptance or rejection. 
+        </p>
+      </li>
+    </ul>
   </div>
 
-	<div>
+  <h6>Client Application Software</h6>
+
+  <p>
+    The mobile client applications are currently contained in a private repositories.  These will be eventually exposed in the upcoming weeks to open repositories.  Partner libraries may obtain access to the repositories and the closed repositories for DRM that require a commercial license.  Once the commercial license is obtained users can gain access to the code libraries that link to the commercial binaries distributed independently by the commercial DRM vendor.  
+  </p>
+  <p>
+    <strong>NOTE:</strong> The application can be built without DRM support as an Open Access (non DRM) content e-reader.  However, a Readium License is still required.  This license can be obtained directly from the <a href="http://readium.org/membership/license-readium-sdk"/>Readium Foundation</a> at special Non-Profit rate.  Additionally <a href="http://www.minitex.umn.edu/"/>Minitex</a> provide a special Non-profit license as well specifically to public, state and academic libraries as well at a reduce price.  Visit their product page <a href="http://www.minitex.umn.edu/Electronic/Readium/"/>here</a> to learn more.  
+  </p>
+
+  <ul>
+    <li><strong>iOS Client</strong> at <a href="https://github.com/NYPL-Simplified/Simplified-iOS"/>https://github.com/NYPL-Simplified/Simplified-iOS</a>.
+      <p>
+        The iOS client is a native application written in Objective C and C++.  There are optional cocoa pods for help ticket support.  It can be built with or without DRM.  
+      </p>
+    </li>
+
+    <li><strong>Android Client</strong> at <a href="https://github.com/NYPL-Simplified/android"/>https://github.com/NYPL-Simplified/android</a>.
+      <p>
+        The Android client is a native application written in Java and C++.  There are optional components for help ticket support.  It can be built with or without DRM.  
+      </p>
+    </li>
+  </ul>
+  </div>
+
+	<!-- <div>
 			<div class="panel-group">
 				<div class="panel panel-default">
 			    <div class="panel-heading">
@@ -466,320 +555,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			      </div>
 			    </div>
 			  	</div>
-			 </div>
+			 </div> -->
 
 <div>
 <h2 id="environmentvariables"></h2>
+
 <h5> </h5>
 	<div>
+
 	<h2 class="hr2"></h2>
+
   <h2>Configure</h2>
 
-	<p>The <code>simplified_env</code> file contains your Library Simplified configuration in the form or a number of shell <code>EXPORT</code> statements. This document explains what those variables do and which ones are required for the circulation manager, the metadata wrangler, and the content server.</p>
+    <p>
+      The configuration file contains all the necessary information to distinguish one Library Simplified installation from another. This file contains a lot of miscellaneous stuff, but the main sections are:
+    </p>
 
-	<p>In the table below, O means a value of that variable optional, X means it's required, and blank means that server doesn't use the variable.<p>
+    <ul>
+      <li>Links to especially important information that differs between libraries (privacy policy, terms of service.) </li> 
+      <li>Policies that differ between libraries, such as how to authenticate patrons, whether patrons can put books on hold, and how books should be organized in lanes.</li>
+      <li>Details on integrating with external pieces of software (such as the database) and third-party services (such as ebook providers.)</li>
+    </ul>
 
-	<div>
-  <table border="1" style="width:100%">
-    <tr>
-    <th>Variable Name</th>
-    <th>circ</th> 
-    <th>metadata</th>
-    <th>content</th>
-    </tr>
-    <tr>
-    <td><code>DATABASE_URL</td>
-    <td>X</td>
-    <td>X</td> 
-    <td>X</td>
-    </tr>
-    <tr>
-  	<td><code>DATABASE_TEST_URL</td>
-    <td>O</td>  
-    <td>O</td>    
-    <td>O</td>
-   <tr>
-    <td><code>CONTENT_WEB_APP_URL</td>
-    <td>X</td>
-    <td>X</td>
-    <td>X</td>
-   <tr>
-    <td><code>MILLENIUM_HOST</td>	
-    <td>X</td>
-    <td></td>
-    <td></td>
-   </tr>				
-   <tr>
-    <td><code>METADATA_WEB_APP_URL</td>
-    <td>X</td>
-    <td></td>
-    <td></td>
-   <tr>
-    <td><code>LENDING_POLICY</td>	
-    <td>X</td>
-    <td></td>
-    <td></td>
-   </tr>
-   <tr>
-    <td><code>SEARCH_SERVER_URL</td>	
-    <td>X</td>
-    <td></td>
-    <td></td>
-   </tr>
-   <tr>		
-    <td><code>SEARCH_WORKS_INDEX</td>	
-    <td>X</td>
-    <td></td>
-    <td></td>
-   </tr>
-   <tr>		
-    <td><code>PRIMARY_COLLECTION_LANGUAGE</td>	
-    <td>X</td>
-    <td></td>
-    <td></td>
-   </tr>
-   <tr>		
-    <td><code>OTHER_COLLECTION_LANGUAGES</td>	
-    <td>X</td>
-    <td></td>
-   	<td></td>
-   </tr>
-   <tr>		
-    <td><code>STAFF_PICKS_GOOGLE_SPREADSHEET_KEY</td>
-    <td>X</td>
-    <td></td>
-   	<td></td>
-   </tr>
-   <tr>		
-    <td><code>ADOBE_VENDOR_ID</td>	
-    <td>O</td>
-    <td></td>
-   	<td></td>
-   </tr>
-   <tr>
-    <td><code>ADOBE_VENDOR_ID_NODE_VALUE</td>
-    <td>O</td>
-    <td></td>
-   	<td></td>	
-   </tr>
-   <tr>
-    <td><code>TEST_CREDENTIAL_USERNAME</td>
-   	<td>O</td>
-   	<td></td>
-   	<td></td>
-   </tr>
-   <tr>
-    <td><code>TEST_CREDENTIAL_PASSWORD</td>
-    <td>O</td>
-   	<td></td>
-   	<td></td>
-   </tr>
-   <tr>		
-    <td><code>BOOK_COVERS_CDN_HOST</td>
-    <td>O</td>
-   	<td></td>
-   	<td></td>
-   </tr>
-   <tr>		
-    <td><code>OPDS_FEEDS_CDN_HOST</td>
-    <td>O</td>	
-   	<td></td>
-   	<td></td>
-   </tr>
-   <tr>
-    <td><code>AXIS_360_USERNAME</td>	
-   	<td>O</td>
-   	<td></td>
-   	<td></td>
-   </tr>
-   <tr>
-    <td><code>AXIS_360_PASSWORD</td>
-    <td>O</td>	
-   	<td></td>
-   	<td></td>
-   </tr>
-   <tr>
-    <td><code>AXIS_360_LIBRARY_ID</td>
-    <td>O</td>		
-   	<td></td>
-   	<td></td>
-   </tr>
-   <tr>
-    <td><code>THREEM_LIBRARY_ID</td>
-    <td>X</td>
-    <td>X</td>
-    <td></td>
-   </tr>
-   <tr> 
-   	<td><code>THREEM_ACCOUNT_ID</td>	
-   	<td>X</td>	
-   	<td>X</td>
-   	<td></td>
-   </tr>
-   <tr>	
-    <td><code>THREEM_ACCOUNT_KEY</td>
-    <td>X</td>	
-   	<td>X</td>
-   	<td></td>
-   </tr>
-   <tr>	
-    <td><code>OVERDRIVE_CLIENT_KEY</td>
-    <td>X</td>	
-   	<td>X</td>
-   	<td></td>
-   </tr>
-   <tr>	
-    <td><code>OVERDRIVE_CLIENT_SECRET</td>
-    <td>X</td>	
-   	<td>X</td>
-   	<td></td>
-   </tr>
-   <tr>	
-    <td><code>OVERDRIVE_LIBRARY_ID</td>
-    <td>X</td>	
-   	<td>X</td>
-   	<td></td>
-   </tr>
-   <tr>	
-    <td><code>OVERDRIVE_WEBSITE_ID</td>
-    <td>X</td>	
-   	<td>X</td>
-   	<td></td>
-   </tr>
-   <tr>	
-    <td><code>OVERDRIVE_COLLECTION_NAME</td>
-    <td>X</td>	
-   	<td>X</td>
-   	<td></td>
-   </tr>
-   <tr>	
-    <td><code>NYT_BEST_SELLERS_API_KEY</td>
-    <td>X</td>	
-   	<td>X</td>
-   	<td></td>
-   </tr>
-   <tr>	
-    <td><code>METADATA_WEB_APP_PORT</td>
-    <td></td>
-    <td>X</td>
-    <td></td>
-   </tr>
-   <tr>
-    <td><code>BOOK_COVERS_S3_BUCKET</td>
-    <td></td>
-    <td>X</td>
-    <td></td>
-   </tr>
-   <tr>
-    <td><code>CONTENT_CAFE_USER_ID</td>
-    <td></td>
-    <td>X</td>
-    <td></td>
-   </tr>
-   <tr>
-    <td><code>CONTENT_CAFE_PASSWORD
-    </td>
-    <td></td>
-    <td>X</td>
-    <td></td>
-   </tr>
-   <tr>	
-    <td><code>DATA_DIRECTORY</td>
-    <td></td>
-    <td>X</td>
-    <td>X</td>
-   </tr>
-   <tr>
-    <td><code>OPEN_ACCESS_CONTENT_S3_BUCKET</td>
-    <td></td>
-    <td></td>
-    <td>X</td>
-   </tr>
-   <tr>
-    <td><code>GUTENBERG_ILLUSTRATED_BINARY_PATH</td>
-    <td></td>
-    <td></td>
-    <td>X</td>
-   </tr>
-  </table>
- </div>
-</div>
-</div>
-	<div>
-  <p class="lead"></p>	
- 	<h5>Environment variables detailed explanations</h5>
- 		<div>
- 			<p class="lead"> The following provides a detailed description of the environment variable parameters from above.</p>
- 		   <ul>	
-   		<li><code>DATABASE_*_URL</code>
-  			<p>These are postgres:// URLs similar to the following:</p>
-  			<p><code>export DATABASE_URL="postgres://circulationuser:pass@mylsinstall.org:5432/circulation"</code></p>
-  			<p>The DATABASE_TEST_URL is only used when running unit tests. If you're not running tests, you don't need it.</p></li>
+    <p>
+      The circulation manager, the metadata wrangler, and the content server each need their own configuration file, but what goes into that configuration file differs from one component to the other.
+    </p>
 
-  		<li><code>MILLENIUM_HOST</code>
+    <p>
+      The Configuration instructions can be found on github on the main project's wiki at <a href="https://github.com/NYPL-Simplified/Simplified/wiki/Configuration"/>https://github.com/NYPL-Simplified/Simplified/wiki/Configuration</a>.
+    </p>
 
-  			<p>This is the URL to the Millenium Patron API used by your library.</p>
+  </div>
 
-  			<p><code>EXPORT MILLENIUM_HOST="http://my-library.iii.com:4500/PATRONAPI/" </code><p>
-
-  		<li><code>THREEM_, OVERDRIVE_, AXIS_360_, CONTENT_CAFE_</code></li>
-
-  			<P>These are values given to you by a vendor for accessing general book metadata or a particular collection.</br>
-  			If you don't have an account with that vendor, you still need to define the variables, but you can leave the values blank.<p></li>
-
-  		<li><code>*_WEB_APP_URL</code></li>
-
-  		  <p>These variables allow the different parts of a Library Simplified system to find each other over the network. They also tell the Simplified app itself which URL it's hosted at.<p></li>
-
-  		<li><code>CIRCULATION_WEB_APP_URL='https://circulation.librarysimplified.org/'</code>
-  		  <p><code>METADATA_WEB_APP_PORT</code> also needs to be set on the metadata wrangler. This is probably redundant and can be removed.</p></li>
-
-  		<li><code>DATA_DIRECTORY</code>
-
-  		  <p>In the metadata wrangler, this should point to a clone of the Simplified-data repository. In the content server, this should point to a directory with a huge amount of free space, because this is where the Gutenberg mirrors will go.</p></li>
-
-  		<li><code>*_S3_BUCKET</code>
-
-  		  <p>These are the URLs to the S3 buckets where open access epubs and cover images are stored.</p>
-  		  <p>
-  		  <code>export BOOK_COVERS_S3_BUCKET="http://book-covers.nypl.org"</code></br>
-  		  <code>export OPEN_ACCESS_CONTENT_S3_BUCKET="http://oabooks.nypl.org"</code></li>
-
-  		<li><code>PRIMARY_COLLECTION_LANGUAGES</code> and <code>OTHER_COLLECTION_LANGUAGES</code></p>
-
-  		  <p>Both of these are JSON lists of strings.</p>
-
-  		  <p>
-  			<code>export PRIMARY_COLLECTION_LANGUAGES='["eng"]'</code></br>
-  			<code>export OTHER_COLLECTION_LANGUAGES='["rus", "chi", "spa"]'</code></p>
-
-  		  <p><code>PRIMARY_COLLECTION_LANGUAGES</code> is a list of the languages in which the library has a very large collection--either the single largest collection or all collections larger than 25,000 books.</p>
-
-  		  <p><code>OTHER_COLLECTION_LANGUAGES</code> is a list of other languages in which the library has a large or notable collection.</p><li>
-
-  		<li><code>LENDING_POLICY</code>
-
-  		  <p>This is a JSON object that puts restrictions on what kind of books patrons can check out. If the patron's Patron.external_type is one of the strings found in the keys</p>
-
-  		  <p>For instance, if you have this in your <code>simplified_env:</code></p>
-
-  		  <p><code>export LENDING_POLICY='{"60": {"audiences": ["Children"]}, "152": {"audiences": ["Children"]}, "62": {"audiences": ["Children"]}}'</code></p>
-  		  <p>Then a patron whose <code>external_type</code> is <code>60</code>, <code>62</code>, or <code>152</code> will only be able to check out children's books. All other patrons will be able to check out any kind of books.</p></li>
-
-  		<li><code>ADOBE_VENDOR_ID*</code>
-
-  		  <p>These are values provided by Adobe when you purchase the Adobe Vendor ID service. If you don't provide these values, the circulation manager will not implement the Adobe Vendor ID service.</p></li>
-
-  		<li><code>TEST_CREDENTIAL_USERNAME and TEST_CREDENTIAL_PASSWORD</code>
-
-  		  <p>These variables are used by the circulation manager's /service_status handler to verify that the ILS is up and responding properly to PIN checks. If you don't specify them, /service_status won't work, but everything else will be fine.</p></li>
-
-  		<li><code>GUTENBERG_ILLUSTRATED_BINARY_PATH</code>
-
-  		  <p>This should be set to your Simplified-server-content directory plus <code>bin/imagecoverp5tint/imagecoverp5tint</code>. e.g. <code>/home/simplified/content/bin/imagecoverp5tint/imagecoverp5tint</code>. It probably doesn't need to be an environment variable.</p></li>
-	     </ul>
-    </div>
-    <div>
+  <div>
     <h2 id="monitoring"></h2>
     <h5> </h5>
       <div>
