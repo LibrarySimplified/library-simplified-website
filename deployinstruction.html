@@ -439,7 +439,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       The application can also be deployed as a containerized application if your IT practices take advantage of this technology.  Instead of building and deplying the application from the source repository, the Library Simplified Team also provides a containerized version of the application using Docker.  Docker is an open-source project that automates the deployment of applications inside software containers, by providing an additional layer of abstraction and automation of operating-system-level virtualization on Linux. Docker can package an application and its dependencies in a virtual container that can run on any Linux server. This helps enable flexibility and portability on where the application can run, on premises, in a public cloud, on a private cloud, or bare metal machines.   
     </p>
     
-    <img src="assets/images/docker.png" alt="Docker deploy process"/>
+    <img src="assets/images/Docker.png" alt="Docker deploy process"/>
 
     <p>
       Using a deployment management tool like <a href="https://wiki.jenkins-ci.org/display/JENKINS/Meet+Jenkins" target="new"/>Jenkins</a>, a docker containter can be pulled down by the repsective library from Docker Hub as a self contained application container onto your infrastructure (for example EC2.)  This simplifies application implementation and deployment by prepackaging the application and all the required stack technolgies and dependencies with out having to manualy configure or run PIP and GIT commands.  Simply pull the latest compatible container version, update the JSON configuration file during the deploy process.  For certain versions you may have to run some update scripts on your DB server.  
