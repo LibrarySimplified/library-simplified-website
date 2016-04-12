@@ -231,7 +231,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <!--<img src="assets/slides/Slide1.png"> -->
         </div>
 
-        <div >
+        <div class="well">
           <p>
            As you can see on the diagram to the left, the desired end state for libraries seeking to own the user experience and remove the intermediation of the library by its vendors  is to simply provide the interface to the eBook collection.  This interface in short intermediates the vendors so that discover, borrowing and reading experiences are managed by the library interfaces. 
           </p>
@@ -311,7 +311,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <h5 class="hr2"></h5>
 
         <div>
-        <h4 id="applicationstacks">Application Stacks</h4>
+        <h4 id="applicationstacks">Application Technologies</h4>
         <p class="lead">
          The application consist of a combination of open source and commercial proprietary software. The following diagrams depict software and resources that make up the application stack.       
         </p>
@@ -330,7 +330,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      </div><!--row-->
 
       <div class="row">   
-        <h5 class="hr5">Middleware application stacks</h5>
+        <h5 class="hr5">Middleware Application Technologies</h5>
         <p>
          The middleware consist of custom software application code and language specific resource libraries.  The bulk of the application is a Flask application written in Python.  The database technology is Postgres SQL and the server technology is Linux.  The card registration application is a Rails application using a Postgres SQL database to handle temp data storage and a SOAP interface to transact that data into the Sierra ILS.  The different application servers depicted in the diagram provide the core functionality and feature functions (e.g. card registration, open access content hosting and vendor ID.)  The core function of the middleware is to consolidate the remotely hosted content services into a unified collection, normalize its representation, normalize the 3rd party host APIs into a standard transaction for the client, and manage access to content.  All interfaces between the application servers are based on OPDS (accept for the Database.)  
         </p>

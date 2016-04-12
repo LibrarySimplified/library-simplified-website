@@ -4,3 +4,6 @@
 .description {
   font-size: 10px;
 }
+th, td {
+    padding: 10px;
+}

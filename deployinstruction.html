@@ -381,7 +381,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     There are several repositories in the project.  The following repositories are required to the run the application.
   </p>
 
-  <h6>Required Server Software</h6>
+  <h6>Required server software</h6>
 
   <ul>
     <li><strong>Server Core</strong> at <a href="https://github.com/NYPL-Simplified/server_core"/>https://github.com/NYPL-Simplified/server_core</a>. 
@@ -428,6 +428,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </li>
     </ul>
   </div>
+
+  <p>
+    <img src="assets/logos/Docker_logo.png" alt="Docker" width="150"/>
+  </p>
+
+  <h6>Containers</h6> 
+    
+    <p>
+      The application can also be deployed as a containerized application if your IT practices take advantage of this technology.  Instead of building and deplying the application from the source repository, the Library Simplified Team also provides a containerized version of the application using Docker.  Docker is an open-source project that automates the deployment of applications inside software containers, by providing an additional layer of abstraction and automation of operating-system-level virtualization on Linux. Docker can package an application and its dependencies in a virtual container that can run on any Linux server. This helps enable flexibility and portability on where the application can run, on premises, in a public cloud, on a private cloud, or bare metal machines.   
+    </p>
+    
+    <img src="assets/images/docker.png" alt="Docker deploy process"/>
+
+    <p>
+      Using a deployment management tool like <a href="https://wiki.jenkins-ci.org/display/JENKINS/Meet+Jenkins" target="new"/>Jenkins</a>, a docker containter can be pulled down by the repsective library from Docker Hub as a self contained application container onto your infrastructure (for example EC2.)  This simplifies application implementation and deployment by prepackaging the application and all the required stack technolgies and dependencies with out having to manualy configure or run PIP and GIT commands.  Simply pull the latest compatible container version, update the JSON configuration file during the deploy process.  For certain versions you may have to run some update scripts on your DB server.  
+    </p>
+
+    <p>The docker project and detailed deployment instructions can be found at <a href="https://github.com/NYPL-Simplified/Simplified/wiki/Deployment:-Quickstart-with-Docker"/>https://github.com/NYPL-Simplified/Simplified/wiki/Deployment:-Quickstart-with-Docker</a>
 
   <h6>Client Application Software</h6>
 
@@ -492,44 +510,199 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <p>The ability to monitor your cloud environment and application services is important.  Libraries and their technical staff need simple tools for keeping your ebook service running and scallable so that users have a wonderful and consistent Library Ebook service experience.  While you may have your own tools that you prefer to manage your enterprise or cloud systems, the following are examples of what the Library Simplifed Team use for the project, Open eBooks and the New York Public Library.  </p>
 
+      <div class="well">
       <h6>Environment Management</h6>
+      <table border="0.1" style="width:100%">
+      <tr>
+        <th>Product</th>
+        <th>Delivery</th>
+        <th>Purpose</th>
+      </tr>      
+      <tr>
+        <td><a href="https://puppetlabs.com/puppet/puppet-open-source" target="new"/><img src="assets/logos/Puppet_logo.png" width="100"/></a>
+        </td>
+        <td>Enterprise</td>
+        <td> This tool allows you to manage your cloud infrastructure and application service configurations.
+        </td>
+      </tr>
+    </table>
 
-      <ul>
-        <li><a href="http://newrelic.com/server-monitoring" target="new"/>New Relic</a> This tool is used to monitor the server application's performance.</li>
-        <li><a href="https://puppetlabs.com/puppet/puppet-open-source" target="new"/>Puppet</a>  This tool allows you to manage your cloud infrastructure and application service configurations.</li>
-      </ul>
+      </div>
+      <div class="well">
 
-      <h6>Automated Test and Deployment</h6>
-      <ul>
-        <li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Meet+Jenkins" target="new"/>Jenkins</a> 
-          This tool is used to manage continuous deployment of the application between your development environment (if needed) QA/pre-production environment and production service environment.</li>
-        <li><a href="https://travis-ci.com/"/>TravisCI</a> 
-          This service provides a tool to help manage continuous integration and deployment of your pre-compiled mobile applications (iOS, and Android.) </li>
-        <li><a href="https://aws.amazon.com/device-farm/"/>AWS Device Farm</a>
-          This service is used to provide mobile device environments and test infrasturucture for conducting automated testing.  This service can provide iOS and Android test device instances for a mulititude of device manaufactures and OS combinations.</li>
-        <li><a href="https://maven.apache.org/index.html"/>Maven</a>
-          Maven leverages the concept of a repository by retrieving the artifacts necessary to build an application and deploying the result of the build process into a repository. Maven uses the concept of structured repositories so components can be retrieved to support the build. These components or dependencies include libraries, frameworks, containers, etc.</li>
-        <li><a href="http://central.sonatype.org/"/>The Central Repository</a>
-          The Central Repository is the the default repository for Apache Maven, SBT and other build systems and can be easily used from Apache Ant/Ivy, Gradle and many other tools.</li>
-        <li><a href="http://www.sonatype.com/nexus/product-overview"/>Nexus</a>
-          Nexus manages software "artifacts" required for development. If you develop software, your builds can download dependencies from Nexus and can publish artifacts to Nexus creating a new way to share artifacts within an organization. </li>
-      </ul>
+      <h6>Automated Build, Test and Deployment for Continuous Integration and Deployment</h6>
+      <table border="0.1" style="width:100%">
+      <tr>
+        <th>Product</th>
+        <th>Delivery</th>
+        <th>Purpose</th>
+      </tr> 
+      <tr>  
+        <td><a href="https://wiki.jenkins-ci.org/display/JENKINS/Meet+Jenkins" target="new"/><img src="assets/logos/Jenkins_logo.png" width="200"/></a>
+        </td>
+        <td>Enterprise</td>
+        <td>
+          This tool is used to manage continuous deployment of the application between your development environment (if needed) QA/pre-production environment and production service environment.
+        </td>
+      </tr>
+      <tr>
+        <td><a href="https://travis-ci.com/"/><img src="assets/logos/TravisCI_logo.png" width="200"/></a>
+        </td>
+        <td>SaaS</td>
+        <td> 
+          This service provides a tool to help manage continuous integration and deployment of your pre-compiled mobile applications (iOS, and Android.)
+        </td>
+      </tr>
+      <tr>
+        <td><a href="https://aws.amazon.com/device-farm/"/><img src="assets/logos/amazon_web_services_logo.png" width="200"/></a>
+        </td>
+        <td>IaaS</td>
+        <td>
+          This service is used to provide mobile device environments and test infrasturucture for conducting automated testing.  This service can provide iOS and Android test device instances for a mulititude of device manaufactures and OS combinations.
+        </td>
+      </tr>
+      <tr>
+        <td><a href="https://maven.apache.org/index.html"/><img src="assets/logos/maven_logo.png" width="400"/></a>
+        </td>
+        <td>Enterprise</td>
+        <td>
+          Maven leverages the concept of a repository by retrieving the artifacts necessary to build an application and deploying the result of the build process into a repository. Maven uses the concept of structured repositories so components can be retrieved to support the build. These components or dependencies include libraries, frameworks, containers, etc.
+        </td>
+      </tr>
+      <tr>
+        <td><a href="http://central.sonatype.org/"/><img src="assets/logos/sonatype_nexus.png" width="300"/></a>
+        </td>
+        <td>IaaS</td>
+        <td>
+          The Central Repository is the default repository for Apache Maven, SBT and other build systems and can be easily used from Apache Ant/Ivy, Gradle and many other tools.
+        </td>
+      </tr>
+      <tr>
+        <td><a href="http://www.sonatype.com/nexus/product-overview"/><img src="assets/logos/sonatype.png" width="400"/></a>
+        </td>
+        <td>Enterprise</td>
+        <td>
+          Nexus manages software "artifacts" required for development. If you develop software, your builds can download dependencies from Nexus and can publish artifacts to Nexus creating a new way to share artifacts within an organization. 
+        </td>
+      </tr>
+      </table>
+    </div>
 
-      <h6>Application Monitoring and Logging</h6>
-      <ul>
-        <li><a href="https://www.loggly.com/product/" target="new"/>Loggly</a> 
-          This tool provides insights into your application performance through log file mining and visualization. </li>
-        <li><a href="https://bugsnag.com/" target="new"/>Bugsnag</a> 
-          This tool is FREE for non-profits and a must have for logging stack trace level issues.  This tool can be used across the entire application stack on the backend servers applications and mobile clients</li>
-      </ul>
-    
+    <div class="well">
+        <h6>Application Monitoring and Logging</h6>
+        <table border="0.1" style="width:100%">
+      <tr>
+        <th>Product</th>
+        <th>Delivery</th>
+        <th>Purpose</th>
+      </tr>
+      <tr>
+        <td><a href="https://www.loggly.com/product/" target="new"/><img src="assets/logos/loggly.png" width="150"/></a> </td>
+        <td>SaaS
+        </td>
+        <td>
+          This tool provides insights into your application performance through log file mining and visualization. You can create querries and alerts based on querries to detect logged events or sequences of events for reporting and monitoring.
+        </td>
+      </tr>
+      <tr>
+        <td><a href="https://bugsnag.com/" target="new"/><img src="assets/logos/bugsnag.png" width="150"/></a></td> 
+        <td>SaaS</td> 
+        <td>
+          This tool is FREE for non-profits and a must have for logging stack trace level issues.  This tool can be used across the entire application stack on the backend servers applications and mobile clients.
+        </td>
+      </tr>
+      <tr>
+        <td><a href="http://newrelic.com/server-monitoring" target="new"/><img src="assets/logos/NewRelic-logo.png" width="150"/></a>
+        </td>
+        <td> SaaS
+        </td>
+        <td>
+          This tool is used to monitor the server application's performance.  This tool can help you identify process bottlenecks in yiou application.</p>
+        </td>
+      </tr>
+      <tr>
+        <td><a href="" target="new"/><img src="assets/logos/google_analytics_logo.png" width="200"/></a>
+        </td>
+        <td> SaaS
+        </td>
+        <td>
+        This tool provides application anaytics in terms of user insights. This tool is used in the clients to annonymously measure click through of the applications so as to imporve usser expereince.
+        </td>  
+      </table>
+    </div>
   </div>
 </div>
 </div>
 </div>
 </div><!-- .container -->
+</div>
+  <footer id="footer">
 
-<footer >	
+  <div class="newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <a href="http://eepurl.com/bo9K3T"><h3 class="title"><i class="icon-envelope-alt"></i> Subscribe to updates</h3></a>
+          <span class="lead">We will only send you good stuff. Promise!</span>
+        </div>
+        <!--<div class="col-md-4">
+          <form class="input-group small" method="post" action="">
+            <input type="text" class="form-control" placeholder="Your Email Address" />
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="button">Sign Up <i class="icon-angle-right"></i></button>
+            </div>
+          </form>
+        </div>-->
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+      
+        <div class="col-md-4">
+          <div class="social-networks">
+            <a href="https://www.facebook.com/nypl"><i class="icon-facebook"></i></a>
+            <a href="https://twitter.com/nypl"><i class="icon-twitter"></i></a>
+            <a href="https://plus.google.com/u/0/+newyorkpubliclibrary/posts"><i class="icon-google-plus"></i></a>
+            <a href="http://nypl.tumblr.com/"><i class="icon-tumblr"></i></a>
+            <a href="https://www.pinterest.com/nypl/"><i class="icon-pinterest"></i></a>
+            <!-- <a href=""><i class="icon-linkedin"></i></a>
+            <a href=""><i class="icon-dribbble"></i></a>  
+            <a href=""><i class="icon-instagram"></i></a>
+            <a href=""><i class="icon-pinterest"></i></a>
+            <a href=""><i class="icon-youtube-play"></i></a>
+            <a href=""><i class="icon-rss"></i></a> -->
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <h6 class="title">About</h6>
+          <p>
+            We are a team of remarkable institutions doing great things. Get to know a little bit more <a href="about">about us</a>.
+          </p>
+        </div>  
+        
+        <div class="col-md-4">
+          <h6 class="title">Get in Touch</h6>
+          <address>
+            <i class="icon-map-marker"></i> <a class="lightbox-iframe" href="https://maps.google.com/maps?q=NYPL+5th+Ave+at+42nd+St,+New+York+City,+New+York&amp;hl=en&amp;t=v&amp;hnear=5th+Ave+at+42nd+St,+New+York+City,+New+York" data-toggle="tooltip" title="Show on Google Maps">42nd Street 5th Avenue, New York City, United States</a><br />
+            <i class="icon-envelope"></i> <a href="mailto:info@librarysimplified.com" data-toggle="tooltip" title="Email Us">info@librarysimplified.com</a><br />
+            <i class="icon-phone"></i> +1 212 621 40520<br />
+          </address>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="container footer-bottom">
+    <div class="footer-copyright">
+      <p>&copy; 2013 by Olin. All Rights Reserved.</p>
+    </div>
+  </div>
+  
 </footer>
 
 
