@@ -72,7 +72,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		  </button> 
 	    <a class="navbar-brand logo" href="index.html">Library Simplified</a>
     </div>
-    <nav class="collapse navbar-collapse" role="navigation">
+    
+<nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li class="dropdown">
           <a href="index.html">Home</a>
@@ -83,31 +84,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </ul>
         </li>
         <li class="dropdown">
-          <a href="/">Project</a>
+          <a href="/">Projects</a>
           <ul class="dropdown-menu">
-              <li><a href="project-design.html">Project Design</a></li>
-              <li><a href="roll-up.html">Industry Reasearch and Analysis</a></li>
-              <li><a href="LSsurvey1.html">Survey One eBook Survey</a></li>
-              <li><a href="LSsurvey2.html">Survey Two non-user Survey</a></li>
-              <li><a href="measures.html">Product Objectives and Measures</a></li>
+              <li><a href="project-design.html">Library Simpliifed Project Design</a></li>
+              <li><a href="LEAP-project-design.html">LEAP Project Design</a></li>
+              <li><a href="consortia-project-design.html">SimplyE for Consortia Project Design</a><li>
           </ul>
         </li>
         <li class="dropdown">
           <a href="/">Product</a>
           <ul class="dropdown-menu">
-              <li><a href="integrationandarchitecture.html">Integration and Architecture</a></li>
-              <li><a href="userjourney.html">User Stories and Journey</a></li>
-              <li><a href="covergenerator.html">Invetigations: Cover Generator</a></li>
               <li><a href="productbacklog.html">Product Backlog</a></li>
               <li><a href="iOSUItour.html">Mobile: iOS ver 1.0</a></li>
               <li><a href="androidtour.html">Mobile: Android ver 1.0</a></li>
+              <li><a href="covergenerator.html">Invetigations: Cover Generator</a></li>
           </ul>
         </li>
         <li class="dropdown">
           <a href="/">Deployment and Support</a>
           <ul class="dropdown-menu">
               <li><a href="deployinstruction.html">Deploying the application</a></li>
-              <li><a href="clientappfaq">Mobile Client application how to</a></li>
+              <li><a href="clientappfaq.html">Mobile Client application how to</a></li>
               <li><a href="accessibility.html">iOS Accessibility</a></li>
           </ul>
         </li>
@@ -139,6 +136,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<li><a href="#phase-2">Architecture and testing </a></li>
 				<li><a href="#phase-3">Build</a></li>
 				<li><a href="#phase-4">Implementation and Assessment</a><li>
+				<li><a href="#communication">Communication Plan</a><li>
+				<li><a href="#evaluation">Evaluation</a><li>
+				<li><a href="#resources">Resources</a><li>
 			</ul>
 		</div><!-- .affix -->
 	</div>
@@ -153,17 +153,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<strong>Library Simplified</strong> is jointly funded by <a href="http://www.NYPL.org" data-toggle="tooltip" title="The New York Public Library" target="_blank">NYPL</a> and <a href="http://www.imls.org" data-toggle="tooltip" title="Institute for Museum and Library Sciences" target="_blank">IMLS</a>.  This funding supports a full-time position at NYPL: “Product Owner (PO) for the Library Reading Experience.” The PO, is charged with proposing ways in which to employ technology, innovation in library policies, and the full range of library offerings to deliver a better experience to more patrons.  The PO leads a small technical team, and works in concert with partner libraries to analyze the digital assessment findings and move the design process forward. Library Simplified will include four phases of work with major milestones and deliverables at the end of each: (I) Fact gathering and analysis, (II) Architecture and testing (III) Build and (IV) Implementation and assessment.  
 			</p>
 
+
+
+			<h3><strong>Project Design</strong></h3>
+
+
+			
 			<hr />
 
-			<h3 id="phase-1"><Strong>Phase 1:</strong> Fact gathering and analysis</h3>
+			<h4 id="phase-1"><Strong>Phase 1:</strong> Fact gathering and analysis</h4>
 
-			<p class="lead">
+			<p>
 				There are three parts to the fact gathering and analysis of Library Simplified.  The three parts are designed to clearly document the expereinces of users and non-users, the system infterfaces and technology architectures that deliver those expereinces and analyze the needs and wants of users and how those are met or not met. 
 			</p>
 			<ul class="nav nav-tabs tab-header">
-		  		<li class="active"><a href="#part1" data-toggle="tab"><i class="icon-user"></i> Part 1 </a></li>
-		  		<li><a href="#part2" data-toggle="tab"><i class="icon-search"></i> Part 2</a></li>
-		  		<li><a href="#part3" data-toggle="tab"><i class="icon-cogs"></i> Part 3</a></li>
+		  		<li class="active"><a href="#part1" data-toggle="tab"><i class="icon-user icon-large"></i> Part 1 </a></li>
+		  		<li><a href="#part2" data-toggle="tab"><i class="icon-search icon-large"></i> Part 2 </a></li>
+		  		<li><a href="#part3" data-toggle="tab"><i class="icon-cogs icon-large"></i> Part 3 </a></li>
 			</ul>
 		
 			<div class="tab-content">
@@ -187,17 +193,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			  	<h5>Needs/Wants of Users and Non-users</h5>
 			  	<p>
 				  The project team will engage directly with users throughout the first two phases to test hypotheses and gather input.  Since the first goal of this project is to build audience, at all stages it will be critical to gather insights from non-users. For example, in January 2013 when NYPL’s Office of Strategic Planning sought feedback on a new Netflix-type card, users in focus groups conveyed that they wanted to be able to check out at least 10 items and expressed anxiety about fines but also a belief that they were important to teach personal responsibility.  Many non-users, on the other hand, indicated they would be happy to sacrifice the number of items available (e.g. accepting a card with a 3-5 item borrowing limit) if that meant a promise that they would never incur fines.  These critically different perspectives must be considered and addressed throughout the duration of the project.
-				</p>  
-				<p>With that in mind, the project team will be tasked to conduct at least the following analysis of users and non-users:
 				</p> 
-				<h6><a href="roll-up.html">Survey Data roll up and gap assessment</a> -</h6> NYPL’s Office of Strategic Planning’s User Insights Group has conducted large-scale surveys with user and non-user quantitative and qualitative data. Similar research completed by partner libraries or published elsewhere (American Community Survey, Pew) will also be included. </br>
-				<ul>
-				<li><a href="LSsurvey1.html">Library Simplified Survey One </a></li>
-				<li><a href="LSsurvey2.html">Library Simplified Survey Two </a></li>
-				</ul>
 
-				<h6>User & Non-User Ethnographies -</h6> The team will conduct a small field study of selected circulating branch libraries and online users to explore the behaviors and attitudes of current users, with a particular focus on policy issues and related UX design implications.
-				<h6>Personas of users and non-users -</h6> The team will also develop user personas that capture the needs and wants of the most largest and most important groups of potential users, including heavy media consumers & ereaders; and youth and students.  
+				<p>
+					With that in mind, the project team will be tasked to conduct at least the following analysis of users and non-users:
+				</p>
+
+				<h6><a href="roll-up.html">Survey Data roll up and gap assessment</a> -</h6>
+				<p>
+					NYPL’s Office of Strategic Planning’s User Insights Group has conducted large-scale surveys with user and non-user quantitative and qualitative data. Similar research completed by partner libraries or published elsewhere (American Community Survey, Pew) will also be included. </br>
+				<ul>
+					<li><a href="LSsurvey1.html">Library Simplified Survey One </a></li>
+					<li><a href="LSsurvey2.html">Library Simplified Survey Two </a></li>
+				</ul>a href=""></a>
+
+					<h6>User & Non-User Ethnographies -</h6>The team will conduct a small field study of selected circulating branch libraries and online users to explore the behaviors and attitudes of current users, with a particular focus on policy issues and related UX design implications.
+					<h6>Personas of users and non-users -</h6> The team will also develop user personas that capture the needs and wants of the most largest and most important groups of potential users, including heavy media consumers & ereaders; and youth and students.  
 			  	</p>
 		  		</div>
 
@@ -205,12 +216,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		  		<h5>Systems Architecture analysis</h5>
 			  	<p>
 				  <h6>Architectural Schematics of/for all Partners -</h6>
-				  <p>The Product Owner will work with partner project leads to develop a simple but comprehensive annotated schematic diagram of the IT architecture for each partner library.</p>
+				  	<p>
+				  		The Product Owner will work with partner project leads to develop a simple but comprehensive annotated schematic diagram of the IT architecture for each partner library.
+				  	</p>
 				  <h6>Overlay of Data sources and feeds -</h6> 
-				  <p>A key component of the architectural diagnostic will be to understand the potential sources of patron and collections data from an <a data-toggle="tooltip" title="ILS: Integrated Library System" target="_blank">ILS</a>, e-content from vendors, and supplemental UGC and/or recommendation from other third party products.  This overlay, which will sit “on top” of schematic diagrams, will capture not what the systems are but also how they interact, a critical first step toward proposing ways they can be streamlined.</p><h6>Market Scan -</h6> 
-				  <p>The Product Owner and team will review products that are available to libraries but not in use at all/any of the partners.  This work will come late in the Fact gathering/Analysis phase so that it can focus on exploring strong hypotheses about how new products could be integrated to satisfy unmet needs and wants.</p>
-				  <strong>Note:</strong>At the end of the Phase I, the team will produce and circulate a comprehensive report with all the findings and raw data.   Although the team will likely have begun to develop ideas about how to solve for the user stories gathered, this report will stop short of recommendation or proposed product design.  It will instead create the robust foundation for the next phase, which will be to design the actual product offering.
-			  	</p>
+				  	<p>
+				  		A key component of the architectural diagnostic will be to understand the potential sources of patron and collections data from an <a data-toggle="tooltip" title="ILS: Integrated Library System" target="_blank">ILS</a>, e-content from vendors, and supplemental UGC and/or recommendation from other third party products.  This overlay, which will sit “on top” of schematic diagrams, will capture not what the systems are but also how they interact, a critical first step toward proposing ways they can be streamlined.</p><h6>Market Scan -</h6> 
+				  <p>
+				  	The Product Owner and team will review products that are available to libraries but not in use at all/any of the partners.  This work will come late in the Fact gathering/Analysis phase so that it can focus on exploring strong hypotheses about how new products could be integrated to satisfy unmet needs and wants.
+				  </p>
+				  <p>
+				  	<strong>Note:</strong> At the end of the Phase I, the team will produce and circulate a comprehensive report with all the findings and raw data.   Although the team will likely have begun to develop ideas about how to solve for the user stories gathered, this report will stop short of recommendation or proposed product design.  It will instead create the robust foundation for the next phase, which will be to design the actual product offering.
+			  		</p>
 		  		</div>
 			</div>
 		
@@ -218,7 +235,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			
 			<h3 id="phase-2"><Strong>Phase 2:</strong> Architecture and testing </h3>
 
-			<p class="lead">
+			<p>
 				During Phase II, the team will attempt to sketch a wide variety of products that could be built and test them against user stories and user personas to identify the most impactful design.  This will be an iterative process and will include engagement with a variety of external technology experts; partners will come together physically to discuss the different approaches.
 			</p>	
 
@@ -231,14 +248,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		  		<div class="tab-pane active" id="2part1">
 		  		<h5>Partner review and assesment of options</h5>
 			  	<p>
-				  Partners will be asked to review the options through the lens of three main factors, 
+				  Partners will be asked to review the options through the lens of three main factors,
+				 </p> 
 				  <ol>
 				  	<li>Feasibility (i.e. does the partner feel confident that, if built, they could implement the proposed product at their library),</li>
 				  	<li>Willingness to adopt implied policies,</li>
 				  	<li>Satisfaction with goals.</li> 
 				  </ol>
-				  <p>The project team will review partner feedback, and during an in-person event, build consensus to go forward with a product build that will have the broadest impact. The team will then develop detailed technical documentation of the proposed solution that can serve as a roadmap for an in-house software development effort or become the basis of outsourced contract development work. </p>   
-			  	</p>
+				  <p>
+				  	The project team will review partner feedback, and during an in-person event, build consensus to go forward with a product build that will have the broadest impact. The team will then develop detailed technical documentation of the proposed solution that can serve as a roadmap for an in-house software development effort or become the basis of outsourced contract development work.
+				  </p>   
+
 		  		</div>
 
 		  		<div class="tab-pane" id="2part2">
@@ -256,33 +276,58 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 			<h3 id="phase-3"><strong>Phase 3:</strong> Build</h3>
 
-			<p class="lead">
+			<p>
 				During this phase the Product Owner will identify and commission the most cost effective way to build the chosen product, estimating the time and cost associated with building the project in-house using staff resources and seeking quotes from vendors to compare the cost of outsourcing.  The team will also look for opportunities to build/accelerate parts of the build by convening hackathons or codes sprints, drawing from the local developer pool in New York City hosting at one of our partner libraries, including those in Silicon Valley, and/or seek support and contributions, as appropriate, from existing industry developer communities such as Code4Lib.
-			</p>	
-				<h5><i class="icon-code-fork 2x"></i> Middleware/Application Backend</h5>
-				<h6> Normalized Catalogue/Content Inventory Application Programing Interface (API)</h6>
+			</p>
+
+			<ul class="nav nav-tabs tab-header">
+		  		<li class="active"><a href="#3part1" data-toggle="tab"><i class="icon-code-fork icon-large"></i> Middleware/Application Backend</a></li>
+		  		<li><a href="#3part2" data-toggle="tab"><i class="icon-tablet icon-large"></i> Client Applications</a></li>
+			</ul>
+			<div class="tab-content">
+			<div class="tab-pane active" id="3part1">
+				<h6>Middleware/Application Backend</h6>
+
+				<strong> Normalized Catalogue/Content Inventory Application Programing Interface (API)</strong>
+
 				<p>
 				  During this phase the project team will prepare for integration by vetting and adopting new policies and practice suggested by the product visions and by preparing any technical enablers that will be required for implementation. In addition to the existing <a data-toggle="tooltip" title="API: Application Programing Interface" target="_blank">ILS</a>, e-content vendor platform (i.e. 3M, Baker & Taylor), and catalog frontend being in place, several more pieces of infrastructure would be brought together to make the existing components work well with one another and provide a better experience to users. The project would develop piece of middleware to coordinate ebook inventory and activity between multiple vendors across a common API, enabling 3M, Overdrive, and Baker & Taylor to be accessed and served in a uniform way. This middleware would sit between the ILS, ebook vendors (via their APIs), and the Library Simplified frontend, pulling the aggregate list of titles from the catalog, inventory details from the vendors, and facilitate user’s transaction to check out a title from any vendor. Library Simplified’s frontend would be powered by the same data feeds that drive existing catalog frontends coming out of the ILS, as well as the vendor management middleware.
 				</p>
 
-				<h6> Normalized Recommendation Application Programing Interface (API)</h6>
+				<strong> Normalized Recommendation Application Programing Interface (API)</strong>
+
 				<p>
 				  The data feeds and APIs that power this user-facing frontend would be implemented first for the web, but would also enable the creation of integrated Library Simplified native apps for mobile devices and some dedicated e-readers like the Kindle Fire and the Nook. This frontend would utilize a third-party recommendation engine, such as Hunch or LibraryThing, which would index the ILS’s corpus of ebooks, and with a little knowledge about each user (what it needs will vary depending on the recommendation engine or engines used). The recommendation engine would also interface with the vendor middleware to determine titles a patron might be interested in reading that are immediately available, will be available in a day or so, or for which the user might wish to join a longer hold queue. This common discovery interface could power more than just the e-reading experience, but discovery for all of Library Simplified’s offerings.
 				</p>
-				<h5><i class="icon-tablet 2x"></i> Client Applications</h5>
-				<h6>Web/Connected Client Application</h6>
+				</div>
+
+				<div class="tab-pane" id="3part2">
+				<h6><i class="icon-tablet 2x"></i> Client Applications</h6>
+
+				<strong>Web/Connected Client Application</strong>
 				<p>
 				  Ebook delivery will be offered two ways. To facilitate immediate reading, without undergoing the arduous process of transferring an ebook to a device, the project will follow the example of OpenLibrary’s browser-based lending system and build a HTML5 browser-based reader that can be used on any browser connected to the internet, optimized both for tablets and smartphones. Checking out an e-book to read in the browser will result in the book being checked out to a server controlled by the library with the digital rights management (<a data-toggle="tooltip" title="DRM: Digital Right Management" target="_blank">DRM</a>) certificate being tied to the library server for the lending period. When a user requests a page in the book, that page will be rendered on-the-fly on the server, and sent to the user’s browser. When a user moves to a new page, the service copy of the previous page will be deleted from the server so no more than one page is available at any given time, but offering all the features of a standard e-reader including searching the full text of the book.
 				</p>
-				<h6>Native Client Application</h6>
+
+				<strong>Native Client Application</strong>
+
 				<p>
 				  While the browser-based model works only when connected to the internet, it doesn’t replace reading on a dedicated app that can be used offline. Delivery of ebooks can be arduous due to the complex requirements of the underlying DRM. Major sellers like Amazon and Apple own the process from end-to-end and have created the illusion of no DRM within that ecosystem. Library Simplified will do something similar by taking advantage of the existing e-reader software on devices which is compatible with libraries and making the delivery experience to those apps seamless via the checkout API of the vendor middleware, and serving the book to the user via a special URL. By visiting that URL to pick up the book, they’ll be presented with a list of options, and by clicking on the user’s preferred reading app, Library Simplified will trigger via special URLs to tell those apps to access the books directly, without any special steps. This leaves the possibility open for a set of Library Simplified native apps, but makes immediately actionable the seamless checkout of ebooks to smartphones, tablets, and some dedicated readers without needing to build specific apps for each platform.</br>
-				</p>	
-			</p>
-			<h3 id="phase-4"><strong>Phase 4:</strong> Implementation and Assessment</h3>
-			<p class="lead">By the time the technical build of the new product is complete, project managers at NYPL and each partner library should have prepared their library for integration, meaning that new policies and/or practices implied by the product have been approved or adopted and that technical infrastructure is ready to integrate. As the product is rolled out, local marketing campaigns will advertise the tools and encourage use. 
+				</p>
+			</div>
+		</div>
 
-			<h5><i class="icon-bullhorn 2x"></i> Communication</h5>
+				<hr  />
+
+			<h4 id="phase-4"><strong>Phase 4:</strong> Implementation and Assessment</h4>
+			<p>
+				By the time the technical build of the new product is complete, project managers at NYPL and each partner library should have prepared their library for integration, meaning that new policies and/or practices implied by the product have been approved or adopted and that technical infrastructure is ready to integrate. As the product is rolled out, local marketing campaigns will advertise the tools and encourage use. 
+			</p>
+
+			<hr  />
+
+			<h3 id="communication"><strong> Communication Plan</strong></h3>
+
 			<p>
 				In parallel to the technical build, the project leads at partner libraries will prepare and implement a communications plan focused on reaching all libraries that may be interested in implementing the product.  This communication will include dissemination of the final product vision as well as detailed information and instructions implementation requirement. This communications push will leverage the deep industry knowledge and networks of the partner libraries include dissemination by taking advantage of channels such as ReadersFirst, listservs provided by ALA, PLA, ULC, DPLA, and other marketing opportunities with state and local library associations.  The partners will seek to speak about the project and encourage other libraries to implement it at conferences and directly with peer institutions.  The goal will be to ensure that all libraries are aware of the opportunity and that as many as possible choose to adopt the product.
 			</p>
@@ -291,7 +336,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				Each partner will also prepare a marketing plan to make the public aware of the product once it is launched by their libraries.  These will undoubtedly leverage low-cost marketing approaches like using the library's social media presence, but will also purchase paid marketing to the degree resources permit. Partners will be encouraged, but not required, to use their partner stipend to seed these marketing budgets and to supplement these activities in other ways.
 			</p>	
 
-			<h5><i class="icon-ok 2x"></i> Evaluation</h5>
+			<hr />
+
+			<h3 id="evaluation" ><strong>Evaluation</strong></h3>
 
 			NYPL and partner libraries will pool data about use and qualitative feedback from users, staff, and other stakeholders to assess the degree to which this project is meeting its goals. Evaluation and assessment will measure the following objectives: 
 			<ul>
@@ -317,6 +364,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				</ol>
 				All data will be analyzed by NYPL’s Office of Strategic Planning.  Both the findings and the raw data will also be made available to partners and open for public dissemination.
 			</p>
+
+			<hr  />
+
+			<h3 id="evaluation" ><strong>Resources</strong></h3>
+				<div class="well">
+				<h5>Product Development / Engineering</h5>
+				
+				<p>
+					Product Owner / Engineering Manager - James English</br>
+					Application Architect, NYPL - Leonard Richardson</br>
+					iOS Client - Gwendolen Quinn / Sam Tarakajian - NYPL
+					Android Client - Mark Raynsford - Independent, UK
+				</p>
+				<h6><i class="icon-beaker"></i> NYPL Labs</h6> 
+				<p>
+					Based at The New York Public Library's landmark central branch on 42nd Street, NYPL Labs is an award-winning design and technology team working to re-imagine The Library for the Internet age.  </p><a href='http://www.nypl.org/collections/labs' target="new"/> Learn more...</a>
+				</p>
+				<p>
+				 	Mauricio Giraldo - UX Designer and Labs Engineering Manager
+				</p>
+
+				<h6><i class="icon-group"></i><strong>&nbsp Other Contributors</strong></h6>
+				<p>
+					Ben Anderman, Raduz Benicky, Juan Corona - Evident Point, Corp</br>
+					Hadrien Gardeur - Feedbooks, SAS  </br>
+					Mikael Menu, Jean-Marie Geofroy -  Mantano, SAS</br>
+				</p>
+			</div>
 
 	</div><!-- .col-md-9 -->
 	

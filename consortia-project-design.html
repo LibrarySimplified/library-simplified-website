@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<title>SimplyE for Consortia Project Design</title>
+<meta name="About" content="Library Simplified is jointly funded by The New York Public Library and Institute for Museum and Library SciencesIMLS.  The Product Owner (PO) for the Library Reading Experience is charged with proposing ways in which to employ technology, innovation in library policies, and the full range of library offerings to deliver a better experience to more patrons.  The PO leads a small highly skilled technical team, and works in concert with partner libraries to analyze usser and library needs as well as the industry and technology landscape in order to develope a minimum viable product solution."/>
+<link rel="icon" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts (more: http://www.google.com/fonts) -->
+<!-- Main Font -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<!-- Headings -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<!-- Handwritten -->
+<link href="http://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+<!-- Countdown, Pricing Table Price Tag -->
+<link href="http://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+<!-- Logo -->
+<link href="http://fonts.googleapis.com/css?family=Cantora+One" rel="stylesheet" type="text/css">
+
+<!-- CDN Bootstrap & FontAwesome -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- CSS Libraries -->
+<link href="assets/css/animate.min.css" rel="stylesheet">
+<link href="assets/css/bxslider.css" rel="stylesheet">
+<link href="assets/css/magnific-popup.css" rel="stylesheet">
+
+<!-- Theme Specific CSS -->
+<link href="assets/css/styles.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+
+<!-- Predefined Color Scheme -->
+<link href="assets/css/colors/orange.css" rel="stylesheet" id="colors">
+
+<!-- LESS - Development Only
+<link href="assets/less/styles.less" rel="stylesheet/less" />
+<script>less = { env: 'development' };</script>
+<script src="assets/js/less.js"></script>
+-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+<link href="assets/css/ie8.css" rel="stylesheet"></link>
+<![endif]-->
+</head>
+<body>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-RKWC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-RKWC');</script>
+<!-- End Google Tag Manager -->
+
+<header id="header" class="navbar">
+
+  <div class="container">
+    <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	    	<span class="sr-only">Skip navigation</span>
+	    	<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+		  </button> 
+	    <a class="navbar-brand logo" href="index.html">SimplyE for Consortia Project Design</a>
+    </div>
+
+ <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="index.html">Home</a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">About</a></li>
+            <li><a href="news-and-events.html">News and Events</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/">Projects</a>
+          <ul class="dropdown-menu">
+              <li><a href="project-design.html">Library Simpliifed Project Design</a></li>
+              <li><a href="LEAP-project-design.html">LEAP Project Design</a></li>
+              <li><a href="consortia-project-design.html">SimplyE for Consortia Project Design</a><li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/">Product</a>
+          <ul class="dropdown-menu">
+              <li><a href="productbacklog.html">Product Backlog</a></li>
+              <li><a href="iOSUItour.html">Mobile: iOS ver 1.0</a></li>
+              <li><a href="androidtour.html">Mobile: Android ver 1.0</a></li>
+              <li><a href="covergenerator.html">Invetigations: Cover Generator</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/">Deployment and Support</a>
+          <ul class="dropdown-menu">
+              <li><a href="deployinstruction.html">Deploying the application</a></li>
+              <li><a href="clientappfaq.html">Mobile Client application how to</a></li>
+              <li><a href="accessibility.html">iOS Accessibility</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    
+  </div>
+</header><!-- .navbar-fixed-top -->
+
+<div class="page-top">
+	<div class="container">	
+		<h1 class="page-top-header">SimplyE for Consortia Project Design</h1>		
+		<ol class="breadcrumb">
+		  <li><a href="index.html">Home</a></li>
+		  <li class="active">SimplyE for Consortia Project Design</li>
+		</ol>
+	</div>	
+</div>
+
+<div class="container" id="main">
+
+<div class="row">
+
+	<div class="col-md-3">
+		<div id="sidebar" class="affix" role="complementary">
+			<ul class="nav">
+				<li><a href="#overview">Project Overveiw</a></li>
+				<li><a href="#projectdesign">Project Design</a></li>
+				<li><a href="#diversity">Diversity Plan</a></li>
+				<li><a href="#communication">Communincation Plan</a></li>
+				<li><a href="#sustainability">Sustainability</a><li>
+				<li><a href="#resources">Resources</a></li>
+			</ul>
+		</div><!-- .affix -->
+	</div>
+
+	<div class="col-md-9">
+
+		<div class="row">
+		
+			<h2 id="overview"></h2>
+		
+			<p class="lead">
+				<strong>SimplyE for Consortia </strong> is jointly funded by <a href="https://www.minitex.umn.edu/" data-toggle="tooltip" title="Minitex" target="_blank">Minitex</a> and <a href="http://www.imls.org" data-toggle="tooltip" title="Institute for Museum and Library Sciences" target="_blank">IMLS</a>.  Along with RAILS and Masachusates State Library, this team, in collaboration with the NYPL's Library Simiplified product development team will research, design develop and deploy the functionality needed to federate and combine ebooks from public library collections with statewide, consortial, and/or national ebook collections, and deploy consortial versions of SimplyE in Minnesota, Illinois, and Massachusetts by 2018. The project will also develop specifications for enhancing SimplyE to better support academic and school library users by adding features such as enabling citations, group annotations, and embedded assessments.  
+			</p>
+
+			<hr />
+
+			<h2 id="projectdesign"><Strong>Project Design</strong></h2>
+
+			<p>
+				The project creates three major deliverables that are critical to multi-type library consortia such as Minitex, MLS, and RAILS, and their member libraries.
+			</p>
+            
+            <h4><Strong>Phase 1:</strong> Research and Design</h4>
+		  	<h5>Design and build specifications for SimplyE for Consortia.</h5>
+		  	<p>
+		  		<i>Year 1, months 1-6</i>
+		  	</p>            
+            <p>
+            	Using this specification, Minitex and the Technical Working Group (see page 9) will assess the costs of various development paths by soliciting bids and proposals from various vendors and comparing those to the estimated cost of in-house development done by participating organizations. The conclusion of Phase 1 will come when the Advisory Group selects a development path (vendorsupported, in-house, or a mix of the two) for the Collections Merge functionality. We will bring key members of the Advisory Group and Technical Working Group together in person three times during the project process. We anticipate a significant number of online meetings will occur in the interim periods.
+            </p>
+
+			<ul class="nav nav-tabs tab-header">
+		  		<li class="active"><a href="#part1" data-toggle="tab"><i class="icon-user icon-large"></i> Goal </a></li>
+		  		<li><a href="#part2" data-toggle="tab"><i class="icon-search icon-large"></i> Deliverables </a></li>
+		  		<li><a href="#part3" data-toggle="tab"><i class="icon-cogs icon-large"></i> Milestones and Workstreams </a></li>
+			</ul>
+		
+			<div class="tab-content">
+		  		<div class="tab-pane active" id="part1">
+		  		<h5>Goal</h5>
+			  	<p>
+			  		The goal of Phase 1 is to envision how libraries will want to merge their collections from a policy and user experience perspective, and based on that vision, create a technical specification for Collections Merge functionality. The work to create this specification will include creating user stories, gathering and prioritizing system requirements, identifying and answering key policy questions (such as library collection branding and how inconsistent classifications should be rationalized), and ultimately creating a detailed technical description of the enhancements to the SimplyE application/platform that will be needed to realize this service. This stage will involve dialogue with individual libraries, library consortia, and appropriate vendors to ensure that SimplyE for Consortia meets the broad needs of libraries and library consortia of all types and sizes.
+			  	</p>
+		  		</div>
+
+		  		<div class="tab-pane" id="part2">
+			  	<h5>Deliverables to achieve Goal:</h5>
+			  	<ul>
+				  <li>A technical specification for Collections Merge functionality developed by the Technical Working Group reporting to the Advisory Group, including: </li>
+				  <ol>
+				  	<li>a communication process based on community engagement working with DPLA;</li>
+				  	<li>a comprehensive list of enhancements to SimplyE that address those needs;</li>
+				  	<li>a plan to address the privacy concerns that result from use by K12 and academic patrons, related to COPPA/FERPA regulations as well as state law.</li>
+				  </ol>
+				  <li>Bids/proposals for the software development outlined in the specification, and estimates regarding the costs and timeline for in-house development option.</li>
+				  <li>Based on bids and estimates, a development path for Collections Merge functionality (i.e., provider/developer selected and work ready to begin).</li>
+				</ul>
+		  		</div>
+
+		  		<div class="tab-pane" id="part3">
+		  		<h5>Key work-streams and milestones:</h5>
+			  	<p>
+				  	<ul>
+				  		<li>Milestone, July 2016: First in-person meeting of key players from the Advisory Group and Technical Working Group to start process in Chicago.</li>
+				  		<li>Work-stream, July - October 2016: Build specifications for Collections Merge functionality.</li>
+				  		<li>Milestone, November 2016: Specifications for the Collections Merge functionality goes out to vendors for bid/proposal through the Minitex’ RFP process and to in-house teams for estimates.</li>
+				  		<li>Work-stream, November - December 2016: Solicit and review bids and estimates for Collections Merge enhancements.</li>
+				  		<li>Milestone, December 2016 or January 2017: Second in-person meeting of key members the Advisory Group and Technical Working Group in Boston to:
+				  			<ol>
+				  				<li>Select development path and provider(s) for software development on Collections Merge functionality.</li>
+				  				<li>Begin work to develop specification for enhancements for students and researchers.</li>
+				  			</ol></li>
+				  		</li>
+				  	</ul>
+			  	</p>
+		  		</div>
+			</div>
+		
+			<hr />
+			
+			<h4 id="phase-2"><strong>Phase 2:</strong> Build and Prototype</h4>
+				<h5>Build Collections Merge and prototype enhancements for K12 and higher education. </h5>
+				<p>
+					<i>Year 1, months 6-12</i>
+				</p>
+
+			<ul class="nav nav-tabs tab-header">
+		  		<li class="active"><a href="#2part1" data-toggle="tab"><i class="icon-thumbs-up icon-large"></i> Goals </a></li>
+		  		<li><a href="#2part2" data-toggle="tab"><i class="icon-search icon-large"></i> Deliverables </a></li>
+			</ul>
+		
+			<div class="tab-content">
+		  		<div class="tab-pane active" id="2part1">
+		  		<h5>There are three main goals for Phase 2.</h5>
+
+				  <ol>
+				  	<li>The first goal is for the team to supervise software development work on the Collections Merge functionality as previously designed. Ideally, that work will be timed to be finished at the end of phase 2, although it is possible that it will continue into Phase 3.</li>
+				  	<li>
+				  		The second goal of Phase 2 is to create the specifications for enhancements for students and scholarly researchers. Based on those specifications, the team will assess the cost of various development paths by soliciting bids from third-party providers and comparing those to estimates of the cost of in-house development by the partners and collaborators. At the conclusion of phase 2, the key members of the Advisory Group and Technical Working Group will meet for the third time in person in Chicago to select a development path for software enhancements for student and researcher functionality. The focus of this meeting will be to evaluate if the resources available are adequate to create a ‘minimum viable product’ (MVP), or a set of feature enhancements that will in fact deliver significant value to the user population. The goal will be to deliver as much value to users as possible, including commissioning prototypes of versions for both students and researchers, or choosing one prototype and putting all available resources into its development.
+				  	</br>
+				  		The project will also explore the issue of data privacy as it relates to patrons who hold library cards from multiple institutions, chiefly academic and school libraries, to ensure protection of private data based on state and federal statutes. Issues related to COPPA and FERPA will be considered. Outreach to the wider community through DPLA and identified stakeholders will be crucial at this time. In the event that the Advisory Group does not believe that the available resources are adequate to achieve a MVP for students and/or researchers, they will seek additional funds to close the gap.</li>
+				  	<li>The third and final goal for Phase 2 is for the partners to prepare for deployment by beginning outreach to member/participants, provisioning server environments for each member library, and establishing support services.</li> 
+				  </ol>
+
+		  		</div>
+
+		  		<div class="tab-pane" id="2part2">
+			  	<h5>Deliverables to achieve Goal 2 are:</h5>
+			  	<ul>
+				  <li>A completed technical specification for proposed enhancements for students and researchers including input from the stakeholder community and based on appropriate data privacy laws.</li>
+				  <li>Bids/proposals solicited from vendors and in-house development estimates acquired from partners.</li>
+				  <li>A development path for proposed enhancements, based on bids proposals, for students and researchers (i.e., provider selected and work begins).</li>
+				  <li>Collections Merge functionality completed and merged into code base. (NOTE: depending on software development timeline, this may extend into phase 3).</li>
+				  <li>Final plans for outreach and awareness activities to other potential implementers, and build application information into NYPL’s Library Simplified website.</li>
+				</ul>
+				</div>
+			</div>
+		
+			<hr />
+
+			<h4 id="phase-3"><strong>Phase 3:</strong> Deploy and Grow</h4>
+			<h5>Deploy SimplyE for Consortia and seek additional partners.</h5>
+			<p>
+				<i> Year 2</i>
+			</p>
+			<ul class="nav nav-tabs tab-header">
+		  		<li class="active"><a href="#3part1" data-toggle="tab"><i class="icon-bullseye icon-large"></i> Goals </a></li>
+		  		<li><a href="#3part2" data-toggle="tab"><i class="icon-check icon-large"></i> Deliverables </a></li>
+		  		<li><a href="#3part3" data-toggle="tab"><i class="icon-calendar icon-large"></i> Milestones and Workstreams </a></li>
+			</ul>
+
+			<div class="tab-content">
+		  		<div class="tab-pane active" id="3part1">
+		  			<h5>Goal</h5>
+		  			<p>
+						The goal of Phase 3 is to build and deploy enhanced instances of SimplyE for Consortia. This includes both instances that support the new Collections Merge functionality and/or prototypes with customizations for students and researchers. The three consortia will deploy at least three new versions of SimplyE, and make updates to already-deployed versions reflecting these enhancements. We hope to have other consortia and state library implementers ready to deploy at this stage as well.
+					</p>
+					<p>
+						The partners will also produce a final report outlining the work done and lessons learned, including proposed suggested next steps. The report will include an initial assessment of the effectiveness and impact of the implemented improvements, identify outstanding challenges including any necessary conditions that must be met before the solutions outlined in the specification for researchers and students can be realized (including items such as the availability of content through APIs), and suggest the specific organizations, people, and processes that the team believes can best move forward on each.	
+					</p>
+				</div>
+				<div class="tab-pane" id="3part2">
+				<h5> Deliverables for Goal 3 are:</h5>
+					<ul>
+						<li>Deployment of enhanced SimplyE for Consortia application and/or prototype(s) of versions with enhancements for students and researchers. At a minimum, the partners will deploy three instances of SimplyE in Minnesota, Illinois, and Massachusetts. Minitex will manage all servers and technical aspects during the grant period as well as evaluate offering an ongoing national service platform after the grant period ends.</li>
+						<li>Implemented outreach plan.</li>
+						<li>Assessment of goal completion. Report recommendations and next steps.</li>
+					</ul>
+				</div>
+				<div class="tab-pane" id="3part3">
+				<h5>Key work-streams and milestones:</h5>
+					<ul>
+						<li>Milestone, September 2016 - June 2018: Discussions and presentations will take place at events listed in Schedule of Completion, including state conferences, DPLAFest, ALA, etc.</li>
+						<li>Work-stream, April 2017 - June 2018: Partners support deployments in their regions and beta test functionality.</li>
+						<li>Milestone, June 2018: Prior to the completion of the final report, more of library community will recognize SimplyE for Consortia’s name and function as measured in end-user survey.</li>
+						<li>Milestone, June 2018: Sustainability work plan is fully implemented including identifying a long-term group to continue development of the system.</li>
+					</ul>
+				</div>
+			</div>
+		<hr />
+			<h2 id="diversity"></h2>
+			<h3><strong>Diversity Plan</strong></h3>
+			<p>
+				Consortia represent diverse populations from tribal centers to urban neighborhoods. We will use our existing outreach networks into our communities to solicit input from a wide variety of stakeholders. We anticipate substantial connection to K12 and higher education institutions as we consider needed enhancements to SimplyE. Furthermore, SimplyE is built on top of the Readium system (readium.org) for rendering EPUB publications. Readium is committed to standards compliance, stability, performance, and accessibility for all users, including those with reading disabilities.
+			</p>
+			<p>
+				The consortia partners will not only solicit input from our diverse communities, we will work with these same communities to help them deploy and use SimplyE. For example, we are pledged to work with low-income school districts connected to the White House’s Open Ebooks. As a partner on the Open Ebooks Initiative, DPLA is committed to reaching out to underserved communities and will incorporate feedback from their network of stakeholders into the development of SimplyE for Consortia. We also look forward to reaching out to the Joint Caucus of Librarians of Color.
+			</p>
+
+		<hr />
+			<h2 id="communication"></h2>
+			<h3><strong>Commmunication Plan</strong></h3>
+			<p>
+				In parallel to the technical build, the three partners will work closely with DPLA’s national conversation on ebooks, to deploy a robust communications strategy that focuses on reaching all libraries, consortia, and state library organizations that may be interested in implementing SimplyE for Consortia. The Advisory Group will oversee the Communications Plan. Ongoing conversations with librarians, facilitated by the Advisory Group and DPLA will reveal project strengths and weaknesses.
+			</p>
+			<p>
+				Our primary partner in implementing our Communications Plan is DPLA, who is engaging in a largescale national conversation across the ebook industry (libraries, vendors, publishers, and related nonprofits), ensuring the evolution of access and availability of ebooks through libraries. These conversations will help us receive input from stakeholders who represent populations and interests we would like to include. Working with DPLA will also allow us to tap into existing work-streams and conversations occurring both online and in-person. The stakeholders we plan to work with include: 
+				<ul>
+					<li>ALA’s Association of Specialized and Cooperative Library Agencies (ASCLA), </li>
+					<li>ALA’s Public Library Association (PLA), </li>
+					<li>ALA’s Digital Content Working Group, </li>
+					<li>Association of Rural and Small Libraries (ARSL),</li> 
+					<li>Chief Officers of State Library Agencies (COSLA), </li>
+					<li>Joint Caucus of Librarians of Color (JCLC),</li> 
+					<li>International Federation of Library Agencies’ (IFLA)’s eLending Working Group,</li> 
+					<li>and the International Coalition of Library Consortia (ICOLC).</li>
+				</ul>
+			</p>
+			<p>
+				The approach to the communications process will be open to present lessons learned and challenges met throughout the grant period and beyond. The partners have already identified over twenty communications outlets including websites, journals, and meetings where we will share information. Ongoing discussions will be made available through an online forum (i.e., DPLA’s Confluence page at digitalpubliclibraryofamerica.atlassian.net/wiki/display/EW/Ebook+Workgroup+Home) and at state and national conferences and through online and print publications.
+			</p>
+		<hr />
+		<h2 id="sustainability"></h2>
+			<h3><strong>Sustainability</strong></h3>
+			<p>
+				Consortia are the natural partners of the library community in developing and sustaining new cooperative library services, bringing a wide variety of expertise and group buying power to foster innovation. These multi-library collaborations bring scale to the issue of sustaining an open source development community in support of SimplyE for Consortia as attested in the accompanying letters.  Consortia will use existing marketing, training, and technical support infrastructure for member libraries to improve the deployment experience of participating libraries. Improved accessibility via Readium infrastructure will also encourage ongoing adoption.
+			</p>
+			<p>
+				The Advisory Group will develop a sustainability/business plan that provides for continued development, funding, and governance of SimplyE for Consortia. After the term of the grant, sustainability may very well occur through a non-profit organization backing of the project in the same way that support has developed for Evergreen and Koha. The Advisory Group will explore options, research current models, and tap potential organizations, including partners and collaborators, to determine the best future path for SimplyE for Consortia. The partners on the project are committed to supporting the open source developer community that has grown around SimplyE. NYPL and DPLA are committed to maintaining relationships with the technology community and coordinating ongoing technical work and development. All software enhancements and modifications will continue to be released as open source. Minitex will host and support the technical infrastructure of the SimplyE for Consortia application during the grant period, demonstrating a model that may be replicable on a national stage, and Minitex and others will explore expanding the support role nationally as part of business model planning.
+			</p>
+
+		<hr />
+		<h2 id="resources"></h2>
+			<h3><strong>Resources</strong></h3>
+			<p class="lead">
+			<ul class="nav nav-tabs tab-header">
+		  		<li class="active"><a href="#4part1" data-toggle="tab"><i class="icon-group icon-large"></i> Personnel </a></li>
+		  		<li><a href="#4part2" data-toggle="tab"><i class="icon-money icon-large"></i> Budget </a></li>
+		  		<li><a href="#4part3" data-toggle="tab"><i class="icon-legal icon-large"></i> Governance </a></li>
+			</ul>
+
+			<div class="tab-content">
+		  		<div class="tab-pane active" id="4part1">
+		  			<h5>Personnel</h5>
+		  			<div class="well">
+		  			<strong>Personnel – In-Kind</strong>
+		  			<ul>
+		  				<li>Minitex:
+		  				 <ul>
+		  				 	<li>Valerie Horton, Director (15% FTE) Principal Investigator and project/budget manager</li>
+		  					<li>Paul Swanson, Systems Architect (25% FTE). Oversees specification development and supervise subcontractors</li>
+		  					<li>Link Swanson, Programmer (25% FTE) Helps develop specifications, supports servers, & works directly with subcontractor on coding</li>
+		  					<li>New hire (83% FTE) Technical and Support Outreach. Coordinates support and outreach to Minitex’ user community, creates documentation</li>
+		  				</ul></li>
+		  				<li>RAILS:
+		  					<ul>
+		  						<li> Dierdre Brennan, Executive Director (6% FTE) Oversees RAILS SimplyE for Consortia deployment</li>
+		  						<li>Veronda Pitchford, Resource Sharing Director (25% FTE). Develops specifications, coordinates communication and support</li>
+		  					</ul>
+		  				</li>
+		  				<li>MLS: 
+		  					<ul>
+		  						<li>Greg Pronevitz, Executive Director (7.5% FTE) Oversees MLS SimplyE for Consortia deployment</li>
+		  						<li>Stephen Spohn, Resource Sharing Director (25% FTE) Develops specifications and coordinates communication & support</li>
+		  					</ul>
+		  				</li>
+		  			</ul>
+		  			</div>
+		  			<div class="well">
+		  			<strong>Other in-kind personnel:</strong>
+		  			<ul>
+		  				<li>Scot Colford from Boston Public Library, Web Developer (10% FTE) will coordinate making BPL’s statewide ebook collection accessible through SimplyE for Consortia.</li>
+		  				<li>Nicole Theis-Mahon and Michael Berkowski from the University of Minnesota Libraries will develop functional and authentication/access requirements representative of a large higher education institution and its users. Gathered requirements will be reviewed and validated by peer institutions, informing the development of specifications.</li>
+		  				<li>Remaining personnel contribute 5% or less of their time to the project.</li>
+		  			</ul>
+		  			</div>
+		  			<div class="well">
+		  			<strong>Personnel – Not In-Kind</strong>
+		  			<ul>
+		  				<li>Micah May and James English (NYPL) will work with the teams creating specifications and coding subcontractors to ensure coordination with existing SimplyE development work.</li>
+		  				<li>Michelle Bickert (DPLA) is leading the national discussion on ebooks and will work with the team on connecting this project to their Ebook Working Group discussions. She will also facilitate bringing DPLA’s developing public domain ebook collection into other SimplyE deployments.</li>
+		  				<li>Public library IT staff from Great Rivers Regional Library System (MN), Ramsey County Public Library (MN) and Plainfield Public Library District (IL) have agreed to be beta testers and will work on each state’s SimplyE deployment.</li>
+		  			</ul>
+		  			</div>
+		  		</div>
+
+		  		<div class="tab-pane" id="4part2">
+		  			<h5>Budget</h5>
+				<strong>
+					The budget for the project is $1,390,000.  
+				</strong>
+				<p>Grant funds will be spent roughly on:
+					<ul>
+						<li>support and product development planning (30%),</li> 
+						<li>coding and beta testing (25%),</li> 
+						<li>deployment for three consortia (25%),</li>
+						<li> and indirect costs to the University of Minnesota (20%).</li>
+					</ul>
+				</p>
+				<p>
+					A team will write the specifications and create an RFP to be issued by Minitex. A subcontractor or in-house staff will be hired to do the bulk of the coding for the project. Minitex will manage technical implementation and management of the system during the project period. Equipment and licenses needed to perform the SimplyE deployment include multiple servers per deployment, Readium sublicenses, Heap evaluation software, and Adobe Content Server access for digital rights management or DRM. Additional costs are associated with travel to create specification, select subcontractor(s), and evaluate results. Robust outreach costs are also built in.
+				</p>
+				</div>
+
+		  		<div class="tab-pane" id="4part3">
+		  		<h5>Governance</h5>
+		  		<p>
+		  			<strong>Advisory Group Members:</strong> Valerie Horton (Minitex), Greg Pronevitz (MLS), Deirdre Brennan (RAILS), Micah May (NYPL), Michelle Bickert (DPLA), Michael Colford (BPL), and other partners from consortia or state libraries (TBD).
+		  		</p>
+		  		<p>
+		  			<strong>Technical Working Group Members: </strong>Paul Swanson (Minitex), Link Swanson (Minitex), Stephen Spohn (MLS), Veronda Pitchford (RAILS), James English (NYPL), Scott Colford (BPL), Michael Berkowski (UMN), and possibly others (TBD).
+		  		</p>
+		  		</div>
+		  </div>
+
+
+	</div><!-- .col-md-9 -->
+	
+</div><!-- .row -->
+
+</div><!-- .container -->
+
+<footer id="footer">
+
+	<div class="newsletter">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<a href="http://eepurl.com/bo9K3T"><h3 class="title"><i class="icon-envelope-alt"></i> Subscribe to updates</h3></a>
+					<span class="lead">We will only send you good stuff. Promise!</span>
+				</div>
+				<!--<div class="col-md-4">
+					<form class="input-group small" method="post" action="">
+				    <input type="text" class="form-control" placeholder="Your Email Address" />
+				    <div class="input-group-btn">
+				      <button class="btn btn-default" type="button">Sign Up <i class="icon-angle-right"></i></button>
+				    </div>
+				  </form>
+				</div>-->
+			</div>
+	  </div>
+  </div>
+
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+			
+				<div class="col-md-4">
+					<div class="social-networks">
+						<a href="https://www.facebook.com/nypl"><i class="icon-facebook"></i></a>
+						<a href="https://twitter.com/nypl"><i class="icon-twitter"></i></a>
+						<a href="https://plus.google.com/u/0/+newyorkpubliclibrary/posts"><i class="icon-google-plus"></i></a>
+						<a href="http://nypl.tumblr.com/"><i class="icon-tumblr"></i></a>
+						<a href="https://www.pinterest.com/nypl/"><i class="icon-pinterest"></i></a>
+						<!-- <a href=""><i class="icon-linkedin"></i></a>
+						<a href=""><i class="icon-dribbble"></i></a>	
+						<a href=""><i class="icon-instagram"></i></a>
+						<a href=""><i class="icon-pinterest"></i></a>
+						<a href=""><i class="icon-youtube-play"></i></a>
+						<a href=""><i class="icon-rss"></i></a> -->
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<h6 class="title">About</h6>
+					<p>
+						We are a team of remarkable institutions doing great things. Get to know a little bit more <a href="about">about us</a>.
+					</p>
+				</div>  
+				
+				<div class="col-md-4">
+					<h6 class="title">Get in Touch</h6>
+					<address>
+						<i class="icon-map-marker"></i> <a class="lightbox-iframe" href="https://maps.google.com/maps?q=NYPL+5th+Ave+at+42nd+St,+New+York+City,+New+York&amp;hl=en&amp;t=v&amp;hnear=5th+Ave+at+42nd+St,+New+York+City,+New+York" data-toggle="tooltip" title="Show on Google Maps">42nd Street 5th Avenue, New York City, United States</a><br />
+						<i class="icon-envelope"></i> <a href="mailto:info@librarysimplified.com" data-toggle="tooltip" title="Email Us">info@librarysimplified.com</a><br />
+						<i class="icon-phone"></i> +1 212 621 40520<br />
+					</address>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="container footer-bottom">
+		<div class="footer-copyright">
+			<p>&copy; 2013 by Olin. All Rights Reserved.</p>
+		</div>
+	</div>
+	
+</footer>
+
+
+<a href="#" id="scrollToTop">
+	<i class="icon-angle-up icon-2x"></i>
+</a>
+
+<!-- Contact Popup (Modal) -->
+<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">We would love to hear from you</h4>
+      </div>
+      <div class="modal-body">
+
+				<p class="lead">
+					Ask us anything you want. We will get back to you during the work week.</strong>
+				</p>
+				<form name="contactform" id="contactform" class="margin-bottom-large" method="post" action="contactform.php">		
+					<div class="row">
+						<div class="form-group col-md-6">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" placeholder="" class="form-control" />
+						</div>
+						<div class="form-group col-md-6">
+							<label for="email">Email <span class="text-warning">*</span></label>
+							<input type="text" name="email" id="email" placeholder="" class="form-control" />
+							<div id="email_error_empty" class="error">Please enter your email address.</div>
+							<div id="email_error_invalid" class="error">Please enter a valid email address.</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="subject">Subject</label>
+						<input type="text" name="subject" id="subject" class="form-control" placeholder="" />
+					</div>
+					<div class="form-group">
+						<label for="message">Message <span class="text-warning">*</span></label>
+						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder=""></textarea>
+						<div id="message_error_empty" class="error">Please enter a message.</div>
+						<div id="message_error_invalid" class="error">Please check your message for any errors.</div>
+					</div>
+	
+					<div id="mailsuccess" class="success">Your message has been sent successfully.</div>
+					<div id="mailfail" class="error">Sorry, error occured this time sending your message.</div>
+					
+					<div class="margin-top-base">
+						<input type="submit" id="submit_contact_form" class="btn btn-primary" value="Send">				
+						<small class="pull-right text-muted">* required</small>
+					</div>
+					<script src="assets/js/validation.js"></script>
+				</form>
+
+				<div class="row">
+					<div class="col-sm-6">
+						<h4 class="invert">Library Simplified</h4>
+						<address>
+							<i class="icon-map-marker"></i> the New York Public Library, 5th Ave at 42nd St, New York City, United States<br />
+							<i class="icon-map-marker"></i> 42nd Street and 5th Avenue, New York City, United States<br />
+							<i class="icon-envelope"></i> info@librarysimplified.com<br />
+							<i class="icon-phone"></i> +1 212 621 0520<br />
+						</address>		
+					</div>
+				</div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Libraries & jQuery Plugins -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.bxslider.min.js"></script>
+<script src="assets/js/jquery.isotope.min.js"></script>
+<script src="assets/js/jquery.fittext.js"></script>
+<script src="assets/js/jquery.fitvids.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.hoverdir.js"></script>
+<script src="assets/js/validation.js"></script>
+<script src="assets/js/theme.js"></script>
+ 
+</body>
+</html>

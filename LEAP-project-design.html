@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<title>Library Simplified &middot; Project Design</title>
+<meta name="About" content="Library Simplified is jointly funded by The New York Public Library and Institute for Museum and Library SciencesIMLS.  The Product Owner (PO) for the Library Reading Experience is charged with proposing ways in which to employ technology, innovation in library policies, and the full range of library offerings to deliver a better experience to more patrons.  The PO leads a small highly skilled technical team, and works in concert with partner libraries to analyze usser and library needs as well as the industry and technology landscape in order to develope a minimum viable product solution."/>
+<link rel="icon" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts (more: http://www.google.com/fonts) -->
+<!-- Main Font -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<!-- Headings -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<!-- Handwritten -->
+<link href="http://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+<!-- Countdown, Pricing Table Price Tag -->
+<link href="http://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+<!-- Logo -->
+<link href="http://fonts.googleapis.com/css?family=Cantora+One" rel="stylesheet" type="text/css">
+
+<!-- CDN Bootstrap & FontAwesome -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- CSS Libraries -->
+<link href="assets/css/animate.min.css" rel="stylesheet">
+<link href="assets/css/bxslider.css" rel="stylesheet">
+<link href="assets/css/magnific-popup.css" rel="stylesheet">
+
+<!-- Theme Specific CSS -->
+<link href="assets/css/styles.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+
+<!-- Predefined Color Scheme -->
+<link href="assets/css/colors/orange.css" rel="stylesheet" id="colors">
+
+<!-- LESS - Development Only
+<link href="assets/less/styles.less" rel="stylesheet/less" />
+<script>less = { env: 'development' };</script>
+<script src="assets/js/less.js"></script>
+-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+<link href="assets/css/ie8.css" rel="stylesheet"></link>
+<![endif]-->
+</head>
+<body>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-RKWC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-RKWC');</script>
+<!-- End Google Tag Manager -->
+
+<header id="header" class="navbar">
+
+  <div class="container">
+    <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	    	<span class="sr-only">Skip navigation</span>
+	    	<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+		  </button> 
+	    <a class="navbar-brand logo" href="index.html">Library Simplified</a>
+    </div>
+    
+<nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="index.html">Home</a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">About</a></li>
+            <li><a href="news-and-events.html">News and Events</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/">Projects</a>
+          <ul class="dropdown-menu">
+              <li><a href="project-design.html">Library Simpliifed Project Design</a></li>
+              <li><a href="LEAP-project-design.html">LEAP Project Design</a></li>
+              <li><a href="consortia-project-design.html">SimplyE for Consortia Project Design</a><li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/">Product</a>
+          <ul class="dropdown-menu">
+              <li><a href="productbacklog.html">Product Backlog</a></li>
+              <li><a href="iOSUItour.html">Mobile: iOS ver 1.0</a></li>
+              <li><a href="androidtour.html">Mobile: Android ver 1.0</a></li>
+              <li><a href="covergenerator.html">Invetigations: Cover Generator</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/">Deployment and Support</a>
+          <ul class="dropdown-menu">
+              <li><a href="deployinstruction.html">Deploying the application</a></li>
+              <li><a href="clientappfaq.html">Mobile Client application how to</a></li>
+              <li><a href="accessibility.html">iOS Accessibility</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    
+  </div>
+</header><!-- .navbar-fixed-top -->
+
+<div class="page-top">
+	<div class="container">	
+		<h1 class="page-top-header">Project Design</h1>		
+		<ol class="breadcrumb">
+		  <li><a href="index.html">Home</a></li>
+		  <li class="active">Project Design</li>
+		</ol>
+	</div>	
+</div>
+
+<div class="container" id="main">
+
+<div class="row">
+
+	<div class="col-md-3">
+		<div id="sidebar" class="affix" role="complementary">
+			<ul class="nav">
+				<li><a href="#overview">Overveiw</a></li>
+				<li><a href="#design">Project Design</a></li>
+				<li><a href="#phase-1">Part 1: Buildout</a></li>
+				<li><a href="#phase-2">Part 2: Exploring the Future </a></li>
+				<li><a href="#evaluation">Evaluation</a></li>
+				<li><a href="#resources">Project Resources </a></li>
+				<li><a href="#communication">Communication </a></li>
+				<li><a href="#sustainability">Sustainability </a></li>				
+			</ul>
+		</div><!-- .affix -->
+	</div>
+
+	<div class="col-md-9">
+
+		<div class="row">
+		
+			<h2 id="overview"></h2>
+		
+			<p class="lead">
+				<strong>Library E-content Access Project</strong> is jointly funded by <a href="http://www.NYPL.org" data-toggle="tooltip" title="The New York Public Library" target="_blank">NYPL</a> and <a href="http://www.imls.org" data-toggle="tooltip" title="Institute for Museum and Library Sciences" target="_blank">IMLS</a>.  The New York Public Library (NYPL) and partners present the Library E-content Access Project, or LEAP, a two-year project responding to IMLS’s “National Digital Platform” priority. This project will advance the work that NYPL began with Library Simplified, an IMLS-funded  exploration of ways to unify and improve the e-book borrowing and reading experience for library patrons across the country. In close collaboration with the Digital Public Library of America (DPLA), NYPL and its 19 nationwide partner libraries and library consortia will expand  and provide outreach for the existing Library Simplified application, engage in in-depth planning for its sustainable maintenance and ongoing development, facilitate a national conversation about the challenges and potential of library e-books, build consensus around a possible solution addressing these needs and opportunities, and, as appropriate, begin to prototype that solution. 
+			</p>
+			<h6>The four primary deliverables of LEAP are:</h6>
+
+			<ol>
+				<li>a fully developed, functional Library Simplified e-content reader application, available on several platforms;</li>
+				<li>a remediated public domain library of e-books that can be served through Library Simplified or other existing interfaces;</li>
+				<li>the critical technology components needed to support the first year of Open eBooks including customization of the Library Simplified application so that it can be configured to support users of the Open eBooks collection; and </li>
+				<li>the technical and sustainability plans for a Library Content Exchange or similar, and much of the infrastructure in support of a future pilot implementation. 
+			</ol>
+
+			<hr />
+			<div class="well">
+			<h5>Product Development / Engineering</h5>
+
+				<p>
+					Product Owner / Engineering Manager, NYPL - James English</br>
+					Application Architect, NYPL - Leonard Richardson</br>
+					Sr Developer/Application Engineer, NYPL - Amy Slagle</br>
+					Developer/Application Engineer, NYPL - Courteney Erin</br>
+					Developer/Application Engineer, NYPL - Matthew Skomarovsky</br>
+					Sr Developer/Mobile Applcation Engineer, NYPL - Aferdita Muriqi</br>
+					Mauricio Giraldo - UX Designer and Labs Engineering Manager
+				</p>
+				<h6><i class="icon-group"></i><strong>&nbsp Other Contributors</strong></h6>
+				<p>
+					Ben Anderman, Raduz Benicky, Juan Corona - Evident Point, Corp</br>
+					Hadrien Gardeur - Feedbooks, SAS  </br>
+					Mikael Menu, Jean-Marie Geofroy -  Mantano, SAS</br>
+					Mark Raynsford - Independent, UK</br>
+					Gwendolen Quinn - NYPL/Independent, USA</br>
+					Sam Tarakajian - NYPL
+				</p>
+			</div>
+			<hr />
+				
+			<h3 id="design"><strong>Project Design</strong></h3> 
+			<p>
+				IMLS funding will support the expansion of NYPL’s team of e-book developers to accelerate the development of additional features, migrate the app to additional platforms, create a public domain library with remediated meta-data and cover art, and complete the initial planning, scoping, and scaffolding of a proposed nonprofit content exchange. Funding will also support convening and community-building activities led by project partner DPLA in collaboration with NYPL staff for the duration of the project period, especially NYPL’s grant-funded Open Source Community Organizer in Year 2. Community-building activities will center on creating a field-wide understanding of the challenges that face libraries in their delivery of e-content, highlighting existing solutions, and beginning to build consensus around the project trajectory. The project will be planned around a continuous, iterative cycle of building, releases, testing, and convening.
+			</p>
+			</hr>
+			<h4 id="phase-1"><strong>Part 1:</strong> Build-Out of Library Simplified Community and Technology</h4>
+			<p>
+				<i>September 2015 – August 2017</i>
+			</p>
+
+			<p>
+				There are three parts to the fact gathering and analysis of Library Simplified.  The three parts are designed to clearly document the expereinces of users and non-users, the system infterfaces and technology architectures that deliver those expereinces and analyze the needs and wants of users and how those are met or not met. 
+			</p>
+			
+			<h5>(I) Product Expansion:</h5>
+			
+			<ul class="nav nav-tabs tab-header">
+		  		<li class="active"><a href="#part1" data-toggle="tab"><i class="icon-book"></i>Open eBooks</a></li>
+		  		<li><a href="#part2" data-toggle="tab"><i class="icon-tablet"></i>Device Platforms</a></li>
+		  		<li><a href="#part3" data-toggle="tab"><i class="icon-cogs"></i>Backend Work</a></li>
+		  		<li><a href="#part4" data-toggle="tab"><i class="icon-cogs"></i>Backend Extensions</a></li>
+			</ul>
+		
+			<div class="tab-content">
+		  		<div class="tab-pane active" id="part1">
+
+			  	<H5> Open eBooks</h5>
+				 <p>
+				   	In the first months of the project, the team will work intensively to make the current Library Simplified application, funded through IMLS Grant # LG-05-13-0356, configurable to support the Open eBooks project. After Open eBooks is supported, NYPL will return focus to the expansion of its own e-reader application. Through beta testing and the work NYPL conducted with its nine partner libraries leading up to the first release of the iOS application, the most necessary next features are clear. Critical additions include support for content types like audio files and comics, as well as emerging EPUB types like EDUPUB to support digital textbook rendering. Other features will enhance the platform’s appeal to a wide variety of different library users, such as Text-to-Speech for visually impaired users, annotation features for research users, and social features integrated with social networks for bibliophiles who are part of book clubs.
+				<p>
+				</div>
+				
+				<div class="tab-pane" id="part2">	
+					<h5>Device Platforms</h5>
+					<p>
+						Feature releases are planned throughout the development schedule. NYPL developers will work to create Android and Nook compatible versions of the application. After iOS, Android is the most commonly used mobile operating system in the United States, and ensuring that the majority of patrons can access e-content on their smart phones and tablets is the first priority for LEAP. From February 2016 through May 2016, the team will focus on creating Kindle and web browser compatible versions of Library Simplified. While a version of the application that can be used across all Kindle devices is unlikely, a version that works on Kindle Fire will be achievable. Because this will expand upon some of the code developed for Android support it is scheduled for development later in the grant period. Additional features will be added once the application is functional on a variety of platforms.
+					</p>
+				</div>
+
+				<div class="tab-pane" id="part3"> 
+					<h5>Backend Work</h5>
+					<p>
+						Other work on the Library Simplified application will add additional backend functionality to improve the user experience, though this may be less visible to end-users. The application will succeed in simplifying library e-book access to approximately three clicks through a variety of such back-end innovations, such as:
+						<ul>
+							<li>Authenticating users against the ILS via their library card numbers and PIN credentials;</li>
+							<li>Rendering EPUB2 and EPUB 3 content;</li>
+							<li>Providing a unified catalogue of content hosted by 3M and OverDrive;</li>
+							<li>Hosting and distributing both public domain content and other e-books not protected by DRM;</li>
+							<li>Auto classifying and normalizing e-content classifications; and</li>
+							<li>Auto generating missing metadata such as book cover-art and descriptions.</li>
+						</ul>
+					</p>
+					<p>
+						<strong> APIs</strong> - Crucial back-end improvements, particularly those associated with APIs (Application Programming Interfaces) and DRM (Digital Rights Management) solutions will begin early in the award period. These developments will build on the successes of the first IMLS grant-funded project, such as the creation of a new standard within OPDS.org called OPDS for Libraries, and the creation of new a non-restrictive, transaction-fee-free DRM technology within Readium to support library lending use cases (Light Content Protection, or LCP). These are some of the latest, most open, and lowest cost digital publishing industry standards and technologies, and advancing them will ultimately contribute to the replicability and ease of implementation of the Library Simplified application at libraries nationwide. 
+					</p>
+				</div>
+
+				<div class="tab-pane" id="part4"> 
+					<h5>Backend System Extensions</h5>
+
+					<strong>Licensed Content Protection</strong>
+					<p>
+						Because Library Simplified is built using open Readium technologies it is compatible with industry publication formats and web standards, has favorable licensing regimes, and enables the use of alternative DRM technologies such as Readium LCP. LEAP will accelerate the building of this full-fledged LCP reference server that can be deployed by libraries. This solution will be highly interoperable with other e-book platforms. In order to encrypt and decrypt e-books protected with commercial DRM technologies, the application will include commercial licensed software components.
+					</p>
+
+					<strong>Beackend System Extensions</strong>
+					<p>
+						Additional back-end extensions will build support for e-content classification, recommendations, reviews, dictionaries and annotations; extend the back-end application services to allow content queue management, license, and publisher meta-data management; implement content host and aggregation services; and build the API infrastructure for easier integration by third party systems. The white label application will be able to integrate the APIs needed for related e-book projects and platforms with only minimal developer time. These could include APIs needed to customize the application for the incarcerated, or English language learners in developing countries and, in the case of LEAP, will include the APIs needed to authenticate economically disadvantaged students through FirstBook, as a part of an IMLS-driven children’s e-book initiative. Subject to the availability of funds and IMLS discretion, IMLS anticipates continuing to be a partner in both managing Open eBooks and developing other potential implementations of Library Simplified designed to serve special audiences with compelling need. IMLS’s involvement may include convening stakeholders, project management, and communications. Through anticipated participation in regularly scheduled calls, IMLS staff would weigh in on the rolling priorities in this area and provide feedback and input on prioritizing issues that are most pressing to be resolved to meet the needs of various library stakeholders. 
+					</p>
+
+					<strong>Expanded Acesss</strong>
+					<p>
+						After ensuring that the Library Simplified application is usable across a variety of platforms, and once the best DRM solution is selected and integrated, NYPL will add support for features that directly address improved user access:
+						<ul>
+							<li>additional e-content types including PDF, Audio, and CBR/CBZ comic book files; and </li>
+							<li>accessibility features to support use by persons with disabilities and speakers of other languages.</li>
+						</ul> 
+						New features will be integrated into application releases starting in late 2016, however the order of their prioritization will depend on partner and user feedback gained through regular partner calls and convenings. The application will be expanded through a continuous “build and release” cycle, and user testing, feedback, and responsive fixes will result in continuous code releases. The open source code repository associated with the application will also be kept current so that partners and others will be able to implement the latest, most problem-free iteration of the project. The project team will engage directly with users and with partner libraries to solicit feedback and to increase their awareness of the needs and wants of patrons.
+					</p>
+				</div>
+		  	</div>
+
+			<hr />
+
+		  	<h5>(II) Public Domain Library</h5>
+
+		  	<P>
+		  		The project will create a back-end content catalogue, specifically asit relates to public domain e-books, and will implement improved public domain content management interfaces for all phases of the content discovery, access, and reading process. This is the first step in expanding the white label Library Simplified application from a discovery and reading platform to one that enables libraries to aggregate and host their own content. DPLA and NYPL will address issues currently plaguing public domain e-books which make them difficult for libraries to ingest and serve, and challenging for patrons to locate and read. These issues include duplicate versions of works; missing, inaccurate, incomplete, and catalogue-incompatible metadata; and unidentifiable jacket covers. 
+		  	</p>
+		  	<p>
+		  		The project team will identify born-digital (i.e. not scanned) public domain e-books from sources including Project Gutenberg and DPLA Hubs. The team will then build and deploy a “data wrangler” tool capable identifying and standardizing metadata from a variety of sources and employable in a variety of contexts, including for identifying and collecting age-appropriate content for the Open eBooks project. The team will also create book covers—using both computer-generated and community-contributed artwork—for the many titles that do not currently have them. An Open Access Content server built into the Library Simplified application will be able to mirror locally-hosted public domain files from a variety of institutions, syncing and normalizing their metadata through the data wrangler and increasing the amount of content discoverable through the application. NYPL and DPLA will collaborate on the data wrangler tool, which DPLA will also use to improve the metadata on the non-Project Gutenberg content aggregated through its Hubs network. IMLS staff will provide feedback and input on public domain content to prioritize over the course of the project. Hosted on Amazon’s EC2 “Elastic Compute Cloud,” this seed collection will be available through the Library Simplified application as an opt-in bundle that implementing libraries can add to their own collections. The collection will also be discoverable through the DPLA portal, which directs users to library-hosted digital content, and through the proposed Content Exchange, if built. Public domain work will be augmented by at least four public domain e-book hackathons, like the one hosted by NYPL Labs and the Readium Foundation in January 2015.
+		  	</p>
+		  	<p>
+		  		The resulting remediated public domain collection (more than 40,000 titles) will also play an important role in the still-evolving NYPL, DPLA, FirstBook, and IMLS effort to provide access to free e-books to children in need (Open eBooks). Public domain works will supplement content donated by publishers, and may potentially facilitate a children’s e-book application available to all students regardless of income level. Similar to Library Simplified, this application could link users to the e-book collections available at their local public libraries while also serving works in the public domain.
+		  	</p>
+
+			<hr />
+
+			<h5>(III) Community Building</h5>
+
+			<p>
+				The nine named partners on the current Library Simplified grant have proven to be highly engaged, participating in regular meetings and calls, and in self-formed working groups. Ultimately, more libraries have regularly participated in Library Simplified conversations than were named as partners. This pool of interested libraries, library systems, technologists, and publishers has grown continuously over the past two years, and growth is expected to continue due to the number of community-building and convening activities planned during the grant period. To address the need to build field-wide consensus and bring as many organizations under the LEAP umbrella as possible, LEAP will have 19 partner organizations (in addition to DPLA) at the start of the project. For a complete list of partners see Attachment C. The number of informal project partners will continue to grow throughout the grant period.
+			</p>
+			<ul class="nav nav-tabs tab-header">
+		  		<li class="active"><a href="#3part1" data-toggle="tab"><i class="icon-user"></i>Implementation Feedback</a></li>
+		  		<li><a href="#3part2" data-toggle="tab"><i class="icon-search"></i>Open Source Community Manager</a></li>
+		  		<li><a href="#3part3" data-toggle="tab"><i class="icon-cogs"></i>Convenings</a></li>
+			</ul>
+			<div class="tab-content">
+		  		<div class="tab-pane active" id="3part1">
+		  		<h5>Implementation Feedback</h5>
+				<p>
+					Partnerships and consensus building will play an important role in the iterative process of project development, and NYPL will continue working with partners to build out and improve the Library Simplified application. Partners represent a diverse array of libraries and library systems from urban and rural areas across the country, and have been selected for their engagement in discussions and experiments around library e-book lending. Some will participate in UX analysis, the review of architectural options, and the prioritization of features, and will provide ongoing feedback. Other partners will implement the white label Library Simplified application at their organizations, market its availability, and report on user uptake and feedback. Still others will engage with some of the broader challenges to a field-wide ecosystem of affordable, accessible library e-books. Many consortium library systems have experience in experimenting with alternative e-content acquisition, hosting, and delivery methods, and these consortia partners will be involved in planning creative solutions such as the Content Exchange outlined below.
+				</p>
+				</div>
+
+		  		<div class="tab-pane" id="3part2">
+		  		<h5>Open Source Community Manager</h5>
+				<p>
+					Through NYPL’s partnership with the Digital Public Library of America, the project team will connect with various sectors of the open source technology community. DPLA will activate its network of libraries, librarians, data specialists, and technologists in order to facilitate the creation of an open source developer community dedicated to the ongoing maintenance of the Library Simplified application. Additional opportunities for engagement will be identified by NYPL, including by the Open Source Community Organizer. After the startup and initial adoption phases are complete, DPLA will house and maintain the resulting application source code and its open source community.
+				</p>
+				</div>
+
+		  		<div class="tab-pane" id="3part3">
+		  		<h5>Convenings</h5>
+				<p>
+					The project partners are committed to growing the network of libraries and other stakeholders with an interest in reshaping the library e-content ecosystem, and bringing together as many of these interested parties as possible is a high priority. DPLA will also take the lead on the project’s convening activities, bringing together LEAP’s diverse community of stakeholders to form consensus around project priorities and field-wide next steps. Convenings will provide ample opportunities for gathering feedback, creating new connections, driving nationwide adoption of the Library Simplified application, and the sustainability planning and product development for a possible Library Content Exchange. Convenings, including project outreach during DPLA’s annual DPLAFest, will be held regularly between September 2015 and August 2017 on a to-be-determined schedule that will align closely with the ongoing releases of Library Simplified, as well as important field-wide national conferences and meetings. IMLS staff will participate, at IMLS expense and subject to the availability of funds, in the community building activities and events. Similarly, IMLS staff will participate in the planning and development of the agendas for these events. Partner and non-partner feedback from these convenings will be crucial in determining the success and future trajectory of LEAP, and will help establish the viability of a national, community-driven, nonprofit Content Exchange.
+				</p>
+				</div>
+			</div>
+			<hr />
+			<h4 id="phase-2"><strong>Part 2:</strong> Exploring the Future of Library E-Books </h4>
+			<p><i>(September 2015 – August 2017)</i></p>
+
+
+
+			<p>
+				Phase 2 of LEAP will address library access to the e-content supply chain. This project proposes to seek solutions that help libraries source and aggregate their own e-content, and to deeply explore the possibility of a nonprofit, national Content Exchange. Recent conversations with partner libraries and other field-wide stakeholders have pointed towards an e-content exchange as a favorable solution to obtain library e-content for patron access. Partners anticipate that a Content Exchange will have several benefits, including enhanced protection of user data; a less fragmented user experience; better ROI for libraries looking to purchase e-content, freeing up a larger portion of collections budgets; and improved business relationships with publishers, which may also impact both the quality and cost of e-content licensing.
+			</p>
+			<h5>Increasing Available E-Content: The Exploration and Planning for a Library Content Exchange</h5>
+			<ul class="nav nav-tabs tab-header">
+		  		<li class="active"><a href="#4part1" data-toggle="tab"><i class="icon-user"></i>Community Consensus</a></li>
+		  		<li><a href="#4part2" data-toggle="tab"><i class="icon-search"></i>Sustainability Planning</a></li>
+		  		<li><a href="#4part3" data-toggle="tab"><i class="icon-cogs"></i>Exchange Project Design</a></li>
+		  		<li><a href="#4part4" data-toggle="tab"><i class="icon-cogs"></i>Pilot Planning</a></li>
+			</ul>
+			<div class="tab-content">
+			<div class="tab-pane active" id="4part1">
+			<h5>Securing Community Consensus</h5>
+			<p>
+				Regular, DPLA-led convenings to promote field-wide consensus will also be a prominent tool for LEAP during Part 2. Because project phases will not be sequential, conversations will begin at the start of the grant period, and some convenings may include discussion about both Library Simplified application expansion and Content Exchange pilot planning. Conversations to consider, design, and plan a Content Exchange will involve LEAP partners—including IMLS—as well as publishers, technologists, and other interested stakeholders. Convenings will take place on a roughly quarterly basis, with partner calls and informal phone meetings occurring more regularly. The DPLA will manage covening logistics while working to build a self-sustaining community that will promote, maintain, and improve both LEAP products throughout the grant period and beyond.
+			</p>
+			</div>
+			
+			<div class="tab-pane" id="4part2">
+			<h5>Sustainability Planning and Development</h5>
+			<p>
+				NYPL and DPLA will work with LEAP partners to assemble the data and analyses required to support decision making around the creation of a Library Content Exchange. A Sustainability Plan will be created based on thorough literature review, user analysis, interviews with key stakeholders and existing providers, especially staff from libraries who have already begun hosting e-books. This will include:
+				<ul>
+					<li>A clear and data-rich summary of relevant background information about e-books and libraries, including the problems libraries face in serving e-books and the opportunities for improvement;</li>
+					<li>Analysis of the historic and likely future growth rate of the library e-book market;</li>
+					<li>Analysis of the likely drivers and rates of adoption by libraries, and the resulting gross revenue that an Exchange could receive;</li>
+					<li>A detailed assessment of the costs of starting and operating an Exchange. The budget model will also estimate how costs will rise as the Exchange grows and adds staff, and the net effect on excess revenue that can be generated for re-investment and/or returned to libraries; </li>
+					<li>Revenue forecasts for different market growth and adoption scenarios; and</li>
+					<li>Descriptions of various possible models for the long-term organization, governance, and sustainability of an Exchange with an analysis of the advantages and disadvantages of each. </li>
+				</ul>
+			</p>
+			<p>
+				<strong>Deliverable</strong></br>
+				This Sustainability Plan will be written by Micah May from NYPL and Rachel Frick from DPLA and circulated to partners and other convening participants. The team will gauge their reactions and adjust the proposal accordingly. Because sustainability planning and convening activities will be mutually reinforcing, conversations will result in an increasingly clear consensus around how libraries can best move forward together to build, pilot, and share an Exchange. 
+			</p>
+			</div>
+
+			<div class="tab-pane" id="4part3">
+			<h5>Designing Project Architecture</h5>
+			<p>
+			 	In consultation with partners and other experts, the NYPL will also design the proposed Content Exchange, which will be a piece of middleware capable of aggregating and connecting digital content stores and locally-hosted content repositories. Like the Library Simplified application, the Content Exchange will be built using open industry standards such as Readium’s Content Protection Server for content protection, and Open Publication Distribution System (OPDS) as the API and server-to-server interface between system components and third-party applications. For content acquisition and publisher distribution services the project team will evaluate commercial platforms such as Firebrand Technologies, Odillo, and DeMarque. The team will sketch a variety of products to identify the most user-friendly and impactful design, and project partners will be asked to review and provide feedback on these options. LEAP will establish an open source community around all project products to ensure that the code is maintained and updated, or such a role may be taken on by either DPLA or a new nonprofit entity as resolved during the Sustainability Planning phase.
+			</p>
+			<p><strong>Design</strong></br>
+				While the partners who will ultimately build and pilot a Content Exchange are yet to be determined, much of the infrastructure that NYPL will build to support related e-book projects will also be available to be leveraged in support of this Exchange. This includes the technical app architecture, which may be deployed in support of Open eBooks, and similar specialized e-book projects.</br>
+				Building these products at NYPL enables the Library to take a responsive approach to partner feedback and to changes in the field, and also allows for deeper engagement with the open source developer community in the form of hackathons, code sprints, and other technologist-focused convenings. The team of NYPL developers who will expand Library Simplified and scaffold the technical components for a Content Exchange pilot will also spend time in Year 1 to develop Open eBooks.</br> 
+				These grant-funded positions will include developers who will focus on</br>
+				<ul>
+					<li>building an OPAC/ILS Extension,</li> 
+					<li>integrating API feeds into all LEAP products,</li> 
+					<li>and a contract developer specializing in DRM.</li> 
+				</ul>
+				Within the scope of this grant NYPL will be able to</br>
+				<ul>
+					<li>a) integrate with FirstBook to authenticate users (note that this grant will support NYPL’s incorporation of the data feed from FirstBook, but not FirstBook’s building or enhancement of its outbound API), </li>
+					<li>b) build the capacity to host and serve DRM protected e-books procured directly from publishers, and</li>
+					<li>c) customize the Library Simplified application interface to improve the user experience for children (this may include features to support DPLA-generated metadata feeds and other critical UX enhancements).</li> 
+				</ul>
+				A detailed timeline for building and scaffolding all LEAP and related products will be established once these new developers start at NYPL.
+			</p>
+			</div>
+
+			<div class="tab-pane" id="4part4">
+			<h5>Pilot Planning</h5>
+			<p>
+				The LEAP partners currently envision a functional pilot Content Exchange as the natural next stage for the project, once all sustainability and technical planning is in place. Pilot planning will start immediately and will continue throughout the grant period; this will involve </br>
+				<ul>
+					<li>working towards consensus on the right product design,</li> 
+					<li>technical architecture,</li> 
+					<li>and model for governance.</li> 
+				</ul>
+
+				More technical implementation planning will begin later, and will involve several months of finalizing pilot specifics, staff training on operating required technology and navigating the Exchange, and scheduling pilot test sites for setup. NYPL will participate in this pilot, as will additional interested libraries and consortiums. Stipends will be available to help cover expenses partners may encounter when piloting the Exchange. As with convening funds, stipends will be made available to project partners prior to being offered to later adopters. It is also anticipated that the pilot will require partners to contribute financially (no additional costs may be charged to IMLS without IMLS approval and availability of funding); sustainability planning will help determine the shape and scope of this investment.
+			</p>
+			<p>
+				The development team will closely observe pilot libraries to test assumptions, evaluate institutional library and library end-user user experiences, and assess the financial and technical impact of a direct acquisition model on library collection development and content acquisitions operations. The project will share pilot findings alongside Content Exchange planning materials such as the communications plan, sustainability plan, and related research documents. These will be made available on the Library Simplified website and shared with the library field, including ALA, Internet Librarian, and others as determined by the communications plan. NYPL and its partners believe that results will demonstrate LEAP is an innovative and affordable national solution for libraries to implement and sustain.
+			</p>
+			</div>
+		</div>
+		<hr />
+
+		<h3 id="evaluation"><strong>Evaluation</strong></h3>
+		<p>
+			LEAP will result in two key deliverables—a fully functional Library Simplified application and the technical architecture and sustainability plans for a Library Content Exchange—as well as an integrated, remediated public domain library. In Year 1, NYPL will also provide hosting of the technology for the Open eBooks application, and app development work including integration with FirstBook’s user authentication APIs and some customization of the Library Simplified app. In addition to these products, LEAP will create several informal reports highlighting key issues relating to library delivery of e-content. These will mainly take the form of quarterly blog posts on librarysimplified.org, which will be written by the relevant members of the project team from DPLA or NYPL. By sharing reports in this format the LEAP team will be able to responsively engage with the community growing around the project. LEAP partners will also document the data and analyses required to support decision making around the creation of a Library Content Exchange.
+		</p>
+		<p>
+			Because LEAP proposes the creation of complementary but freestanding products, the evaluation of their successes will be based on the achievement of different metrics:
+		</p>
+
+		<h5>Library Simplified Expansion:</h5> </br>
+		<p>
+			Achievements for the next iteration of the Library Simplified application will be measured according to metrics established during the initial development of the application, such as usability and widespread product adoption. The key performance indicators (KPIs) for Library Simplified build-out include
+		</p> 
+			<ol>
+				<li>Product adoption of the application at libraries,</li> 
+				<li>Library patron uptake of the application, and </li>
+				<li> End-user (patron) experience and satisfaction, as measured through embedded web analytics and user surveys.</li>
+			</ol> 
+		<p>
+			NYPL, DPLA, and partner libraries will solicit qualitative feedback from patrons, libraries, and other stakeholders both throughout the design process and following the wider launch of each version of the application. NYPL’s User Insights Team will use surveys and focus groups to formally gather feedback from the wider user population. They will also conduct interviews with partner library staff and other industry stakeholders. Resulting data and reports will be available to partners and open for public dissemination.
+		</p>
+		<p>
+			Quantitative assessment will also be used to evaluate success, in particular product adoption and usage. Use data will be reported by partner and participating libraries, and demonstrated user behavior collected from embedded analytics in the product. The project team will track the following objectives:
+		</p>
+			<ul>
+				<li>The Library Simplified white label application will be widely adopted by libraries nationwide. The baseline goal will be for 5 to 10 libraries or library systems to roll out the application by the end of the grant period.</li>
+				<li>Libraries adopting the Library Simplified application will provide improved user experience, as demonstrated by a decreased number of abandoned searches and increased self-reported satisfaction among users. </li>
+				<li>The total number of users at participating libraries who install the application will depend on which libraries and systems implement it, but overall project success will hinge on the product widely attracting new users.</li>
+			</ul>
+
+		<h5>Library Content Exchange: </h5>
+		<p>
+			Because the launch of the Library Content Exchange will take place beyond the project timeline, the success of LEAP will be predicated on the creation of the technical and sustainability plans for the Exchange. KPIs that will be tracked for an eventual pilot will include 
+		</p>
+			<ol>
+				<li>Library participation in the Exchange, and</li>
+				<li>Cost-savings and improvements to ROI realized by libraries that participate, as measured by tracking total cost per circulation at participating libraries.</li>
+			</ol>
+		<p>
+			The requirements for a pilot iteration of the Exchange will be established through the conversations to be convened with hosting partners and other interested libraries. The pilot will serve both licensable publisher content and free public domain works to LEAP partner libraries. The LEAP Hosting Partners who will participate in the pilot represent consortia of hundreds of libraries large and small with varied e-content budgets. NYPL and DPLA anticipate that pilot success can be reached through the participation of as few as 5 of these library consortia. Strategic and sustainability planning during the grant period will establish longer-term metrics for both adoption and sustainability of the proposed Exchange.
+		</p>
+		<p>
+			For all LEAP products, the project team will work to quickly identify the root causes for any unmet KPI targets and to address them thoughtfully. Because LEAP will be designed iteratively and in partnership with institutions which are probable eventual users, metrics for success will be continuously reevaluated and adjusted to match current project realities. Evaluation will provide one source of this feedback. The LEAP team will also seek formative assessment through other channels including partner library feedback, product user testing, and continuous monitoring of key performance indicators and web analytics. Data will help the team responsively adjust product design and address specific obstacles to adoption and use in real time as they are identified.
+		</p>
+
+
+		<hr />
+
+		<h3 id="resources"><strong>Project Resources</strong></h3>
+
+			<h5>Costs</h5>
+			<p>
+				The total cost of this project, including both the requested IMLS funds and the funds provided by NYPL as cost-share, is $2,744,308.
+			</p>
+			<ul>
+				<li>Approximately 50 percent will support product development and </li>
+				<li>40 percent will support partnerships and coalition building.</li>
+				<li>An additional 8.09 percent has been allocated for indirect costs as allowable by NYPL’s grant agreement with the US Department of the Interior.</li>
+			</ul> 
+			<h5>Product and Engineering Resources</h5>
+			<p>
+				More detail is available in the included Budget Justification.  James English, NYPL’s Senior Product Manager for Reader Experience, will serve as the product owner for LEAP. The project will continue to utilize the talents of several other members of the original Library Simplified team, including LEAP program manager Micah May and two developers. Mr. May is NYPL’s Director of Business Development. Back End CMS Developer Leonard Richardson will be the lead architect and developer for server side applications and services, as he has been during the first phase of Library Simplified. NYPL will hire a new full-time Mobile Applications Developer to serve as the lead application developer for mobile clients. LEAP will also draw on the resources of the Library for ongoing product evaluation and user survey analysis. As a part of this project, NYPL plans to hire or contract four more developers to build, implement, and integrate backend systems, including authentication APIs for related projects; port the existing iOS client application onto other web and mobile interfaces and platforms; collaborate with DPLA on the creation of a remediated public domain library to be served through the application; and architect a fully functional, easy to use Content Exchange web store platform.
+			</p>
+
+			<h5>Community Management and Planning</h5>
+			<p>
+				Additionally, NYPL staff (including a full-time Open Source Community Organizer in Year 2) will manage outreach activities, plan and attend library convening events, and to cultivate the open source developer community for the long term maintenance of all LEAP products and source code.  This Community Organizer will work closely with DPLA for this project. The Community Manager will lead the community convenings; facilitate stakeholder conversations; and synthesize issues, decisions, and system/service requirements; and communicate these back to the NYPL development team. They will also play a large role in external communications to the broader library community. Funded independently, this to-be-hired position will join the DPLA team no later than August 2015. Additional members of DPLA who will work on LEAP include 
+			</p>
+			<p>
+				<ul>
+					<li>Rachel Frick, Director of Business Development, and </li>
+					<li>Dan Cohen, Executive Director.</li>
+				</ul>
+				Ms. Frick will oversee the E-book Community Manager and be responsible for guiding the sustainability planning and communication activities of this project, in close collaboration with Micah May. Mr. Cohen will provide strategic guidance for DPLA’s long-term role in sustaining the work outlined in this proposal, and actively contribute to LEAP’s outreach and communication activities.
+			</p>
+
+		<hr  />
+
+		<h3 id="communication"><strong>Communication Plan</strong></h3>
+			<p>
+				Clear and effective communication about the various LEAP products is essential to their wide adoption and corresponding field-wide impact. In addition to the iterative cycle of building, testing, releasing, and peer-to-peer consensus building enumerated in the Project Design section, the LEAP Communication Plan will focus on two primary audiences with two corresponding modes of communication:
+			</p>
+			<p>
+				<ul>
+					<li>
+						<strong>B2B (Business to Business) communication to libraries and other industry partners:</strong></br>
+						Through communication to libraries and industry partners such as e-content vendors, publishers, and open-source technologists, to the team will drive acceptance and adoption of LEAP’s products. Previous and current B2B outreach and communication efforts have been highly effective, as demonstrated by the increasing number of libraries and library systems interested in partnering with NYPL and DPLA on LEAP. Throughout the proposed grant period the project team will provide outreach for LEAP and its products at meetings, sessions, and more typical B2B communications such as exhibit booths during conferences like Internet Librarian, Books in Browsers, ALA, and DPLAFest. Conference presentations will be broadly focused to build awareness of LEAP and encourage more libraries to adopt project solutions. For issues specifically related to the Open eBooks project, IMLS communications staff will be the primary point of contact for communications. As such, IMLS will be responsible for coordinating and leading communications efforts across the various partners involved in the project. NYPL will direct and manage communications about the general LEAP project.
+					</li>
+					<li>
+						<strong>B2C (Business to Community) communication directly to users/patrons:</strong></br> 
+						The ultimate impact of LEAP depends on use of its products, which depends on the successful communication of product availability and functionality to library patrons. Because each implementing library is invited to re-brand the Library Simplified application, each must also be responsible for creating and implementing their own marketing plans to drive adoption among their patrons. Partners will be encouraged but not required to share their marketing plans, which may leverage existing resources, industry knowledge, and community networks.
+					</li>
+				</ul>
+			</p>
+
+			<hr  />
+
+			<h3 id="sustainability"><strong>Sustainability</strong></h3> 
+			<p>
+				NYPL, DPLA, and partners will make the products of this grant and their code open source and freely available to be implemented and branded by libraries nationwide. We envision this project and the products it will create having a strong, field-wide impact long after the grant period has ended. There is a distinct path to sustainability for each of the principal “end products” that will result from this work:
+			</p>
+			<p>
+				<ol>
+					<li><strong>The Library Simplified Application:</strong></br>
+						E-reader application software will be maintained and regularly improved by the open source developer community cultivated through the efforts of NYPL and DPLA. NYPL and DPLA will build and actively maintain relationships with the technology community through event hosting and attendance, and will also identify and coordinate the ongoing technical work that can be accomplished by the open source community, including an annual review and cleanup of all project code. The Readium Foundation’s existing community of library developers will also be actively engaged. By the end of the grant period NYPL and DPLA will establish a funding plan for the sustainable future management of this development community. There are a variety of scenarios for the sustainability of the application itself as an open source effort. Adopting libraries may invest individually in the product and contribute those engineering investments back into the open source community. The application could be contributed to the Readium Foundation as a reference implementation of their technologies so that it is maintained by that open source community. The last and most likely scenario is that a non-profit entity such as DPLA, a standalone content exchange, or coalition of library adopters will finance and support the project. This model would be similar to the open source ILS and OPAC technologies that are in use by other research and public library systems. As detailed above, adoption will be driven through outreach for the application at conferences, through listservs and other formal and informal interest groups including IFLA, DPLA Digital Content Working Group, and the ALA e-content interest group. Greater adoption will translate to the creation of a larger and more invested support community. In Year 2, a FTE Community Organizer is anticipated to cultivate these adopters into a support and maintenance community; this position will travel with the product and may be hosted at NYPL, DPLA, or a new entity associated with a Content Exchange.
+					</li>
+					<li><strong>Public Domain Library:</strong></br> 
+						Libraries that choose to host public domain content locally will be able to do so using the Open Access Content Server built into the Library Simplified platform. This will mirror public domain host files locally and sync their metadata using a “data wrangler” to gather and normalize the bibliographic data for both public domain and commercially licensed works. With this tool, continuing to improve the meta-data for and provide cover art to support the discovery of public domain titles will be an easy-to-maintain part of the ongoing work of LEAP. Continued development and curation of the public domain collection, as well as ongoing metadata enrichment, will be undertaken by the DPLA as a part of its overall strategic mission.
+					</li>
+					<li><strong>Library Content Exchange Plans:</strong></br>
+						While specific plans for the sustainability of a Library Content Exchange will depend on the sustainability and technical plans that will be created through this award, it is probable that economic viability will be the main key to the Exchange’s ongoing success.
+					</li>
+				</ol>
+			</p>
+			
+	</div><!-- .col-md-9 -->
+	
+</div><!-- .row -->
+
+</div><!-- .container -->
+
+<footer id="footer">
+
+	<div class="newsletter">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<a href="http://eepurl.com/bo9K3T"><h3 class="title"><i class="icon-envelope-alt"></i> Subscribe to updates</h3></a>
+					<span class="lead">We will only send you good stuff. Promise!</span>
+				</div>
+				<!--<div class="col-md-4">
+					<form class="input-group small" method="post" action="">
+				    <input type="text" class="form-control" placeholder="Your Email Address" />
+				    <div class="input-group-btn">
+				      <button class="btn btn-default" type="button">Sign Up <i class="icon-angle-right"></i></button>
+				    </div>
+				  </form>
+				</div>-->
+			</div>
+	  </div>
+  </div>
+
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+			
+				<div class="col-md-4">
+					<div class="social-networks">
+						<a href="https://www.facebook.com/nypl"><i class="icon-facebook"></i></a>
+						<a href="https://twitter.com/nypl"><i class="icon-twitter"></i></a>
+						<a href="https://plus.google.com/u/0/+newyorkpubliclibrary/posts"><i class="icon-google-plus"></i></a>
+						<a href="http://nypl.tumblr.com/"><i class="icon-tumblr"></i></a>
+						<a href="https://www.pinterest.com/nypl/"><i class="icon-pinterest"></i></a>
+						<!-- <a href=""><i class="icon-linkedin"></i></a>
+						<a href=""><i class="icon-dribbble"></i></a>	
+						<a href=""><i class="icon-instagram"></i></a>
+						<a href=""><i class="icon-pinterest"></i></a>
+						<a href=""><i class="icon-youtube-play"></i></a>
+						<a href=""><i class="icon-rss"></i></a> -->
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<h6 class="title">About</h6>
+					<p>
+						We are a team of remarkable institutions doing great things. Get to know a little bit more <a href="about">about us</a>.
+					</p>
+				</div>  
+				
+				<div class="col-md-4">
+					<h6 class="title">Get in Touch</h6>
+					<address>
+						<i class="icon-map-marker"></i> <a class="lightbox-iframe" href="https://maps.google.com/maps?q=NYPL+5th+Ave+at+42nd+St,+New+York+City,+New+York&amp;hl=en&amp;t=v&amp;hnear=5th+Ave+at+42nd+St,+New+York+City,+New+York" data-toggle="tooltip" title="Show on Google Maps">42nd Street 5th Avenue, New York City, United States</a><br />
+						<i class="icon-envelope"></i> <a href="mailto:info@librarysimplified.com" data-toggle="tooltip" title="Email Us">info@librarysimplified.com</a><br />
+						<i class="icon-phone"></i> +1 212 621 40520<br />
+					</address>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="container footer-bottom">
+		<div class="footer-copyright">
+			<p>&copy; 2013 by Olin. All Rights Reserved.</p>
+		</div>
+	</div>
+	
+</footer>
+
+
+<a href="#" id="scrollToTop">
+	<i class="icon-angle-up icon-2x"></i>
+</a>
+
+<!-- Contact Popup (Modal) -->
+<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">We would love to hear from you</h4>
+      </div>
+      <div class="modal-body">
+
+				<p class="lead">
+					Ask us anything you want. We will get back to you during the work week.</strong>
+				</p>
+				<form name="contactform" id="contactform" class="margin-bottom-large" method="post" action="contactform.php">		
+					<div class="row">
+						<div class="form-group col-md-6">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" placeholder="" class="form-control" />
+						</div>
+						<div class="form-group col-md-6">
+							<label for="email">Email <span class="text-warning">*</span></label>
+							<input type="text" name="email" id="email" placeholder="" class="form-control" />
+							<div id="email_error_empty" class="error">Please enter your email address.</div>
+							<div id="email_error_invalid" class="error">Please enter a valid email address.</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="subject">Subject</label>
+						<input type="text" name="subject" id="subject" class="form-control" placeholder="" />
+					</div>
+					<div class="form-group">
+						<label for="message">Message <span class="text-warning">*</span></label>
+						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder=""></textarea>
+						<div id="message_error_empty" class="error">Please enter a message.</div>
+						<div id="message_error_invalid" class="error">Please check your message for any errors.</div>
+					</div>
+	
+					<div id="mailsuccess" class="success">Your message has been sent successfully.</div>
+					<div id="mailfail" class="error">Sorry, error occured this time sending your message.</div>
+					
+					<div class="margin-top-base">
+						<input type="submit" id="submit_contact_form" class="btn btn-primary" value="Send">				
+						<small class="pull-right text-muted">* required</small>
+					</div>
+					<script src="assets/js/validation.js"></script>
+				</form>
+
+				<div class="row">
+					<div class="col-sm-6">
+						<h4 class="invert">Library Simplified</h4>
+						<address>
+							<i class="icon-map-marker"></i> the New York Public Library, 5th Ave at 42nd St, New York City, United States<br />
+							<i class="icon-map-marker"></i> 42nd Street and 5th Avenue, New York City, United States<br />
+							<i class="icon-envelope"></i> info@librarysimplified.com<br />
+							<i class="icon-phone"></i> +1 212 621 0520<br />
+						</address>		
+					</div>
+				</div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Libraries & jQuery Plugins -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.bxslider.min.js"></script>
+<script src="assets/js/jquery.isotope.min.js"></script>
+<script src="assets/js/jquery.fittext.js"></script>
+<script src="assets/js/jquery.fitvids.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.hoverdir.js"></script>
+<script src="assets/js/validation.js"></script>
+<script src="assets/js/theme.js"></script>
+ 
+</body>
+</html>
