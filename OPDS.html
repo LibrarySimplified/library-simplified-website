@@ -199,20 +199,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <p>
     <strong>Application Programing Interface (API) </strong>
     <ul> 
-      <li>An API has many software libraries and depending on the vendor, can change or be deprecated (they literally change every week on Google) because the front or backend software functionality or architecture changes.</li>
+      <li>An API has many software libraries and depending on the vendor, can change or be deprecated without notice simply becasue vendor's front or backend software functionality or architecture changed.  This can lead to brittle integrations and service disruption.</li>
       <li>An API provides a software library that one must link with to use the services. This tightly binds the client and server together.</li>
-      <li>The API tends to invade all code layers and creates strong dependencies between layers. It also tends to be simple to use.</li>
+      <li>An API tends to invade all code layers and creates strong dependencies between layers becasue of the external code dependencies. It also tends to be simple initially implement and use.</li>
     </ul>
   </p>
   <p><strong>Protocol </strong>
     <ul>
-      <li>HyperTextTransferProtocol (HTTP), FileTransferProtocol (FTP), ATOM, etc., are examples of protocols.  They tend to evolve over time and persist.</li>
-      <li>A protocol defines a standard request response layer and a common transport.</li> 
-      <li>Nothing other than the standard binds the client and server together.</li>
+      <li>HyperTextTransferProtocol (HTTP), FileTransferProtocol (FTP), ATOM, etc., are examples of protocols.  They tend to evolve over time and persist.  They are stable.</li>
+      <li>A protocol defines a standard request response layer and a common transport.  Thus it is sw architecture independent.</li> 
+      <li>Nothing other than the standard binds the client and server together.  This provides resiliancy and flexibility.</li>
     <ul>
   </p>
   <p>
-    While protocols are more complex to use as they are less direct and take a lot of serializing/deserializing/dispatching type logic, they are more flexible for they allow independent SW development and loosely coupled system architectures. The use open protocols such as HTTP and HTML powered the growth of the internet and the growth of the Word Wide Web by allowing anyone to independently publish and distribute content online reliably and interoperably.
+    While protocols are more complex to use as they are less direct and take a lot of serializing/deserializing/dispatching type logic, they are <strong>more flexible</strong> for they allow independent SW development and loosely coupled system architectures. The use of open protocols such as HTTP and HTML powered the growth of the internet and the growth of the Word Wide Web by allowing anyone to independently publish and distribute content online reliably and interoperably.  We beleive, OPDS offers the same potential for growth and interoperability for ebook distribution.
   </p>
   </div><!-- row -->
 
@@ -220,9 +220,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h4>OPDS Protocols and Extensions</h4>
 
 <div class="well">
-  <h6> OPDS 1.2 Features Requests </h6>
+  <h6> OPDS 1.2 Features</h6>
   <p>
-    The OPDS 1.2 Features requests document is drafted in the context of the formal released OPDS version 1.1 specification.  As such it identifiess the extensions to the specification in conjucntion with the functonality and features it seeks to provide to support the library ledning uses cases.
+    The OPDS 1.2 Features document is drafted in the context of the formally released OPDS version 1.1 specification.  As such it identifies the extensions to the specification in conjucntion with the functonality and features it seeks to provide to support the library ledning uses cases.
   </p>
   <p><strong>New Features:</strong></br>
     <ul>
