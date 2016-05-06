@@ -400,7 +400,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <div class="well">
 
-    <h6>Optional Server Software</h6>
+    <h2>Optional Server Software</h2>
 
     <p>
       There are optional server components that a library may implement - <strong>Open Access (OA) Content Server</strong>, <strong>Metadata Wrangler</strong> and <strong>Card Creator</strong>.  These applications are purely optional because The New York Public Library will be providing functions for some of these servers as a service to implementing libraries so they do not have to install and host the servers.  <strong>Card Creator</strong> is an optional application which will not be provided as a service which needs to be customized on an individual basis by libraries.  which will allow libraries to incorporate remote library card application and proof of eligibility documentation in a secure and controlled process so that user data and privacy is secured in transit and at rest during the application review process and promptly deleted from library systems upon acceptance or rejection. 
@@ -428,6 +428,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </li>
     </ul>
   </div>
+
+<hr />
+
 
   <p>
     <img src="assets/logos/Docker_logo.png" alt="Docker" width="150"/>
@@ -499,6 +502,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       The Configuration instructions can be found on github on the main project's wiki at <a href="https://github.com/NYPL-Simplified/Simplified/wiki/Configuration"/>https://github.com/NYPL-Simplified/Simplified/wiki/Configuration</a>.
     </p>
 
+  </div>
+<hr />
+ <div>
+    <h2>Maintaining the servers</h2>
+
+    <p>
+      The <code>/bin</code> directory contains autmated scripts that should be run every 5 minutes to keep your collections updated as well as fix data from time to time.  The wiki link below lists the scripts and their purpose.  Unless you are running a separate instance of <strong>Metadata Wrangler</strong> and <strong>OA Content Server</strong> as opposed using the NYPL public service, those instructions and scripts can be ignored.  They will be done as part of NYPL's maintenance.
+    </p>
+    <p>
+      <strong>Automated Jobs</strong></br>
+      <a href="https://github.com/NYPL-Simplified/Simplified/wiki/AutomatedJobs#jobs-that-should-be-run-as-needed">https://github.com/NYPL-Simplified/Simplified/wiki/AutomatedJobs#jobs-that-should-be-run-as-needed</a>
+
+    </p>
   </div>
 
   <div>
