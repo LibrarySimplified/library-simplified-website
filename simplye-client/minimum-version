@@ -5,6 +5,6 @@
   },
   "iOS": {
     "minimum-version": "9999.0.0",
-    "update-url": "http://www.example.com/iOS"
+    "update-url": "https://itunes.apple.com/us/app/nypl-simplye/id1046583900?ls=1&mt=8"
   }
 }
