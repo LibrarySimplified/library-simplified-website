@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<title>Library Simplified &middot; Android UI Tour</title>
+<link rel="icon" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts (more: http://www.google.com/fonts) -->
+<!-- Main Font -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<!-- Headings -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<!-- Handwritten -->
+<link href="http://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+<!-- Countdown, Pricing Table Price Tag -->
+<link href="http://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+<!-- Logo -->
+<link href="http://fonts.googleapis.com/css?family=Cantora+One" rel="stylesheet" type="text/css">
+
+<!-- CDN Bootstrap & FontAwesome -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- CSS Libraries -->
+<link href="assets/css/animate.min.css" rel="stylesheet">
+<link href="assets/css/bxslider.css" rel="stylesheet">
+<link href="assets/css/magnific-popup.css" rel="stylesheet">
+
+<!-- Theme Specific CSS -->
+<link href="assets/css/styles.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+
+<!-- Predefined Color Scheme -->
+<link href="assets/css/colors/orange.css" rel="stylesheet" id="colors">
+
+<!-- LESS - Development Only
+<link href="assets/less/styles.less" rel="stylesheet/less" />
+<script>less = { env: 'development' };</script>
+<script src="assets/js/less.js"></script>
+-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+<link href="assets/css/ie8.css" rel="stylesheet"></link>
+<![endif]-->
+
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-RKWC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-RKWC');</script>
+<!-- End Google Tag Manager -->
+
+
+<header id="header" class="navbar">
+
+  <div class="container">
+    <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	    	<span class="sr-only">Skip navigation</span>
+	    	<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+		  </button> 
+	    <a class="navbar-brand logo" href="index.html">Library Simplified</a>
+    </div>
+
+<nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="index.html">Home</a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">About</a></li>
+            <li><a href="news-and-events.html">News and Events</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/">Projects</a>
+          <ul class="dropdown-menu">
+              <li><a href="project-design.html">IMLS: Library Simpliifed</a></li>
+              <li><a href="LEAP-project-design.html">IMLS: LEAP Project Design</a></li>
+              <li><a href="consortia-project-design.html">IMLS: SimplyE for Consortia</a><li>
+              <li><a href="OPDS.html">Specifications: OPDS Extensions</a></li>
+              <li><a href="covergenerator.html">Investigations: Cover Generator</a></li>
+              <li><a href="open-ebook-2014.html">Hackathon: Open eBooks 2014</a></li>
+              <li><a href="open-ebook-2015.html">Hackathon: Open eBooks 2015</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/">Product</a>
+          <ul class="dropdown-menu">
+              <li><a href="productbacklog.html">Product Backlog</a></li>
+              <li><a href="iOSUItour.html">Mobile: iOS ver 1.0</a></li>
+              <li><a href="androidtour.html">Mobile: Android ver 1.0</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/">Deployment and Support</a>
+          <ul class="dropdown-menu">
+              <li><a href="deployinstruction.html">Deploying the application</a></li>
+              <li><a href="clientappfaq.html">Mobile Client application how to</a></li>
+              <li><a href="accessibility.html">Accessibility</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+        
+  </div>
+</header><!-- .navbar-fixed-top -->
+  
+<div class="page-top">
+	<div class="container">	
+		<h1 class="page-top-header">Android UI Tour</h1>		
+		<ol class="breadcrumb">
+		  <li><a href="/">Home</a></li>
+		  <li class="active">Android UI Tour</li>
+		</ol>
+	</div>	
+</div>
+  
+<div class="container" id="main">
+	<div class="row">
+
+	<div class="col-md-3">
+		<div id="sidebar" class="affix" role="complementary">
+			<ul class="nav">
+        	<li><a href="#discover"><strong>Prototype User Interaction</strong></a></li>
+				<li><a href="#discover">Discover</a></li>
+				<li><a href="#borrow">Borrow</a></li>
+				<li><a href="#read">Read</a></li>
+        	<li><a href="#iOS"><strong>Android version 1.0</strong></a></li>
+			</ul>
+		</div><!-- .affix -->
+	</div>
+
+	<div class="col-md-9">
+	<div class="row">
+		<h4>Simple un-pretentious design</h4>
+	
+		<p class="lead">
+		  The SimplyE application is designed to organize the tasks required to find, borrow and read and eBook from the library.  In doing so the interface had to be utilitarian in design while preserving the visual appeal expected of a quality mobile applications.  For library lending, there is less need for supperficial interaction and display in order to sell the user on the content. The content itself is the product so that the application should fall away in order to showcase the collection and curatorial strength of the library.
+		</p>
+		<blockquote>
+	  	<p>
+	  		<strong>The mobile app interface aims to get out of the way and let readers easily find, borrow and read the books they want.</strong>
+	  	</p>
+	  		<small>Maurico Giraldo</small>
+		</blockquote>
+
+	</div><!-- Row -->
+
+	<h2 id="discover"></h2>
+
+    <div class="row">
+      <h5 class="hr2"></h5>
+      <h2>Prototype User Interaction </h2>   
+        <h4>Find a Book: Discovery</h4>
+	      <div>
+	          <p>
+	          	The process of finding something to read is typically framed as a process of
+	          </p>
+	          <ul>
+	          	<li><strong>Recommendation</strong></li>
+		        <li><strong>Browse</strong></li>
+		        <li><strong>Search</strong></li>
+	           </ul>
+	        	<p>
+	        		The process of discovery we believe always starts with <strong>recommendation</strong>. Whether a user comes to the library to <strong>search</strong> for a specific title or author, the intent is informed by some prior recommendation or suggestion regarding the work, or author. The less informed method of discovery can be guided by expert recommendation of a librarian or the user’s awareness of their book preferences through browse paths to collections of books. When users come to the library, they have ready access to librarians to assist them in their discovery. This expert extracts information from the user and guides the user to content in which they can browse collections or directs them to the particular title they are looking for. In commercial bookstores or online books stores, self-guided browsing experiences are facilitated by highly curated collections and navigation schemes and queues based on genre, appeal and popularity.
+	        	</p>
+	       </div>
+    </div><!-- row -->
+
+    <div class="row">
+      <h5>Smart Phone</h5>
+       <div class="gallery">
+        <div class="col-sm-4">
+        <h6>Browse recommended titles by genre category</h6>
+            <a href="assets/designs2/phone001catalog.png" title="<h3>Easily browse through recommended and suggested titles with in custom genera swim lanes.  Select title immediately to place hold, check out, return if necessary or view more titles within genera."><img src="assets/designs2/phone001catalog.png" alt="" /></a>
+        </div>
+
+        <div class="col-sm-4">
+        <h6>Browse selected genre categories for available titles</h6>
+            <a href="assets/designs2/phone006lane.png" title="Browse within selected genera, select title immediately to place hold, check out or return if necessary."><img src="assets/designs2/phone006lane.png" alt="" /></a>
+        </div>
+
+        <div class="col-sm-4">
+            <h6>Browse lists of recommended titles regardless of genre</h6>
+              <a href="assets/designs2/phone005listdetail.png" title="Browse within selected genera, select title immediately to place hold, check out or return if necessary."><img src="assets/designs2/phone005listdetail.png" alt="" /></a>
+        </div>
+      </div><!-- gallery --> 
+    </div><!-- row -->
+
+    <div class="row">
+      <h5>Tablet</h5>
+
+          <div class="gallery">
+
+            <div class="col-sm-4">
+            <h6>Browse recommended titles by genre category</h6>
+                <a href="assets/designs2/tablet01catalog.png" title="<h3>Easily browse through recommended and suggested titles with in custom genera swim lanes.  Select title immediately to place hold, check out, return if necessary or view more titles within genera."><img src="assets/designs2/tablet01catalog.png" alt="" /></a>
+            </div>
+
+            <div class="col-sm-4">
+            <h6>Browse selected genre cetegories for available titles</h6>
+                <a href="assets/designs2/tablet04listsdetail.png" title="Browse within selected genera, select title immediately to place hold, check out or return if necessary."><img src="assets/designs2/tablet04listsdetail.png" alt="" /></a>
+            </div>
+
+            <div class="col-sm-4">
+                <h6>Browse lists of recommended titles regardless of genera</h6>
+                  <a href="assets/designs2/tablet06lanes.png" title="Browse within selected genera, select title immediately to place hold, check out or return if necessary."><img src="assets/designs2/tablet06lanes.png" alt="" /></a>
+            </div>
+          </div><!-- gallery --> 
+    </div><!-- row -->
+
+
+    <div class="row">
+    <h2 id="borrow"></h2>
+    <h4>Borrow</h4>
+      <div>
+        <p>The process of borrowing a book from the library "digitally" is cumbersome. However, buying a book commercially is simple from a user perspective. This stems from online book stores having an unlimited supply. Libraries have forced scarcity and must elegantly deal with this issue. To reduce the complexity, we remove the choices from this transaction stream. First, we standardize packaging (EPUB3) and remove alternate digital format decisions. Second, automatically eliminate transaction options if they are irrelevant and only present options and information needed. Third, allow users to "shop" before executing a check requirement (e.g. entering their library card if or signing in.) </p>
+      </div>
+    </div><!-- row -->
+
+    <div class="row">
+      <h5>Smart Phone</h5>
+      <div class="gallery">
+      	<div class="col-sm-4">
+            <h6>Remove unnecessary decisions such as format from the transaction stream</h6>
+               <a href="assets/designs2/phone006lane.png" title="Browse within selected genera, select title immediately to place hold, check out or return if necessary."><img src="assets/designs2/phone006lane.png" alt="" /></a>
+      	</div>
+
+      	<div class="col-sm-4">
+            <h6>Present immediate and relevant information for a particular interaction.</h6>
+                <a href="assets/designs2/phone016holddetaildownloadpct.png" title=""><img src="assets/designs2/phone016holddetaildownloadpct.png" alt="" /></a>
+      	</div>
+
+      	<div class="col-sm-4">
+          <h6>Allow users to "look" before transacting information.</h6>
+                <a href="assets/designs2/phone019auth.png" title="If not logged in, simply scan your library card once.  Credentials will persist locally so you never have to log in again."><img src="assets/designs2/phone019auth.png" alt="" /></a>
+      	</div>
+      </div> <!-- gallery -->
+    </div><!-- row-->
+     
+    <div class="row">
+      <h5>Tablet</h5>
+      <div class="gallery">
+      	<div class="col-sm-4">
+            <h6>Remove unnecessary decisions such as format from the transaction stream</h6>
+               <a href="assets/designs2/tablet02catalogdetail.png" title="Browse within lanes, select title immediately to place hold, check out or return if necessary."><img src="assets/designs2/tablet02catalogdetail.png" alt="" /></a>
+      	</div>
+
+      	<div class="col-sm-4">
+            <h6>Present immediate and relevant information for a particular interaction.</h6>
+                <a href="assets/designs2/tablet07holds.png" title=""><img src="assets/designs2/tablet07holds.png" alt="" /></a>
+      	</div>
+      	<div class="col-sm-4">
+          <h6>Allow users to "look" before transacting information.</h6>
+                <a href="assets/designs2/tablet08auth.png" title="If not logged in, simply scan your library card once.  Credentials will persist locally so you never have to log in again."><img src="assets/designs2/tablet08auth.png" alt="" /></a>
+      	</div>
+      </div> <!-- gallery -->
+    </div><!-- row-->
+
+    <div class="row">
+    <h2 id="read"></h2>
+    <h4>Read</h4> 
+      <div>
+        <p>
+          The reading of experience for libraries in regards to eBooks is not unlike that of commercial applications.  However, we believe that pure consumption of the content over the user's interaction with the content should be better facilitated.  This requires adoption of EPUB3.  The EPUB3 format requires additional media types beyond text to be exposed to the readers such as audio, video, and Math ML to be displayed.  Additionally, users may want to comment or highlight and annotate content they are researching, referencing or sharing with others.  Social features are important for building readers communities and recommending content. 
+        </p>
+      </div>
+    </div> <!-- row -->
+
+    <div class="row">
+      <h5>Smart Phone</h5>
+        <div class="gallery">
+          <div class="col-sm-4">
+             <h6>Simply Open and Navigate the content.</h6>
+                <a href="assets/designs2/phone101reader.png" title="Simply Open and Navigate the content."><img src="assets/designs2/phone101reader.png" alt="" /></a>
+          </div>
+
+          <div class="col-sm-4">
+              <h6>Access Bookmarks, Annotations, etc.</h6>
+                  <a href="assets/designs2/phone107readerbookmark.png" title="Acess Book Marks, Highlights, Annotations"><img src="assets/designs2/phone107readerbookmark.png" alt="" /></a>
+          </div>
+
+          <div class="col-sm-4">
+              <h6>Adjust readability and display settings</h6>
+                  <a href="assets/designs2/phone106readerbw.png" title="Adjust readability and display settings"><img src="assets/designs2/phone106readerbw.png" alt="" /></a>
+          </div>
+        </div> <!-- gallery -->
+    </div> <!-- row -->
+
+    <div class="row">
+      <h5>Tablet</h5>
+        <div class="gallery">
+          <div class="col-sm-4">
+             <h6>Simply Open and Navigate the content.</h6>
+                <a href="assets/designs2/tablet101reader.png" title="Simply Open and Navigate the content."><img src="assets/designs2/tablet101reader.png" alt="" /></a>
+          </div>
+
+          <div class="col-sm-4">
+              <h6>Access Bookmarks, Annotations, etc.</h6>
+                  <a href="assets/designs2/tablet103readernotes.png" title="Acess Book Marks, Highlights, Annotations"><img src="assets/designs2/tablet103readernotes.png" alt="" /></a>
+          </div>
+
+          <div class="col-sm-4">
+              <h6>Adjust readability and display settings</h6>
+                  <a href="assets/designs2/tablet102readersettings.png" title="Adjust readability and display settings"><img src="assets/designs2/tablet102readersettings.png" alt="" /></a>
+          </div>
+        </div> <!-- gallery -->
+    </div> <!-- row -->
+
+<h2 class="hr2"></h2>
+<h2 id="iOS"></h2>
+<h2>SimplyE Android NYPL implementation version 1.0</h2>
+
+	<p class="lead">
+		For NYPL, SimplyE was styled to relfect its standard color pallet and incorporate its library icon.  The application also took advantage of two optional features for Card Applications and HelpStack integration with Desk.com ticket management for in app help with AskNYPL.  While the mockups reflect a newer bottom of screen tab option made recently avaialable on Androids Material Design guide, it is not in the initial implementation that is native to the majority of apps on Android. In the future, the tabbed menus might be implemented to make the implmentation reflect the original desing and iOS implementation.
+	</p>
+<h5>Smartphone</h5>
+	<p>
+	  <ul class="portfolio-filter list-inline">
+		  <li class="active"><a href="#" data-filter="*">All</a></li>
+		  <li><a href="#" data-filter=".pbrowse">Browse</a></li>
+		  <li><a href="#" data-filter=".psearch">Search</a></li>
+		  <li><a href="#" data-filter=".pborrow">Get (Borrow)</a></li>
+		  <li><a href="#" data-filter=".pholds">Reserve (Place Hold)</a></li>
+      <li><a href="#" data-filter=".pread">Read</a></li>      
+		  <li><a href="#" data-filter=".plogin">Log In/Out</a></li>
+		  <!--<li><a href="#" data-filter=".apply">Optional: Sign Up</a></li>
+		  <li><a href="#" data-filter=".help">Optional: Help</a></li>-->
+		</ul>
+	</p>
+	<div class="row">
+		<ul class="portfolio">
+			<li class="pbrowse">
+				<a href="">
+					<img src="assets/androidscreenshots/phonebrowse01.png" alt="" />
+					<span class="type">Browse</span>
+					<span class="portfolio-item-content">
+						<span class="header">Browse</span>
+						<p>
+							<strong>Browse the Catalog</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Swipe left and right on the NetFlix style lanes to see popular and available titles</br></li>
+									<li>Swipe up and down to view more catagories</br></li>
+									<li>Tap the category heading or More... to see more books in the category</br></li>
+									<li>Tap the refresh in the upper left to update the view of titles</li> 
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+      </li>
+      <li class="psearch">
+        <a href="">
+          <img src="assets/androidscreenshots/phone01search.png" alt="" />
+          <span class="type">Search</span>
+          <span class="portfolio-item-content">
+            <span class="header">Search</span>
+            <p>
+              <strong>Search the Catalog</strong>
+            </p>
+            <span class="body">
+              <p>
+                <ul>
+                  <li>Tap the inside the search bar to bring up the keyboard</br></li>
+                  <li>Tap the title ,author or other keyword for the work you are searching for</br></li>
+                </ul>
+              </p>
+            </span>
+          </span>
+        </a>
+      </li>  
+			<li class="pborrow">
+				<a href="">
+					<img src="assets/androidscreenshots/phone01bookdetailborrow.png" alt="" />
+					<span class="type">Borrow</span>
+					<span class="portfolio-item-content">
+						<span class="header">Borrow</span>
+						<p>
+							<strong>Borrow</strong>
+						</p>
+
+						<span class="body">
+							<p>
+							<ul>
+								<li>
+								When you find a book you want to read tap the Get button to borrow.
+								</li>
+							</ul>
+							</p>
+							<p>
+								NOTE: If the book is not a available the a Hold button will be avialable</br>
+								If a book is already borrowed a Download button will be displayed.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="pborrow">
+				<a href="">
+					<img src="assets/androidscreenshots/phone02bookdetailborrow.png" alt="" />
+					<span class="type">Borrow</span>
+					<span class="portfolio-item-content">
+						<span class="header">Borrow</span>
+						<p>
+							<strong>Borrow</strong>
+						</p>
+
+						<span class="body">
+							<p>
+							<ul>
+								<li>
+								Tap Cancel to cancel download if desired
+								</li>
+							</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+      <li class="pholds">
+        <a href="">
+          <img src="assets/androidscreenshots/phone01bookdetailreserve.png" alt="" />
+          <span class="type">Reserve</span>
+          <span class="portfolio-item-content">
+            <span class="header">Reserve</span>
+            <p>
+              <strong>Reserve</strong>
+            </p>
+
+            <span class="body">
+              <p>
+              <ul>
+                <li>
+                Tap Reserve to plal=ce hold on a title
+                </li>
+              </ul>
+              </p>
+            </span>
+          </span>
+        </a>
+      </li>
+      <li class="pholds">
+        <a href="">
+          <img src="assets/androidscreenshots/phone03bookdetailreserve.png" alt="" />
+          <span class="type">Reserve</span>
+          <span class="portfolio-item-content">
+            <span class="header">Reserve</span>
+            <p>
+              <strong>Reserve</strong>
+            </p>
+            <span class="body">
+              <p>
+                Tap Remove to cancel the reservation if needed
+              </p>
+            </span>
+          </span>
+        </a>
+      </li>
+			<li class="pread">
+				<a href="">
+					<img src="assets/androidscreenshots/phone03bookdetailborrow.png" alt="" />
+					<span class="type">Read</span>
+					<span class="portfolio-item-content">
+						<span class="header">Read</span>
+						<p>
+							<strong>Read</strong>
+						</p>
+
+						<span class="body">
+							<p>
+							<ul>
+								<li>Tap Read to open books</li> 
+								<li>Tap Return Now to end loan if desired</li>
+							</ul>
+							</p>
+							<p>
+								NOTE: A blue dot will display next to cover if it has yet to be opened.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="pread">
+				<a href="">
+					<img src="assets/androidscreenshots/phone01readcover.png" alt="" />
+					<span class="type">Read</span>
+					<span class="portfolio-item-content">
+						<span class="header">Read</span>
+						<p>
+							<strong>Read</strong>
+						</p>
+
+						<span class="body">
+							<p>
+							<ul>
+								<li>Swipe left or right to advance page by page through the book </br>
+									OR</li> 
+								<li>Tap left for right edge of the book to move throught the book</li>
+							</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="pread">
+				<a href="">
+					<img src="assets/androidscreenshots/phone03readformat.png" alt="" />
+					<span class="type">Read</span>
+					<span class="portfolio-item-content">
+						<span class="header">Read</span>
+						<p>
+							<strong>Read</strong>
+						</p>
+
+						<span class="body">
+							<p>
+							<ul>
+								<li>Tap screen to display Menu Bar</li> 
+								<li>Tap Font Icon to adjust text font, size, and contrast and display brightness</li>
+							</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="pread">
+				<a href="">
+					<img src="assets/androidscreenshots/phone02readtoc.png" alt="" />
+					<span class="type">Read</span>
+					<span class="portfolio-item-content">
+						<span class="header">Read</span>
+						<p>
+							<strong>Read</strong>
+						</p>
+
+						<span class="body">
+							<p>
+							<ul>
+								<li>Tap screen to display Menu</li> 
+								<li>Tap TOC Icon to acces the Table of Contents</li>
+								<li>Tap TOC section desired to naviage to the desired location</li>
+							</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+
+			<li class="pborrow">
+				<a href="">
+					<img src="assets/androidscreenshots/phone03bookdetailborrow.png" alt="" />
+					<span class="type">Borrow</span>
+					<span class="portfolio-item-content">
+						<span class="header">Borrow</span>
+						<p>
+							<strong>Return Book</strong>
+						</p>
+
+						<span class="body">
+							<p>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="plogin">
+				<a href="">
+					<img src="assets/androidscreenshots/phonelogin.png" alt="" />
+					<span class="type">Log In/Out</span>
+					<span class="portfolio-item-content">
+						<span class="header">Log In/Out</span>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Enter your Barcode and PIN into the respective feilds</li>
+									<li>Tap Log In to verify and sign in or Log Out to sign out.<li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<!--<li class="help">
+				<a href="">
+					<img src="assets/androidscreenshots/phonehelp.png" alt="" />
+					<span class="type">Optional: Help</span>
+					<span class="portfolio-item-content">
+						<span class="header">Help</span>
+						<p>
+							<strong>FAQs</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>From the More Tab</li>
+									<li>Tap Help to see FAQs, How-To guides or submit an issue</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="help">
+				<a href="">
+					<img src="assets/androidscreenshots/15help.png" alt="" />
+					<span class="type">Optional: Help</span>
+					<span class="portfolio-item-content">
+						<span class="header">Help</span>
+						<p>
+							<strong>FAQs</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Tap on a particular topic under FAQs</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="help">
+				<a href="">
+					<img src="assets/androidscreenshots/15help2.jpg" alt="" />
+					<span class="type">Optional: Help</span>
+					<span class="portfolio-item-content">
+						<span class="header">Help</span>
+						<p>
+							<strong>FAQs</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Tap on the different FAQ Topics to see relevant information and instructions</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="help">
+				<a href="">
+					<img src="assets/androidscreenshots/15help3.png" alt="" />
+					<span class="type">Optional: Help</span>
+					<span class="portfolio-item-content">
+						<span class="header">Help</span>
+						<p>
+							<strong>FAQ</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Tap on Issue to submit and issues</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="help">
+				<a href="">
+					<img src="assets/androidscreenshots/15help.png" alt="" />
+					<span class="type">Optional: Help</span>
+					<span class="portfolio-item-content">
+						<span class="header">Help</span>
+						<p>
+							<strong>Submit Issue</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Tap on Issue to submit and issues</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="help">
+				<a href="">
+					<img src="assets/androidscreenshots/15help4.png" alt="" />
+					<span class="type">Optional: Help</span>
+					<span class="portfolio-item-content">
+						<span class="header">Help</span>
+						<p>
+							<strong>Submit Issue</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Enter the requested contact information</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+
+			<li class="help">
+				<a href="">
+					<img src="assets/androidscreenshots/15help5.jpg" alt="" />
+					<span class="type">Optional: Help</span>
+					<span class="portfolio-item-content">
+						<span class="header">Help</span>
+						<p>
+							<strong>Submit Issue</strong>
+						</p>
+						<span class="body">
+							<p>
+								<ul>
+									<li>Enter the issue and details about the issue encountered</li>
+								</ul>
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+												
+			<li class="apply">
+				<a href="">
+					<img src="assets/androidscreenshots/14settingsnotloggedin.png" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								From the More Tab, Tap Library Card
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/androidscreenshots/16signup.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Sign Up to apply for a Library Barcode and PIN
+ 							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/androidscreenshots/16signup1.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Settgins to allow the access the application permision to access function on your iOS device needed to provide as part of the application process.
+ 							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/androidscreenshots/16signup1a.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+							<p>
+							<strong>Settings</strong>
+							</p>
+						<span class="body">
+							<p>
+								Tap Location
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/androidscreenshots/16signup1b.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+							<p>
+							<strong>Settings</strong>
+							</p>
+						<span class="body">
+							<p>
+								Select "While using the app."
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/androidscreenshots/16signup1c.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+	 					<p>
+							<strong>Settings</strong>
+						</p>
+						<span class="body">
+							<p>
+								Tap Settings to return to SimplyE.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+
+			<li class="apply">
+				<a href="">
+					<img src="assets/androidscreenshots/16signup2.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Continue.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/androidscreenshots/16signup3.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/androidscreenshots/16signup4.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/androidscreenshots16signup4b.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/androidscreenshots/16signup5.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/androidscreenshots/16signup6.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/androidscreenshots/16signup7.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/androidscreenshots/16signup8.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/androidscreenshots/16signup9.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/androidscreenshots/16signup10.jpg" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Allow to let the app confirm you are in New York.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li class="apply">
+				<a href="">
+					<img src="assets/androidscreenshots/16signup11.png" alt="" />
+					<span class="type">Optional: Sign Up</span>
+					<span class="portfolio-item-content">
+						<span class="header">Optional: Sign Up</span>
+						<span class="body">
+							<p>
+								Tap Return to Catalog to exit.
+							</p>
+						</span>
+					</span>
+				</a>
+			</li>-->
+		</ul>
+	</div>
+  <h5>Tablet</h5>
+  <p>
+    <ul class="portfolio-filter list-inline">
+      <li><a href="#" data-filter="*">All</a></li>
+      <li><a href="#" data-filter=".tbrowse">Browse</a></li>
+      <li><a href="#" data-filter=".tsearch">Search</a></li>
+      <li><a href="#" data-filter=".tborrow">Get (Borrow)</a></li>
+      <li><a href="#" data-filter=".tholds">Reserve (Place Hold)</a></li>
+      <li><a href="#" data-filter=".tread">Read</a></li>
+      <li><a href="#" data-filter=".tlogin">Log In/Out</a></li>
+      <!--<li><a href="#" data-filter=".apply">Optional: Sign Up</a></li>
+      <li><a href="#" data-filter=".help">Optional: Help</a></li>-->
+    </ul>
+  </p>
+  <div class="row">
+    <ul class="portfolio">  
+      <li class="tbrowse">
+        <a href="single-project-slider.html">
+          <img src="assets/androidscreenshots/tablet01browse.png" alt="" />
+          <span class="type">Browse</span>
+          <span class="portfolio-item-content">
+            <span class="header">Browse</span>
+            <p>
+              <Strong>Browse the Catalog</strong>
+            </p>
+            <span class="body">
+              <p>
+                <ul>
+                  <li>Swipe left and right on the NetFlix style lanes to see popular and available titles</br></li>
+                  <li>Swipe up and down to view more catagories</br></li>
+                  <li>Tap the category heading or More... to see more books in the category</br></li>
+                  <li>Tap the refresh in the upper left to update the view of titles</li> 
+                </ul>
+              </p>
+              <p>
+                NOTE: The search is global if searching from the catalog.
+              </p>
+            </span>
+          </span>
+        </a>
+      </li>
+      <li class="tbrowse">
+        <a href="">
+          <img src="assets/androidscreenshots/tablet02browsebestsellers.png" alt="" />
+          <span class="type">Browse</span>
+          <span class="portfolio-item-content">
+            <span class="header">Browse</span>
+            <p>
+              <strong>Browse</strong>
+            </p>
+
+            <span class="body">
+              <p>
+              <ul>
+                <li>
+                Swipe up and down to browse best seller lists.
+                </li>
+              </ul>
+              </p>
+            </span>
+          </span>
+        </a>
+      </li>
+      <li class="tsearch">
+        <a href="">
+          <img src="assets/androidscreenshots/tablet01search.png" alt="" />
+          <span class="type">Search</span>
+          <span class="portfolio-item-content">
+            <span class="header">Search</span>
+            <p>
+              <strong>Search</strong>
+            </p>
+
+            <span class="body">
+              <p>
+              <ul>
+                <li>Tap the inside the search bar to bring up the keyboard</br></li>
+                <li>Tap the title ,author or other keyword for the work you are searching for</br></li>
+              </ul>
+              </p>
+            </span>
+          </span>
+        </a>
+      </li>
+
+
+      <li class="tborrow">
+        <a href="">
+          <img src="assets/androidscreenshots/tablet02browsebestsellers.png" alt="" />
+          <span class="type">Borrow</span>
+          <span class="portfolio-item-content">
+            <span class="header">Borrow</span>
+            <p>
+              <strong>Borrow</strong>
+            </p>
+
+            <span class="body">
+              <p>
+              <ul>
+                <li>Tap Read to open books you have downloaded</li>
+                <li>Tap Download to download books you borrowed but have not downloaded to your device </li>
+                <li>Tap Reserver to place a hold on titles you woul like to borrow when available</li>
+                <li>Tap Return Now to end loan if desired or Remove to cancel reservation</li>
+              </ul>
+              </p>
+              <p>
+                NOTE: A blue dot will display next to cover if it has yet to be opened.
+              </p>
+            </span>
+          </span>
+        </a>
+      </li>
+      <li class="tread">
+        <a href="">
+          <img src="assets/androidscreenshots/tablet01read.png" alt="" />
+          <span class="type">Read</span>
+          <span class="portfolio-item-content">
+            <span class="header">Read</span>
+            <p>
+              <strong>Read</strong>
+            </p>
+
+            <span class="body">
+              <p>
+              <ul>
+                <li>Swipe left or right to advance page by page through the book </br>
+                  OR</li> 
+                <li>Tap left for right edge of the book to move throught the book</li>
+              </ul>
+              </p>
+            </span>
+          </span>
+        </a>
+      </li>
+      <li class="tread">
+        <a href="">
+          <img src="assets/androidscreenshots/tablet02readformat.png" alt="" />
+          <span class="type">Read</span>
+          <span class="portfolio-item-content">
+            <span class="header">Read</span>
+            <p>
+              <strong>Read</strong>
+            </p>
+
+            <span class="body">
+              <p>
+              <ul>
+                <li>Tap screen to display Menu Bar</li> 
+                <li>Tap Font Icon to adjust text font, size, and contrast and display brightness</li>
+              </ul>
+              </p>
+            </span>
+          </span>
+        </a>
+      </li>
+      <li class="tread">
+        <a href="">
+          <img src="assets/androidscreenshots/tablet03readtoc.png" alt="" />
+          <span class="type">Read</span>
+          <span class="portfolio-item-content">
+            <span class="header">Read</span>
+            <p>
+              <strong>Read</strong>
+            </p>
+
+            <span class="body">
+              <p>
+              <ul>
+                <li>Tap screen to display Menu</li> 
+                <li>Tap TOC Icon to acces the Table of Contents</li>
+                <li>Tap TOC section desired to naviage to the desired location</li>
+              </ul>
+              </p>
+            </span>
+          </span>
+        </a>
+      </li>
+
+      <li class="tborrow">
+        <a href="">
+          <img src="assets/androidscreenshots/tablet02borrow.png" alt="" />
+          <span class="type">Borrow</span>
+          <span class="portfolio-item-content">
+            <span class="header">Borrow</span>
+            <p>
+              <strong>Return Book</strong>
+            </p>
+
+            <span class="body">
+              <p>
+              </p>
+            </span>
+          </span>
+        </a>
+      </li>
+      <li class="tholds">
+        <a href="">
+          <img src="assets/androidscreenshots/tablet01reserve.png" alt="" />
+          <span class="type">Reserve</span>
+          <span class="portfolio-item-content">
+            <span class="header">Reserve</span>
+            <span class="body">
+              <p>
+                Tap Reserve to place a hold on the title
+              </p>
+            </span>
+          </span>
+        </a>
+      </li>
+      <li class="tholds">
+        <a href="">
+          <img src="assets/androidscreenshots/tablet02reserve.png" alt="" />
+          <span class="type">Reserve</span>
+          <span class="portfolio-item-content">
+            <span class="header">Reserve</span>
+            <span class="body">
+              <p>
+                Tap Cancel to stop download if needed
+              </p>
+            </span>
+          </span>
+        </a>
+      </li>
+      <li class="tholds">
+        <a href="">
+          <img src="assets/androidscreenshots/tablet03reserve.png" alt="" />
+          <span class="type">Reserve</span>
+          <span class="portfolio-item-content">
+            <span class="header">Reserve</span>
+            <span class="body">
+              <p>
+                Tap Remove to cancel reservation
+              </p>
+            </span>
+          </span>
+        </a>
+      </li>
+      <li class="tholds">
+        <a href="">
+          <img src="assets/androidscreenshots/tablet04reserve.png" alt="" />
+          <span class="type">Reserve</span>
+          <span class="portfolio-item-content">
+            <span class="header">Reserve</span>
+            <span class="body">
+              <p>
+                Tap Remove to confirm cancellation
+              </p>
+            </span>
+          </span>
+        </a>
+      </li>
+
+      <li class="tlogin">
+        <a href="">
+          <img src="assets/androidscreenshots/tablet01borrowlogin.png" alt="" />
+          <span class="type">Log In/Out</span>
+          <span class="portfolio-item-content">
+            <span class="header">Log In/Out </span>
+            <span class="body">
+              <p>
+                <ul>
+                  <li>Tap into the respective feild and the touch keyboard will display</li>
+                </ul>
+              </p>
+            </span>
+          </span>
+        </a>
+      </li>
+      <li class="tlogin">
+        <a href="">
+          <img src="assets/androidscreenshots/tablet01login.png" alt="" />
+          <span class="type">Log In/Out</span>
+          <span class="portfolio-item-content">
+            <span class="header">Log In/Out</span>
+            <span class="body">
+              <p>
+                <ul>
+                  <li>Enter your Barcode and PIN into the respective feilds</li>
+                  <li>Tap Log In to verify and sign in or Log Out to sign out.<li>
+                </ul>
+              </p>
+            </span>
+          </span>
+        </a>
+      </li>
+    </div><!-- Tablet-->
+	</div> <!-- Col-md-9 -->
+	
+</div><!-- .container -->
+
+<footer id="footer">
+
+	<div class="newsletter">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<a href="http://eepurl.com/bo9K3T"><h3 class="title"><i class="icon-envelope-alt"></i> Subscribe to updates</h3></a>
+					<span class="lead">We will only send you good stuff. Promise!</span>
+				</div>
+				<!--<div class="col-md-4">
+					<form class="input-group small" method="post" action="">
+				    <input type="text" class="form-control" placeholder="Your Email Address" />
+				    <div class="input-group-btn">
+				      <button class="btn btn-default" type="button">Sign Up <i class="icon-angle-right"></i></button>
+				    </div>
+				  </form>
+				</div>-->
+			</div>
+	  </div>
+  </div>
+
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+			
+				<div class="col-md-4">
+					<div class="social-networks">
+						<a href="https://www.facebook.com/nypl"><i class="icon-facebook"></i></a>
+						<a href="https://twitter.com/nypl"><i class="icon-twitter"></i></a>
+						<a href="https://plus.google.com/u/0/+newyorkpubliclibrary/posts"><i class="icon-google-plus"></i></a>
+						<a href="http://nypl.tumblr.com/"><i class="icon-tumblr"></i></a>
+						<a href="https://www.pinterest.com/nypl/"><i class="icon-pinterest"></i></a>
+						<!-- <a href=""><i class="icon-linkedin"></i></a>
+						<a href=""><i class="icon-dribbble"></i></a>	
+						<a href=""><i class="icon-instagram"></i></a>
+						<a href=""><i class="icon-pinterest"></i></a>
+						<a href=""><i class="icon-youtube-play"></i></a>
+						<a href=""><i class="icon-rss"></i></a> -->
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<h6 class="title">About</h6>
+					<p>
+						We are a team of remarkable institutions doing great things. Get to know a little bit more <a href="about">about us</a>.
+					</p>
+				</div>  
+				
+				<div class="col-md-4">
+					<h6 class="title">Get in Touch</h6>
+					<address>
+						<i class="icon-map-marker"></i> <a class="lightbox-iframe" href="https://maps.google.com/maps?q=NYPL+5th+Ave+at+42nd+St,+New+York+City,+New+York&amp;hl=en&amp;t=v&amp;hnear=5th+Ave+at+42nd+St,+New+York+City,+New+York" data-toggle="tooltip" title="Show on Google Maps">42nd Street 5th Avenue, New York City, United States</a><br />
+						<i class="icon-envelope"></i> <a href="mailto:info@librarysimplified.com" data-toggle="tooltip" title="Email Us">info@librarysimplified.com</a><br />
+						<i class="icon-phone"></i> +1 212 621 40520<br />
+					</address>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="container footer-bottom">
+		<div class="footer-copyright">
+			<p>&copy; 2013 by Olin. All Rights Reserved.</p>
+		</div>
+	</div>
+	
+</footer>
+
+
+<a href="#" id="scrollToTop">
+	<i class="icon-angle-up icon-2x"></i>
+</a>
+
+<!-- Contact Popup (Modal) -->
+<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">We would love to hear from you</h4>
+      </div>
+      <div class="modal-body">
+
+				<p class="lead">
+					Our qualified support is waiting for you, literally. Ask us anything you want. We will get back to you within 24h, seven days a week.</strong>
+				</p>
+				<form name="contactform" id="contactform" class="margin-bottom-large" method="post" action="contactform.php">		
+					<div class="row">
+						<div class="form-group col-md-6">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" placeholder="" class="form-control" />
+						</div>
+						<div class="form-group col-md-6">
+							<label for="email">Email <span class="text-warning">*</span></label>
+							<input type="text" name="email" id="email" placeholder="" class="form-control" />
+							<div id="email_error_empty" class="error">Please enter your email address.</div>
+							<div id="email_error_invalid" class="error">Please enter a valid email address.</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="subject">Subject</label>
+						<input type="text" name="subject" id="subject" class="form-control" placeholder="" />
+					</div>
+					<div class="form-group">
+						<label for="message">Message <span class="text-warning">*</span></label>
+						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder=""></textarea>
+						<div id="message_error_empty" class="error">Please enter a message.</div>
+						<div id="message_error_invalid" class="error">Please check your message for any errors.</div>
+					</div>
+	
+					<div id="mailsuccess" class="success">Your message has been sent successfully.</div>
+					<div id="mailfail" class="error">Sorry, error occured this time sending your message.</div>
+					
+					<div class="margin-top-base">
+						<input type="submit" id="submit_contact_form" class="btn btn-primary" value="Send">				
+						<small class="pull-right text-muted">* required</small>
+					</div>
+					<script src="assets/js/validation.js"></script>
+				</form>
+
+				<div class="row">
+					<div class="col-sm-6">
+						<h4 class="invert">Great Company Inc.</h4>
+						<address>
+							<i class="icon-map-marker"></i> Main Street, New York City, United States<br />
+							<i class="icon-envelope"></i> mail@yourcompany.com<br />
+							<i class="icon-phone"></i> +1 555 1234 4556<br />
+						</address>		
+					</div>
+					<div class="col-sm-6">
+						<h5 class="hr2 margin-bottom-base text-muted"><i class="icon-time"></i> Business Hours</h5>
+						<p class="lead">
+							<span class="color">Mon - Fri:</span> <span class="text-muted">9am to 5pm <em>(EST)</em></span><br />
+							<span class="color">Sat:</span> <span class="text-muted">9am to 2pm <em>(EST)</em></span><br />
+							<span class="color">Sun:</span> <span class="text-muted">closed</span>
+						</p>
+					</div>
+				</div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Libraries & jQuery Plugins -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.bxslider.min.js"></script>
+<script src="assets/js/jquery.isotope.min.js"></script>
+<script src="assets/js/jquery.fittext.js"></script>
+<script src="assets/js/jquery.fitvids.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.hoverdir.js"></script>
+<script src="assets/js/validation.js"></script>
+<script src="assets/js/theme.js"></script>
+ 
+</body>
+</html>
