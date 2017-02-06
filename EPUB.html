@@ -2,7 +2,7 @@
 <html language="english"> 
 <head>
 <meta charset="utf-8">
-<title>Library Simplified &middot; About</title>
+<title>Library Simplified &middot; About EPUB</title>
 <meta name="About" content="Library Simplified is an eBook application development intiative to improve the user experience in discovering, borrowing and reading an eBook from the library as simple as three clicks through the application of new technologies and innovative library policies.  Library Simplified is funded in part by a grant from the Institute of Museum and Library Services (IMLS) and lead by The New York Public Library and nine partner libraries from across the nation.  This open source project seeks to advance the accessibility and interoperability in collaboration with the Readium Foundation, the International Digital Publishing Forum (IDPF), eBook platform developers and books distributors across the open source community. " />
 <link rel="icon" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -80,10 +80,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <li><a href="EPUB.html">EPUB</a></li>
             <li><a href="Readium.html">Readium</a></li>
             <li><a href="accessibility.html">Accessibility</a></li>
-            <li><a href="community.html">Our Community</a></li>
-            <li><a href="get-involved.html">Getting Involved</a></li>
             <li><a href="news-and-events.html">News and Events</a></li>
             <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/">Community</a>
+          <ul class="dropdown-menu">
+            <li><a href="community.html">Our Community</a></li>
+            <li><a href="get-involved.html">Getting Involved</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -92,7 +97,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <li><a href="project-design.html">IMLS: Library Simpliifed</a></li>
               <li><a href="LEAP-project-design.html">IMLS: LEAP Project Design</a></li>
               <li><a href="consortia-project-design.html">IMLS: SimplyE for Consortia</a><li>
-          </ul>
+           </ul>
         </li>
         <li class="dropdown">
           <a href="/">SimplyE</a>
@@ -102,6 +107,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <li><a href="androidtour.html">Mobile: Android ver 1.0</a></li>
               <li><a href="deployinstruction.html">Deploying the application</a></li>
               <li><a href="clientappfaq.html">Mobile Client application how to</a></li>
+              <li><a href="accessibility.html">Accessibility</a></li>
           </ul>
         </li>
       </ul>
@@ -112,43 +118,156 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <div class="page-top">
 	<div class="container">	
-		<h1 class="page-top-header">About</h1>		
+		<h1 class="page-top-header">EPUB</h1>		
 		<ol class="breadcrumb">
 		  <li><a href="index.html">Home</a></li>
-		  <li class="active">About</li>
+		  <li class="active">EPUB</li>
 		</ol>
 	</div>	
 </div>
 
-<div class="container page-404" id="main">
-<i class="icon-file-text icon-404"></i>
+<div class="container" id="main">
+<div class="row">
 
-<div class="header-404">404 - Page Not Found</div>
-<h4 class="lead margin-top-base description-404">We're sorry, but the page you were looking for doesn't exist.</h4>
+	<div class="col-md-3">
+		<div id="sidebar" class="affix" role="complementary">
+			<ul class="nav">
+		        <li><a href="#whatisepub">What is EPUB</a></li>
+		        <li><a href="#whatitdoes">What the EPUB format does</a></li>
+		        <li><a href="#whyepub">Why EPUB</a></li>
+		        <li><a href="#history">History of EPUB</a></li>
+		        <li><a href="#epub3vsepub2">EPUB3 vs EPUB2</a></li>
+			</ul>
+		</div><!-- .affix -->
+	</div>
+	
+<div class="col-md-9">	
+	<h3 id="whatisepub" class="col-1"><strong> What is EPUB</strong></h3>
+	<p class="lead">
+		EPUB stands for <i>electronic publication</i>.  It is an open file format used for eBooks. While eBooks typically refer to digital books, EPUBs is generically meant to include things that were represented as PDFs.  EPUB is the distribution and interchange format standard for digital publications and documents based on Web Standards and is an IDPF (now a part of the W3C) standard.
+	</p>
 
-<div class="section-small">
-	<h5 class="hr2">Try one of those pages</h5>
+	<h3 id="whatitdoes">What the EPUB format does</h3>
+	<p>
+		EPUB defines a means of representing, packaging and encoding structured and semantically enhanced Web content — including XHTML, CSS, SVG, images, and other resources — for distribution in a single-file format.  EPUB allows publishers to produce and send a single digital publication file through distribution and offers consumers interoperability between software/hardware for unencrypted reflowable digital books and other publications.  The EPUB file is a zip archive so it is portable.</p> 
+		
+		<div class="col-lg-6">
+		<h6>EPUB contains</h6>
+		<ul>
+		<li>XML structures</li>
+		<li>HTML and CSS resources</li>
+		<li>images</li>
+		</ul>
+	</div>
+	<div class="col-lg-6">
+		<h6>And – with EPUB 3</h6>
+		<ul>
+			<li>javascript code,</li>
+			<li>audio and</li> 
+			<li>video assets.</li>
+		</ul>
+	</div>
+
+		As an open standard, the specification is freely accessible from the IDPF website so developers can freely create applications for generating or rendering EPUB files (.epub) prodcued by publishers.<br />
+		More information on EPUB 3 can be found at EPUBZone website <a href="http://epubzone.org/epub-3-overview"/>EPUB 3 overview</a>.
+	</p>
+
+	<h3>Why EPUB</h3>
+
+	<p>Using open Web Standards in EPUB brings many advantages to the publishing industry:</p>
 	<ul>
-		<li><a href="/">Home</a></li>
-		<li><a href="about.html">About Us</a></li>
-		<li><a href="faq.html">FAQ's</a></li>
-		<li><a href="contact.html">Contact Us</a></li>
+	<li>Web Standards are interoperable, meaning they aim at being usable on any kind of device; so is the EPUB standard.</li>
+	<li>Developers of the EPUB specification benefit from the work of the entire Web community. As an example, ebooks accessibility is leveraged by the work done by the W3C on the subject [WAI].</li>
+	<li>Developers of EPUB authoring solutions can create such tools as variants of Web authoring solutions.  Developers of reading applications can use as core for their rendering engine an off-the-shelves Web browser engine.</li>
 	</ul>
-</div>
 
-<div class="section-small">
-	<h5 class="hr2">Last, but not least, the search</h5>
-	<form action="404" method="post"class="row">
-		<div class="input-group col-sm-3">
-			<input type="text" placeholder="Search.." class="form-control" />
-			<span class="input-group-addon gradient">
-				<a onclick="$(this).closest('form').submit()"><i class="icon-search"></i></a>
-			</span>
+	<p>
+		By using Web Standards, the publishing industry avoids reinventing the wheel, albeit the publishing industry must continue to adapt this “wheel” to the chapters and pages of ebooks so that their historical context is preserved.  As the reference format for distribution and interchange in the digital publishing indstry for books and media, EPUB allows publishers to produce and send a single digital publication file through digital distribution networks and offer consumers interoperability between software/hardware for reflowable or fixed-layout ebooks.
+	<p>
+
+	<h3 id="history">History of EPUB</h3>
+
+	<h6>2007 EPUB 2 </h6> It was initially standardized in 2007 as a successor format to the <i>Open eBook Publication Structure</i> or "OEB" which was developed in 1999. 
+
+	<h6>2010 <a href="http://idpf.org/epub/201/>"/>EPUB 2.0.1</a></h6> This maintenance release was approved in and was the final release in the EPUB 2 branch.
+	
+	<h6>2011 <a href="http://idpf.org/epub/30"/>EPUB 3.0</a></h6> EPUB 3 superseded EPUB 2 in October of 2011. EPUB 3.0 was approved as a final Recommended Specification.
+
+	<h6>2014 <a href="http://idpf.org/epub/301"/>EPUB 3.0.1</a></h6> This maintenance release was approved as a Final Recommended specification in June, 2014.
+
+	<h6>2017 <a href="http://www.idpf.org/epub/31/spec/epub-spec.html"/>EPUB 3.1</a></h6> In January 2017, EPUB 3.1, the first major update to EPUB 3, was approved as a Recommended Specification. It is the current version of the standard.
+	</p>
+
+	<h2 id="epub3vsepub2">EPUB3 vs EPUB2</h2>
+		<div class="well">
+		<h5>Added and/or improved in EPUB3:</h5>
+		<h6>Content Documents</h6>
+		<ul>
+			<li><strong><a href="https://en.wikipedia.org/wiki/HTML5"/>HTML5:</a></strong> EPUB 2 supports <a href="https://www.w3.org/TR/xhtml11/">XHTML 1.1</a> and <a href="https://en.wikipedia.org/wiki/DTBook">DTBook</a>. With the support of the XML propoerties of <a href="https://en.wikipedia.org/wiki/HTML5"/>HTML 5</a> in EPUB 3, it is now possible to use more detailed semantic markup (e.g. use <code>section</code>, <code>aside</code>, <code>figure</code>).</li>
+			<li><strong><a href="http://www.idpf.org/epub/301/spec/epub-contentdocs.html#sec-xhtml-semantic-inflection"/>Semantic Inflection:</a></strong> A new <code>epub:type</code> attribute, when added to HTML 5 markup, defines the precise nature of structural markup, in line with the publisher intended book semantics.</li>
+			<li><strong>Navigation:</strong> EPUB3 defines a new human-and-machine readable grammar for the navigation document, based on the HTML 5 <code>nav</code> element. It replaces the EPUB 2 .ncx file which now deprecated.</li>
+			<li><strong>SVG documents:</strong> They can now appear directly in the spine (they no longer need to be nested within an xhtml file).</li>
+			<li><strong><a href="https://www.w3.org/Math/#specs"/>MathML:</a></strong> The XML markup language dedicated to the presentation of mathematical notations is now a first class citizen in EPUB publications.</li>
+			<li><strong>Content switching:</strong> It has been simplified by having its processing model defined so that it does not require document preprocessing.</li>
+		</ul>
+		<h6>Navigation</h6>
+		<ul>
+			<li><strong><a href="http://www.idpf.org/epub/30/spec/epub30-contentdocs.html#sec-xhtml-nav">EPUB Navigation Documents:</a></strong> supersedes the NCX grammar used in EPUB 2.</li>
+		</ul>
+		<h6>Linking</h6>
+		<ul>
+			<li><strong>Linking:</strong> Linking schemes have been added. At the moment there’s only one available. Please refer to the <a href="http://www.idpf.org/epub/linking/cfi/epub-cfi.html">Canonical Fragment Identifiers.</a></li>
+		</ul>
+		<h6>Scripting and Interactivity</h6>
+		<ul>
+			<li><strong>Interactivity:</strong> You can now script scrollbars, photo galleries, text popups, etc… using Javascript code.</li>
+			<li><strong>Triggers:</strong> Trigger is an element included in HTML5 for EPUB that allows declarative bindings of activation events (such as “play”, “pause” for an audio event)</li>
+			<li><strong>Bindings:</strong> You can now script your own handles for uncommon media files.</li>
+		</ul>
+		<h6>Styling and Layout</h6>
+		<ul>
+			<li><strong>Fixed Layout:</strong> see Reflowable vs Fixed Layout.</li>
+			<li><strong>Added modules from CSS3:</strong> It also includes alternate style tags, allowing the creation of custom viewing modes, such as day, night, etc.</li>
+			<li><strong>Embedded Fonts:</strong> EPUB 3 requires Reading Systems to support the OpenType and WOFF font formats for embedded fonts in conjunction with the CSS @font-face rules.</li>
+			<li><strong>Font Obfuscation:</strong> A new normative section on Font Obfuscation [OCF3] has been added the Open Container Format specification.</li>
+		</ul>
+		<h6>Rich Media and Speech</h6>
+		<ul>
+			<li><strong><a href="https://www.idpf.org/epub/30/spec/epub30-mediaoverlays.html"/>Media overlays:</a></strong> With the possibility of adding audio, EPUB includes a way to synchronize it with the text.</li>	
+			<li><strong>Text-to-speech:</strong> The possibility of a text-to-speech ebook is now implemented (using properties such as <a href="https://www.w3.org/TR/speech-synthesis/"/>SSML</a> attributes in XHTML content documents.
+			<li><strong>Audio and video:</strong> EPUB 2 has support for raster images only. Thanks to HTML 5, EPUB 3 publications can reference audio or video assets via the <code>audio</code> or <code>video</code> tags, and therefore audio and video assets can be natively processed by modern browser engines.</li>
+		</ul>
+		<h6>Meta Data</h6>
+		<ul>
+			<li><strong>Publication Metadata and Identity:</strong> New but mandatory metadata has been added, <code>dcterms:modified</code> Date on which the resource was changed.</li>
+			<li><strong><a href="http://www.idpf.org/epub/30/spec/epub30-publications.html#sec-package-def"/>Resource Metadata:</a></strong> there are new properties attributes on the Package Document, allowing the declaration of new metadatas about the resources.</li>
+		</ul>
+
+		<h6>Containment</h6>
+		<ul>
+			<li><strong>Remote Resources:</strong> EPUB 3 added new restrictions to the resources not located in the container. Please see changes to noted <a href="http://www.idpf.org/epub/30/spec/epub30-changes.html#sec-removals-filesystem-container"/>here</a>.
+			<li><strong>Whitespace in MIMETYPE file:</strong> The restriction against trailing whitespace has been removed.</li>
+			<li><strong>Disallowed characters:</strong> The OCF list of disallowed characters has been extended.</li>
+			</ul>
+		</ul>
 		</div>
-	</form>
-</div>
 
+		<div class="well">
+		<h5>Removed or changed:</h5>
+		<ul>
+			<li><strong>DTBook</strong>  File format similar to HTML, with special regard to the requirements of the visually impaired. </li>
+			<li><strong>Out-of-Line XML Islands</strong> an XML document that is not authored in a Preferred Vocabulary.</li>
+			<li><strong>Tours</strong> A tag to mark points of interest in a publication</li>
+			<li><strong>Filesystem Container</strong></li>
+			<li><strong>Guide</strong></li>
+			<li><strong>NCX</strong> Part of the specification for digital talking book DTB and is used in ePub documents to define the Table of Contents (TOC).</li>
+			<li><strong>2.0.1 meta element</strong> meta element annotating the version</li>
+		</ul>
+		</div>
+</div>
+</div>
 </div><!-- .container -->
+</div>
 
 <footer id="footer">
 
@@ -202,8 +321,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<h6 class="title">Get in Touch</h6>
 					<address>
 						<i class="icon-map-marker"></i> <a class="lightbox-iframe" href="https://maps.google.com/maps?q=NYPL+5th+Ave+at+42nd+St,+New+York+City,+New+York&amp;hl=en&amp;t=v&amp;hnear=5th+Ave+at+42nd+St,+New+York+City,+New+York" data-toggle="tooltip" title="Show on Google Maps">42nd Street 5th Avenue, New York City, United States</a><br />
-						<i class="icon-envelope"></i><a href="mailto:info@librarysimplified.com" data-toggle="tooltip" title="Email Us">info@librarysimplified.com</a><br />
-						<i class="icon-phone"></i> +1 212 621 0520<br />
+						<i class="icon-envelope"></i> <a href="mailto:info@librarysimplified.com" data-toggle="tooltip" title="Email Us">info@librarysimplified.com</a><br />
+						<i class="icon-phone"></i> +1 212 621 40520<br />
 					</address>
 				</div>
 				
@@ -222,6 +341,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a href="#" id="scrollToTop">
 	<i class="icon-angle-up icon-2x"></i>
 </a>
+
 
 <!-- Contact Popup (Modal) -->
 <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -274,8 +394,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<div class="col-sm-6">
 						<h4 class="invert">Library Simplified</h4>
 						<address>
-							<i class="icon-map-marker"></i> the New York Public Library, 5th Ave at 42nd St, New York City, United States<br />
-							<i class="icon-envelope"></i> info@librarysimplified.com<br />
 							<i class="icon-map-marker"></i> 42nd Street and 5th Avenue, New York City, United States<br />
 							<i class="icon-envelope"></i> info@librarysimplified.com<br />
 							<i class="icon-phone"></i> +1 212 621 0520<br />

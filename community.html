@@ -78,35 +78,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <a href="index.html">Home</a>
+          <a href="About.html">About</a>
           <ul class="dropdown-menu">
-            <li><a href="about.html">About</a></li>
-            <li><a href="partners.html">Partners</a></li>
+            <li><a href="OPDS.html">OPDS</a></li>
+            <li><a href="EPUB.html">EPUB</a></li>
+            <li><a href="Readium.html">Readium</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
             <li><a href="news-and-events.html">News and Events</a></li>
             <li><a href="faq.html">FAQ</a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="/">Projects</a>
+          <a href="/">Community</a>
+          <ul class="dropdown-menu">
+            <li><a href="community.html">Our Community</a></li>
+            <li><a href="get-involved.html">Getting Involved</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/">Grant Funded Projects</a>
           <ul class="dropdown-menu">
               <li><a href="project-design.html">IMLS: Library Simpliifed</a></li>
               <li><a href="LEAP-project-design.html">IMLS: LEAP Project Design</a></li>
               <li><a href="consortia-project-design.html">IMLS: SimplyE for Consortia</a><li>
-              <li><a href="OPDS.html">Specifications: OPDS Extensions</a></li>
-              <li><a href="covergenerator.html">Investigations: Cover Generator</a></li>
-              <!-- <li><a href="open-ebook-2014.html">Hackathon: Open eBooks 2014</a></li>
-              <li><a href="open-ebook-2015.html">Hackathon: Open eBooks 2015</a></li> -->
           </ul>
         </li>
         <li class="dropdown">
-          <a href="/">Product</a>
+          <a href="/">SimplyE</a>
           <ul class="dropdown-menu">
               <li><a href="productbacklog.html">Product Backlog</a></li>
               <li><a href="iOSUItour.html">Mobile: iOS ver 1.0</a></li>
               <li><a href="androidtour.html">Mobile: Android ver 1.0</a></li>
               <li><a href="deployinstruction.html">Deploying the application</a></li>
               <li><a href="clientappfaq.html">Mobile Client application how to</a></li>
-              <li><a href="accessibility.html">Accessibility</a></li>
           </ul>
         </li>
       </ul>
@@ -174,116 +178,137 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		</div>
 	</div>
 
-	<h3 class="hr2 text-left">Server Applications</h3>
-	<div>
+	<h3 class="hr2 text-center">Server Applications</h3>
+	<div class="iconbox section-small">
 	<div class="row">
-	<h5 class="page header">Metadata Wrangler</h5>
-		<div class="col-sm-3">
+	<div class="col-lg-4">
+		<i class="icon-puzzle-piece icon-2x"></i>
+		<h5 class="header">Metadata Wrangler</h5>
+			<ul>
+				<li><strong>Framework:</strong>
+					Flask</li>
+				<li><strong>Language:</strong>
+					Python</li>
+			</ul>
 
-			<img src="assets/logos/python-logo.png" width="100px"><img src="assets/logos/flasklogo.png" width="90px">
-		</div>
-		<div>
-			<p>
+			<p class="content">
 				The Metadata Wrangler provides metadata harvesting, aggregation, normalization, and syndication services for eBooks.  The Metadata Wrangler utilizes open access data APIs from a variety of providers so as to enhance the catalog display of eBooks and other digital content.
 			</p>
 		</div>
-	</div><!-- row -->
+		<div class="col-lg-4">
+			<i class="icon-puzzle-piece icon-2x"></i>
+			<h5 class="header">Circulation Manager</h5>
+			<ul>
+				<li><strong>Framework:</strong>
+					Flask</li>
+				<li><strong>Language:</strong>
+					Python</li>
+			</ul>
 
-	<div class="row">
-		<div class="col-sm-3">
-			<h5 class="page header">Circulation Manager</h5>
+			<p class="content">
+			The Circulation Manager is an application designed for libraries that helps aggregate content from a variety of eBook content providers and present the collections as a single catalog of content and inventory using Open Publication Distribution System (OPDS).
+			</p>
+
+		</div>
+		<div class="col-lg-4">
+			<i class="icon-puzzle-piece icon-2x"></i>
+			<h5 class="header">Content Server</h5>
 			<ul>
 				<li><strong>Framework:</strong>
 					Flask</li>
 				<li><strong>Language:</strong>
 					Python</li>
 			</ul>
+
+			<p class="content">
+			The Content Server is currently only designed to support Open Access and Public Domain content.  However, it will eventually be extended to be a general content server.  This will allow adopter to track and communicate the relevant licenses associated with a particular work and apply Digital Rights Management protection as needed. It too is an application designed for libraries that helps aggregate content and present the collection and inventory status using Open Publication Distribution System (OPDS).
+			</p>
 		</div>
-		<div>
-			<p>The Circulation Manager is an application designed for libraries that helps aggregate content from a variety of eBook content providers and present the collections as a single catalog of content and inventory using Open Publication Distribution System (OPDS).
-		</div>
-	</div><!-- row -->
-		<div class="row">
-		<div class="col-sm-3">
-			<h6>Content Server</h6>
-			<ul>
-				<li><strong>Framework:</strong>
-					Flask</li>
-				<li><strong>Language:</strong>
-					Python</li>
-			</ul>
-		</div>
-		<div>
-			<p>The Content Server is currently only designed to support Open Access and Public Domain content.  However, it will eventually be extended to be a general content server.  This will allow adopter to track and communicate the relevant licenses associated with a particular work and apply Digital Rights Management protection as needed. It too is an application designed for libraries that helps aggregate content and present the collection and inventory status using Open Publication Distribution System (OPDS).
-		</div>
-	</div><!-- row -->
+	</div>
 	</div>
 
 	<h3 class="hr2 text-center">Sponsored projects and collaborations</h3>
-	<div class="col-sm-6">
-	<div class="container">
-		<div class="well">
-
-			<h6>Client application support for new content types</h6>
-			<p><strong>Status:</strong> Seeking additional project sponsors for code contribution.</p>
-			<ul>
-				<li><strong>Portable Document File (PDF) support</strong> - PDF 1.7 / ISO standard (ISO 32000-1)</li>
-				<li><strong>Audio Books support</strong> - Formats, applications codes and standards</li>
-				<li><strong>Graphic novel support</strong> -  
-					<ul>
-						<li>Process, render and navigate CBR, CBZ, CBMA file formats</li>
-						<li>EPUB 3.x Panel naviagation</li>
-						<li>Application codes and standards</li>
-					</ul>
-				</li>
-			</ul>
+	<div class="iconbox section-small">
+		<div class="row">
+		<div class="col-lg-4">
+			<div class="well">
+				<h6>Client application support for new content types</h6>
+				<p><strong>Status:</strong> Seeking additional project sponsors for code contribution.</p>
+				<ul>
+					<li><strong>Portable Document File (PDF) support</strong> - PDF 1.7 / ISO standard (ISO 32000-1)</li>
+					<li><strong>Audio Books support</strong> - Formats, applications codes and standards</li>
+					<li><strong>Graphic novel support</strong> -  
+						<ul>
+							<li>Process, render and navigate CBR, CBZ, CBMA file formats</li>
+							<li>EPUB 3.x Panel naviagation</li>
+							<li>Application codes and standards</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</div>
-		<div class="well">
-			<h6>Mutlit DRM support</h6>
-			<p><strong>Status:</strong> In progress</p>
-			<ul>
-				<li>License Content Protection</li>
-				<li>Sony/DADC User Rights Management System</li>
-			</ul>
+		<div class="col-sm-4">
+			<div class="well">
+				<h6>Mutlti DRM support</h6>
+				<p><strong>Status:</strong> In progress</p>
+				<ul>
+					<li>License Content Protection</li>
+					<li>Sony/DADC User Rights Management System</li>
+				</ul>
+			</div>
 		</div>
-		<div class="well">
-			<h6>Readium enhancement</h6>
-			<p><strong>Status:</strong> In progress</p>
-			<ul>
-				<li>Consistent behavior between RMSDK and Readium</li>
-				<li>Collaborate on a common Readium SDK framework</li>
-				<li>In text search</li>
-				<li>Annotations</li>
-				<li>Dictionary</li>
-				<li>User bookmarks</li>
-				<li>Multiple renditions</li>
-			</ul>
-		</div><!-- well -->
-	</div><!-- Container -->
-	</div> <!-- col-sm-6 -->
-	<div class="col-sm-6">
-	</div>
-	<div class="container">
-		<div class="well">
-
-			<ul>
+		<div class="col-sm-4">
+			<div class="well">
+				<h6>Readium enhancement</h6>
+				<p><strong>Status:</strong> In progress (R2)</p>
+				<ul>
+					<li>Consistent behavior between RMSDK and Readium</li>
+					<li>Collaborate on a common Readium SDK framework</li>
+					<li>In text search</li>
+					<li>Annotations</li>
+					<li>Dictionary</li>
+					<li>User bookmarks</li>
+					<li>Multiple renditions</li>				
+					<li>Panel navigation (audiobooks, comics, bookmarks, syncing)</li>
+				</ul>
+			</div><!-- well -->
+		</div><!-- col-lg-4 -->
+		</div> <!-- row -->
+	</div> <!-- icon-section small -->
+	<div class="iconbox section-small">
+	<div class="row">
+		<div class="col-lg-4">
+			<div class="well">
+			<h6>Circulation Manager integrations </h6>
+				<ul>
 					<li>Backend integration to more content hosts and providers</li>
 					<li>Authentication support into Libraries - ILS, Schools- SIS</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="well">
+			<h6>Client Features</h6>
+				<ul>
 					<li>OPDS Web Browser (Open Access Catalog, Web Reader/desktop Reader Discovery,  Server Admin interface)</li>
 					<li>Client push notifications - book availability or expiration for loans </li>
 					<li>Discovery/Catalog enhancement  - Recommendations</li>
-					<li>Multi-source metadata ingestions</li>
 					<li>Client support for annotations</li>
 					<li>Client support for user bookmarks with enhanced enter device synch with anonymity/privacy</li>
 					<li>Client Dictionary support</li>
 					<li>In-text Search</li>
-					<li>Improved Accessibility - TTS, Media Overlay</li>
-					<li>Consortial library lending support</li>
-					<li>Deployability packaging (aka Docker, migration, etc)</li>
-					<li>Internationalization / (multi language support)</li>
+					<li>Improved Accessibility - TTS, Media Overlay</li>				
+					<li>Internationalization / (multi language support)</li>				
+					<li>Interoperability between OPDS readers</li>
+					<li>Sideloading of content</li>
+					<li>Syncing metadata (content to server)</li>
+					<li>Syncing current reading position</li>
 				</ul>
-			</ul>
-			<ul><strong>Mintex</strong>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="well">
+			<h6>Mintex Sponsored Work</h6>
 				<ul>
 					<li>BiblioLabs integration</li>
 					<li>Consortial collections support</li>
@@ -294,48 +319,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<li>Admin for collection presentation management</li>
 					<li>Docker containerization</li>
 					<li>Academic multi-book switching</li>
+					<li>Deployability packaging (aka Docker, migration, etc)</li>
 				</ul>
-			</ul>
-			<ul>
-				<li>RMSDK and/or Readium SDK support</li>
-				<li>Interoperability between OPDS readers</li>
-				<li>Panel navigation (audiobooks, comics, bookmarks, syncing)</li>
-				<li>Sideloading of content</li>
-				<li>Syncing metadata</li>
-				<li>Syncing current reading position</li>
-			</ul>
-
 			</p>
 		</div><!-- well -->
+	</div>
 	</div>
 
 	<div class="row">
 
 	<hr />
 	<div class="team section-base">
-	<h3 class="hr text-center">Organizational Members</h3>
+	<h3 class="hr2 text-center">Contributing Members</h3>
 		<div class="row">
+		<ul class="bxslider5">
 		<div class="col-sm-3">
 			<div class="profile">
 				<a href="http://www.nypl.org"><img src="assets/logos/nypl2.jpg" alt="New York Public Library" class="img-rounded" data-toggle="modal" href="http://www.nypl.org"/></a>
 				<div class="details">
-					<h6 class="name">Library Innovation and Partnerships</h6>
+					<h6 class="name">The New York Public Library</h6>
 					<div class="position">Community Organizer</div>
-					<p>
+					<!--<p>
 						Our mission within The New York Public Library Astor, Tilden and Lenox Foundation is to innovate and incubate new technologies, business models and partnerships to advance the library's mission across the broader industry and globe.
-					<p>
-				</div>
-			</div>
-		</div>
+					</p> -->
+				</div> <!-- details -->
+			</div><!-- profile -->
+		</div> <!--ol-sm-3 -->
 		<div class="col-sm-3">
 			<div class="profile">
 				<a href="https://edrlab.org/edrlab/about-us/"><img src="assets/logos/edrl2.png" alt="European Digital Reading Lab Logo" class="img-rounded" data-toggle="modal" href="https://edrlab.org/edrlab/about-us/"/></a>
 				<div class="details">
 					<h6 class="name">European Digital Reading Lab (EDRL)</h6>
 					<div class="position">Community Member</div>
-					<p>
+					<!--<p>
 						Our main objective is to help provide a technical foundation for the European digital publishing ecosystem. </br>Founder members of EDRLab are: Editis, Hachette, Madrigall, Media Participations, Syndicat National de l’édition, Cercle de la Librarie, Centre National du livre, Cap Digital, the French Ministry of Culture and the French Ministry of Economy and Finance.
-					</p>
+					</p>-->
 				</div>
 			</div>
 		</div>
@@ -345,62 +363,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<div class="details">
 					<h6 class="name">Mintex</h6>
 					<div class="position">Community Member</div>
-					<p>
+					<!--<p>
 						We connect libraries and individuals with information, ideas, and experiences to enrich lives and strengthen our communities. Minitex is a publicly supported network of academic, public, state government, and special libraries working cooperatively to improve library service for their users in Minnesota, North Dakota and South Dakota.
-					</p>
+					</p>-->
 				</div>
 			</div>
 		</div><!--col-sm3-->
+		</ul>
 	</div>
 	</div><!-- row -->
 
 
-		<div class="blog-widget section-large">
-		
-		<div class="row">	
-			
-		<h3 class="hr2 text-center">News & Events:</h3>
-
-		</div>
-					
-		<div class="col-sm-6">
-			<div class="row">
-				<article class="col-sm-9">
-				<h5 class="hr2 blog-post-title"><a href="news-and-events.html">News</a></h5>	
-					<a href="news-and-events.html">
-					</a>								
-				<div class="post-excerpt">
-					<p>
-						<a href="http://readium.org/news/european-digital-reading-lab-established-in-europe"><strong>European Digital Reading Lab Established in Europe </strong></a> - The Readium Foundation is delighted to announce the establishment of their European Headquarters in Paris hosted by the recently created European Digital Reading Lab (EDRLab) which has been formed with the support of the French government and industry stakeholders, with 1.5 million Euros of incremental funding already committed. 
-					</p>
-				</div>
-				<div class="post-meta">
-					<span class="date"><i class="icon-time"></i>January 26, 2016</span>				
-					<span class="author"><a href="news-and-events.html" data-toggle="tooltip" title="Read Comments"><i class="icon-comments-alt"></i>0</a></span>
-				</div>
-				</article>	
-			</div>
-		</div>
-
-		<div class="col-sm-6">
-			<div class="row">
-				<article class="col-sm-9">
-				<h5 class="hr2 blog-post-title"><a href="https://twitter.com/LibSimple"><i class="icon-twitter-sign"></i> Follow us on Twitter</a></h5>
-
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-					
-					<a class="twitter-timeline" 
-					href="https://twitter.com/LibSimple" 
-					data-widget-id="536305769151758336"
-					data-chrome="noheader nofooter noborders transparent"
-					width="1200"
-					height="1200"
-					data-tweet-limit="3">
-					Tweets by @LibSimple</a>
-				</article>	
-			</div>	
-		</div>
-		</div>
 	</div>	
     
 </div><!-- .container -->

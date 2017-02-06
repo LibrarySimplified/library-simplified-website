@@ -36,49 +36,6 @@
 <!-- Predefined Color Scheme -->
 <link href="assets/css/colors/blue.css" rel="stylesheet" id="colors">
 
-<!-- LESS - Development Only
-<link href="assets/less/styles.less" rel="stylesheet/less" />
-<script>less = { env: 'development' };</script>
-<script src="assets/js/less.js"></script>
--->
-
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-  <script src="assets/js/html5shiv.js"></script>
-  <script src="assets/js/respond.min.js"></script>
-<link href="assets/css/ie8.css" rel="stylesheet"></link>
-<![endif]-->
-
-<!--Charts-->
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript" src="tablequerywrapper.js"></script>
-<script type="text/javascript">
-    google.load('visualization', '1', {'packages' : ['table']});
-    google.setOnLoadCallback(init);
-
-    var dataSourceUrl = 'https://spreadsheets.google.com/tq?key=rh_6pF1K_XsruwVr_doofvw&pub=1';
-    var query, options, container;
-
-    function init() {
-      query = new google.visualization.Query(dataSourceUrl);
-      container = document.getElementById("table");
-      options = {'pageSize': 2};
-      sendAndDraw();
-    }
-
-    function sendAndDraw() {
-      query.abort();
-      var tableQueryWrapper = new TableQueryWrapper(query, container, options);
-      tableQueryWrapper.sendAndDraw();
-    }
-
-    function setOption(prop, value) {
-      options[prop] = value;
-      sendAndDraw();
-    }
-
-  </script>
-
 
 </head>
 <body>
@@ -109,11 +66,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <a href="index.html">Home</a>
+          <a href="About.html">About</a>
           <ul class="dropdown-menu">
-            <li><a href="about.html">About</a></li>
+            <li><a href="OPDS.html">OPDS</a></li>
+            <li><a href="EPUB.html">EPUB</a></li>
+            <li><a href="Readium.html">Readium</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
             <li><a href="news-and-events.html">News and Events</a></li>
             <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/">Community</a>
+          <ul class="dropdown-menu">
+            <li><a href="community.html">Our Community</a></li>
+            <li><a href="get-involved.html">Getting Involved</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -122,21 +89,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <li><a href="project-design.html">IMLS: Library Simpliifed</a></li>
               <li><a href="LEAP-project-design.html">IMLS: LEAP Project Design</a></li>
               <li><a href="consortia-project-design.html">IMLS: SimplyE for Consortia</a><li>
-              <li><a href="OPDS.html">Specifications: OPDS Extensions</a></li>
-              <li><a href="covergenerator.html">Investigations: Cover Generator</a></li>
-              <!-- <li><a href="open-ebook-2014.html">Hackathon: Open eBooks 2014</a></li>
-              <li><a href="open-ebook-2015.html">Hackathon: Open eBooks 2015</a></li> -->
             </ul>
         </li>
         <li class="dropdown">
-          <a href="/">Product</a>
+          <a href="/">SimplyE</a>
           <ul class="dropdown-menu">
               <li><a href="productbacklog.html">Product Backlog</a></li>
               <li><a href="iOSUItour.html">Mobile: iOS ver 1.0</a></li>
               <li><a href="androidtour.html">Mobile: Android ver 1.0</a></li>
               <li><a href="deployinstruction.html">Deploying the application</a></li>
               <li><a href="clientappfaq.html">Mobile Client application how to</a></li>
-              <li><a href="accessibility.html">Accessibility</a></li>
           </ul>
         </li>
       </ul>
@@ -162,27 +124,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<div class="col-md-3">
 		<div id="sidebar" class="affix" role="complementary">
 			<ul class="nav">
-        <li><a href="#readium"><strong>Readium</a></strong></li>
-				<li><a href="#general"><strong><i class="icon-apple"></i> Voice Over</a></strong></li>
-        <li><a href="#navigation">Navigation</a></li>
-        <li><a href="#textinput">Text Input</a></li>
-        <li><a href="#1fingergesture"><strong>Gestures</strong></a></li>
-        <li><a href="#1fingergesture">1 finger gesture</a></li>
-        <li><a href="#2fingergesture">2 finger gestures</a></li>
-        <li><a href="#3fingergesture">3 finger gestures</a></li>
-        <li><a href="#4and5finger">4 and 5 finger gestures</a></li>
-        <li><a href="#videos"><strong>Instructional Videos</strong></a></li>
-        <li><a href="#webresources"><strong>Other Web Resources</strong></a></li>
-        <li><a href="#android"><strong><i class="icon-android"></i> Talk Back</a></strong></li>
-        <li><a href="#basicgestures">Basic Gestures</a></li>
-        <li><a href="#backandforth">Back and forth</a></li>
-        <li><a href="#lshaped">L-Shaped Gestures</a></li>
+        <li><a href="#accessibility">About Accessibility</a></li>
+        <li><a href="#readium">Readium.js and SDK</a></li>
+				<li><a href="#apple">iOS- Voice Over</a></li>
+        <li><a href="#android">Android - Talk Back</a></li>
+        <li><a href="#videos">Instructional Videos</a></li>
+        <li><a href="#webresources">Other Web Resources</a></li>
         <!-- <li><a href="#implementationoptions">Implementation Options</a><li> --> 
 			</ul>
 		</div><!-- .affix -->
 	</div>
 
 	<div class="col-md-9">
+  <h2 id="accessibility">About Accessibility</h2>
+
+    <p  class="lead">
+      Persons with reading disabilities have access to little more than 10% of the yearly book pubications. The EPUB 3 format is a one of many tools and attempts to create “born accessible” ebooks. Several best practice guidelines have already been published to help guide platform developers and publishers. Some examples are:</p>
+    <ul>
+        <li><a href="http://www.accessiblebooksconsortium.org/inclusive_publishing/en/accessible_best_practice_guidelines_for_publishers.html">Accessible Publishing Best Practice Guidelines for Publishers</a> – EDItEUR, Wipo, Daisy, 2013 (translated in several languages</li>
+        <li><a href="https://bisg.site-ym.com/store/ViewProduct.aspx?id=6972996">BISG QuickStart to Accessible Publishing</a></li>
+        <li><a href="https://idpf.github.io/a11y-guidelines/">IDPF Accessibility guidelines</a> – IDPF</li>
+        <li><a href="https://idpf.github.io/epub-guides/a11y-faq/">EPUB Accessibility FAQ</a> – IDPF, 2016</li>
+        <li><a href="http://www.idpf.org/epub/a11y/">Conformance and Discovery Requirements for EPUB Publications</a> – IDPF, 2016</li>
+        <li><a href="http://www.idpf.org/epub/a11y/techniques/techniques.html">EPUB Accessibility Techniques</a> – IDPF, 2016</li>
+    </ul>
+
+    <p>
+      The <a href="http://www.daisy.org/">Daisy Consortium</a> is currently working on an important project called <strong>Daisy Baseline for accessible EPUB 3</strong>.  It is comprized of the following efforts:
+    </p>
+    <ul>
+      <li>Developing an EPUB accessibility specification and certification for publishers.</li>
+      <li>Developing accessibility checking tool to assist publishers in implementing the specification for baseline accessibility.</li>
+      <li>Evaluating reading systems for accessibility at <a href="http://epubtest.org"/>epubtest.org</a></li>
+      <li>Developing an inclusive publishing information hub on <a href="http://inclusivepublishing.org"/>inclusivepublishing.org</a>.</li>
+    </ul>
+
 
 		<h2 id="readium"> <i class="icon-cogs"></i> Readium SDK and Readium.js</h2>
     <p class="lead">
@@ -195,7 +171,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </ul>
     </p>
 
-		<h2 id="general">
+		<h2 id="apple">
     <h2> <i class="icon-apple"></i> VoiceOver </h2>
 		<p class="lead">
       VoiceOver is a gesture-based screen reader that lets you enjoy the simplicity of iOS even if you can’t see the screen. With VoiceOver enabled, triple-click the Home button to access it wherever you are in iOS. Voice Over is an accesibility feature of Apple prodcuts.  If you’re using a Multi-Touch trackpad or iOS devices, you can use VoiceOver gestures. VoiceOver provides a set of standard gestures for navigating and interacting with items on the screen. You can’t modify this set of gestures.  Hear a description of everything happening on your screen, from battery level to who’s calling to which app your finger’s on. You can adjust the speaking rate and pitch to suit you.</br>
@@ -372,34 +348,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </table>
 
       <div>
-        <h5 class="hr2"></h5>
-
-        <h2 id="videos"></h2>
-        <h4>Hadely School for the Blind iFocus instruction videos for iOS VoiceOver and Accessibility features</h4>
-
-        <ul class="icon">
-          <li><a href="http://www.hadley.edu/PlayVideo.asp?vid=32" target="new"><i class="icon-youtube-play"></i> iFocus: Begining Gestures in VoiceOver</a></li>
-          <li><a href="http://www.hadley.edu/PlayVideo.asp?vid=5" target="new"><i class="icon-youtube-play"></i> iFocus: Advanced VoiceOver Gestures</a></li>
-        <ul>
-      </div>
-      <div>
-
-        <h5 class="hr2"></h5>
-
-        <h2 id="webresources"></h2>
-        <h4>AppleVis</h4>
-        <p>
-          A community-powered website for blind and low-vision users of Apple's range of Mac computers, the iPhone, iPad, iPod Touch, Apple TV and Apple Watch.</br>
-          AppleVis strives to empower the community by offering multiple pathways to access and share relevant and useful information. As a community, we seek to encourage and support people in exploring the many ways in which these mainstream products and related applications can offer opportunities to the vision-impaired for personal enrichment, independence and empowerment.</br>
-          AppleVis also offers resources and mechanisms for raising awareness of the accessibility of Apple products and related applications, and for promoting further advancement in accessibility.</br>
-        <p>
-
-
-        <p><a href="http://www.applevis.com/new-to-ios" target="new"><i class="icon-globe"></i> http://www.applevis.com/new-to-ios</a></p>
-
-        <ul>
-      </div>
-      <div>
       <h5 class="hr2"></h5>
 
       <h2 id="android"> <i class="icon-android"></i> Talk Back </h2>
@@ -512,8 +460,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <p>
           <strong>Note:</strong> The Notifications gesture (right then down) is available only in some TalkBack versions. If this gesture doesn't work for you, use a two-finger swipe down from the top of the screen to open the notifications shade.
         <p>
-
       </div> 
+
+      <div>
+        <h5 class="hr2"></h5>
+
+        <h2 id="videos">Instructional Videos</h2>
+        <p>Hadely School for the Blind iFocus instruction videos for iOS VoiceOver and Accessibility features</p>
+
+        <ul class="icon">
+          <li><a href="http://www.hadley.edu/PlayVideo.asp?vid=32" target="new"><i class="icon-youtube-play"></i> iFocus: Begining Gestures in VoiceOver</a></li>
+          <li><a href="http://www.hadley.edu/PlayVideo.asp?vid=5" target="new"><i class="icon-youtube-play"></i> iFocus: Advanced VoiceOver Gestures</a></li>
+        <ul>
+      </div>
+
+      <div>
+        <h5 class="hr2"></h5>
+        <h2 id="webresources">Other Web Resources</h2>
+        <h6>AppleVis</h6>
+        <p>
+          A community-powered website for blind and low-vision users of Apple's range of Mac computers, the iPhone, iPad, iPod Touch, Apple TV and Apple Watch.</br>
+          AppleVis strives to empower the community by offering multiple pathways to access and share relevant and useful information. As a community, we seek to encourage and support people in exploring the many ways in which these mainstream products and related applications can offer opportunities to the vision-impaired for personal enrichment, independence and empowerment.</br>
+          AppleVis also offers resources and mechanisms for raising awareness of the accessibility of Apple products and related applications, and for promoting further advancement in accessibility.</br>
+        <p>
+
+
+        <p><a href="http://www.applevis.com/new-to-ios" target="new"><i class="icon-globe"></i> http://www.applevis.com/new-to-ios</a></p>
+
+        <ul>
+      </div>
 	</div>
 	
 </div><!-- .row -->
