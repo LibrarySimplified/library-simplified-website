@@ -251,13 +251,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<h4>Readium SDK</h4>
 
 	<p>
-		The Readium SDK project is developing a compact, performant EPUB 3 rendering engine optimized for use in native apps for tablets and other devices. The Readium SDK Core C++ library with platform wrappers implementations where appropriate.
+		The Readium SDK project is developing a compact, performant EPUB 3 rendering engine optimized for use in native apps for tablets and other devices. The Readium SDK Core C++ library with platform wrappers implementations where appropriate. 
 	</p>
 	
 	<h4>LCP</h4>
 
 	<p>
-		The Readium Foundation is developing a DRM library, Licensed Content Protection (LCP) which can be used with the Readium SDK to build DRM-enabled clients as well as server-side components. Readium SDK will not require use of Readium LCP, which will be separately licensed to interested parties. 
+		Readium LCP (for Licensed Content Protection) is an interoperable passphrase-based rights management solution, with support for different business models, including library lending with early return and loan extension. This is a simple but reliable solution for distributing protected content, based on rock solid encryption algorithms (AES-256) and classical Public Key Infrastructure (PKI) techniques.
+	</p>
+	<p>
+		Readium LCP is vendor-neutral and is based on a decentralized architecture, where no third party DRM provider gains access to user data, usage statistics or unencrypted ebook content.
+	</p>
+	<p>
+		The solution is minimally intrusive for the end-user, who doesn’t need to create a third party account, will not see his personal data processed by a third party, can read his ebook on any compatible device, even offline, can even share it with his family by sharing his personal passphrase. Rights-owners can still protect their content against over-sharing and revoke a license if it is used on too many devices.<br />
+		Readium LCP is easy to integrate, thanks to the open-source software EDRLab has developed for client-side and server-side integration:
+	<ol>
+		<li>client-side, as a library that is seamlessly added to the Readium SDK;</li>
+		<li>server-side, as a multi-platform DRM server installed on an e-distributor platform.</li>
+	</ol>
+	</p>
+	<p>
+		Readium LCP is now ready for launch : for more information on the competitive cost model of the solution and how to be part of the Readium LCP ecosystem, please contact us now.<br />
+		Find out more at <a href="https://readium.github.io/readium-lcp-specifications-codebase/"/>https://readium.github.io/readium-lcp-specifications-codebase/</a>
+	</p>
+
+	<h4>Readium 2</h4>
+	<p>
+		The ultimate goal of the project is to develop a framework for interpreting and rendering EPUB digital publishing markup. This framework will consist of leveraging all the capabilities of the existing browser engines and supplementing those capabilities with separate modules (polyfills, if you will) that provide additional functionality. These additional modules are intended to be, insofar as possible, independent of one or another so that they can be used independently of the overall framework. At the same time, these polyfills will be designed so that they can be easily and seamlessly combined to produce complete reading systems.
+	</p>
+
+	<p>
+		The project has started in September of 2016 with a report on the state of development of the Readium SDK and Readium JS, highlighting the top issues developers were facing when using the codebase. The current phase is a brainstorming on the future architecture of the Readium-2 framework, and you can follow this work on the <a href="https://github.com/readium/readium-2">Readium-2 Github</a>.
 	</p>
 </div>
 </div>
