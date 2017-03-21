@@ -1,0 +1,70 @@
+[
+ {
+ "id" : 0,
+ "pathComponent" : "0",
+ "name" : "New York Public Library",
+ "subtitle" : "Inspiring lifelong learning, advancing knowledge, and strengthening our communities.",
+ "logo" : "LibraryLogoNYPL",
+ "needsAuth" : true,
+ "supportsReservations" : true,
+ "supportsCardCreator" : true,
+ "catalogUrl" : "https://circulation.librarysimplified.org",
+ "mainColor" : "da2527"
+ },
+ {
+ "id" : 1,
+ "pathComponent" : "1",
+ "name" : "Brooklyn Public Library",
+ "subtitle" : "Connecting people to resources to achieve their goals.",
+ "logo" : "LibraryLogoBrooklyn",
+ "needsAuth" : true,
+ "supportsReservations" : true,
+ "supportsCardCreator" : false,
+ "cardCreatorUrl" : "https://go.bklynlibrary.org/ecard",
+ "catalogUrl" : "https://bplsimplye.bklynlibrary.org",
+ "mainColor" : "446ebf"
+ },
+ {
+ "id" : 2,
+ "pathComponent" : "2",
+ "name" : "Instant Classics",
+ "subtitle" : "Open access to the literature of our shared culture.",
+ "logo" : "LibraryLogoMagic",
+ "needsAuth" : false,
+ "supportsCardCreator" : false,
+ "supportsReservations" : false,
+ "catalogUrl" : "https://instantclassics.librarysimplified.org/index.xml",
+ "mainColor" : "497049"
+ },
+ {
+ "id" : 3,
+ "pathComponent" : "3",
+ "name" : "Library For All",
+ "needsAuth" : false,
+ "supportsCardCreator" : false,
+ "supportsReservations" : false,
+ "catalogUrl" : "http://api.1.libraryforall.org:3965/api/bookshelf/free",
+ "mainColor" : "497049"
+ },
+ {
+ "id" : 4,
+ "pathComponent" : "4",
+ "name" : "The Ferguson Library",
+ "needsAuth" : true,
+ "ignorePin" : true,
+ "supportsCardCreator" : false,
+ "supportsReservations" : true,
+ "catalogUrl" : "http://54.197.209.197/",
+ "mainColor" : "497049"
+ },
+ {
+ "id" : 5,
+ "pathComponent" : "5",
+ "name" : "Internet Archive",
+ "needsAuth" : false,
+ "supportsCardCreator" : false,
+ "supportsReservations" : false,
+ "catalogUrl" : " http://bookserver.archive.org/catalog/",
+ "mainColor" : "497049"
+ }
+]
