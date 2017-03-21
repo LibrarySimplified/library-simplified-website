@@ -66,5 +66,17 @@
  "supportsReservations" : false,
  "catalogUrl" : " http://bookserver.archive.org/catalog/",
  "mainColor" : "497049"
+ },
+ {
+ "id" : 6,
+ "pathComponent" : "6",
+ "name" : "QA New York Public Library",
+ "subtitle" : "Inspiring lifelong learning, advancing knowledge, and strengthening our communities.",
+ "logo" : "LibraryLogoNYPL",
+ "needsAuth" : true,
+ "supportsReservations" : true,
+ "supportsCardCreator" : false,
+ "catalogUrl" : "http://qa.circulation.librarysimplified.org",
+ "mainColor" : "da2527"
  }
 ]
