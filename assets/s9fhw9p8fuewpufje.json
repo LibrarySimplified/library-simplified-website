@@ -40,6 +40,10 @@
  "id" : 3,
  "pathComponent" : "3",
  "name" : "Library For All",
+<<<<<<< HEAD
+=======
+ "logo" : "LibraryLogoMagic",
+>>>>>>> origin/gh-pages
  "needsAuth" : false,
  "supportsCardCreator" : false,
  "supportsReservations" : false,
@@ -50,6 +54,10 @@
  "id" : 4,
  "pathComponent" : "4",
  "name" : "The Ferguson Library",
+<<<<<<< HEAD
+=======
+ "logo" : "LibraryLogoMagic",
+>>>>>>> origin/gh-pages
  "needsAuth" : true,
  "ignorePin" : true,
  "supportsCardCreator" : false,
@@ -61,10 +69,29 @@
  "id" : 5,
  "pathComponent" : "5",
  "name" : "Internet Archive",
+<<<<<<< HEAD
+=======
+ "logo" : "LibraryLogoMagic",
+>>>>>>> origin/gh-pages
  "needsAuth" : false,
  "supportsCardCreator" : false,
  "supportsReservations" : false,
  "catalogUrl" : " http://bookserver.archive.org/catalog/",
  "mainColor" : "497049"
+<<<<<<< HEAD
+=======
+ },
+ {
+ "id" : 6,
+ "pathComponent" : "6",
+ "name" : "QA New York Public Library",
+ "subtitle" : "Inspiring lifelong learning, advancing knowledge, and strengthening our communities.",
+ "logo" : "LibraryLogoNYPL",
+ "needsAuth" : true,
+ "supportsReservations" : true,
+ "supportsCardCreator" : false,
+ "catalogUrl" : "http://qa.circulation.librarysimplified.org",
+ "mainColor" : "da2527"
+>>>>>>> origin/gh-pages
  }
 ]
