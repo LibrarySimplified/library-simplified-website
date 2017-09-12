@@ -135,11 +135,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="container" id="main">
 	<div class="row">
 		<div class="col-sm-9">
+			<h1> SimplyE Web Catalog</h1>
 			<p class="lead">
-				The SimplyE Platforms Web Catalog is an Open Publications Distribution System (OPDS) client web application which allows you to deploy a simple unified ebook catalog on your library's website.  It is the same union catalog on the SimplyE mobile app.  This allows you to create a dedicated, browse and searchable catalog of all you ebooks.
+				The SimplyE Platforms Web Catalog is an <a href="OPDS.html"/>Open Publications Distribution System (OPDS)</a> client web application which allows you to deploy a simple unified ebook catalog on your library's website.  It is the same union catalog on the SimplyE mobile app.  This allows you to create a dedicated, browse and searchable catalog of all you ebooks.
 			</p>	
 			
-			<h5>Live Example: The SimplyE Collection</h5>
+			<h6>Live Example: The SimplyE Collection</h6>
 			<p>
 				The catalog below is a live example of the SimplyE Collection added to a web page.
 			</p> 
@@ -175,30 +176,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 	<div class="team section-base">
 	<h3 class="hr2 text-center">How to implement into the MARC record</h3>
-	
+	<h5> Example 1: Linking ILS catalog record to local eBook resource catalog</h5>
 	<p> 
 		You can integrate SimplyE into your libaries catalog and web site by deploying an instance of the SimplyE Web Catalog on your web server.  You can then link to it as a dedicated eBook catalog in your site navigation structure or simply insert it within your web site as an <code> iframe</code>.  To continue the integration into your ILS catalog would simply take the website URLS as use them as 856 Electronic resource files to link out to from your catalog to your normailized ebook web bib page as you already do with Overdrive, B&T, Bibliotheca or other ebook content provider.  
 	</p>
 
-
-	<h6>Example: NYPL book "Eye of the Beholder" Web link to place in MARC feild</h6>
+	<div class="well">
+	<h6>Example: NYPL book "Unbroken" Web link to place in MARC feild</h6>
 
 	<p>
-		<strong>856</strong> 40$u <a href="http://opds-browser-demo.herokuapp.com/book/https%3A%2F%2Fcirculation.librarysimplified.org%2Fworks%2FOverdrive%2FOverdrive%2520ID%2Fb1a4d3ce-41c6-45f4-81ae-2e8eeb48a9e9/" target="new"/>http://opds-browser-demo.herokuapp.com/book/https%3A%2F%2Fcirculation.librarysimplified.org%2Fworks%2FOverdrive%2FOverdrive%2520ID%2Fb1a4d3ce-41c6-45f4-81ae-2e8eeb48a9e9/</a>
+		<strong>856</strong> 40$u <a href="http://opds-browser-demo.herokuapp.com/collection/https%3A%2F%2Fcirculation.librarysimplified.org%2Fgroups%2F/book/https%3A%2F%2Fcirculation.librarysimplified.org%2Fworks%2FOverdrive%2FOverdrive%2520ID%2F7bf6eaad-0cfb-4c83-97c4-88db64d89fa9/" target="new"/>http://opds-browser-demo.herokuapp.com/collection/https%3A%2F%2Fcirculation.librarysimplified.org%2Fgroups%2F/book/https%3A%2F%2Fcirculation.librarysimplified.org%2Fworks%2FOverdrive%2FOverdrive%2520ID%2F7bf6eaad-0cfb-4c83-97c4-88db64d89fa9/</a>
 	</p>
-
-
+	</div>
+	<h5> Example 2:  Linking ILS catalog record to SimplyE OPDS Catalog resource locator</h5>
 	<p>
 		To make the link shareable so that users can open the SimplyE Mobile app to a partiucalar catalog page you can use the OPDS link as well in the electronic resource feild.  You can also use this for other promotional purposes of a particular book.  The users can follow the link and envoke the SimplyE App to open to a paricualr book in its catalog.
 	</p>
-	
-	<h6>Example: NYPL book "Eye of the Beholder" OPDS link to place in MARC feild</h6>
+	<div class="well">
+	<h6>Example: NYPL book "Unbroken" OPDS link to place in MARC feild</h6>
 
 	<p>
 		<strong>856</strong> 42$u<a href="
-			opds:circulation.librarysimplified.org/works/Overdrive/Overdrive%20ID/b1a4d3ce-41c6-45f4-81ae-2e8eeb48a9e9/
-		" target="new"/>opds:circulation.librarysimplified.org/works/Overdrive/Overdrive%20ID/b1a4d3ce-41c6-45f4-81ae-2e8eeb48a9e9/</a>
+			opds:circulation.librarysimplified.org/works/Overdrive/Overdrive%20ID/7bf6eaad-0cfb-4c83-97c4-88db64d89fa9
+		" target="new"/>opds:https://circulation.librarysimplified.org/works/Overdrive/Overdrive%20ID/7bf6eaad-0cfb-4c83-97c4-88db64d89fa9</a>
 	</p>
+	</div>
 </div><!-- row -->
 
 </div><!-- .container -->
