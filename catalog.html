@@ -174,56 +174,87 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 	<div class="row">
 
-	<div class="team section-base">
-	<h3 class="hr2 text-center">How to implement into the MARC record</h3>
-	<h5> Example 1: Linking ILS catalog record to local eBook resource catalog</h5>
-	<p> 
-		You can integrate SimplyE into your libaries catalog and web site by deploying an instance of the SimplyE Web Catalog on your web server.  You can then link to it as a dedicated eBook catalog in your site navigation structure or simply insert it within your web site as an <code> iframe</code>.  To continue the integration into your ILS catalog would simply take the website URLS as use them as 856 Electronic resource files to link out to from your catalog to your normailized ebook web bib page as you already do with Overdrive, B&T, Bibliotheca or other ebook content provider.  
-	</p>
+		<div class="team section-base">
+			<h3 class="hr2 text-center">How to implement into the MARC record</h3>
+			<h5> Example 1: Linking ILS catalog record to local eBook resource catalog</h5>
+			<p> 
+				You can integrate SimplyE into your libaries catalog and web site by deploying an instance of the SimplyE Web Catalog on your web server.  You can then link to it as a dedicated eBook catalog in your site navigation structure or simply insert it within your web site as an <code> iframe</code>.  To continue the integration into your ILS catalog would simply take the website URLS as use them as 856 Electronic resource files to link out to from your catalog to your normailized ebook web bib page as you already do with Overdrive, B&T, Bibliotheca or other ebook content provider.  
+			</p>
 
-	<div class="well">
-	<h6>Example: NYPL book "Unbroken" Web link to place in MARC feild</h6>
+			<div class="well">
+				<h6>Example: NYPL book "Unbroken" Web link to place in MARC feild</h6>
 
-	<p>
-		<strong>856</strong> 40$u <a href="http://opds-browser-demo.herokuapp.com/collection/https%3A%2F%2Fcirculation.librarysimplified.org%2Fgroups%2F/book/https%3A%2F%2Fcirculation.librarysimplified.org%2Fworks%2FOverdrive%2FOverdrive%2520ID%2F7bf6eaad-0cfb-4c83-97c4-88db64d89fa9/" target="new"/>http://opds-browser-demo.herokuapp.com/collection/https%3A%2F%2Fcirculation.librarysimplified.org%2Fgroups%2F/book/https%3A%2F%2Fcirculation.librarysimplified.org%2Fworks%2FOverdrive%2FOverdrive%2520ID%2F7bf6eaad-0cfb-4c83-97c4-88db64d89fa9/</a>
-	</p>
-	</div>
-	<h5> Example 2:  Linking ILS catalog record to SimplyE OPDS Catalog resource locator</h5>
-	<p>
-		To make the link shareable so that users can open the SimplyE Mobile app to a partiucalar catalog page you can use the OPDS link as well in the electronic resource feild.  You can also use this for other promotional purposes of a particular book.  The users can follow the link and envoke the SimplyE App to open to a paricualr book in its catalog.
-	</p>
-	<div class="well">
-	<h6>Example: NYPL book "Unbroken" OPDS link to place in MARC feild</h6>
-
-	<p>
-		<strong>856</strong> 42$u<a href="
-			opds:circulation.librarysimplified.org/works/Overdrive/Overdrive%20ID/7bf6eaad-0cfb-4c83-97c4-88db64d89fa9
-		" target="new"/>opds:https://circulation.librarysimplified.org/works/Overdrive/Overdrive%20ID/7bf6eaad-0cfb-4c83-97c4-88db64d89fa9</a>
-	</p>
-	</div><!--well-->
-</div>
+			<p>
+				<strong>856</strong> 40$u <a href="http://opds-browser-demo.herokuapp.com/collection/https%3A%2F%2Fcirculation.librarysimplified.org%2Fgroups%2F/book/https%3A%2F%2Fcirculation.librarysimplified.org%2Fworks%2FOverdrive%2FOverdrive%2520ID%2F7bf6eaad-0cfb-4c83-97c4-88db64d89fa9/" target="new"/>http://opds-browser-demo.herokuapp.com/collection/https%3A%2F%2Fcirculation.librarysimplified.org%2Fgroups%2F/book/https%3A%2F%2Fcirculation.librarysimplified.org%2Fworks%2FOverdrive%2FOverdrive%2520ID%2F7bf6eaad-0cfb-4c83-97c4-88db64d89fa9/</a>
+			</p>
+			</div><!--wel-->
+			<h5> Example 2:  Linking ILS catalog record to SimplyE OPDS Catalog resource locator</h5>
+			<p>
+				To make the link shareable so that users can open the SimplyE Mobile app to a partiucalar catalog page you can use the OPDS link as well in the electronic resource feild.  You can also use this for other promotional purposes of a particular book.  The users can follow the link and envoke the SimplyE App to open to a paricualr book in its catalog.
+			</p>
+		<div class="well">
+			<h6>Example: NYPL book "Unbroken" OPDS link to place in MARC feild</h6>
+			<p>
+				<strong>856</strong> 42$u<a href="opds:circulation.librarysimplified.org/works/Overdrive/Overdrive%20ID/7bf6eaad-0cfb-4c83-97c4-88db64d89fa9" target="new"/>opds:https://circulation.librarysimplified.org/works/Overdrive/Overdrive%20ID/7bf6eaad-0cfb-4c83-97c4-88db64d89fa9</a>
+			</p>
+		</div><!--well-->
+	</div><!--section-base-->
 </div>
 	<div class="section-base">
 	
-		<div class="row">	
+		<div class="row">
+		
 		<h2 class="hr2 text-center">Using your web catalog in conjunction with book promotions</h2>
+			<div class="col-md-6">	
 			<h3> Example: QR codes for New Arrivals</h3>
 			<p>
 				The same MARC Resource Locator record URLs can be used in conjunction with QR codes.  QR codes can be generated to represent a URL.  These QR Codes can then be used in print materials such as posters or brochures highlting Staff Picks for books you want to promote.  Users can then scan the associated QR code with a title to open their web browser or app to the Books catalog page.
 			</p>
-
-		<div class="col-md-2">
-		<img src="assets/images/qrcode.jpg" class="thumbnail">
-		</div> 
-		<div clas="col-md-10">
-			<h6> QR Code for The NYPL's copy of <i>As Kingfishers Catch Fire</i></h6>
-			<p>
-				The QR Code to the left represents the following URL: <a href="http://opds-browser-demo.herokuapp.com/collection/https%3A%2F%2Fcirculation.librarysimplified.org%2Fsearch%2F%3Fq%3DAs%2520Kingfishers%2520catch%2520fire/book/https%3A%2F%2Fcirculation.librarysimplified.org%2Fworks%2FOverdrive%2FOverdrive%2520ID%2F23e94ca8-acac-473b-a5ab-215d2264b98d/" target="new"/>http://opds-browser-demo.herokuapp.com/collection/https%3A%2F%2Fcirculation.librarysimplified.org%2Fsearch%2F%3Fq%3DAs%2520Kingfishers%2520catch%2520fire/book/https%3A%2F%2Fcirculation.librarysimplified.org%2Fworks%2FOverdrive%2FOverdrive%2520ID%2F23e94ca8-acac-473b-a5ab-215d2264b98d/</a> </br>
-				Simply click the URL above and a web catalog will open on the bib page for <i> As King Fishers Catch Fire</i>.</br>
-				Now download a <i>QR Code Reader App</i> onto you smartphone or tablet such as <a href="https://itunes.apple.com/us/app/qr-reader-for-iphone/id368494609?mt=8"/>QR Reader for iPhone</a> and then scan the QR Code on the left.</br>
-				Your phone web browser should open to the same catalog page for <i> As King Fishers Catch Fire</i>.
-			</p>
 		</div>
+
+			<div class="well">
+				<h6> QR Code for The NYPL's copy of <i>As Kingfishers Catch Fire</i></h6>
+				<div class="col-md-4">
+				<img src="assets/images/qrcode.jpg" class="thumbnail">
+				</div> <!-- col-md2-->
+				
+				<div clas="col-md-4">
+
+					
+					<p>
+						The QR Code to the left represents the following URL: </br>
+						<a href="http://opds-browser-demo.herokuapp.com/collection/https%3A%2F%2Fcirculation.librarysimplified.org%2Fsearch%2F%3Fq%3DAs%2520Kingfishers%2520catch%2520fire/book/https%3A%2F%2Fcirculation.librarysimplified.org%2Fworks%2FOverdrive%2FOverdrive%2520ID%2F23e94ca8-acac-473b-a5ab-215d2264b98d/" target="new"/>OPDS Web Catlog url for As Kingfishers Catch Fire</a></br>
+						You can place this jpg or png file on website, printed materials and distribute through your libraires for community reading program, new arrivals, demand shapping for hidden gems in your collection.
+					</p> 
+				</div><!-- col-md-10-->
+			</div><!-- well -->
+		</div>
+		<div class="row">	
+		
+		<div class="col-md-6">
+		<h4>Try it out!</h4>
+			<P>
+				Simply click the URL link above and a web catalog will open to the bib page in the OPDS Web Catalog for <i> As King Fishers Catch Fire</i>.</br>
+				Use a <i>QR Code Reader App</i> on your smartphone or tablet such as <a href="https://itunes.apple.com/us/app/qr-reader-for-iphone/id368494609?mt=8"/>QR Reader for iPhone</a> and then scan the QR Code on the left.</br>
+				Your devices web browser should open to the same catalog page for <i> As King Fishers Catch Fire</i> as your computer browser.
+			</p>
+			
+			<p>
+				A simple poster or digital ad like the following example can be could be made that link to your ebook copy.
+			</p>
+			
+					
+				<p>
+					<strong>Right:</strong> Hypothetical poster with the relevant QR code linking to your OPDS Web Catalog page for the book being show-cased. The QR code included in the advertising allows user borrow or reserve the ebook title on the spot if they are a member of your library using their smartphone or tablet device with a QR Reader.
+				</p>
+			</div><!--col-md-6 -->
+				<div class="well">
+				<h5> Example of a poster advertising <i> As a King Fisher Catches Fire</i>.</h5>
+				<img src="assets/images/poc QR codeposter sample.png" class="thumbnail"/>		
+				</div>
+			</div><!--col-md-6 -->
+		</div><!--row-->
+	</div><!--section base-->
 
 </div><!-- .container -->
 </div>
