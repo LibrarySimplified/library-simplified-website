@@ -154,7 +154,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="row">
 <h2></h2>
 
-<div class="iconbox section-small">
+  <div class="iconbox section-small">
         
     <h2>How to deply Library Simplified applications into your library</h3>
         <div>
@@ -183,23 +183,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <p class="content">
           Configure the application for your particular envronment and services.
         </p>
-      </div>
-    </div>
-  </div>
-
-  <h2 id="buildyourcloud"></h2>
-  <div>
-  <h2>Build your cloud</h2>
-  <div>
+      </div><!--col-lg-4-->
+    </div><!--row-->
+  </div><!--icon-section-small-->
+</div><!--row-->
+<div class="row">
+<h2 id="buildyourcloud"></h2>
+  <div class="section-base">
+  <h2 class="hr2">Build your cloud</h2>
+  
   <p class="lead">"Cloud Computing", by definition, refers to the on-demand delivery of IT resources and applications via the Internet with pay-as-you-go pricing.  The following page provides step-by-step instructions for deploying any of the Library Simplified server components in the cloud.</p>
-  </div>
+   
+    <div class="well">
+      <div class="col-md-2">
+        <img src="assets/logos/amazon_web_services_logo.png" width="200"/>
+      </div>
+      <div class="col-md-10">
 
-    <h4>Sample EC2 set up and costs</h4>
+      <h5>Amazon EC2</h5>
+        <p>
+          Amazon EC2 provides a wide selection of instance types optimized to fit different use cases. Instance types comprise varying combinations of CPU, memory, storage, and networking capacity and give you the flexibility to choose the appropriate mix of resources for your applications. Each instance type includes one or more instance sizes, allowing you to scale your resources to the requirements of your target workload. For Library Simplified (at The New York Public Library) we are using a combination of <strong>T2 instances</strong>, <strong>Relational Database Services</strong>, <strong>Simple Storage Services</strong>, and <strong>Content Delivery Network</strong> services to implement a <i>low cost</i>, <i>low latency</i>, <i>highly scalable</i> Library Simplified environment.
+        </p>
+      </div><!--col-md-10-->
+    </div><!--well-->
+    <hr />
 
-    <h6>Amazon EC2</h6>
-    <p>Amazon EC2 provides a wide selection of instance types optimized to fit different use cases. Instance types comprise varying combinations of CPU, memory, storage, and networking capacity and give you the flexibility to choose the appropriate mix of resources for your applications. Each instance type includes one or more instance sizes, allowing you to scale your resources to the requirements of your target workload. For Library Simplified (at The New York Public Library) we are using a combination of <strong>T2 instances</strong>, <strong>Relational Database Services</strong>, <strong>Simple Storage Services</strong>, and <strong>Content Delivery Network</strong> services to implement a <i>low cost</i>, <i>low latency</i>, <i>highly scalable</i> Library Simplified environment.</p>
-     
-     <h6>EC2 Server Types</h6>
+    <h5>EC2 Server Types</h5>
 
       <ul>
         <li><strong>T2 instances</strong> are burstable performance instances that provide a baseline level of CPU performance with the ability to burst above the baseline. T2 instances are a good choice for workloads that don’t use the full CPU often or consistently, but occasionally need to burst (e.g. web servers, developer environments and small databases).<a href="http://aws.amazon.com/ec2/instance-types/" target="new"/> Learn more.</a>
@@ -211,34 +220,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <strong>Simple Storage Service</strong> (Amazon S3), provides developers and IT teams with secure, durable, highly-scalable object storage. S3 is easy to use, with a simple web services interface to store and retrieve any amount of data from anywhere on the web.  Amazon S3 can be used alone or together with other AWS services such as Amazon Elastic Compute Cloud (Amazon EC2), Amazon Elastic Block Store (Amazon EBS), and Amazon Glacier, as well as third party storage repositories and gateways. <a href="http://aws.amazon.com/s3/" target="new"/>Learn more</a>
         </li>
         <li>
-          A <strong>Content Delivery Network</strong> (CDN) is a system of distributed servers that deliver webpages and other Web content to a users based on the geographic locations of the user and the origin of the content delivery server in order to reduce network induced latency. Amazon's CloudFront is a content delivery web service. It integrates with other Amazon Web Services products to give developers and businesses an easy way to distribute content to end users with low latency, high data transfer speeds, and no minimum usage commitments.  <a href="http://aws.amazon.com/cloudfront/" target="new"/> Learn more.</a>
+          <strong>Content Delivery Networks</strong> (CDNs) are a system of distributed servers that deliver webpages and other Web content to a users based on the geographic locations of the user and the origin of the content delivery server in order to reduce network induced latency. Amazon's CloudFront is a content delivery web service. It integrates with other Amazon Web Services products to give developers and businesses an easy way to distribute content to end users with low latency, high data transfer speeds, and no minimum usage commitments.  <a href="http://aws.amazon.com/cloudfront/" target="new"/> Learn more.</a>
         </li>
       </ul>
+    <hr />
+    <h4>Environment Diagrams</h4>
 
-    <h4>Environment Diagram</h4>
+    <div class="row">
+      <div class="col-md-4">        
+        <h5>Frontend</h5>
+        <div class="well">
 
-    <h6>Frontend</h6>
-      <p>
-        The frontend environment represents the publicly exposed service resources that allow for content syndication and discovery.  This is the layer of the application that is accessed by the iOS and Android client applications.</p>
-      <div class="row">
-        <div class="col-sm-9">
-          <a href="assets/images/ec2frontend.png" title="<h5>Libary Simlified frontend EC2 environment diagram</h5>"><img src="assets/images/ec2frontend.png" alt="Libary Simlified frontend EC2 environment diagram" /></a>
-                  <!--<img src="assets/slides/Slide1.png"> -->
-        </div>
-    </div>
+        <p>
+          The frontend environment represents the publicly exposed service resources that allow for content syndication and discovery.  This is the layer of the application that is accessed by the iOS and Android client applications.
+       </p>
+      </div><!--well-->
+    </div><!--col-md-4-->
+    <div class="col-sm-8">
+      <a href="assets/images/ec2frontend.png" title="<h5>Libary Simlified frontend EC2 environment diagram</h5>"><img src="assets/images/ec2frontend.png" alt="Libary Simlified frontend EC2 environment diagram" /></a>
+    </div><!--col-sm-8-->
+   </div><!--row-->
+   <div class="row">
+    <div class="col-md-4">
+      <h5>Backend</h5> 
+      <div class="well">
+         
+        <p>
+          The backend environment represents the service resources that are not exposed publically for data and content management and content hosting and content host integration.  This is the layer of the application that is primarily accessed by the circulation server and from time to time by the iOS and Android client applications by way of the OPDS interface.
+        </p>
+      </div><!--well-->
+    </div><!--col-md-4-->
 
-    <h6>Backend</h6>    
-      <p>
-        The backend environment represents the service resources that are not exposed publically for data and content management and content hosting and content host integration.  This is the layer of the application that is primarily accessed by the circulation server and from time to time by the iOS and Android client applications by way of the OPDS interface.</p>
-     <div class="row">     
-        <div class="col-sm-9">
-          <a href="assets/images/ec2backend.png" title="<h5>Libary Simlified backend EC2 environment diagram</h5>"><img src="assets/images/ec2backend.png" alt="Libary Simlified backend EC2 environment diagram" /></a>
-                  <!--<img src="assets/slides/Slide1.png"> -->
-        </div>
-    </div>
-    <h5> </h5>
-
-    <h5>Sample pre-prodcution (QA) server environment and costs</h5>
+    <div class="col-sm-8">
+      <a href="assets/images/ec2backend.png" title="<h5>Libary Simlified backend EC2 environment diagram</h5>"><img src="assets/images/ec2backend.png" alt="Libary Simlified backend EC2 environment diagram" /></a>
+    </div><!--col-sm-9-->
+  </div><!--row-->
+  <hr />
+  
+  <div class="row">
+    <div class="col-md-12">
+    <p>
+      <h5>Sample pre-prodcution (QA) server environment and costs</h5>
+    </p>
     <table border="1" style="width:100%">
       <tr>
         <th>Environment</th>
@@ -299,8 +322,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </tr>
       <tr>
     </table>
-    <P></p>
-          <h5>Sample Production Environment server instances and costs.</h5>
+    </div><!--col-md-12-->
+   </div><!--row-->
+   <div class="row">
+    <div class="col-md-12">
+      <p>
+        <h5>Sample Production Environment server instances and costs.</h5>
+      </p>
     <table border="1" style="width:100%">
       <tr>
         <th>Environment</th>
@@ -360,15 +388,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <td>Metadata Wrangler (Optional)</td>
       </tr>
     </table>
-    <p></p>
-</div>
-<div id="getandinstalsw">
-<h2 class="hr2"></h2>
-<h2>Library Simplified Code Repository</h2>
-</div>
-  <div>
-  <p class="lead">The Library Simplified application and source code is available on GitHub.  GitHub is a web-based <a href="https://en.wikipedia.org/wiki/Git_(software)" target="new"/>Git</a> repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git.</p>
-  <h6>Quick Links...</h6>
+    </div><!--col-md-12-->
+   </div><!--row-->
+
+<div class="row" id="getandinstalsw">
+  <p>
+    <h2 class="hr2" >Library Simplified Code Repository</h2>
+  </p>
+  <p class="lead">
+    The Library Simplified application and source code is available on GitHub.  GitHub is a web-based <a href="https://en.wikipedia.org/wiki/Git_(software)" target="new"/>Git</a> repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git.
+  </p>
+
+  <h5>Quick Links...</h5>
   <ul>
     <li>
       The repositories are located at <a href="https://github.com/NYPL-Simplified"/>https://github.com/NYPL-Simplified</a>.
@@ -378,40 +409,53 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </li>
   </ul>
 
-  <h6> Deployment instructions</h6>
+  <h5> Local environment deployment instructions from repositories</h5>
 
   <p>
     To begin to install the applications you will need to follow the deployment instructions provided in the main repositories wiki at <a href="https://github.com/NYPL-Simplified/Simplified/wiki/Deployment-Instructions">https://github.com/NYPL-Simplified/Simplified/wiki/Deployment-Instructions</a>.
   </p>
-  <p>
-    There are several repositories in the project.  The following repositories are required to the run the application.
-  </p>
+  <hr />
 
-  <h6>Required server software</h6>
-
-  <ul>
-    <li><strong>Server Core</strong> at <a href="https://github.com/NYPL-Simplified/server_core"/>https://github.com/NYPL-Simplified/server_core</a>. 
-      <p>
+  <h4>Server software</h4>
+  <div class="col-md-6">  
+    
+    <div class="well">
+     <p>
+      <strong>Server Core</strong></br> 
+     <p>
         The <strong>Server Core</strong> contains functionality common between various LS servers, including database models and essential class constants, OPDS parsers, and certain configuration details.</br>
         The <strong>OA Content Server</strong>, <strong>Metadata Wrangler</strong>, and <strong>Circulation Manager</strong> all depend on this code base.
       </p>
-    </li>
-    <li><strong>Circulation Manager</strong> at <a href="https://github.com/NYPL-Simplified/circulation"/>https://github.com/NYPL-Simplified/circulation</a>. 
       <p>
-        The <strong>Circulation Manager</strong> is the main connection between a library's collection and Library Simplified's various client-side applications. It handles user authentication, combines licensed works with open access content from the OA Content Server, pulls in updated book information from the Metadata Wrangler, and serves up available books in appropriately organized OPDS feeds.</br>
+      <icon class="icon-github"/></icon> Repository: <a href="https://github.com/NYPL-Simplified/server_core"/>https://github.com/NYPL-Simplified/server_core</a>
+      </p>. 
+    </div><!--well-->
+  </div><!--col-md-6-->
+
+  <div class="col-md-6">
+    <div class="well">
+    <p>
+      <strong>Circulation Manager</strong> 
+    </p>
+    <p>
+        The <strong>Circulation Manager</strong> is the main connection between a library's collection and Library Simplified's various client-side applications. It handles user authentication, combines licensed works with open access content from the OA Content Server, and data from the Metadata Wrangler.</br>
         <strong>NOTE:</strong> This application depends on the <strong>Server Core</strong> as a git submodule. 
       </p>
-    </li>
-  </ul>
+      <p>
+        <icon class="icon-github"/></icon> Repository:  <a href="https://github.com/NYPL-Simplified/circulation"/>https://github.com/NYPL-Simplified/circulation</a>.    
+      </p>
+    </div><!--well-->
+  </div><!--col-md-6-->
+</div><!--row-->
 
-  <div class="well">
-
-    <h2>Optional Server Software</h2>
+<div class="row">
+  <hr />
+  <h4><i>Optional Server Software</i></h4>
 
     <p>
       There are optional server components that a library may implement - <strong>Open Access (OA) Content Server</strong>, <strong>Metadata Wrangler</strong> and <strong>Card Creator</strong>.  These applications are purely optional because The New York Public Library will be providing functions for some of these servers as a service to implementing libraries so they do not have to install and host the servers.  <strong>Card Creator</strong> is an optional application which will not be provided as a service which needs to be customized on an individual basis by libraries.  which will allow libraries to incorporate remote library card application and proof of eligibility documentation in a secure and controlled process so that user data and privacy is secured in transit and at rest during the application review process and promptly deleted from library systems upon acceptance or rejection. 
     </p>
-
+    <div class="well">
     <ul>
       <li><strong>OA Content Server</strong> at <a href="https://github.com/NYPL-Simplified/content_server"/>https://github.com/NYPL-Simplified/content_server</a>
         <p>
@@ -433,102 +477,124 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </p>
       </li>
     </ul>
-  </div>
+  </div> <!--well-->
+</div><!--row-->
 
-<hr />
-
-
+<div class="row">
+  <hr />
+  <h4>Client Application Software</h4>
   <p>
-    <img src="assets/logos/Docker_logo.png" alt="Docker" width="150"/>
+    The client applications are currently contained in open repositories accept for the those DRM compponents that are derivative products which are in private repositories.  Partner libraries may obtain access to the private repositories and the closed repositories for DRM that require a commercial license.  Once the commercial license is obtained users can gain access to the code libraries that link to the commercial binaries distributed independently by the commercial DRM vendor.  
   </p>
 
-  <h6>Containers</h6> 
-    
-    <p>
-      The application can also be deployed as a containerized application if your IT practices take advantage of this technology.  Instead of building and deplying the application from the source repository, the Library Simplified Team also provides a containerized version of the application using Docker.  Docker is an open-source project that automates the deployment of applications inside software containers, by providing an additional layer of abstraction and automation of operating-system-level virtualization on Linux. Docker can package an application and its dependencies in a virtual container that can run on any Linux server. This helps enable flexibility and portability on where the application can run, on premises, in a public cloud, on a private cloud, or bare metal machines.   
+  <div class="row">
+    <div class="col-md-6">
+      <h5> Mobile Clients</h5>
+      <ul>
+        <li><strong>iOS Client</strong> at <a href="https://github.com/NYPL-Simplified/Simplified-iOS"/>https://github.com/NYPL-Simplified/Simplified-iOS</a>.
+          <p>
+            The iOS client is a native application written in Objective C and C++.  There are optional cocoa pods for help ticket support.  It can be built with or without DRM.  
+          </p>
+        </li>
+
+        <li><strong>Android Client</strong> at <a href="https://github.com/NYPL-Simplified/android"/>https://github.com/NYPL-Simplified/android</a>.
+          <p>
+            The Android client is a native application written in Java and C++.  There are optional components for help ticket support.  It can be built with or without DRM.  
+          </p>
+        </li>
+      </ul>
+    </div><!--col-md-6-->
+
+    <div class="col-md-6">
+      <h5>Web Clients</h5>
+    <ul>
+      <li><strong>Web Reader Client</strong> at <a href="https://github.com/NYPL-Simplified/webpub-viewer"/>https://github.com/NYPL-Simplified/webpub-viewer</a>.
+        <p>
+          The web client is a javascript application using typescript and react.js.  
+        </p>
+      </li>
+      <li><strong>OPDS Web Catalog (with web reader)</strong> at <a href="https://github.com/NYPL-Simplified/opds-web-client"/>https://github.com/NYPL-Simplified/opds-web-client</a>.
+        <p>
+          The web client is a javascript application using typescript and react.js.  
+        </p>
+      </li>
+    </ul>
+   </div><!--col-md-6-->
+ </div><!--row-->
+
+   <p>
+        <strong>NOTE:</strong> The application can be built without DRM support as an Open Access (non DRM) content e-reader.  However, a Readium License is still required.  This license can be obtained directly from the <a href="http://readium.org/membership/license-readium-sdk"/>Readium Foundation</a> at special Non-Profit rate.  Additionally <a href="http://www.minitex.umn.edu/"/>Minitex</a> provide a special Non-profit license as well specifically to public, state and academic libraries as well at a reduce price.  Visit their product page <a href="http://www.minitex.umn.edu/Electronic/Readium/"/>here</a> to learn more.  
+      </p>
+  </div><!--row-->
+  <div class="row">
+  <h2 class="hr2">IT Orchestration and Containerization</h2>
+    <p class="lead">
+      To make initital implementation and maintenance easier and in keeping with modern <a href="https://en.wikipedia.org/wiki/DevOps" alt="wikipedia link to DevOps"/>DeveOps</a> practices for technology products the Libary Simplified community practices <a href="https://en.wikipedia.org/wiki/Continuous_integration" alt="wikipedia link to Continuous Integration"/>Continuous Integrations</a> and <a href="https://en.wikipedia.org/wiki/Continuous_delivery#Relationship_to_continuous_deployment" alt="Wikipedia link to continuous delivery"/>Continuos Delivery</a> of the midleware through the use of <a href="https://en.wikipedia.org/wiki/Operating-system-level_virtualization" alt="wikipedia link to virtualization"> operating system virtualization</a> using containerizationand community managed open source IT Orchestration tools such as <a href="https://en.wikipedia.org/wiki/Ansible_(software)" alt="wikipedia link t to Ansible"/>Ansible</a> for automating software provisionsing, configuration and application deployment.
     </p>
-    
-    <img src="assets/images/Docker.png" alt="Docker deploy process"/>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="well">
+      <img src="assets/logos/Docker_logo.png" alt="Docker" width="200px"/>
+       <p>
+        <ul>
+          <li><a href="https://hub.docker.com/r/nypl/">Circulation Manager Cointainer Repository</a></ali>
+          <li><a href="https://hub.docker.com/r/nypl/">Docker Hub</a></li>
+          <li><a href="https://github.com/NYPL-Simplified/Simplified/wiki/Deployment:-Quickstart-with-Docker"/>Quickstart Wiki for Library Simplified</a></li>
+        </ul>
+        </p>
+
+        <h6>Containers</h6> 
+        <p>
+          Docker is an open-source project that automates the deployment of applications inside software containers, by providing an additional layer of abstraction and automation of operating-system-level virtualization on Linux. Docker can package an application and its dependencies in a virtual container that can run on any Linux server. This helps enable flexibility and portability on where the application can run, on premises, in a public cloud, on a private cloud, or bare metal machines.   
+        </p>
+      </div><!--well-->
+    </div><!--col-md-6-->
+    <div class="col-md-6">
+      <div class="well">
+      <img src="assets/logos/ansiblelogo3.png" alt="Ansible Logo" width="200px"/>
+       <p>
+        <ul>
+          <li><a href="http://docs.ansible.com/ansible/latest/intro_installation.html"/>Ansible Software</a></li>
+          <li><a href="https://github.com/alsrlw/ansible-playbook-libsimple">Ansible Playbook Repository Repository (Amigos Lirbary Services)</a></li>
+          <li><a href="https://github.com/Minitex/ansible-playbook-libsimple"/>Ansible Playbooks Repository (Minitex)</a></li>
+        </ul>
+        </p>
+      
+        <h6>Ansible Playbooks</h6> 
+        <p>
+          The Ansible Playbooks are the files that are used by the open source automation engine, Ansible.  The playbooks provide the instructions and linformation necessay to remotely provision the necessary Amazon Web Services environment to host the application.  They also automate the deployment of the Library Simplified Circulation Manager Docker Containers, application servers, databases and other related applciations.
+        </p>
+      </div><!--well-->
+    </div><!--col-md-6-->
+  </div>
 
     <p>
       Using a deployment management tool like <a href="https://wiki.jenkins-ci.org/display/JENKINS/Meet+Jenkins" target="new"/>Jenkins</a>, a docker containter can be pulled down by the repsective library from Docker Hub as a self contained application container onto your infrastructure (for example EC2.)  This simplifies application implementation and deployment by prepackaging the application and all the required stack technolgies and dependencies with out having to manualy configure or run PIP and GIT commands.  Simply pull the latest compatible container version, update the JSON configuration file during the deploy process.  For certain versions you may have to run some update scripts on your DB server.  
     </p>
-
-    <p>The docker project and detailed deployment instructions can be found at <a href="https://github.com/NYPL-Simplified/Simplified/wiki/Deployment:-Quickstart-with-Docker"/>https://github.com/NYPL-Simplified/Simplified/wiki/Deployment:-Quickstart-with-Docker</a>
-
-  <h6>Client Application Software</h6>
-
-  <p>
-    The mobile client applications are currently contained in a private repositories.  These will be eventually exposed in the upcoming weeks to open repositories.  Partner libraries may obtain access to the repositories and the closed repositories for DRM that require a commercial license.  Once the commercial license is obtained users can gain access to the code libraries that link to the commercial binaries distributed independently by the commercial DRM vendor.  
-  </p>
-  <p>
-    <strong>NOTE:</strong> The application can be built without DRM support as an Open Access (non DRM) content e-reader.  However, a Readium License is still required.  This license can be obtained directly from the <a href="http://readium.org/membership/license-readium-sdk"/>Readium Foundation</a> at special Non-Profit rate.  Additionally <a href="http://www.minitex.umn.edu/"/>Minitex</a> provide a special Non-profit license as well specifically to public, state and academic libraries as well at a reduce price.  Visit their product page <a href="http://www.minitex.umn.edu/Electronic/Readium/"/>here</a> to learn more.  
-  </p>
-
-  <ul>
-    <li><strong>iOS Client</strong> at <a href="https://github.com/NYPL-Simplified/Simplified-iOS"/>https://github.com/NYPL-Simplified/Simplified-iOS</a>.
-      <p>
-        The iOS client is a native application written in Objective C and C++.  There are optional cocoa pods for help ticket support.  It can be built with or without DRM.  
-      </p>
-    </li>
-
-    <li><strong>Android Client</strong> at <a href="https://github.com/NYPL-Simplified/android"/>https://github.com/NYPL-Simplified/android</a>.
-      <p>
-        The Android client is a native application written in Java and C++.  There are optional components for help ticket support.  It can be built with or without DRM.  
-      </p>
-    </li>
-  </ul>
   </div>
   
-<div>
 <h2 id="environmentvariables"></h2>
-
-<h5> </h5>
-	<div>
-
-	<h2 class="hr2"></h2>
-
-  <h2>Configure</h2>
-
-    <p>
-      The configuration file contains all the necessary information to distinguish one Library Simplified installation from another. This file contains a lot of miscellaneous stuff, but the main sections are:
-    </p>
-
-    <ul>
-      <li>Links to especially important information that differs between libraries (privacy policy, terms of service.) </li> 
-      <li>Policies that differ between libraries, such as how to authenticate patrons, whether patrons can put books on hold, and how books should be organized in lanes.</li>
-      <li>Details on integrating with external pieces of software (such as the database) and third-party services (such as ebook providers.)</li>
-    </ul>
-
-    <p>
-      The circulation manager, the metadata wrangler, and the content server each need their own configuration file, but what goes into that configuration file differs from one component to the other.
-    </p>
-
+  <h2 class="hr2">Configure</h2>
     <p>
       The Configuration instructions can be found on github on the main project's wiki at <a href="https://github.com/NYPL-Simplified/Simplified/wiki/Configuration"/>https://github.com/NYPL-Simplified/Simplified/wiki/Configuration</a>.
     </p>
 
-  </div>
 <hr />
- <div>
-    <h2>Maintaining the servers</h2>
-
-    <p>
-      The <code>/bin</code> directory contains autmated scripts that should be run every 5 minutes to keep your collections updated as well as fix data from time to time.  The wiki link below lists the scripts and their purpose.  Unless you are running a separate instance of <strong>Metadata Wrangler</strong> and <strong>OA Content Server</strong> as opposed using the NYPL public service, those instructions and scripts can be ignored.  They will be done as part of NYPL's maintenance.
-    </p>
+<h2 class="hr2">Maintaining the servers</h2>
+  <p>
+    The <code>/bin</code> directory contains autmated scripts that should be run every 5 minutes to keep your collections updated as well as fix data from time to time.  The wiki link below lists the scripts and their purpose.  Unless you are running a separate instance of <strong>Metadata Wrangler</strong> and <strong>OA Content Server</strong> as opposed using the NYPL public service, those instructions and scripts can be ignored.  They will be done as part of NYPL's maintenance.
+  </p>
     <p>
       <strong>Automated Jobs</strong></br>
       <a href="https://github.com/NYPL-Simplified/Simplified/wiki/AutomatedJobs#jobs-that-should-be-run-as-needed">https://github.com/NYPL-Simplified/Simplified/wiki/AutomatedJobs#jobs-that-should-be-run-as-needed</a>
 
     </p>
-  </div>
 
-  <div>
     <h2 id="monitoring"></h2>
     <h5> </h5>
-      <div>
-      <h2 class="hr2"></h2>
-      <h2>Management and Monitoring Tools</h2>
+
+      <h2 class="hr2">Management and Monitoring Tools</h2>
 
       <p>The ability to monitor your cloud environment and application services is important.  Libraries and their technical staff need simple tools for keeping your ebook service running and scallable so that users have a wonderful and consistent Library Ebook service experience.  While you may have your own tools that you prefer to manage your enterprise or cloud systems, the following are examples of what the Library Simplifed Team use for the project, Open eBooks and the New York Public Library.  </p>
 
@@ -541,7 +607,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <th>Purpose</th>
       </tr>      
       <tr>
-        <td><a href="https://puppetlabs.com/puppet/puppet-open-source" target="new"/><img src="assets/logos/Puppet_logo.png" width="100"/></a>
+        <td><a href="http://docs.ansible.com/ansible/latest/intro_installation.html" target="new"/><img src="assets/logos/ansiblelogo3.png" width="100"/></a>
         </td>
         <td>Enterprise</td>
         <td> This tool allows you to manage your cloud infrastructure and application service configurations.
