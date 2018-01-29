@@ -1113,6 +1113,9 @@
 .icon-lifebuoy:before {
     content: "\e9cb";
 }
+.icon-library:before {
+  content: "\e921";
+}
 .icon-light-bulb:before {
     content: "\e9cc";
 }
