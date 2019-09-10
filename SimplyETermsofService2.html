@@ -1,632 +1,888 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
 <style>
-<!--
  /* Font Definitions */
- @font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Arial;
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Arial;
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
 @font-face
 	{font-family:Tahoma;
-	panose-1:2 11 6 4 3 5 4 4 2 4;}
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
  /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin:0in;
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-parent:"";
+	margin:0in;
 	margin-bottom:.0001pt;
 	line-height:115%;
+	mso-pagination:widow-orphan;
 	font-size:11.0pt;
-	font-family:"Arial",sans-serif;
-	color:black;}
-p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
-	{mso-style-link:"Comment Text Char";
-	margin:0in;
-	margin-bottom:.0001pt;
-	font-size:10.0pt;
-	font-family:"Arial",sans-serif;
-	color:black;}
-p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
-	{mso-style-link:"Comment Subject Char";
-	margin:0in;
-	margin-bottom:.0001pt;
-	font-size:10.0pt;
-	font-family:"Arial",sans-serif;
+	font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-bidi-font-family:Arial;
 	color:black;
+	mso-ansi-language:EN;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Comment Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:black;
+	mso-ansi-language:EN;}
+span.MsoCommentReference
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"Comment Text";
+	mso-style-link:"Comment Subject Char";
+	mso-style-next:"Comment Text";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:black;
+	mso-ansi-language:EN;
 	font-weight:bold;}
 p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
-	{mso-style-link:"Balloon Text Char";
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
 	margin:0in;
 	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
 	font-size:8.0pt;
-	font-family:"Tahoma",sans-serif;
-	color:black;}
+	font-family:"Tahoma","sans-serif";
+	mso-fareast-font-family:Arial;
+	mso-bidi-font-family:Tahoma;
+	color:black;
+	mso-ansi-language:EN;}
 span.BalloonTextChar
 	{mso-style-name:"Balloon Text Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
 	mso-style-link:"Balloon Text";
-	font-family:"Tahoma",sans-serif;
-	color:black;}
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-ascii-font-family:Tahoma;
+	mso-fareast-font-family:Arial;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;
+	color:black;
+	mso-ansi-language:EN;
+	mso-fareast-language:EN-US;}
 span.CommentTextChar
 	{mso-style-name:"Comment Text Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
 	mso-style-link:"Comment Text";
-	font-family:"Arial",sans-serif;
-	color:black;}
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:black;
+	mso-ansi-language:EN;
+	mso-fareast-language:EN-US;}
 span.CommentSubjectChar
 	{mso-style-name:"Comment Subject Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"Comment Text Char";
 	mso-style-link:"Comment Subject";
-	font-family:"Arial",sans-serif;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-fareast-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
 	color:black;
+	mso-ansi-language:EN;
+	mso-fareast-language:EN-US;
 	font-weight:bold;}
 .MsoChpDefault
-	{font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:11.0pt;
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:\5B8B\4F53;
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Arial;
+	mso-bidi-theme-font:minor-bidi;
+	mso-fareast-language:ZH-CN;}
 .MsoPapDefault
-	{margin-bottom:10.0pt;
+	{mso-style-type:export-only;
+	margin-bottom:10.0pt;
 	line-height:115%;}
 @page WordSection1
 	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
 div.WordSection1
 	{page:WordSection1;}
--->
 </style>
 
 </head>
 
-<body lang=EN-US>
+<body lang=EN-US style='padding: 20px;'>
 
 <div class=WordSection1>
 
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=EN>SimplyE
-Terms of Service</span></b></p>
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span lang=EN>SimplyE Terms of Service<o:p></o:p></span></b></p>
 
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=EN>&nbsp;</span></b></p>
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span lang=EN><o:p>&nbsp;</o:p></span></b></p>
 
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=EN>Partner
-Libraries</span></b></p>
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span lang=EN>Partner Libraries<o:p></o:p></span></b></p>
 
-<p class=MsoNormal align=center style='text-align:center'><b><span lang=EN>&nbsp;</span></b></p>
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span lang=EN><o:p>&nbsp;</o:p></span></b></p>
 
-<p class=MsoNormal><span lang=EN style='color:#222222;background:white'>Please
-take a moment to read the Terms of Service (“Terms”) below. These Terms are
+<p class=MsoNormal><span lang=EN style='color:#222222;background:white;
+mso-highlight:white'>Please take a moment to read the Terms of Service
+(“Terms”) below.<span style="mso-spacerun:yes">&nbsp; </span>These Terms are
 important because they provide the conditions for your use of the NYPL SimplyE
 application, your relationship with NYPL, and your relationship with the
-software contributors that help to power SimplyE. By continuing to use SimplyE,
-you accept these Terms. If you do not accept these Terms, you are not
-authorized to use NYPL SimplyE.</span></p>
+software contributors that help to power SimplyE.<span
+style="mso-spacerun:yes">&nbsp; </span>By continuing to use SimplyE, you accept
+these Terms.<span style="mso-spacerun:yes">&nbsp; </span>If you do not accept
+these Terms, you are not authorized to use NYPL SimplyE.<o:p></o:p></span></p>
 
-<p class=MsoNormal><span lang=EN style='color:#222222;background:white'> </span></p>
+<p class=MsoNormal><span lang=EN style='color:#222222;background:white;
+mso-highlight:white'><span style="mso-spacerun:yes">&nbsp;</span><o:p></o:p></span></p>
 
-<p class=MsoNormal><span lang=EN style='color:#222222;background:white'>NYPL
-SimplyE Partner Library Terms of Service</span></p>
+<p class=MsoNormal><span lang=EN style='color:#222222;background:white;
+mso-highlight:white'>NYPL SimplyE Partner Library Terms of Service<o:p></o:p></span></p>
 
-<p class=MsoNormal><span lang=EN style='color:#222222;background:white'>Last
-Updated: 2.26.19</span></p>
+<p class=MsoNormal><span lang=EN style='color:#222222;background:white;
+mso-highlight:white'>Last Updated: 9.4.2019<o:p></o:p></span></p>
 
-<p class=MsoNormal><span lang=EN style='color:#222222;background:white'> </span></p>
+<p class=MsoNormal><span lang=EN style='color:#222222;background:white;
+mso-highlight:white'><span style="mso-spacerun:yes">&nbsp;</span><o:p></o:p></span></p>
 
-<p class=MsoNormal><span lang=EN style='color:#222222;background:white'>These
-Terms of Service are a legal agreement made between The New York Public
-Library, Astor, Lenox, and Tilden Foundations (“NYPL”, “we”, “us”, or “our”),
-and you (“you” and “your”) as a licensee and user of NYPL SimplyE’s machine-readable
-object code (“the Software”), an eReader application for mobile devices
-developed and distributed by NYPL. By continuing to use the Software, you are
-confirming your acceptance of the Software and are agreeing to become bound by
-these Terms. </span><span lang=EN>If you are acting as an agent of a company or
-another legal person, then &quot;you&quot; and &quot;your&quot; mean your
-principal, the entity or other legal person for whom you are acting. </span><span
-lang=EN style='color:#222222;background:white'>If you do not agree to be bound
-by these Terms, then you may not use the Software. Failure to abide by these
-Terms may result in termination of your access to the Software, eBook content
-(the “Content”), and any related websites or applications. Notwithstanding the
-foregoing, software having a separate end user license agreement shall be covered
-by that separate end user license agreement and shall be expressly excluded
-from the definition of Software. Questions concerning these Terms, Software
-and/or Content shall be directed here: </span><span lang=EN style='color:#1155CC;
-background:white'>EULA@librarysimplified.com</span><span lang=EN
-style='color:#222222;background:white'>.</span></p>
+<p class=MsoNormal><span lang=EN style='color:#222222;background:white;
+mso-highlight:white'>These Terms of Service are a legal agreement made between
+The New York Public Library, Astor, Lenox, and Tilden Foundations (“NYPL”,
+“we”, “us”, or “our”), and you (“you” and “your”) as a licensee and user of
+NYPL SimplyE’s machine-readable object code (“the Software”), an eReader
+application for mobile devices developed and distributed by NYPL.<span
+style="mso-spacerun:yes">&nbsp; </span>By continuing to use the Software, you
+are confirming your acceptance of the Software and are agreeing to become bound
+by these Terms.<span style="mso-spacerun:yes">&nbsp; </span></span><span
+lang=EN>If you are acting as an agent of a company or another legal person,
+then &quot;you&quot; and &quot;your&quot; mean your principal, the entity or
+other legal person for whom you are acting.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>If you do not agree to be bound by these
+Terms, then you may not use the Software.<span style="mso-spacerun:yes">&nbsp;
+</span>Failure to abide by these Terms may result in termination of your access
+to the Software, eBook content (the “Content”), and any related websites or
+applications provided by NYPL.<span style="mso-spacerun:yes">&nbsp; </span>Notwithstanding
+the foregoing, software having a separate end user license agreement shall be
+covered by that separate end user license agreement and shall be expressly
+excluded from the definition of Software.<span style="mso-spacerun:yes">&nbsp;
+</span>Questions concerning these Terms, Software and/or Content shall be
+directed here: </span><span lang=EN style='color:#1155CC;background:white;
+mso-highlight:white'>EULA@librarysimplified.com</span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>.<o:p></o:p></span></p>
 
-<p class=MsoNormal><span lang=EN style='color:#222222;background:white'> </span></p>
-
-<p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>I.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>      </span><span lang=EN
-style='color:#222222;background:white'>Use of Software</span></p>
-
-<p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>A.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>    </span><span lang=EN
-style='color:#222222;background:white'>You shall not:</span></p>
-
-<p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>i.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>      </span><span lang=EN
-style='color:#222222;background:white'>copy, rent, lease, sell, repair,
-transfer, assign, sublicense, disassemble, circumvent, reverse engineer or
-decompile, modify or alter the Software including, but not limited to,
-translating or creating derivative works, under any circumstances;</span></p>
+<p class=MsoNormal><span lang=EN style='color:#222222;background:white;
+mso-highlight:white'><span style="mso-spacerun:yes">&nbsp;</span><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>ii.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>     </span><span lang=EN
-style='color:#222222;background:white'>separate the Software into its component
-parts for independent use;</span></p>
+#222222;background:white;mso-highlight:white'>I.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>Use of Software<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>iii.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>remove any proprietary notices and/or
-labels on or in the Software; and/or</span></p>
+#222222;background:white;mso-highlight:white'>A.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>You shall not:<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>iv.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>use the Software for any commercial or
-illegal purpose.</span></p>
+#222222;background:white;mso-highlight:white'>i.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>copy, rent, lease,
+sell, repair, transfer, assign, sublicense, disassemble, circumvent, reverse
+engineer or decompile, modify or alter the Software including, but not limited
+to, translating or creating derivative works, under any circumstances;<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>B.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>    </span><span lang=EN
-style='color:#222222;background:white'>End User Terms Required by Adobe. The
-Software contains Adobe DRM (“the Adobe Software”), which NYPL has provided to
-you by license arrangement with Adobe Systems Incorporated (“Adobe”), a
-Delaware corporation having a place of business at 345 Park Avenue, San Jose,
+#222222;background:white;mso-highlight:white'>ii.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>separate the
+Software into its component parts for independent use;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
+#222222;background:white;mso-highlight:white'>iii.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>remove any proprietary notices and/or
+labels on or in the Software; and/or<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
+#222222;background:white;mso-highlight:white'>iv.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>use the Software for any commercial or
+illegal purpose.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
+#222222;background:white;mso-highlight:white'>B.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>End User Terms
+Required by Adobe.<span style="mso-spacerun:yes">&nbsp; </span>The Software
+contains Adobe Digital Rights Management (“the Adobe Software”), which NYPL has
+provided to you by license arrangement with Adobe Systems Incorporated (“Adobe”),
+a Delaware corporation having a place of business at 345 Park Avenue, San Jose,
 CA</span><span lang=EN> 95110-2704,</span><span lang=EN style='color:#222222;
-background:white'> and with webqem pty ltd (the “Adobe Supplier”), a
-corporation having a place of business at 59 Backland Road, Atlanta, GA 30342.
-As a condition of that license, you agree to be bound by the specific terms of
-this subsection. This subsection limits your use of the Adobe Software, and
-also requires you to use the Adobe License Signing Service (the “Adobe
-Service”), and comply with its terms, when using the Adobe Software. You agree
-as follows:</span></p>
+background:white;mso-highlight:white'> and with webqem pty ltd (the “Adobe
+Supplier”), a corporation having a place of business at 59 Backland Road,
+Atlanta, GA 30342.<span style="mso-spacerun:yes">&nbsp; </span>As a condition
+of that license, you agree to be bound by the specific terms of this subsection.<span
+style="mso-spacerun:yes">&nbsp; </span>THIS SUBSECTION ONLY LIMITS YOUR USE OF
+THE ADOBE SOFTWARE, AND ONLY REQUIRES YOU TO USE THE ADOBE LICENSE SIGNING
+SERVICE (THE “ADOBE SERVICE”), AND COMPLY WITH ITS TERMS, WHEN USING THE ADOBE
+SOFTWARE.<span style="mso-spacerun:yes">&nbsp; </span>If you use an alternate Digital
+Rights Management service, such as Readium LCP, the Adobe Software terms may
+not apply to your use of the Software or only to extent that you access the
+Adobe Software.<span style="mso-spacerun:yes">&nbsp; </span>You agree as
+follows:<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>i.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>      </span><span lang=EN
-style='color:#222222;background:white'>No Modification or Reverse Engineering.
-You specifically acknowledge and agree that other than as expressly set forth
-in these Terms, you shall not modify, port, adapt or translate the Adobe
-Software or its documentation. You will not reverse-engineer, decompile,
-disassemble, or otherwise attempt to derive the source code of the Adobe
-Software not supplied to you in source code form. Notwithstanding the
-foregoing, decompiling the Adobe Software is permitted to the extent that the
-laws of a jurisdiction give you the right to do so to obtain information necessary
-to render the Adobe Software interoperable with other software; provided,
-however, that you must first request such information from Adobe or the Adobe
-Supplier, and Adobe or the Adobe Supplier may, in their discretion, either
-provide such information to you or impose reasonable conditions, including a
-reasonable fee, on such use of the Adobe Software to ensure that Adobe and the
-Adobe Supplier’s proprietary rights in the Adobe Software are protected.</span></p>
+#222222;background:white;mso-highlight:white'>i.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>No Modification or
+Reverse Engineering.<span style="mso-spacerun:yes">&nbsp; </span>You
+specifically acknowledge and agree that other than as expressly set forth in
+these Terms, you shall not modify, port, adapt or translate the Adobe Software
+or its documentation.<span style="mso-spacerun:yes">&nbsp; </span>You will not
+reverse-engineer, decompile, disassemble, or otherwise attempt to derive the
+source code of the Adobe Software not supplied to you in source code form.<span
+style="mso-spacerun:yes">&nbsp; </span>Notwithstanding the foregoing,
+decompiling the Adobe Software is permitted to the extent that the laws of a
+jurisdiction give you the right to do so to obtain information necessary to
+render the Adobe Software interoperable with other software; provided, however,
+that you must first request such information from Adobe or the Adobe Supplier,
+and Adobe or the Adobe Supplier may, in their discretion, either provide such
+information to you or impose reasonable conditions, including a reasonable fee,
+on such use of the Adobe Software to ensure that Adobe and the Adobe Supplier’s
+proprietary rights in the Adobe Software are protected.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>ii.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>     </span><span lang=EN
-style='color:#222222;background:white'>Proprietary Notices. You agree that as a
-condition of your rights hereunder, each copy of the Adobe Software and its
-documentation shall contain the same proprietary notices of Adobe, the Adobe
-Supplier, and their suppliers that appear in such Adobe Software or
-documentation provided by the Adobe Supplier, and as otherwise may be
-reasonably required by the Adobe Supplier.</span></p>
+#222222;background:white;mso-highlight:white'>ii.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>Proprietary Notices.<span
+style="mso-spacerun:yes">&nbsp; </span>You agree that as a condition of your
+rights hereunder, each copy of the Adobe Software and its documentation shall
+contain the same proprietary notices of Adobe, the Adobe Supplier, and their
+suppliers that appear in such Adobe Software or documentation provided by the
+Adobe Supplier, and as otherwise may be reasonably required by the Adobe
+Supplier.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>iii.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>Ownership. Adobe, the Adobe Supplier,
-and their suppliers are the sole and exclusive owners of all rights, title and
-interest, including all trademarks, copyrights, patents, trade names, trade
-secrets, and other intellectual property rights in and to the Adobe Software.
-Except for the rights expressly granted in these Terms, you are not granted any
-rights to patents, copyrights, trade secrets, trade names, trademarks (whether
-or not registered), or any other rights, franchises or licenses with respect to
-the Adobe Software or its documentation, and you agree that you will not exceed
-the scope of the licenses granted herein. There are no implied licenses granted
-under these Terms, and all rights not expressly granted to you in these Terms
-are reserved.</span></p>
+#222222;background:white;mso-highlight:white'>iii.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>Ownership.<span
+style="mso-spacerun:yes">&nbsp; </span>Adobe, the Adobe Supplier, and their
+suppliers are the sole and exclusive owners of all rights, title and interest,
+including all trademarks, copyrights, patents, trade names, trade secrets, and
+other intellectual property rights in and to the Adobe Software.<span
+style="mso-spacerun:yes">&nbsp; </span>Except for the rights expressly granted
+in these Terms, you are not granted any rights to patents, copyrights, trade
+secrets, trade names, trademarks (whether or not registered), or any other
+rights, franchises or licenses with respect to the Adobe Software or its
+documentation, and you agree that you will not exceed the scope of the licenses
+granted herein.<span style="mso-spacerun:yes">&nbsp; </span>There are no
+implied licenses granted under these Terms, and all rights not expressly
+granted to you in these Terms are reserved.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>iv.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>Log-In Information. To gain access to
-and use the Adobe Service, you may be required to create an ID and password or
-other log-in ID and password issued by Adobe (“Log-In Information”). You are
-responsible for all activity occurring under your Log-In Information, and you
-must keep your Log-In Information confidential and not share your Log-In
-Information with third parties. Adobe has no obligation or responsibility with
-regard to your use, distribution, disclosure, or management of Log-In
-Information. Notwithstanding the foregoing, Adobe may require you to change
-your Log-In Information if such Log-In Information is inconsistent with the
-terms of these Terms.  Adobe’s use of this information is governed by their
-privacy policy, which can be accessed at </span><span lang=EN style='color:
-#222222'>https://www.adobe.com/privacy/policy.html.</span></p>
+#222222;background:white;mso-highlight:white'>iv.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>Log-In Information.<span
+style="mso-spacerun:yes">&nbsp; </span>To gain access to and use the Adobe
+Service, you may be required to create an ID and password or other log-in ID
+and password issued by Adobe (“Log-In Information”).<span
+style="mso-spacerun:yes">&nbsp; </span>You are responsible for all activity
+occurring under your Log-In Information, and you must keep your Log-In
+Information confidential and not share your Log-In Information with third parties.<span
+style="mso-spacerun:yes">&nbsp; </span>Adobe has no obligation or
+responsibility with regard to your use, distribution, disclosure, or management
+of Log-In Information.<span style="mso-spacerun:yes">&nbsp; </span>Notwithstanding
+the foregoing, Adobe may require you to change your Log-In Information if such
+Log-In Information is inconsistent with the terms of these Terms.<span
+style="mso-spacerun:yes">&nbsp; </span>Adobe’s use of this information is
+governed by their privacy policy, which can be accessed at </span><span
+lang=EN style='color:#222222'>https://www.adobe.com/privacy/policy.html.<span
+style='background:white;mso-highlight:white'><o:p></o:p></span></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>v.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>     </span><span lang=EN
-style='color:#222222;background:white'>The Adobe Service. You will use the
-Adobe Software only when the Adobe Software is integrated with the Adobe
-Service. You agree that Adobe will collect, transmit and use the eBook
-Transaction Data to provide the Adobe Service and to enable billing under the
-applicable pricing models. You have adequate rights to allow Adobe, for such
-collection, use and sharing of eBook Transaction Data. eBook Transaction Data
-means all the data required to provide the Adobe Service, for digital content,
-primarily eBooks; which shall include but is not limited to the Adobe Software
-version, fulfillment ID, transaction type (permanent or expiring), eBook
-metadata like geo, subscription ID, price, currency, epub version, resource
-type (epub/PDF), or users Internet Protocol.</span></p>
+#222222;background:white;mso-highlight:white'>v.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>The Adobe Service.<span
+style="mso-spacerun:yes">&nbsp; </span>You will use the Adobe Software only
+when the Adobe Software is integrated with the Adobe Service.<span
+style="mso-spacerun:yes">&nbsp; </span>You agree that Adobe will collect,
+transmit and use the eBook Transaction Data to provide the Adobe Service and to
+enable billing under the applicable pricing models.<span
+style="mso-spacerun:yes">&nbsp; </span>You have adequate rights to allow Adobe,
+for such collection, use and sharing of eBook Transaction Data.<span
+style="mso-spacerun:yes">&nbsp; </span>eBook Transaction Data means all the
+data required to provide the Adobe Service, for digital content, primarily
+eBooks; which shall include but is not limited to the Adobe Software version,
+fulfillment ID, transaction type (permanent or expiring), eBook metadata like
+geo, subscription ID, price, currency, epub version, resource type (epub/PDF),
+or users Internet Protocol.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>vi.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>Use Restrictions.</span></p>
+#222222;background:white;mso-highlight:white'>vi.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>Use Restrictions. <span
+style="mso-spacerun:yes">&nbsp;</span>In connection with your access or use of
+the Adobe Service, you will not:<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>(a)</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>In connection with your access or use of
-the Adobe Service, you will not: introduce a virus, worm, Trojan horse or other
-harmful software code or similar files that may damage the operation of a third
-party’s computer or property or information;</span></p>
+#222222;background:white;mso-highlight:white'>(a)</span><span lang=EN
+style='font-size:7.0pt;line-height:115%;color:#222222;background:white;
+mso-highlight:white'><span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'>introduce a
+virus, worm, Trojan horse or other harmful software code or similar files that
+may damage the operation of a third party’s computer or property or
+information;<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>(b)</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>  </span><span lang=EN
-style='color:#222222;background:white'>use the Adobe Service in any manner that
-could damage, disable, overburden, or impair any server, or the network(s)
-connected to any server or interfere with any other party’s use and enjoyment
-of the Adobe Service;</span></p>
+#222222;background:white;mso-highlight:white'>(b)</span><span lang=EN
+style='font-size:7.0pt;line-height:115%;color:#222222;background:white;
+mso-highlight:white'><span style="mso-spacerun:yes">&nbsp; </span></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'>use the
+Adobe Service in any manner that could damage, disable, overburden, or impair
+any server, or the network(s) connected to any server or interfere with any
+other party’s use and enjoyment of the Adobe Service;<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>(c)</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>attempt to gain unauthorized access to
-service, materials, other accounts, computer systems or networks connected to
-any server or to the Adobe Service, through hacking, password mining, or any
-other means;</span></p>
+#222222;background:white;mso-highlight:white'>(c)</span><span lang=EN
+style='font-size:7.0pt;line-height:115%;color:#222222;background:white;
+mso-highlight:white'><span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'>attempt to
+gain unauthorized access to service, materials, other accounts, computer
+systems or networks connected to any server or to the Adobe Service, through
+hacking, password mining, or any other means;<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>(d)</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>  </span><span lang=EN
-style='color:#222222;background:white'>obtain or attempt to obtain any
-materials or information through any means not intentionally made available
-through the Adobe Service;</span></p>
+#222222;background:white;mso-highlight:white'>(d)</span><span lang=EN
+style='font-size:7.0pt;line-height:115%;color:#222222;background:white;
+mso-highlight:white'><span style="mso-spacerun:yes">&nbsp; </span></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'>obtain or
+attempt to obtain any materials or information through any means not
+intentionally made available through the Adobe Service;<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>(e)</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>host, on a subscription basis or
-otherwise, the Adobe Service, including any related application, to permit a
-third party to use the Adobe Service to create, transmit, or protect any
-content;</span></p>
+#222222;background:white;mso-highlight:white'>(e)</span><span lang=EN
+style='font-size:7.0pt;line-height:115%;color:#222222;background:white;
+mso-highlight:white'><span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'>host, on a
+subscription basis or otherwise, the Adobe Service, including any related
+application, to permit a third party to use the Adobe Service to create,
+transmit, or protect any content;<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>(f)</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>engage in any systematic extraction of
-data or data fields, including without limitation email addresses;</span></p>
+#222222;background:white;mso-highlight:white'>(f)</span><span lang=EN
+style='font-size:7.0pt;line-height:115%;color:#222222;background:white;
+mso-highlight:white'><span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'>engage in
+any systematic extraction of data or data fields, including without limitation
+email addresses;<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>(g)</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>  </span><span lang=EN
-style='color:#222222;background:white'>disclose, harvest, or otherwise collect
-information, including email addresses, or other private Information about any
-third party without the party’s express consent;</span></p>
+#222222;background:white;mso-highlight:white'>(g)</span><span lang=EN
+style='font-size:7.0pt;line-height:115%;color:#222222;background:white;
+mso-highlight:white'><span style="mso-spacerun:yes">&nbsp; </span></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'>disclose,
+harvest, or otherwise collect information, including email addresses, or other
+private Information about any third party without the party’s express consent;<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>(h)</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>  </span><span lang=EN
-style='color:#222222;background:white'> transmit junk mail, spam, surveys,
+#222222;background:white;mso-highlight:white'>(h)</span><span lang=EN
+style='font-size:7.0pt;line-height:115%;color:#222222;background:white;
+mso-highlight:white'><span style="mso-spacerun:yes">&nbsp; </span></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span>transmit junk mail, spam, surveys,
 contests, pyramid schemes, chain letters, or other unsolicited e-mail or
-duplicative messages;</span></p>
+duplicative messages;<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>(i)</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>    </span><span lang=EN
-style='color:#222222;background:white'>sell, lease, or rent access to or use of
-the Adobe Service, or otherwise transfer any rights to use the Adobe Service
-under these Terms (including without limitation, on a timeshare or service
-bureau basis); or</span></p>
+#222222;background:white;mso-highlight:white'>(i)</span><span lang=EN
+style='font-size:7.0pt;line-height:115%;color:#222222;background:white;
+mso-highlight:white'><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'>sell, lease,
+or rent access to or use of the Adobe Service, or otherwise transfer any rights
+to use the Adobe Service under these Terms (including without limitation, on a
+timeshare or service bureau basis); or<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>(j)</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>    </span><span lang=EN
-style='color:#222222;background:white'>defraud, defame, abuse, harass, stalk,
-threaten, or otherwise violate the legal rights (such as rights of privacy and
-publicity) of others.</span></p>
+#222222;background:white;mso-highlight:white'>(j)</span><span lang=EN
+style='font-size:7.0pt;line-height:115%;color:#222222;background:white;
+mso-highlight:white'><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'>defraud,
+defame, abuse, harass, stalk, threaten, or otherwise violate the legal rights
+(such as rights of privacy and publicity) of others.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>vii.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>  </span><span lang=EN
-style='color:#222222;background:white'>Termination of Service. Upon your
-material breach of a provision of these Terms respecting the Adobe Service,
-Adobe or the Adobe Supplier may discontinue your access to the Adobe Service.</span></p>
+#222222;background:white;mso-highlight:white'>vii.<span
+style="mso-spacerun:yes">&nbsp; </span>Termination of Service.<span
+style="mso-spacerun:yes">&nbsp; </span>Upon your material breach of a provision
+of these Terms respecting the Adobe Service, Adobe or the Adobe Supplier may
+discontinue your access to the Adobe Service.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>viii.Termination of Vendor ID. Adobe or the Adobe
-Supplier may terminate any Vendor ID in the event that it believes, in its sole
-and absolute discretion, that continued use of the Vendor ID, may compromise
-the effectiveness of the Adobe Software or the Adobe Service.</span></p>
+#222222;background:white;mso-highlight:white'>viii.<span
+style="mso-spacerun:yes">&nbsp; </span>Termination of Vendor ID.<span
+style="mso-spacerun:yes">&nbsp; </span>Adobe or the Adobe Supplier may
+terminate any Vendor ID in the event that it believes, in its sole and absolute
+discretion, that continued use of the Vendor ID, may compromise the
+effectiveness of the Adobe Software or the Adobe Service.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>C.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>    </span><span lang=EN
-style='color:#222222;background:white'>Communication. NYPL uses Desk.com to
-fulfill requests and perform various functions necessary to improve the
-Software. NYPL encourages you to read the Privacy Policy </span><u><span
-lang=EN style='color:#1155CC;background:white'><a
-href="http://www.desk.com/privacy"><span style='color:#1155CC'>www.desk.com/privacy</span></a></span></u><span
-lang=EN style='color:#222222;background:white'> (last visited 12/28/2016), and
-Terms of Service </span><u><span lang=EN style='color:#1155CC;background:white'><a
-href="http://www.desk.com/terms"><span style='color:#1155CC'>www.desk.com/terms</span></a></span></u><span
-lang=EN style='color:#222222;background:white'> (last visited 12/28/2016), of
-Desk.com. NYPL also uses Service Objects for address validation and encourages
-you to read Service Object’s Privacy Policy </span><u><span lang=EN
-style='color:#1155CC;background:white'><a
-href="https://www.serviceobjects.com/privacy"><span style='color:#1155CC'>https://www.serviceobjects.com/privacy</span></a></span></u><span
-lang=EN style='color:#222222;background:white'> (last visited 12/28/2016). We
-use the contact information provided by you through Desk.com to contact you
-outside of the Software. If you have questions or wish to review or delete
-information captured through Desk.com, please contact Ask NYPL.</span></p>
+#222222;background:white;mso-highlight:white'>C.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>Communication.<span
+style="mso-spacerun:yes">&nbsp; </span>NYPL uses Desk.com to fulfill requests
+and perform various functions necessary to improve the Software.<span
+style="mso-spacerun:yes">&nbsp; </span>NYPL encourages you to read the Privacy
+Policy </span><span lang=EN><a href="http://www.desk.com/privacy"><span
+style='color:#1155CC;background:white;mso-highlight:white'>www.desk.com/privacy</span></a></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'> (last
+visited 12/28/2016), and Terms of Service </span><span lang=EN><a
+href="http://www.desk.com/terms"><span style='color:#1155CC;background:white;
+mso-highlight:white'>www.desk.com/terms</span></a></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'> (last visited
+12/28/2016), of Desk.com.<span style="mso-spacerun:yes">&nbsp; </span>NYPL also
+uses Service Objects for address validation and encourages you to read Service
+Object’s Privacy Policy </span><span lang=EN><a
+href="https://www.serviceobjects.com/privacy"><span style='color:#1155CC;
+background:white;mso-highlight:white'>https://www.serviceobjects.com/privacy</span></a></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'> (last
+visited 12/28/2016).<span style="mso-spacerun:yes">&nbsp; </span>We use the
+contact information provided by you through Desk.com to contact you outside of
+the Software.<span style="mso-spacerun:yes">&nbsp; </span>If you have questions
+or wish to review or delete information captured through Desk.com, please
+contact Ask NYPL.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>II.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>    </span><span lang=EN
-style='color:#222222;background:white'>Use of eBook Content Accessed Using the
-Software</span></p>
+#222222;background:white;mso-highlight:white'>II.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>Use of eBook Content
+Accessed Using the Software<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>A.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>Multiple Providers; Multiple Licenses.
-The SimplyE Application is designed to be a platform for digital content
-provided by your local library from multiple sources. To upload Content using the
-Software, you must register an account with NYPL as a participating library (a
-“Provider”), and agree to these Terms. </span></p>
+#222222;background:white;mso-highlight:white'>A.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>Multiple Providers; Multiple Licenses.<span
+style="mso-spacerun:yes">&nbsp; </span>The SimplyE Application is designed to
+be a platform for digital content provided by your local library from multiple
+sources.<span style="mso-spacerun:yes">&nbsp; </span>To upload Content using
+the Software, you must register an account with NYPL as a participating library
+(a “Provider”), and agree to these Terms.<span style="mso-spacerun:yes">&nbsp;
+</span><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>B.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>    </span><span lang=EN
-style='color:#222222;background:white'>Authorized Use. You agree to provide
-Content consistent with the copyright and other intellectual property laws
-which apply to such Content. You agree that Content you provide through the
-Software will not contain third party copyrighted material, or material that is
-subject to other third party proprietary rights, unless you have permission
-from the rightful owner of the material or you are otherwise legally entitled
-to post the material and to grant NYPL all of the license rights granted
-herein. You shall be solely responsible for your own Content and the
-consequences of submitting your Content to, and distributing your content through,
-the Software. You affirm, represent, and warrant that you own or have the
-necessary licenses, rights, consents, and permissions to publish Content you
-submit; and you license to NYPL all patent, trademark, trade secret, copyright
-or other proprietary rights in and to such Content for provision through the
-Software pursuant to these Terms.</span></p>
+#222222;background:white;mso-highlight:white'>B.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>Authorized Use.<span
+style="mso-spacerun:yes">&nbsp; </span><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222'>NYPL
+respects the intellectual property of others and asks that you do too.<span
+style="mso-spacerun:yes">&nbsp; </span>The laws of copyright protect Content
+that is made available through the Software.<span
+style="mso-spacerun:yes">&nbsp; </span>Copyrights in Content are held by their
+respective owners.<span style="mso-spacerun:yes">&nbsp; </span>Content embodies
+the intellectual property of a third party and is protected by law.<span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>You agree to provide Content consistent
+with the copyright and other intellectual property laws which apply to such
+Content.<span style="mso-spacerun:yes">&nbsp; </span>You agree, represent and
+warrant that Content you provide through the Software will not contain third
+party copyrighted material, or material that is subject to other third party
+proprietary rights, unless you have permission from the rightful owner of the
+material or you are otherwise legally entitled to post the material and to
+grant NYPL all of the license rights granted herein.<span
+style="mso-spacerun:yes">&nbsp; </span>You shall be solely responsible for your
+own Content and the consequences of submitting your Content to, and
+distributing your content through, the Software.<span
+style="mso-spacerun:yes">&nbsp; </span>You affirm, represent, and warrant that
+you own or have the necessary licenses, rights, consents, and permissions to
+publish Content you submit; and you license to NYPL all patent, trademark,
+trade secret, copyright and other proprietary rights in and to such Content for
+provision through the Software pursuant to these Terms.<span style='background:
+white;mso-highlight:white'><o:p></o:p></span></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>C.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>Additional information. For general
-information about copyright, fair use, public domain, and related topics, you
-may consult<a href="http://www.copyright.gov/"><span style='color:#222222;
-text-decoration:none'> </span></a></span><u><span lang=EN style='color:#1155CC;
-background:white'><a href="http://www.copyright.gov/"><span style='color:#1155CC'>http://www.copyright.gov/</span></a></span></u><span
-lang=EN style='color:#222222;background:white'>.</span></p>
+#222222;background:white;mso-highlight:white'>C.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>Additional information.<span
+style="mso-spacerun:yes">&nbsp; </span>For general information about copyright,
+fair use, public domain, and related topics, you may consult</span><span
+lang=EN><a href="http://www.copyright.gov/"><span style='color:#222222;
+background:white;mso-highlight:white;text-decoration:none;text-underline:none'>
+</span></a><a href="http://www.copyright.gov/"><span style='color:#1155CC;
+background:white;mso-highlight:white'>http://www.copyright.gov/</span></a></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'>. <o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>III.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>  </span><span lang=EN
-style='color:#222222;background:white'>Trademarks</span></p>
+#222222;background:white;mso-highlight:white'>D. </span><span lang=EN
+style='color:#222222'>Intellectual Property. NYPL does not endorse any Content submitted
+to the Software by you or other licensor, or any opinion, recommendation, or
+advice expressed therein, and NYPL expressly disclaims any and all liability in
+connection with Content.<span style="mso-spacerun:yes">&nbsp; </span>NYPL does
+not permit copyright infringing activities and infringement of intellectual
+property rights on the Software, and NYPL will remove all Content if properly
+notified that such Content infringes on another's intellectual property
+rights.<span style="mso-spacerun:yes">&nbsp; </span>NYPL reserves the right to
+remove Content without prior notice.<span style="mso-spacerun:yes">&nbsp;
+</span>Although NYPL reserves the right to remove all content that appears on
+the Software, NYPL does not necessarily review all of it.<span
+style="mso-spacerun:yes">&nbsp; </span>So, we cannot--and do not--take
+responsibility for any Content that others provide through the Software.<span
+style="mso-spacerun:yes">&nbsp; </span><span style='background:white;
+mso-highlight:white'><o:p></o:p></span></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>A.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>All text, graphics, user interfaces,
+#222222;background:white;mso-highlight:white'>III.<span
+style="mso-spacerun:yes">&nbsp; </span>Trademarks<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
+#222222;background:white;mso-highlight:white'>A.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>All text, graphics, user interfaces,
 visual interfaces, photographs, trademarks (whether or not registered), logos,
 sounds, music, and artwork (collectively, “Marks”), including but not limited
 to the design, structure, selection, coordination, expression, “look and feel”
 and arrangement of such Marks, contained on the Software is owned, controlled
 or licensed by or to NYPL and its suppliers, and is protected by trade dress,
 copyright, patent and trademark laws, and various other intellectual property
-rights and unfair competition laws. The Marks of NYPL and NYPL’s suppliers may
-not be used without prior written consent of NYPL or NYPL’s suppliers, as the
-case may be.</span></p>
+rights and unfair competition laws.<span style="mso-spacerun:yes">&nbsp;
+</span>The Marks of NYPL and NYPL’s suppliers may not be used without prior
+written consent of NYPL or NYPL’s suppliers, as the case may be.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>IV.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'> </span><span lang=EN
-style='color:#222222;background:white'>Age of Users</span></p>
+#222222;background:white;mso-highlight:white'>IV.<span
+style="mso-spacerun:yes">&nbsp; </span>Age of Users<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>A.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>Individuals under the age of 18 are not
-permitted to use the Software without the supervision of a parent or legal
-guardian. Furthermore, NYPL does not knowingly collect or solicit personal
+#222222;background:white;mso-highlight:white'>A.<span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>The Software is not intended for
+use by any person under the age of 13.<span style="mso-spacerun:yes">&nbsp;
+</span>Furthermore, NYPL does not knowingly collect or solicit personal
 information from children under the age of 13 or knowingly allow such persons
-to register for an account online or to post personal information online.
-Should NYPL learn that someone under the age of 13 has provided any personal
-information to or on the Software, NYPL will remove that information as soon as
-possible.</span></p>
+to register for an account online or to post personal information online.<span
+style="mso-spacerun:yes">&nbsp; </span>Should NYPL learn that someone under the
+age of 13 has provided any personal information to or on the Software, NYPL
+will remove that information as soon as possible.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>V.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>Feedback; Usage Data</span></p>
+#222222;background:white;mso-highlight:white'>V.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>Feedback; Usage Data<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>A.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>Any feedback or suggestions regarding
-the Software provided by you to NYPL, and any related intellectual property
-rights, shall be licensed to NYPL by you on a perpetual, royalty-free, worldwide,
-and irrevocable basis. You acknowledge and understand that in connection with
-your use of the Software certain information regarding your use of the Software
-may be transmitted to NYPL and its suppliers (“Usage Data”). This Usage Data
-may be collected and used by NYPL and its suppliers to provide support services
-to you, to better tailor the Software to your use, to improve the Software
-generally, and for research, development, and fundraising purposes. You hereby
-consent to such activities. All Usage Data collection is subject to NYPL’s
-Privacy Policy.</span></p>
+#222222;background:white;mso-highlight:white'>A.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>Any feedback or suggestions regarding the
+Software provided by you to NYPL, and any related intellectual property rights,
+shall be licensed to NYPL by you on a perpetual, royalty-free, worldwide, and
+irrevocable basis.<span style="mso-spacerun:yes">&nbsp; </span>You acknowledge
+and understand that in connection with your use of the Software certain
+information regarding your use of the Software may be transmitted to NYPL and
+its suppliers (“Usage Data”).<span style="mso-spacerun:yes">&nbsp; </span>This
+Usage Data may be collected and used by NYPL and its suppliers to provide
+support services to you, to better tailor the Software to your use, to improve
+the Software generally, and for research, development, and fundraising purposes.<span
+style="mso-spacerun:yes">&nbsp; </span>You hereby consent to such activities.<span
+style="mso-spacerun:yes">&nbsp; </span>All Usage Data collection is subject to
+NYPL’s Privacy Policy.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>VI.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'> </span><span lang=EN
-style='color:#222222;background:white'>Privacy Policy</span></p>
+#222222;background:white;mso-highlight:white'>VI.<span
+style="mso-spacerun:yes">&nbsp; </span>Privacy Policy<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>A.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>For information about NYPL's data
-protection and collection practices, please read NYPL's Privacy Policy at </span><u><span
-lang=EN style='color:#1155CC;background:white'><a
+#222222;background:white;mso-highlight:white'>A.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>For information about NYPL's data
+protection and collection practices, please read NYPL's Privacy Policy at </span><span
+lang=EN><a
 href="http://www.nypl.org/help/about-nypl/legal-notices/privacy-policy"><span
-style='color:#1155CC'>http://www.nypl.org/help/about-nypl/legal-notices/privacy-policy</span></a></span></u><span
-lang=EN style='color:#222222;background:white'> (last visited 06/20/2017),
-which is incorporated herein by reference. You agree to NYPL's use of your data
-in accordance with the Privacy Policy.</span></p>
+style='color:#1155CC;background:white;mso-highlight:white'>http://www.nypl.org/help/about-nypl/legal-notices/privacy-policy</span></a></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'> (last
+visited 06/20/2017), which is incorporated herein by reference.<span
+style="mso-spacerun:yes">&nbsp; </span>You agree to NYPL's use of your data in
+accordance with the Privacy Policy.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>B.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>    </span><span lang=EN
-style='color:#222222;background:white'> When using the Software, you and your
+#222222;background:white;mso-highlight:white'>B.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span>When using the Software, you and your
 users are interacting with the online services of Providers and Distributors,
 who may collect information about users and their use of the Software and the
-Distributors’ own services. Your users are also solely responsible for reading
-and agreeing to your Privacy Policies, and the Privacy Policies of any
-associated Distributors.</span></p>
+Distributors’ own services.<span style="mso-spacerun:yes">&nbsp; </span>Your
+users are also solely responsible for reading and agreeing to your Privacy
+Policies, and the Privacy Policies of any associated Distributors.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>VII.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>        </span><span lang=EN
-style='color:#222222;background:white'>No Warranties; No Support</span></p>
+#222222;background:white;mso-highlight:white'>VII.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'>No
+Warranties; No Support<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>A.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>THE SOFTWARE IS PROVIDED &quot;AS
-IS&quot; WITHOUT ANY WARRANTY OF ANY KIND. EXCEPT TO THE EXTENT REQUIRED BY
-APPLICABLE LAW, NYPL AND ITS SUPPLIERS DISCLAIM ALL WARRANTIES,
-REPRESENTATIONS, CONDITIONS, AND DUTIES, WHETHER EXPRESS OR IMPLIED, REGARDING
-THE SOFTWARE AND/OR CONTENT, INCLUDING, WITHOUT LIMITATION, ANY AND ALL IMPLIED
-WARRANTIES OF MERCHANTABILITY, ACCURACY, RESULTS OF USE, RELIABILITY, FITNESS
-FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT OF THIRD-PARTY RIGHTS.
-FURTHER, NYPL AND ITS SUPPLIERS DISCLAIM ANY WARRANTY THAT YOUR USE OF THE
-SOFTWARE AND/OR CONTENT WILL BE UNINTERRUPTED, SECURE, TIMELY OR ERROR FREE.
-YOU ACKNOWLEDGE AND AGREE THAT THIS EULA DOES NOT ENTITLE YOU TO ANY SUPPORT
-FOR THE SOFTWARE AND/OR CONTENT. NO ADVICE OR INFORMATION, WHETHER ORAL OR IN
-WRITING, OBTAINED BY YOU FROM NYPL OR ITS SUPPLIERS WILL CREATE ANY WARRANTY
-NOT EXPRESSLY STATED IN THESE TERMS.</span></p>
+#222222;background:white;mso-highlight:white'>A.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>THE SOFTWARE IS PROVIDED &quot;AS
+IS&quot; WITHOUT ANY WARRANTY OF ANY KIND.<span style="mso-spacerun:yes">&nbsp;
+</span>EXCEPT TO THE EXTENT REQUIRED BY APPLICABLE LAW, NYPL AND ITS SUPPLIERS
+DISCLAIM ALL WARRANTIES, REPRESENTATIONS, CONDITIONS, AND DUTIES, WHETHER
+EXPRESS OR IMPLIED, REGARDING THE SOFTWARE AND/OR CONTENT, INCLUDING, WITHOUT
+LIMITATION, ANY AND ALL IMPLIED WARRANTIES OF MERCHANTABILITY, ACCURACY,
+RESULTS OF USE, RELIABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND
+NON-INFRINGEMENT OF THIRD-PARTY RIGHTS.<span style="mso-spacerun:yes">&nbsp;
+</span>FURTHER, NYPL AND ITS SUPPLIERS DISCLAIM ANY WARRANTY THAT YOUR USE OF
+THE SOFTWARE AND/OR CONTENT WILL BE UNINTERRUPTED, SECURE, TIMELY OR ERROR FREE.<span
+style="mso-spacerun:yes">&nbsp; </span>YOU ACKNOWLEDGE AND AGREE THAT THESE
+TERMS DO NOT ENTITLE YOU TO ANY SUPPORT FOR THE SOFTWARE AND/OR CONTENT.<span
+style="mso-spacerun:yes">&nbsp; </span>NO ADVICE OR INFORMATION, WHETHER ORAL
+OR IN WRITING, OBTAINED BY YOU FROM NYPL OR ITS SUPPLIERS WILL CREATE ANY
+WARRANTY NOT EXPRESSLY STATED IN THESE TERMS.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>VIII.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>         </span><span lang=EN
-style='color:#222222;background:white'>Limitation of Liability</span></p>
+#222222;background:white;mso-highlight:white'>VIII.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'>Limitation
+of Liability<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>A.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>THE SOFTWARE IS BEING PROVIDED BY NYPL
-FREE OF CHARGE. ACCORDINGLY, YOU AGREE THAT NYPL AND ITS SUPPLIERS SHALL HAVE
-NO LIABILITY ARISING FROM OR RELATED TO YOUR ACCESS TO AND/OR USE OF THE
-SOFTWARE AND/OR CONTENT (OR NYPL'S SUSPENSION OR TERMINATION OF SUCH ACCESS
-AND/OR USE). REGARDLESS OF WHETHER ANY REMEDY SET FORTH HEREIN FAILS OF ITS ESSENTIAL
-PURPOSE OR OTHERWISE, AND EXCEPT FOR BODILY INJURY, IN NO EVENT SHALL NYPL OR
-ITS OFFICERS, TRUSTEES, AGENTS, EMPLOYEES, OR ITS SUPPLIERS BE LIABLE TO YOU OR
-TO ANY THIRD PARTY UNDER ANY TORT, CONTRACT, NEGLIGENCE, STRICT LIABILITY OR
-OTHER LEGAL OR EQUITABLE THEORY FOR ANY LOST PROFITS, LOST OR CORRUPTED DATA,
-COMPUTER FAILURE OR MALFUNCTION, INTERRUPTION OF BUSINESS, OR OTHER SPECIAL,
-INDIRECT, INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES OF ANY KIND ARISING
-OUT OF THE USE OR INABILITY TO USE THE SOFTWARE AND/OR CONTENT, EVEN IF NYPL OR
-ITS SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS OR DAMAGES AND
-WHETHER OR NOT SUCH LOSS OR DAMAGES ARE FORESEEABLE. NYPL’S MAXIMUM AGGREGATE
-LIABILITY, OR THAT OF ITS SUPPLIERS, ARISING IN CONNECTION WITH THESE TERMS
-SHALL NOT, IN ANY EVENT, EXCEED ANY AMOUNTS RECEIVED UNDER THESE TERMS.</span></p>
+#222222;background:white;mso-highlight:white'>A.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>THE SOFTWARE IS BEING PROVIDED BY NYPL
+FREE OF CHARGE.<span style="mso-spacerun:yes">&nbsp; </span>ACCORDINGLY, YOU
+AGREE THAT NYPL AND ITS SUPPLIERS SHALL HAVE NO LIABILITY ARISING FROM OR
+RELATED TO YOUR ACCESS TO AND/OR USE OF THE SOFTWARE AND/OR CONTENT (OR NYPL'S
+SUSPENSION OR TERMINATION OF SUCH ACCESS AND/OR USE).<span
+style="mso-spacerun:yes">&nbsp; </span>REGARDLESS OF WHETHER ANY REMEDY SET
+FORTH HEREIN FAILS OF ITS ESSENTIAL PURPOSE OR OTHERWISE, AND EXCEPT FOR BODILY
+INJURY, IN NO EVENT SHALL NYPL OR ITS OFFICERS, TRUSTEES, AGENTS, EMPLOYEES, OR
+ITS SUPPLIERS BE LIABLE TO YOU OR TO ANY THIRD PARTY UNDER ANY TORT, CONTRACT,
+NEGLIGENCE, STRICT LIABILITY OR OTHER LEGAL OR EQUITABLE THEORY FOR ANY LOST
+PROFITS, LOST OR CORRUPTED DATA, COMPUTER FAILURE OR MALFUNCTION, INTERRUPTION
+OF BUSINESS, OR OTHER SPECIAL, INDIRECT, INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL
+DAMAGES OF ANY KIND ARISING OUT OF THE USE OR INABILITY TO USE THE SOFTWARE
+AND/OR CONTENT, EVEN IF NYPL OR ITS SUPPLIERS HAVE BEEN ADVISED OF THE
+POSSIBILITY OF SUCH LOSS OR DAMAGES AND WHETHER OR NOT SUCH LOSS OR DAMAGES ARE
+FORESEEABLE.<span style="mso-spacerun:yes">&nbsp; </span>NYPL’S MAXIMUM
+AGGREGATE LIABILITY, OR THAT OF ITS SUPPLIERS, ARISING IN CONNECTION WITH THESE
+TERMS SHALL NOT, IN ANY EVENT, EXCEED ANY AMOUNTS RECEIVED UNDER THESE TERMS.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>IX.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'> </span><span lang=EN
-style='color:#222222;background:white'>Indemnification</span></p>
+#222222;background:white;mso-highlight:white'>IX.<span
+style="mso-spacerun:yes">&nbsp; </span>Indemnification<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>A.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>You agree to indemnify, defend, and hold
+#222222;background:white;mso-highlight:white'>A.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>You agree to indemnify, defend, and hold
 harmless NYPL and its officers, trustees, employees, agents, and its suppliers
 from any claim or demand, including reasonable attorneys' fees, made by any
 third party arising from or in any way related to (i) your use or access of (or
-inability to use or access) the Software and/or Content;, (ii) your violation
-of any third party right, including without limitation any copyright, property
-or privacy right; and/or (iii) violation of these Terms. NYPL shall provide you
-with written notice of any such claim or demand. NYPL and its suppliers reserve
-the right to assume the exclusive defense and control of any matter subject to
-indemnification by you, which shall not excuse your indemnity obligations. In
-the event of any settlement of an action, you agree to obtain NYPL's prior
-written consent to the settlement and, as the case may be, the prior written
-consent of its suppliers (which consent shall not be unreasonably withheld or
-delayed, or cause any delay or harm in the settlement discussion).</span></p>
+inability to use or access) the Software and/or Content; (ii) your violation of
+any third party right, including without limitation any copyright, property or
+privacy right; and/or (iii) your violation of these Terms.<span
+style="mso-spacerun:yes">&nbsp; </span>You shall provide NYPL with written
+notice of any such claim or demand.<span style="mso-spacerun:yes">&nbsp;
+</span>NYPL and its suppliers reserve the right to assume the exclusive defense
+and control of any matter subject to indemnification by you, which shall not
+excuse your indemnity obligations.<span style="mso-spacerun:yes">&nbsp; </span><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>X.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>Digital Millennium Copyright Act</span></p>
+#222222;background:white;mso-highlight:white'>X.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>Digital Millennium Copyright Act<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>A.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><u><span lang=EN>Notice</span></u><span
-lang=EN>: </span><span lang=EN style='color:#222222;background:white'>The
-Digital Millennium Copyright Act of 1998 (the &quot;DMCA&quot;) provides
-recourse for copyright owners who believe that material appearing on the
-Internet infringes their rights under U.S. copyright law. If you believe in
-good faith that Content hosted by NYPL infringes your copyright, you (or your
-agent) may send NYPL a notice requesting that the material be removed or access
-to it blocked. Notice can be sent to </span><u><span lang=EN style='color:#1155CC;
-background:white'><a href="mailto:takedown@nypl.org"><span style='color:#1155CC'>takedown@nypl.org</span></a></span></u><span
-lang=EN style='background:white'> or mailed to:</span></p>
+#222222;background:white;mso-highlight:white'>A.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><u><span lang=EN>Providing NYPL
+with Notice</span></u><span lang=EN>: </span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>The Digital Millennium Copyright Act of
+1998 (the &quot;DMCA&quot;) provides recourse for copyright owners who believe
+that material appearing on the Internet infringes their rights under U.S. copyright
+law.<span style="mso-spacerun:yes">&nbsp; </span>If you believe in good faith
+that Content hosted by NYPL infringes your copyright, you (or your agent) may
+send NYPL a notice requesting that the material be removed or access to it
+blocked.<span style="mso-spacerun:yes">&nbsp; </span>Notice can be sent to </span><span
+lang=EN><a href="mailto:takedown@nypl.org"><span style='color:#1155CC;
+background:white;mso-highlight:white'>takedown@nypl.org</span></a><span
+style='background:white;mso-highlight:white'> or mailed to:<o:p></o:p></span></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>NYPL Copyright Agent</span></p>
+#222222;background:white;mso-highlight:white'>NYPL Copyright Agent</span><span
+lang=EN style='color:#222222'><br>
+Michele Mayes<br>
+General Counsel<br>
+The New York Public Library<br>
+476 5th Avenue<br>
+New York, NY 10018<br>
+212.930.0552<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222'>Michele Mayes</span></p>
+#222222;background:white;mso-highlight:white'>The notice must include the
+following information (a) a physical or electronic signature of a person
+authorized to act on behalf of the owner of an exclusive right that is
+allegedly infringed; (b) identification of the copyrighted work claimed to have
+been infringed (or if multiple copyrighted works are covered by a single
+notification, a representative list of such works); (c) identification of the
+material that is claimed to be infringing or the subject of infringing activity,
+and information reasonably sufficient to allow NYPL to locate the material on
+the Software; (d) information reasonably sufficient to permit NYPL to contact
+the complaining party, such as the name, address, telephone number and e-mail
+address (if available) of the complaining party; (e) a statement that the
+complaining party has a good faith belief that use of the material in the
+manner complained of is not authorized by the copyright owner, its agent or the
+law; and (f) a statement that the information in the notification is accurate,
+and under penalty of perjury, that the complaining party is authorized to act
+on behalf of the owner of an exclusive right that is allegedly infringed.<span
+style="mso-spacerun:yes">&nbsp; </span>NYPL suggests that you consult your
+legal advisor before filing a notice. <span
+style="mso-spacerun:yes">&nbsp;</span>Also, be aware that there can be
+penalties for false claims under the DMCA.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222'>General Counsel</span></p>
+#222222;background:white;mso-highlight:white'>B.<span
+style="mso-spacerun:yes">&nbsp; </span><u>NYPL Receives Notice</u>: If NYPL
+receives a notice valid under the DMCA, we will first notify you so that you
+may expeditiously remove the </span><span lang=EN style='color:#222222'>material
+that is claimed to be infringing or the subject of infringing activity<span
+style='background:white;mso-highlight:white'> yourself.<span
+style="mso-spacerun:yes">&nbsp; </span>If the potentially infringing content is
+not removed within 3 business days, NYPL reserves the right to block your Content.<span
+style="mso-spacerun:yes">&nbsp; </span>If NYPL is only able to block access to your
+Content by blocking access to the entire collection, NYPL may do so until the </span>material
+that is claimed to be infringing or the subject of infringing activity<span
+style='background:white;mso-highlight:white'> is removed from the collection,
+or may be made available to the public again consistent with the DMCA.<o:p></o:p></span></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222'>The New York Public Library</span></p>
-
-<p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222'>476 5th Avenue</span></p>
-
-<p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222'>New York, NY 10018</span></p>
-
-<p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222'>212.930.0552</span></p>
-
-<p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>The notice must include the following information (a)
-a physical or electronic signature of a person authorized to act on behalf of
-the owner of an exclusive right that is allegedly infringed; (b) identification
-of the copyrighted work claimed to have been infringed (or if multiple
-copyrighted works are covered by a single notification, a representative list
-of such works); (c) identification of the material that is claimed to be
-infringing or the subject of infringing activity, and information reasonably
-sufficient to allow NYPL to locate the material on the Software; (d)
-information reasonably sufficient to permit NYPL to contact the complaining
-party, such as the name, address, telephone number and e-mail address (if available)
-of the complaining party; (e) a statement that the complaining party has a good
-faith belief that use of the material in the manner complained of is not
-authorized by the copyright owner, its agent or the law; and (f) a statement
-that the information in the notification is accurate, and under penalty of
-perjury, that the complaining party is authorized to act on behalf of the owner
-of an exclusive right that is allegedly infringed. NYPL suggests that you
-consult your legal advisor before filing a notice. Also, be aware that there
-can be penalties for false claims under the DMCA.</span></p>
-
-<p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>B.  <u>Counter-Notice</u>: If you believe in good
-faith that your Content that was removed (or to which access was disabled) is
-not infringing, or that you have authorization from the copyright owner, the
+#222222;background:white;mso-highlight:white'>C.<span
+style="mso-spacerun:yes">&nbsp; </span><u>Counter-Notice</u>: If you believe in
+good faith that your Content that was removed (or to which access was disabled)
+is not infringing, or that you have authorization from the copyright owner, the
 copyright owner’s agent, or pursuant to the law to post and use the material in
 your Content, you may send a counter-notice to the NYPL Copyright Agent listed
 above, containing the following information: (a) your physical or electronic
@@ -640,215 +896,280 @@ you consent to the jurisdiction of the Federal District Court for the judicial
 district in which you are located, or if your address is outside of the United
 States, for the Southern District of New York; and (f) a statement that you
 will accept service of process from the person who provided notification of the
-alleged infringement or their agent. NYPL suggests that you consult your legal
-advisor before filing a counter-notice. Also, please be aware that there can be
-penalties for false claims under the DMCA.</span></p>
+alleged infringement or their agent.<span style="mso-spacerun:yes">&nbsp;
+</span>NYPL suggests that you consult your legal advisor before filing a
+counter-notice.<span style="mso-spacerun:yes">&nbsp; </span>Also, please be
+aware that there can be penalties for false claims under the DMCA.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>If a counter-notice is received by the NYPL Copyright
-Agent, we may send a copy of the counter-notice to the original complaining
-party informing that person that we may replace the removed Content or cease
-disabling it in 10 business days. Unless the copyright owner files an action seeking
-a court order against the Content Provider, the removed Content may be
-replaced, or access to it restored, in 10 to 14 business days or more after the
-receipt of the counter-notice, at our sole discretion.</span></p>
+#222222;background:white;mso-highlight:white'>If a counter-notice is received
+by the NYPL Copyright Agent, we may send a copy of the counter-notice to the
+original complaining party informing that person that we may replace the
+removed Content or cease disabling it in 10 business days.<span
+style="mso-spacerun:yes">&nbsp; </span>Unless the copyright owner files an
+action seeking a court order against the Content Provider, the removed Content
+may be replaced, or access to it restored, in 10 to 14 business days or more
+after the receipt of the counter-notice, at our sole discretion.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>C.  <u>Repeat Infringement</u>: </span><span lang=EN
-style='color:#222222'>NYPL has adopted and implemented a policy to provide for
-the termination, in appropriate circumstances, of users who repeatedly infringe
-copyright through their use of SimplyE.</span></p>
+#222222;background:white;mso-highlight:white'>D.<span
+style="mso-spacerun:yes">&nbsp; </span><u>Repeat Infringement</u>: </span><span
+lang=EN style='color:#222222'>NYPL has adopted and implemented a policy to
+provide for the termination, in appropriate circumstances, of users who
+repeatedly infringe copyright through their use of SimplyE.<span
+style='background:white;mso-highlight:white'><o:p></o:p></span></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>XI.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'> </span><span lang=EN
-style='color:#222222;background:white'>U.S. Government Rights</span></p>
+#222222;background:white;mso-highlight:white'>XI.<span
+style="mso-spacerun:yes">&nbsp; </span>U.S. Government Rights<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>A.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>The Software licensed hereunder is
-provided with restricted rights applicable to private and public licenses
-alike. Without limiting the foregoing, any use, duplication, modification,
-reproduction, operation, performance, release or disclosure of the Software by
-the U.S. Government is subject to restrictions as set forth in these Terms and
-as provided in DFARS 227.7202-1(a) and 227.7202-3(a) (1995), DFARS</span><span
+#222222;background:white;mso-highlight:white'>A.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>The Software licensed hereunder is
+provided with restricted rights applicable to private and public licenses alike.<span
+style="mso-spacerun:yes">&nbsp; </span>Without limiting the foregoing, any use,
+duplication, modification, reproduction, operation, performance, release or
+disclosure of the Software by the U.S.<span style="mso-spacerun:yes">&nbsp;
+</span>Government is subject to restrictions as set forth in these Terms and as
+provided in DFARS 227.7202-1(a) and 227.7202-3(a) (1995), DFARS</span><span
 lang=EN> 252.227-7013 </span><span lang=EN style='color:#222222;background:
-white'>(c)(1)(ii)(OCT 1988), FAR 12.212(a)(1995), FAR 52.227-19, or FAR
-52.227-14, as applicable.</span></p>
+white;mso-highlight:white'>(c)(1)(ii)(OCT 1988), FAR 12.212(a)(1995), FAR
+52.227-19, or FAR 52.227-14, as applicable.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>B.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>    </span><span lang=EN
-style='color:#222222;background:white'>You agree that by using the Software and
-accessing or providing Content that: (i) you do not reside in a country subject
-to embargo or export controls by the U.S. Government; (ii) you are not on the
-List of Denied Persons as published by the U.S. government; and (iii) you will
-not use the Software or any Content for any illegal purpose.</span></p>
+#222222;background:white;mso-highlight:white'>B.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>You represent <span
+style="mso-spacerun:yes">&nbsp;</span>that by using the Software and accessing
+or providing Content that: (i) you do not reside in a country subject to embargo
+or export controls by the U.S.<span style="mso-spacerun:yes">&nbsp; </span>Government;
+(ii) you are not on the List of Denied Persons as published by the U.S. government;
+and (iii) you will not use the Software or any Content for any illegal purpose.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>XII.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>        </span><span lang=EN
-style='color:#222222;background:white'>Modification of the Terms and Software</span></p>
+#222222;background:white;mso-highlight:white'>XII.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'>Modification
+of the Terms and Software<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>A.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>NYPL may modify any of the terms and
-conditions contained in these Terms at any time and at NYPL’s sole discretion.</span></p>
+#222222;background:white;mso-highlight:white'>A.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>NYPL may modify any of the terms and
+conditions contained in these Terms at any time and at NYPL’s sole discretion.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>B.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>    </span><span lang=EN
-style='color:#222222;background:white'>From time to time, NYPL, or third
-parties may automatically update or otherwise modify the Software, including,
-but not limited to, for purposes of enhancement of security functions, error
-correction and improvement of functions, at such time as you interact with
-NYPL’s or third parties’ servers, or otherwise. Such updates or modifications
-may delete or change the nature of the features or other aspects of the
-Software, including functions you may rely upon. You hereby agree that such
-activities may occur at NYPL’s sole discretion and that NYPL may condition
-continued use of the Software upon your complete installation or acceptance of
-such update or modifications. Any updates/modifications shall be deemed to be,
-and shall constitute part of, the Software for purposes of these Terms. By
-acceptance of these Terms, you consent to such update/modification.</span></p>
+#222222;background:white;mso-highlight:white'>B.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>From time to time,
+NYPL, or third parties may automatically update or otherwise modify the
+Software, including, but not limited to, for purposes of enhancement of
+security functions, error correction and improvement of functions, at such time
+as you interact with NYPL’s or third parties’ servers, or otherwise.<span
+style="mso-spacerun:yes">&nbsp; </span>Such updates or modifications may delete
+or change the nature of the features or other aspects of the Software,
+including functions you may rely upon.<span style="mso-spacerun:yes">&nbsp;
+</span>You hereby agree that such activities may occur at NYPL’s sole
+discretion and that NYPL may condition continued use of the Software upon your
+complete installation or acceptance of such update or modifications.<span
+style="mso-spacerun:yes">&nbsp; </span>Any updates/modifications shall be
+deemed to be, and shall constitute part of, the Software for purposes of these
+Terms.<span style="mso-spacerun:yes">&nbsp; </span>By acceptance of these
+Terms, you consent to such update/modification.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>C.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>    </span><span lang=EN
-style='color:#222222;background:white'>IF ANY MODIFICATION IS UNACCEPTABLE TO
-YOU, YOUR SOLE RECOURSE IS TO TERMINATE THESE TERMS BY DISCONTINUING USE OF THE
-SOFTWARE AND CEASING TO PROVIDE CONTENT TO NYPL. YOUR CONTINUED USAGE OF THE SOFTWARE
+#222222;background:white;mso-highlight:white'>C.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>IF ANY MODIFICATION
+IS UNACCEPTABLE TO YOU, YOUR SOLE RECOURSE IS TO TERMINATE THESE TERMS BY
+DISCONTINUING USE OF THE SOFTWARE AND CEASING TO PROVIDE CONTENT TO NYPL.<span
+style="mso-spacerun:yes">&nbsp; </span>YOUR CONTINUED USAGE OF THE SOFTWARE
 AND/OR CONTENT FOLLOWING NYPL’S MODIFICATION CONSTITUTES YOUR IRREVOCABLE AND
-BINDING ACCEPTANCE OF THE CHANGE.</span></p>
+BINDING ACCEPTANCE OF THE CHANGE.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>D. You understand and agree that the Content might
-become unavailable for a number of reasons, including an operational glitch, a
-DMCA takedown request, or a decision on our end to terminate your account.</span></p>
+#222222;background:white;mso-highlight:white'>D.<span
+style="mso-spacerun:yes">&nbsp; </span>You understand and agree that the
+Content might become unavailable for a number of reasons, including an
+operational glitch, a DMCA takedown request, or a decision on our end to
+terminate your account.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>E. NYPL reserves the right to remove or block access
-to Content for any reason and without prior notice.</span></p>
+#222222;background:white;mso-highlight:white'>E.<span
+style="mso-spacerun:yes">&nbsp; </span>NYPL reserves the right to remove or
+block access to Content for any reason and without prior notice.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>XIII.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>         </span><span lang=EN
-style='color:#222222;background:white'>Termination</span></p>
+#222222;background:white;mso-highlight:white'>XIII.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'>Termination<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>A.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>The term of these Terms (&quot;the ToS
+#222222;background:white;mso-highlight:white'>A.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>The term of these Terms (&quot;the ToS
 Term&quot;) shall continue indefinitely unless terminated by NYPL or you in
-accordance with the provisions herein.</span></p>
+accordance with the provisions herein.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>B.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>    </span><span lang=EN
-style='color:#222222;background:white'>NYPL reserves the right, in its sole
-discretion (for any reason or for no reason) and at any time without notice to
-you, to modify, suspend or discontinue the Software and/or Content, and/or
-suspend or terminate your rights under these Terms to access and/or use the
-Software and/or Content. You may terminate these Terms by discontinuing use of
-the Software and ceasing to provide Content to NYPL.</span></p>
+#222222;background:white;mso-highlight:white'>B.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>NYPL reserves the
+right, in its sole discretion (for any reason or for no reason) and at any time
+without notice to you, to modify, suspend or discontinue the Software and/or
+Content, and/or suspend or terminate your rights under these Terms to access
+and/or use the Software and/or Content.<span style="mso-spacerun:yes">&nbsp;
+</span>You may terminate these Terms by discontinuing use of the Software and
+ceasing to provide Content to NYPL.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>C.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>    </span><span lang=EN
-style='color:#222222;background:white'>Upon termination of these Terms, you
-shall promptly delete and remove any and all Software and NYPL Content in your
-possession or under your control unless otherwise specified. You shall also
-promptly delete and remove any and all Content to the extent necessary to
-terminate service.  Any termination of access to the Software and/or NYPL Content
-will also immediately terminate any and all licenses granted to you hereunder.
-All disclaimers of warranties and limitation of liability set forth in these
-Terms shall survive any termination of these Terms.</span></p>
+#222222;background:white;mso-highlight:white'>C.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>Upon termination of
+these Terms, you shall promptly delete and remove any and all Software and NYPL
+Content in your possession or under your control unless otherwise specified.<span
+style="mso-spacerun:yes">&nbsp; </span>You shall also promptly delete and
+remove any and all Content to the extent necessary to terminate service.<span
+style="mso-spacerun:yes">&nbsp; </span>Any termination of access to the
+Software and/or NYPL Content will also immediately terminate any and all
+licenses granted to you hereunder.<span style="mso-spacerun:yes">&nbsp; </span>All
+disclaimers of warranties and limitation of liability set forth in these Terms
+shall survive any termination of these Terms.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>D.  NYPL will terminate your access to the Software
-if, under appropriate circumstances and in NYPL’s sole discretion, you are
-determined to be a repeat infringer of a third party’s copyright(s).</span></p>
+#222222;background:white;mso-highlight:white'>D.<span
+style="mso-spacerun:yes">&nbsp; </span>NYPL will terminate your access to the
+Software if, under appropriate circumstances and in NYPL’s sole discretion, you
+are determined to be a repeat infringer of a third party’s copyright(s).<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>XIV.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>      </span><span lang=EN
-style='color:#222222;background:white'>Compliance</span></p>
+#222222;background:white;mso-highlight:white'>XIV.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>Compliance<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>A.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>NYPL reserves the right to take steps
+#222222;background:white;mso-highlight:white'>A.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>NYPL reserves the right to take steps
 NYPL believes are reasonably necessary or appropriate to enforce and/or verify
-compliance with any part of these Terms. You acknowledge and agree that NYPL
-may preserve any transmittal or communication by you with NYPL or any third
-party through the Software or otherwise to this end. All users are advised that
-any library record or other information collected by NYPL as described herein
-is, pursuant to New York CPLR §4509, subject to disclosure upon subpoena, court
-order, or as otherwise authorized by applicable law.</span></p>
+compliance with any part of these Terms.<span style="mso-spacerun:yes">&nbsp;
+</span>You acknowledge and agree that NYPL may preserve any transmittal or
+communication by you with NYPL or any third party through the Software or
+otherwise to this end.<span style="mso-spacerun:yes">&nbsp; </span>All users
+are advised that any library record or other information collected by NYPL as
+described herein is, pursuant to New York CPLR §4509, subject to disclosure upon
+subpoena, court order, or as otherwise authorized by applicable law.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>XV.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>        </span><span lang=EN
-style='color:#222222;background:white'>General Terms</span></p>
+#222222;background:white;mso-highlight:white'>XV.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span
+lang=EN style='color:#222222;background:white;mso-highlight:white'>General
+Terms<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>A.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>All Disputes Arising From These Terms.
-These Terms shall be governed, interpreted, and enforced by the laws of the
-State of New York. Any legal action brought involving the Software, NYPL
-Content, and/or Terms shall be brought only in the courts of the State of New
-York, in the County of New York, or in the federal courts located in such state
-(and county). Both you and NYPL submit to venue and jurisdiction in these
-courts. In the event that an action or claim arises outside of the exclusive
-jurisdiction specified herein which names NYPL as a party, NYPL and you
-specifically agree to initiate, consent to and/or cooperate with any and all
-efforts to remove the matter to the exclusive jurisdiction named herein, or
-otherwise take any and all reasonable actions to achieve the objectives of this
-provision.</span></p>
+#222222;background:white;mso-highlight:white'>A.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>All Disputes Arising From These Terms.<span
+style="mso-spacerun:yes">&nbsp; </span>These Terms shall be governed,
+interpreted, and enforced by the laws of the State of New York.<span
+style="mso-spacerun:yes">&nbsp; </span>Any legal action brought involving the
+Software, NYPL Content, and/or Terms shall be brought only in the courts of the
+State of New York, in the County of New York, or in the federal courts located
+in such state (and county).<span style="mso-spacerun:yes">&nbsp; </span>Both
+you and NYPL submit to venue and jurisdiction in these courts.<span
+style="mso-spacerun:yes">&nbsp; </span>In the event that an action or claim
+arises outside of the exclusive jurisdiction specified herein which names NYPL
+as a party, NYPL and you specifically agree to initiate, consent to and/or
+cooperate with any and all efforts to remove the matter to the exclusive
+jurisdiction named herein, or otherwise take any and all reasonable actions to
+achieve the objectives of this provision.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>B.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>    </span><span lang=EN
-style='color:#222222;background:white'>Entire Agreement. These Terms constitute
-the entire agreement and understanding between you and NYPL and supersede all
-prior and contemporaneous agreements, understandings, negotiations and
-proposals, oral or written.</span></p>
+#222222;background:white;mso-highlight:white'>B.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>Entire Agreement.<span
+style="mso-spacerun:yes">&nbsp; </span>These Terms constitute the entire
+agreement and understanding between you and NYPL and supersede all prior and
+contemporaneous agreements, understandings, negotiations and proposals, oral or
+written.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>C.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>    </span><span lang=EN
-style='color:#222222;background:white'>Severability. In the event that a court
-of competent jurisdiction determines that any portion of these Terms is
-unenforceable, said unenforceability shall not affect any other provision of
-these Terms.</span></p>
+#222222;background:white;mso-highlight:white'>C.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>Severability.<span
+style="mso-spacerun:yes">&nbsp; </span>In the event that a court of competent
+jurisdiction determines that any portion of these Terms is unenforceable, said
+unenforceability shall not affect any other provision of these Terms.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>D.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>   </span><span lang=EN
-style='color:#222222;background:white'>Independent Transactions. NYPL makes no
-representation and shall have no liability or obligation whatsoever in relation
-to your use of any Third-Party Services accessed through the Software. Any
-transaction completed with any Third-Party Services through the Software, and
-any dispute concerning the terms of service of any of the Third-Party Services,
-is between you and the relevant third party, and not NYPL.</span></p>
+#222222;background:white;mso-highlight:white'>D.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>Independent Transactions.<span
+style="mso-spacerun:yes">&nbsp; </span>NYPL makes no representation and shall
+have no liability or obligation whatsoever in relation to your use of any
+Third-Party Services accessed through the Software.<span
+style="mso-spacerun:yes">&nbsp; </span>Any transaction completed with any
+Third-Party Services through the Software, and any dispute concerning the terms
+of service of any of the Third-Party Services, is between you and the relevant
+third party, and not NYPL.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-bottom:12.0pt'><span lang=EN style='color:
-#222222;background:white'>E.</span><span lang=EN style='font-size:7.0pt;
-line-height:115%;color:#222222;background:white'>    </span><span lang=EN
-style='color:#222222;background:white'>Remedies. Violation of any of the above
-provisions or restrictions may result in a termination of your ability to
-access the Software or the Content. NYPL reserves any and all rights or
-remedies that may be available in the event of your breach of these Terms.</span></p>
+#222222;background:white;mso-highlight:white'>E.<span
+style="mso-spacerun:yes">&nbsp; </span></span><span lang=EN style='font-size:
+7.0pt;line-height:115%;color:#222222;background:white;mso-highlight:white'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;</span></span><span lang=EN
+style='color:#222222;background:white;mso-highlight:white'>Remedies.<span
+style="mso-spacerun:yes">&nbsp; </span>Violation of any of the above provisions
+or restrictions may result in a termination of your ability to access the
+Software or the Content.<span style="mso-spacerun:yes">&nbsp; </span>NYPL
+reserves any and all rights or remedies that may be available in the event of
+your breach of these Terms.<o:p></o:p></span></p>
 
-<p class=MsoNormal><span lang=EN style='color:#222222;background:white'>F.</span><span
-lang=EN style='font-size:7.0pt;line-height:115%;color:#222222;background:white'>   
-</span><span lang=EN style='color:#222222;background:white'>Waiver. The failure
-of NYPL to exercise or enforce any right or provision of these Terms shall not
-operate as a waiver of such right or provision, nor shall any course of conduct
-between NYPL and you or any other party be deemed to modify any provision of
-these Terms.</span></p>
+<p class=MsoNormal><span lang=EN style='color:#222222;background:white;
+mso-highlight:white'>F.<span style="mso-spacerun:yes">&nbsp; </span></span><span
+lang=EN style='font-size:7.0pt;line-height:115%;color:#222222;background:white;
+mso-highlight:white'><span style="mso-spacerun:yes">&nbsp;</span><span
+style="mso-spacerun:yes">&nbsp;</span></span><span lang=EN style='color:#222222;
+background:white;mso-highlight:white'>Waiver.<span
+style="mso-spacerun:yes">&nbsp; </span>The failure of NYPL to exercise or
+enforce any right or provision of these Terms shall not operate as a waiver of
+such right or provision, nor shall any course of conduct between NYPL and you
+or any other party be deemed to modify any provision of these Terms.</span></p>
 
 </div>
 
